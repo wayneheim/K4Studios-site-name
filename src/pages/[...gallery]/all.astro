@@ -7,6 +7,10 @@ export const prerender = true;
  * This replaces individual /all.astro files per gallery.
  */
 import Footer from "@/components/Footer.astro";
+import EditionGroupHeading from "@/components/gallery/EditionGroupHeading.astro";
+import { buildEditionCatalog } from "@/utils/editionCatalog.js";
+import { resolveImageCommerce } from "@/data/commerceResolver.js";
+import "@/styles/edition-catalog.css";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { siteNav } from "@/data/siteNav.ts";
 import {
@@ -118,6 +122,8 @@ const galleryData = rawGalleryData.filter((img: any) =>
 // ✅ Gallery metadata
 const imageCount = galleryData.length;
 const basePath = galleryHref;
+const legacyEditionCatalog = buildEditionCatalog(galleryData, (image: any) =>
+  resolveImageCommerce({ image, galleryPath: basePath })?.tiers || []);
 const useUnifiedCurrentTemplate = basePath.startsWith('/Galleries/Fine-Art-Photography/');
 const CommercialCollectionAllPage = useUnifiedCurrentTemplate
   ? (await import('@/components/all-pages/CommercialCollectionAllPage.astro')).default
@@ -266,7 +272,7 @@ const collectionSupportFallback = `This collection page keeps all ${imageCount} 
 const collectionSupport = (() => {
   const sourceText = cleanForPlainText(entranceRecord?.details || landingRecord?.description || '');
   if (!sourceText || sourceText === collectionLead) return collectionSupportFallback;
-  return truncateText(sourceText, 340);
+  return useUnifiedCurrentTemplate ? sourceText : truncateText(sourceText, 340);
 })();
 
 const styleLabel = galleryHref.includes('/Painterly-Fine-Art-Photography/')
@@ -715,7 +721,7 @@ const pageMetaOverride = {
     <!-- Image Grid -->
     {galleryData.length > 0 ? (
       <div class="ssr-grid">
-        {galleryData.map((item: any, idx: number) => {
+        {legacyEditionCatalog.orderedEntries.map(({ item, idx, openEditionOnly }, displayIndex: number) => {
           const imageUrl = getSemanticImageUrl(item, { galleryPath: basePath }, 's');
           const srcsetParts = [
             `${getSemanticImageUrl(item, { galleryPath: basePath }, 's')} 400w`,
@@ -740,7 +746,10 @@ const pageMetaOverride = {
           const storyExcerpt = truncateStory(item.story || "");
 
           return (
-            <div class="ssr-card" id={item.id}>
+            <>
+            {legacyEditionCatalog.hasSplit && displayIndex === 0 && <EditionGroupHeading kind="limited" price={legacyEditionCatalog.limitedPrice} />}
+            {legacyEditionCatalog.hasSplit && displayIndex === legacyEditionCatalog.limitedCount && <EditionGroupHeading kind="open" price={legacyEditionCatalog.openPrice} />}
+            <div class:list={["ssr-card", { "ssr-card--open-edition": legacyEditionCatalog.hasSplit && openEditionOnly, "ssr-card--limited-edition": legacyEditionCatalog.hasSplit && !openEditionOnly }]} id={item.id} data-edition-group={openEditionOnly ? 'open' : 'limited'}>
               <a href={linkUrl} class="ssr-card-link">
                 <img 
                   src={imageUrl} 
@@ -757,6 +766,7 @@ const pageMetaOverride = {
                 </div>
               </a>
             </div>
+            </>
           );
         })}
       </div>
@@ -921,7 +931,7 @@ const pageMetaOverride = {
 
     .ssr-card {
       position:relative;
-      border:1px solid #ddd;
+      border:1px solid var(--card-border, #ddd);
       border-radius:8px;
       background:#fff;
       box-shadow:0 2px 5px rgba(0,0,0,.1);

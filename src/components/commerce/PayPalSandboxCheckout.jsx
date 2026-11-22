@@ -3,6 +3,7 @@ import { BadgeDollarSign, LoaderCircle, LockKeyhole, TriangleAlert } from "lucid
 import { commerceRequest } from "../../lib/commerce/checkoutApi.js";
 import { emptyCart, formatCurrency, saveCart } from "../../lib/commerce/cart.js";
 import { trackEvent } from "../../utils/analytics.ts";
+import { createCheckoutTelemetry } from "../../lib/commerce/checkoutTelemetry.js";
 
 const STATES = [
   ["AL", "Alabama"], ["AK", "Alaska"], ["AZ", "Arizona"], ["AR", "Arkansas"], ["CA", "California"],
@@ -19,7 +20,7 @@ const STATES = [
 ];
 
 const EMPTY_FORM = {
-  name: "", email: "", phone: "", addressLine1: "", addressLine2: "", city: "", stateCode: "OH", postalCode: "",
+  name: "", email: "", phone: "", addressLine1: "", addressLine2: "", city: "", stateCode: "OH", postalCode: "", couponCode: "",
 };
 
 let sdkPromise;
@@ -41,6 +42,7 @@ function checkoutPayload(cart, form) {
   return {
     items: cart.items.map(({ productKey, imageId, imageTitle, quantity }) => ({ productKey, imageId, imageTitle, quantity })),
     buyer: { name: form.name, email: form.email, phone: form.phone },
+    couponCode: form.couponCode.trim(),
     shippingAddress: {
       addressLine1: form.addressLine1,
       addressLine2: form.addressLine2,
@@ -53,6 +55,12 @@ function checkoutPayload(cart, form) {
 }
 
 export default function PayPalSandboxCheckout({ cart, onQuote }) {
+  const cartRef = useRef(cart);
+  cartRef.current = cart;
+  const telemetryRef = useRef(null);
+  if (!telemetryRef.current) telemetryRef.current = createCheckoutTelemetry(trackEvent,
+    () => cartRef.current.items.map(item => item.imageId));
+  const reportCheckoutIssue = telemetryRef.current;
   const [expanded, setExpanded] = useState(false);
   const [form, setForm] = useState(EMPTY_FORM);
   const [quote, setQuote] = useState(null);
@@ -66,11 +74,13 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
   const payload = useMemo(() => checkoutPayload(cart, form), [cart, form]);
   const isSandbox = config?.mode !== "live";
 
+  useEffect(() => { setQuote(null); onQuote?.(null); }, [cart.updatedAt]);
+
   useEffect(() => {
     let active = true;
     commerceRequest("/config")
       .then((nextConfig) => { if (active) setConfig(nextConfig); })
-      .catch((error) => { if (active) { setStatus("error"); setMessage(error.message); } });
+      .catch((error) => { if (active) { reportCheckoutIssue('config'); setStatus("error"); setMessage(error.message); } });
     return () => { active = false; };
   }, []);
 
@@ -85,6 +95,8 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
     event.preventDefault();
     setStatus("loading");
     setMessage("");
+    setQuote(null);
+    onQuote?.(null);
     try {
       const [nextConfig, nextQuote] = await Promise.all([
         commerceRequest("/config"),
@@ -95,8 +107,9 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
       setQuote(nextQuote);
       onQuote?.(nextQuote);
       setStatus("ready");
-      trackEvent("native_checkout_quote", { pageType: "other", trigger: "shipping_tax_calculated" });
+      trackEvent("native_checkout_quote", { pageType: "other", trigger: "shipping_tax_calculated", cartImageIds: cart.items.map(item => item.imageId) });
     } catch (error) {
+      reportCheckoutIssue('quote');
       setStatus("error");
       setMessage(error.message);
     }
@@ -131,7 +144,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
                 items: Array.isArray(result.confirmationItems) ? result.confirmationItems : [],
               }));
               saveCart(emptyCart());
-              trackEvent("native_order_complete", { pageType: "other", trigger: "paypal" });
+              trackEvent("native_order_complete", { pageType: "other", trigger: "paypal", cartImageIds: cart.items.map(item => item.imageId) });
               setCompleted(result);
               setStatus("complete");
               setMessage("");
@@ -140,15 +153,18 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
               confirmationUrl.searchParams.set("mode", result.mode || "sandbox");
               window.location.assign(confirmationUrl.toString());
             } catch (error) {
+              reportCheckoutIssue("paypal_capture");
               setStatus("error");
               setMessage(error.message);
             }
           },
           onCancel() {
+            reportCheckoutIssue("paypal_cancel");
             setStatus("ready");
             setMessage("Checkout was canceled. Your cart is unchanged.");
           },
           onError(error) {
+            reportCheckoutIssue("paypal_error");
             setStatus("error");
             setMessage(error?.message || "PayPal reported an error.");
           },
@@ -158,7 +174,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
         button.setAttribute("type", "pay");
         button.setAttribute("size", "responsive");
         const click = async () => {
-          trackEvent("native_payment_start", { pageType: "other", trigger: "paypal" });
+          trackEvent("native_payment_start", { pageType: "other", trigger: "paypal", cartImageIds: cart.items.map(item => item.imageId) });
           setStatus("creating");
           setMessage("Saving the order before opening PayPal…");
           try {
@@ -172,6 +188,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
                 }),
             );
           } catch (error) {
+            reportCheckoutIssue("paypal_open");
             setStatus("error");
             setMessage(error.message);
           }
@@ -198,7 +215,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
                   items: Array.isArray(result.confirmationItems) ? result.confirmationItems : [],
                 }));
                 saveCart(emptyCart());
-                trackEvent("native_order_complete", { pageType: "other", trigger: "card" });
+                trackEvent("native_order_complete", { pageType: "other", trigger: "card", cartImageIds: cart.items.map(item => item.imageId) });
                 setCompleted(result);
                 setStatus("complete");
                 setMessage("");
@@ -207,6 +224,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
                 confirmationUrl.searchParams.set("mode", result.mode || "sandbox");
                 window.location.assign(confirmationUrl.toString());
               } catch (error) {
+                reportCheckoutIssue("card_capture");
                 setStatus("error");
                 setMessage(error.message);
                 throw error;
@@ -214,14 +232,17 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
             },
             onComplete() {},
             onCancel() {
+              reportCheckoutIssue("card_cancel");
               setStatus("ready");
               setMessage("Card checkout was canceled. Your cart is unchanged.");
             },
             onError(error) {
+              reportCheckoutIssue("card_error");
               setStatus("error");
               setMessage(error?.message || "PayPal reported a card-payment error.");
             },
             onWarn(data) {
+              reportCheckoutIssue("card_validation");
               setStatus("error");
               setMessage(data?.message || "Please check the card information and try again.");
             },
@@ -230,7 +251,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
           const guestButton = document.createElement("paypal-basic-card-button");
           guestContainer.appendChild(guestButton);
           const guestClick = async () => {
-            trackEvent("native_payment_start", { pageType: "other", trigger: "card" });
+            trackEvent("native_payment_start", { pageType: "other", trigger: "card", cartImageIds: cart.items.map(item => item.imageId) });
             setStatus("creating");
             setMessage("Saving the order before opening card checkout…");
             try {
@@ -244,6 +265,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
                   }),
               );
             } catch (error) {
+              reportCheckoutIssue("card_open");
               setStatus("error");
               setMessage(error?.message || "Card checkout could not be opened.");
             }
@@ -256,6 +278,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
         }
       } catch (error) {
         if (!cancelled) {
+          reportCheckoutIssue("paypal_setup");
           setStatus("error");
           setMessage(error.message);
         }
@@ -276,7 +299,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
 
   if (!expanded) {
     return (
-      <button type="button" onClick={() => { setExpanded(true); trackEvent("native_checkout_start", { pageType: "other", trigger: "secure_checkout" }); }} className="mt-4 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[#8a3d2b] px-4 text-sm font-semibold text-white shadow hover:bg-[#743120]">
+      <button type="button" onClick={() => { setExpanded(true); trackEvent("native_checkout_start", { pageType: "other", trigger: "secure_checkout", cartImageIds: cart.items.map(item => item.imageId) }); }} className="mt-4 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[#8a3d2b] px-4 text-sm font-semibold text-white shadow hover:bg-[#743120]">
         <LockKeyhole className="h-4 w-4" /> Continue to Secure Checkout
       </button>
     );
@@ -304,6 +327,7 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
           </select>
           <input required name="postalCode" value={form.postalCode} onChange={setField} placeholder="ZIP" autoComplete="postal-code" inputMode="numeric" className="min-w-0 rounded-md border border-stone-300 px-3 py-2 text-sm" />
         </div>
+        <label className="block text-sm text-stone-600">Coupon code (optional)<input name="couponCode" value={form.couponCode} onChange={setField} maxLength={40} autoComplete="off" placeholder="Enter coupon code" className="mt-1 w-full rounded-md border border-stone-300 px-3 py-2 text-sm" /></label>
         <button type="submit" disabled={status === "loading" || status === "creating" || status === "capturing"} className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-[#63776a] px-4 text-sm font-semibold text-white disabled:opacity-50">
           {status === "loading" ? <LoaderCircle className="h-4 w-4 animate-spin" /> : <BadgeDollarSign className="h-4 w-4" />}
           Calculate Shipping & Tax
@@ -312,10 +336,12 @@ export default function PayPalSandboxCheckout({ cart, onQuote }) {
 
       {quote && (
         <div className="mt-4 space-y-1 rounded-md border border-stone-200 bg-white p-3 text-sm">
-          <div className="flex justify-between"><span>Merchandise</span><span>{formatCurrency(quote.merchandiseCents / 100)}</span></div>
+          <div className="flex justify-between"><span>Merchandise</span><span>{formatCurrency((quote.merchandiseSubtotalCents ?? quote.merchandiseCents) / 100)}</span></div>
+          {quote.merchandiseDiscountCents > 0 && <div className="flex justify-between text-emerald-800"><span>Print discount</span><span>−{formatCurrency(quote.merchandiseDiscountCents / 100)}</span></div>}
           <div className="flex justify-between"><span>Shipping</span><span>{formatCurrency(quote.shippingCents / 100)}</span></div>
           <div className="flex justify-between"><span>Tax ({quote.tax.ratePercent.toFixed(2)}%)</span><span>{formatCurrency(quote.taxCents / 100)}</span></div>
           <div className="flex justify-between border-t border-stone-200 pt-2 font-bold"><span>Total</span><span>{formatCurrency(quote.totalCents / 100)}</span></div>
+          {quote.promotion && <p className="pt-1 text-xs text-emerald-800">{quote.promotion.name}{quote.promotion.code ? ` (${quote.promotion.code})` : ""}{quote.shippingDiscountCents > 0 ? ` · shipping savings ${formatCurrency(quote.shippingDiscountCents / 100)}` : ""}</p>}
           {isSandbox && <p className="pt-1 text-[10px] leading-relaxed text-amber-800">{quote.tax.configLabel} · {quote.tax.ruleLabel}</p>}
         </div>
       )}

@@ -1,5 +1,6 @@
 import { V3_DATACENTER_ASNS } from './model.js';
 import { entryVisit } from './entry-engagement.js';
+import { SHOPPING_STAGES } from './shopping.js';
 
 const EASTERN_TIME_ZONE = 'America/New_York';
 const diagnosticAsnList = V3_DATACENTER_ASNS.join(',');
@@ -93,24 +94,31 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     `).bind(...bounds, ...bounds),
     env.DB.prepare(`
       WITH scoped AS MATERIALIZED (
-        SELECT landing_page,entry_source,visitor_id,visitor_status,visitor_geo,image_geo,site_device,image_device,page_view_count,entry_evidence
+        SELECT landing_page,entry_source,visitor_id,visitor_status,visitor_geo,image_geo,site_device,image_device,page_view_count,entry_evidence,shopping_activity
         FROM analytics_v3_daily_sessions WHERE day BETWEEN ? AND ?
       ), visitor_statuses AS MATERIALIZED (
         SELECT visitor_id,MAX(CASE WHEN visitor_status='new' THEN 1 ELSE 0 END) saw_new,
           MAX(CASE WHEN visitor_status='returning' THEN 1 ELSE 0 END) saw_returning
         FROM scoped WHERE visitor_id IS NOT NULL AND visitor_id<>'' GROUP BY visitor_id
       ), geo_members AS (
-        SELECT 'visitor_geo' kind,COALESCE(visitor_geo,image_geo) label,visitor_id
+        SELECT 'visitor_geo' kind,COALESCE(visitor_geo,image_geo) label,visitor_id,shopping_activity
         FROM scoped WHERE COALESCE(visitor_geo,image_geo) IS NOT NULL AND visitor_id IS NOT NULL AND visitor_id<>''
-        UNION
-        SELECT 'image_geo',image_geo,visitor_id FROM scoped
+        UNION ALL
+        SELECT 'image_geo',image_geo,visitor_id,shopping_activity FROM scoped
         WHERE image_geo IS NOT NULL AND visitor_id IS NOT NULL AND visitor_id<>''
+      ), geo_visitors AS (
+        SELECT kind,label,visitor_id,
+          MAX(CASE WHEN ${SHOPPING_STAGES.map(({ event }) => `COALESCE(json_extract(shopping_activity,'$.${event}'),0)>0`).join(' OR ')} THEN 1 ELSE 0 END) shopping_activity,
+          ${SHOPPING_STAGES.map(({ event }) => `SUM(COALESCE(json_extract(shopping_activity,'$.${event}'),0)) ${event}`).join(',')}
+        FROM geo_members GROUP BY kind,label,visitor_id
       ), geo_mix AS (
         SELECT g.kind,g.label,COUNT(*) count,json_object(
           'newVisitors',SUM(v.saw_new),
           'returningVisitors',SUM(CASE WHEN v.saw_new=0 AND v.saw_returning=1 THEN 1 ELSE 0 END),
-          'unknownVisitors',SUM(CASE WHEN v.saw_new=0 AND v.saw_returning=0 THEN 1 ELSE 0 END)
-        ) visitor_mix FROM geo_members g JOIN visitor_statuses v USING(visitor_id)
+          'unknownVisitors',SUM(CASE WHEN v.saw_new=0 AND v.saw_returning=0 THEN 1 ELSE 0 END),
+          'shoppingVisitors',SUM(CASE WHEN g.shopping_activity>0 THEN 1 ELSE 0 END),
+          'shoppingEvents',json_object(${SHOPPING_STAGES.map(({ event }) => `'${event}',SUM(g.${event})`).join(',')})
+        ) visitor_mix FROM geo_visitors g JOIN visitor_statuses v USING(visitor_id)
         GROUP BY g.kind,g.label
       )
       SELECT 'entry_page' kind,landing_page label,COUNT(*) count,
@@ -150,9 +158,19 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
         SELECT image_id,MAX(NULLIF(page_path,'')) page_path,SUM(count) count,
           SUM(pricing_opens) pricing_opens,
           SUM(smugmug_clicks) smugmug_clicks,
-          SUM(email_clicks) email_clicks
+          SUM(email_clicks) email_clicks,
+          json_object(${SHOPPING_STAGES.map(({ event }) => `'${event}',SUM(COALESCE(json_extract(shopping_activity,'$.${event}'),0))`).join(',')}) shopping_events,
+          SUM(${SHOPPING_STAGES.map(({ event }) => `COALESCE(json_extract(shopping_activity,'$.${event}'),0)`).join('+')}) shopping_total
         FROM analytics_v3_daily_images WHERE day BETWEEN ? AND ?
         GROUP BY image_id
+      ), image_sessions AS MATERIALIZED (
+        SELECT DISTINCT i.image_id,i.day,j.value session_id
+        FROM analytics_v3_daily_images i,json_each(i.shopping_activity,'$._sessions') j
+        WHERE i.day BETWEEN ? AND ?
+      ), shopper_progress AS (
+        SELECT i.image_id,json_object(${SHOPPING_STAGES.map(({ event }) => `'${event}',SUM(COALESCE(json_extract(s.shopping_activity,'$.${event}'),0))`).join(',')}) shopping_progress
+        FROM image_sessions i JOIN analytics_v3_daily_sessions s ON s.day=i.day AND s.session_id=i.session_id
+        GROUP BY i.image_id
       ), top_viewed AS (
         SELECT image_id FROM grouped WHERE count>0
         ORDER BY count DESC,image_id LIMIT 25
@@ -165,12 +183,13 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
           ROW_NUMBER() OVER (PARTITION BY image_id ORDER BY geo_views DESC,country,region,city) geo_rank
         FROM image_geo_grouped
       )
-      SELECT g.image_id,g.page_path,g.count,g.pricing_opens,g.smugmug_clicks,g.email_clicks,
+      SELECT g.image_id,g.page_path,g.count,g.pricing_opens,g.smugmug_clicks,g.email_clicks,g.shopping_events,p.shopping_progress,
         x.country dominant_country,x.region dominant_region,x.city dominant_city,x.geo_views
       FROM grouped g LEFT JOIN image_geo_ranked x ON x.image_id=g.image_id AND x.geo_rank=1
-      WHERE g.pricing_opens>0 OR g.smugmug_clicks>0 OR g.email_clicks>0 OR g.image_id IN (SELECT image_id FROM top_viewed)
+      LEFT JOIN shopper_progress p ON p.image_id=g.image_id
+      WHERE g.shopping_total>0 OR g.pricing_opens>0 OR g.smugmug_clicks>0 OR g.email_clicks>0 OR g.image_id IN (SELECT image_id FROM top_viewed)
       ORDER BY g.count DESC,g.pricing_opens DESC,(g.smugmug_clicks+g.email_clicks) DESC,g.image_id
-    `).bind(...bounds, ...bounds),
+    `).bind(...bounds, ...bounds, ...bounds),
     env.DB.prepare(`
       WITH per_day AS MATERIALIZED (
         SELECT day,visitor_id,
@@ -209,7 +228,10 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     .slice(0, limit).map((row) => ({ label: row.label, count: Number(row.count || 0) }));
   const topSession = (kind, limit) => sessionRows.filter((row) => row.kind === kind)
     .map((row) => ({ label: row.label, count: Number(row.count || 0),
-      ...(row.visitor_mix ? { visitorMix: JSON.parse(row.visitor_mix) } : {}) }))
+      ...(row.visitor_mix ? (() => {
+        const { shoppingVisitors, shoppingEvents, ...visitorMix } = JSON.parse(row.visitor_mix);
+        return { visitorMix, ...(shoppingVisitors > 0 ? { shoppingVisitors, shoppingEvents } : {}) };
+      })() : {}) }))
     .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, limit);
   const imageViewGeoCounts = new Map(top('image_geo_views', Number.MAX_SAFE_INTEGER)
     .map((row) => [row.label, row.count]));
@@ -251,6 +273,8 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
       label: row.image_id, imageId: row.image_id, pagePath: row.page_path || null,
       count: Number(row.count || 0), pricingOpens: Number(row.pricing_opens || 0),
       smugmugClicks: Number(row.smugmug_clicks || 0), emailClicks: Number(row.email_clicks || 0),
+      shoppingEvents: row.shopping_events ? JSON.parse(row.shopping_events) : {},
+      shoppingProgress: row.shopping_progress ? JSON.parse(row.shopping_progress) : {},
       dominantGeo: [row.dominant_city, row.dominant_region, row.dominant_country].filter(Boolean).join(', ') || null,
       dominantGeoViews: Number(row.geo_views || 0)
     })),
@@ -272,6 +296,8 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     actionGroups: top('action_group', 10),
     actions: top('action', 25).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),
     cartFunnel: cartFunnelLabels.map((label) => ({ label, count: actionCounts.get(label) || 0 })),
+    checkoutIssues: [...actionCounts].filter(([label]) => /^Checkout (error|canceled):/.test(label))
+      .map(([label, count]) => ({ label, count })),
     visitorMix: {
       ...overallVisitorMix,
       daily: visitorMixRows.filter((row) => row.scope === 'daily').map((row) => ({

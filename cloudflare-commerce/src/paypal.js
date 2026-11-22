@@ -1,5 +1,5 @@
 import { centsToDecimal } from "../../src/lib/commerce/server/money.js";
-import { buildPayPalLineItems } from "./paypalLineItems.js";
+import { buildPayPalLineItems, buildPayPalBreakdown } from "./paypalLineItems.js";
 
 const PAYPAL_APIS = Object.freeze({
   sandbox: "https://api-m.sandbox.paypal.com",
@@ -71,11 +71,7 @@ export async function createPayPalOrder(env, localOrder, quote, shippingAddress)
       amount: {
         currency_code: "USD",
         value: centsToDecimal(quote.totalCents),
-        breakdown: {
-          item_total: { currency_code: "USD", value: centsToDecimal(quote.merchandiseCents) },
-          shipping: { currency_code: "USD", value: centsToDecimal(quote.shippingCents) },
-          tax_total: { currency_code: "USD", value: centsToDecimal(quote.taxCents) },
-        },
+        breakdown: buildPayPalBreakdown(quote),
       },
       items: buildPayPalLineItems(quote.items, quote.taxCents),
       shipping: {
@@ -119,13 +115,13 @@ export function assertPayPalOrderMatches(paypalOrder, localOrder) {
     throw new Error("PayPal order total does not match the saved K4 order.");
   }
   const breakdown = purchaseUnit.amount?.breakdown || {};
-  const expectedBreakdown = {
-    item_total: centsToDecimal(localOrder.merchandise_cents),
-    shipping: centsToDecimal(localOrder.shipping_cents),
-    tax_total: centsToDecimal(localOrder.tax_cents),
-  };
+  const savedQuote = JSON.parse(localOrder.quote_json || "{}");
+  const expectedBreakdown = buildPayPalBreakdown({
+    ...savedQuote, merchandiseCents: localOrder.merchandise_cents, shippingCents: localOrder.shipping_cents,
+    taxCents: localOrder.tax_cents, totalCents: localOrder.total_cents,
+  });
   for (const [key, value] of Object.entries(expectedBreakdown)) {
-    if (breakdown[key]?.currency_code !== "USD" || breakdown[key]?.value !== value) {
+    if (breakdown[key]?.currency_code !== "USD" || breakdown[key]?.value !== value.value) {
       throw new Error(`PayPal ${key} does not match the server-calculated K4 order.`);
     }
   }

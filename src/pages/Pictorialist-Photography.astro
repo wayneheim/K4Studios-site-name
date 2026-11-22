@@ -3,15 +3,11 @@ export const prerender = true;
 import BaseLayout         from '@/layouts/BaseLayout.astro';
 import LandingHeader      from '@/components/Landing-Header.jsx';
 import ImageBar2          from '@/components/ImageBar2.jsx';
-import TombstoneNav       from '@/components/TombstoneNav.jsx';
-import LandingRightImages from '@/components/LandingRightImages.jsx';
 // import FAQAccordion       from '@/components/FAQAccordion.jsx';
 import SiteFooter         from '@/components/Footer.astro';
-import MobileStoryImages  from '@/components/MobileStoryImages.jsx';
 import { getStructuredData } from '@/components/utils/getStructuredData.ts';
 
 import { getSideImages } from '@/components/utils/getSideImages.ts';
-import { sanitizeForClient } from '@/components/utils/normalizeImage.ts';
 
 import { landingWestern } from '@/data/Pictorialist-Photography/landingstones.ts';
 import { facingHistoryStory as westernStory } from '@/data/Pictorialist-Photography/story.ts';
@@ -20,6 +16,16 @@ import { facingHistoryStory as westernStory } from '@/data/Pictorialist-Photogra
 import { getLandingMeta } from '@/data/landingMeta.ts';
 
 import '@/styles/global.css';
+
+import { westernFineArtPage } from '@/data/doorway/western-fine-art';
+import EditionGroupHeading from '@/components/gallery/EditionGroupHeading.astro';
+import PrintSeriesIcon from '@/components/PrintSeriesIcon.jsx';
+import { buildEditionCatalog } from '@/utils/editionCatalog.js';
+import { extractImageId, getSemanticImageUrl } from '@/utils/imageProxy.js';
+import { getArtworkAltForImageSource } from '@/utils/imageAltLookup';
+import { resolveImageCommerce } from '@/data/commerceResolver.js';
+import '@/styles/edition-catalog.css';
+
 
 // ----------------------
 // DYNAMIC IMAGE FEATHERING LOGIC
@@ -99,34 +105,107 @@ const faqItems = [
   },
 ];
 
-function dedupeFaq(items: typeof faqItems) {
-  const seen = new Set<string>();
-  return items.filter((item) => {
-    const key = item.question.trim().toLowerCase();
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
+
+// Page-local reuse of the Western Fine Art grids; shared templates and copy stay untouched.
+const siteOrigin = 'https://www.k4studios.com';
+const gridTitles = ['Western Narratives Color', 'Western Narratives B/W', 'Cowboy Portraits Color', 'Cowboy Portraits B/W', 'Native American Portraits', 'Painterly Landscapes'];
+const normalizedGridSections = [0, 4, 1, 5, 2, 3].map((sourceIndex, index) => {
+  const section = westernFineArtPage.gridSections[sourceIndex];
+  return {
+    ...section,
+    title: gridTitles[index],
+    slug: gridTitles[index].toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+    items: section.items.filter((image: any) => image?.id && image.id !== 'i-k4studios' && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(image.visibility ?? 'show').trim().toLowerCase())),
+  };
+});
+const cleanForDisplay = (value = '') => String(value).replace(/[\u0000-\u001F]+/g, ' ').replace(/\r?\n|\r/g, ' ').trim();
+const getSectionProxySrc = (image: any, galleryPath: string, size = 'l') => getSemanticImageUrl(image, { galleryPath }, size);
+const getCardSeries = (image: any, galleryPath: string) => resolveImageCommerce({ image, galleryPath, pageUrl: `${siteOrigin}${galleryPath}/${image.id}` })?.tiers || [];
+const forceImageSize = (src = '', size = 's', galleryPath = '') => {
+  const id = extractImageId(src);
+  return id ? getSemanticImageUrl({ id }, { galleryPath }, size) : src;
+};
+const artworkAlt = (image: any) => `${cleanForDisplay(image.title)} - ${cleanForDisplay(image.alt || image.description)}`;
+const artwork = (sectionIndex: number, id: string) => {
+  const section = normalizedGridSections[sectionIndex];
+  const image = section.items.find((item: any) => item.id === id);
+  if (!image?.title || !image?.alt) throw new Error(`Missing pictorialist example: ${id}`);
+  return { ...image, href: `${section.galleryPath}/${id}`, src: getSectionProxySrc(image, section.galleryPath), alt: artworkAlt(image) };
+};
+const openingExamples = [artwork(0, 'i-LCspRF4'), artwork(2, 'i-ncFcHDM'), artwork(5, 'i-SNtZNVm')];
+const workedExamples: Record<string, Array<{ from: number; to: number; image: ReturnType<typeof artwork> }>> = {
+  'Core Principles of Pictorialist Photography': [
+    { from: 0, to: 2, image: artwork(0, 'i-gxMVNh3') },
+    { from: 2, to: 4, image: artwork(4, 'i-rRdrQBg') },
+    { from: 4, to: 5, image: artwork(2, 'i-k4b6c5b') },
+  ],
+  'Characteristics of Pictorialist Photography': [
+    { from: 0, to: 2, image: artwork(2, 'i-QWcX7JT') },
+    { from: 2, to: 3, image: artwork(5, 'i-G6gftd8') },
+    { from: 3, to: 5, image: artwork(5, 'i-g7SCMTD') },
+  ],
+};
+const stepInsideLinks = [
+  { href: '/Painterly-Portrait-Photography', label: 'Painterly Portrait Photography' },
+  { href: '/Painterly-Landscape-Photography', label: 'Painterly Landscape Photography' },
+  { href: '/Painterly-Transportation-Photography', label: 'Painterly Transportation Photography' },
+  { href: '/WWII-Photography', label: 'WWII Photography' },
+  { href: '/Roaring-20s-Photography', label: 'Roaring 20s Photography' },
+  { href: '/Western-Fine-Art', label: 'Western Fine Art' },
+  { href: '/One-Image-Movie', label: 'One-Image Movie' },
+];
+// Lift answers from the frozen essay, preserving the original wording.
+const essaySection = (heading: string) => westernStorySections.find(section => section.subhead === heading)!;
+const modernQuestions = essaySection('Modern Pictorialism - Key Questions Answered').list!.map(item => {
+  const [, question, answer] = item.match(/^<strong>(.*?)<\/strong><br\s*\/>(.*)$/)!;
+  return { question, answers: [answer] };
+});
+const retainedQuestions = faqItems.filter(item => !['Who were important pictorialist photographers?', 'Why does pictorialism matter today?'].includes(item.question)).map(({ question, answer }) => ({ question, answers: [answer] }));
+const liftedQuestions = [
+  { question: 'What are some examples of pictorialist photography?', answers: [essaySection('What Is Modern Pictorialism Photography?').paragraphs![1], workedExamples['Core Principles of Pictorialist Photography'].map(({ image }) => `<a href="#example-${image.id}">${image.title}</a>`).join('; ')] },
+  { question: 'Who are some famous pictorialists?', answers: [westernStorySections[0].paragraphs![2]] },
+  { question: 'Why did pictorialism lose popularity?', answers: [essaySection('Why Pictorialism Still Matters').paragraphs![0]] },
+  { question: 'Why was pictorialism controversial?', answers: [essaySection('A Brief History of Pictorialism').paragraphs![0], westernStorySections[0].paragraphs![2]] },
+];
+const mergedFaq = new Map<string, { question: string; answers: string[] }>();
+for (const item of [...modernQuestions, ...retainedQuestions, ...liftedQuestions]) {
+  const previous = mergedFaq.get(item.question);
+  if (previous) previous.answers.push(...item.answers.filter(answer => !previous.answers.includes(answer)));
+  else mergedFaq.set(item.question, { ...item, answers: [...item.answers] });
 }
+const visibleFaqItems = [...mergedFaq.values()];
+const textOnly = (html: string) => html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+const collectionItemList = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${siteOrigin}${pagePath}#itemlist`,
+  itemListElement: normalizedGridSections.flatMap(section => buildEditionCatalog(section.items.slice(0, section.limit), image => getCardSeries(image, section.galleryPath)).orderedEntries.map(({ item }) => ({
+    '@type': 'ListItem', name: cleanForDisplay(item.title), url: `${siteOrigin}${section.galleryPath}/${item.id}`,
+  }))).map((item, index) => ({ ...item, position: index + 1 })),
+}).replace(/</g, '\\u003c');
+
+const truncateStoryExcerpt = (text: string, maxLen = 100) => {
+  const cleaned = cleanForDisplay(text);
+  if (!cleaned) return "";
+  if (cleaned.length <= maxLen) return cleaned;
+  const wordSafe = cleaned.slice(0, maxLen).replace(/\s+\S*$/, "").trimEnd();
+  return `${wordSafe || cleaned.slice(0, maxLen).trimEnd()}...`;
+};
+
+const truncateBookendExcerpt = (text: string, headLen = 100, tailLen = 300) => {
+  const cleaned = cleanForDisplay(text);
+  if (!cleaned) return "";
+  const totalLen = headLen + tailLen;
+  if (cleaned.length <= totalLen) return cleaned;
+  const head = cleaned.slice(0, headLen).replace(/\s+\S*$/, "").trimEnd();
+  const tail = cleaned.slice(-tailLen).replace(/^\S+\s+/, "").trimStart();
+  return `${head || cleaned.slice(0, headLen).trimEnd()}\u00a0.\u00a0.\u00a0.\u00a0\u00a0${tail || cleaned.slice(-tailLen).trimStart()}`;
+};
 
 const faqStructuredData = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `https://www.k4studios.com${pagePath}#faq`,
-  mainEntity: dedupeFaq(faqItems)
-    .filter((item) => ![
-      "Who were important pictorialist photographers?",
-      "Why does pictorialism matter today?",
-    ].includes(item.question))
-    .map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-    })),
-});
+  '@context': 'https://schema.org', '@type': 'FAQPage', '@id': `https://www.k4studios.com${pagePath}#faq`,
+  mainEntity: visibleFaqItems.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answers.map(textOnly).join(' ') } })),
+}).replace(/</g, '\\u003c');
 
 const articleStructuredData = JSON.stringify({
   "@context": "https://schema.org",
@@ -158,7 +237,7 @@ const articleStructuredData = JSON.stringify({
 
 <BaseLayout
   structuredDataJSON={structuredData}
-  extraStructuredDataJSON={[articleStructuredData, faqStructuredData]}
+  extraStructuredDataJSON={[articleStructuredData, faqStructuredData, collectionItemList]}
   title={`${landingWestern.title} - ${landingWestern.subtitle}`}
   meta={landingMeta}
 >
@@ -193,51 +272,218 @@ const articleStructuredData = JSON.stringify({
       </div>
     </section>
 
-    <div class="py-5">
-      <TombstoneNav items={landingWestern.tombstones} />
-    </div>
-
-    <section class="story-layout">
-      <div class="text-column">
-        <section class="story-section">
-          {westernStorySections.map((section) => (
-            <article class="story-block">
-              {section.title && (
-                <h2 class="slide-in-left" set:html={section.title} />
-              )}
-              {section.subhead && (
-                <h3 class="slide-in-left" set:html={section.subhead} />
-              )}
-              {section.tagline && (
-                <h4 class="tagline reveal-on-scroll" set:html={section.tagline} />
-              )}
-              {section.paragraphs?.map((para) => (
-                <p class="reveal-on-scroll" set:html={para} />
+    <section class="story-section">
+      {westernStorySections.map((section) => (
+        <article class:list={['story-block', { 'story-block--collections': section.subhead === 'What Lives in These Galleries' }]} id={section.subhead === 'Core Principles of Pictorialist Photography' ? 'worked-examples' : section.subhead === 'Modern Pictorialism - Key Questions Answered' ? 'faq' : undefined}>
+          {section.title && <h2 class="slide-in-left" set:html={section.title} />}
+          {section.subhead && <h3 class="slide-in-left" set:html={section.subhead} />}
+          {section.tagline && <h4 class="tagline reveal-on-scroll" set:html={section.tagline} />}
+          {section.paragraphs?.map(para => <p class="reveal-on-scroll" set:html={para} />)}
+          {section.subhead === 'A Short Definition' && (
+            <div class="example-images" aria-label="Examples of modern pictorialist photography">
+              {openingExamples.map((image, index) => (
+                <figure>
+                  <a href={image.href}><img src={image.src} alt={image.alt} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" /></a>
+                  <figcaption><a href={image.href}>{image.title}</a></figcaption>
+                </figure>
               ))}
-              {section.list && section.list.length > 0 && (
-                <ul>
-                  {section.list.map((item) => (
-                    <li class="reveal-on-scroll" set:html={item} />
-                  ))}
-                </ul>
-              )}
-            </article>
-          ))}
-        </section>
+            </div>
+          )}
+          {workedExamples[section.subhead || ''] ? workedExamples[section.subhead || ''].map(({ from, to, image }) => (
+            <div class="painterly-focus-grid" id={`example-${image.id}`}>
+              <figure class="painterly-focus-side">
+                <a href={image.href}><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /></a>
+                <figcaption><a href={image.href}>{image.title}</a></figcaption>
+              </figure>
+              <ul class="painterly-focus-main">{section.list!.slice(from, to).map(item => <li set:html={item} />)}</ul>
+            </div>
+          )) : section.subhead === 'Modern Pictorialism - Key Questions Answered' ? (
+            <div class="lesson-faq">
+              {visibleFaqItems.map(item => (
+                <details>
+                  <summary>{item.question}</summary>
+                  <div class="faq-answer">{item.answers.map(answer => <p set:html={answer} />)}</div>
+                </details>
+              ))}
+            </div>
+          ) : section.list?.length > 0 && <ul>{section.list.map(item => <li class="reveal-on-scroll" set:html={item} />)}</ul>}
+          {section.subhead === 'What Lives in These Galleries' && (
+            <div class="catalog-section-stack" id="collection-grid">
+              {normalizedGridSections.map((section, sectionIndex) => {
+                const sectionCatalog = buildEditionCatalog(section.items.slice(0, section.limit), item => getCardSeries(item, section.galleryPath));
+                const sectionCount = section.items.length;
+                const sectionKicker = `Selected Works - ${sectionCount} in Series`;
+                const thumbId = extractImageId(section.ctaThumb);
+                const thumbImage = normalizedGridSections.flatMap(group => group.items).find(item => item.id === thumbId);
+                const sectionCtaAlt = thumbImage ? artworkAlt(thumbImage) : getArtworkAltForImageSource(section.ctaThumb, section.title);
+                return (
+              <section class="catalog-gallery-section" id={`section-${section.slug}`} aria-labelledby={`catalog-section-heading-${sectionIndex + 1}`}>
+                <div class="catalog-section-heading">
+                  {section.timeZone && <p class="catalog-section-timezone">{section.timeZone}</p>}
+                  <p class="catalog-section-kicker">{sectionKicker}</p>
+                  <h2 id={`catalog-section-heading-${sectionIndex + 1}`}>{section.title}</h2>
+                  {section.description && <p>{section.description}</p>}
+                </div>
 
-        <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages) as any} displayCount={3} />
-      </div>
+                <div class="ssr-grid ssr-grid--catalog-section">
+                  {sectionCatalog.orderedEntries.map(({ item, idx, cardSeries, openEditionOnly }, displayIndex: number) => {
+                  const imageUrl = getSectionProxySrc(item, section.galleryPath, 's');
+                  const srcsetParts = [
+                    `${getSectionProxySrc(item, section.galleryPath, 's')} 400w`,
+                    `${getSectionProxySrc(item, section.galleryPath, 'm')} 600w`
+                  ].join(", ");
+                  const linkUrl = `${section.galleryPath}/${item.id}`;
+                  const collectorNotesHref = `${linkUrl}#collector-notes`;
+                  const title = cleanForDisplay(item.title);
 
-      <div class="sidebar-column hidden md:block">
-        <div class="sample-fade reveal-on-scroll">
-          <LandingRightImages
-            client:load
-            heading="Collection Samples"
-            images={sanitizeForClient(featheredImages) as any}
-            displayCount={3}
-          />
-        </div>
-      </div>
+                  let altText: string;
+                  if (item.alt) {
+                    altText = cleanForDisplay(item.alt);
+                  } else if (item.description) {
+                    const firstSentence = item.description.split(/[.!?]/)[0];
+                    altText = cleanForDisplay(firstSentence.slice(0, 150));
+                  } else if (item.keywords?.length > 0) {
+                    const topKeywords = item.keywords.slice(0, 4).join(", ");
+                    altText = `Western wall art photograph: ${topKeywords}`;
+                  } else {
+                    altText = `Western wall art print: ${title} by Wayne Heim`;
+                  }
+
+                  const storyExcerpt = truncateStoryExcerpt(item.story || "", 100);
+                  const collectorNoteRaw = item.description || "";
+                  const collectorNoteTeaser = truncateBookendExcerpt(collectorNoteRaw, 100, 300);
+                  const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
+
+                  return (
+                    <>
+                    {!sectionCatalog.hasSplit && displayIndex === 0 && Number.isFinite(sectionCatalog.openPrice) && <EditionGroupHeading kind="open" price={sectionCatalog.openPrice} anchorId={'open-edition-prints-' + section.slug} />}
+                    {!sectionCatalog.hasSplit && displayIndex === 0 && Number.isFinite(sectionCatalog.limitedPrice) && <EditionGroupHeading title="Limited Edition Prints" kind="limited" price={sectionCatalog.limitedPrice} />}
+                    {sectionCatalog.hasSplit && displayIndex === 0 && <EditionGroupHeading title="Limited Edition Prints" kind="limited" price={sectionCatalog.limitedPrice} />}
+                    {sectionCatalog.hasSplit && displayIndex === sectionCatalog.limitedCount && <EditionGroupHeading kind="open" price={sectionCatalog.openPrice} anchorId={'open-edition-prints-' + section.slug} />}
+                    <div
+                      class:list={["ssr-card", { "ssr-card--open-edition": openEditionOnly }]}
+                      id={`${sectionIndex + 1}-${item.id}`}
+                      data-artwork-number={idx + 1}
+                      data-original-index={idx}
+                      data-series={cardSeriesKeys}
+                      data-edition-group={openEditionOnly ? "open" : "limited"}
+                      data-title={title}
+                    >
+                      <a
+                        href={linkUrl}
+                        class="ssr-card-link"
+                        data-context-image-link
+                        data-image-id={item.id}
+                        data-gallery-id={section.galleryPath}
+                        data-artwork-number={idx + 1}
+                      >
+                        <img
+                          class="ssr-card-image"
+                          src={imageUrl}
+                          srcset={srcsetParts || undefined}
+                          sizes="(max-width: 520px) calc(100vw - 32px), (max-width: 768px) calc((100vw - 48px) / 2), 250px"
+                          alt={`${title} - ${altText}`}
+                          loading="lazy"
+                          decoding="async"
+                          fetchpriority="low"
+                        />
+                        <div class="ssr-card-content">
+                          <div class="card-meta-row">
+                            <span class="card-number">Image {idx + 1} of {sectionCount}</span>
+                            {cardSeries.length > 0 && (
+                              <span class="card-series-strip" aria-label="Available print series">
+                                {cardSeries.map((series: any, seriesIdx: number) => (
+                                  <>
+                                    <span
+                                      class="card-series-icon"
+                                      title={`${series.label} Series Member`}
+                                      aria-label={`${series.label} Series Member`}
+                                    >
+                                      <PrintSeriesIcon seriesKey={series.key} />
+                                    </span>
+                                    {seriesIdx < cardSeries.length - 1 && <span class="card-series-separator" aria-hidden="true">|</span>}
+                                  </>
+                                ))}
+                              </span>
+                            )}
+                          </div>
+                          <h3>{title}</h3>
+                          <p class="print-cue sr-only">Fine art print available</p>
+                          {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
+                          <span class="card-cta">
+                            <span class="card-cta-desktop">Explore Story | Order Fine Art Print &rarr;</span>
+                            <span class="card-cta-mobile">Explore Story | Order</span>
+                          </span>
+                        </div>
+                      </a>
+                      <button
+                        type="button"
+                        class="collector-notes-trigger"
+                        data-notes-trigger
+                        aria-label="View image description preview"
+                      >
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 18v-6a5 5 0 0 1 10 0v6" />
+                  <path d="M5 21v-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1" />
+                  <path d="M12 14v4" />
+                  <path d="M12 2v2" />
+                  <path d="M4.93 4.93 6.34 6.34" />
+                  <path d="M19.07 4.93 17.66 6.34" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                </svg>
+                      </button>
+                      <div class="collector-note-overlay" data-notes-overlay>
+                        <p class="collector-note-kicker">Image Description</p>
+                        <p class="collector-note-teaser">{collectorNoteTeaser || "Image description preview available for this artwork."}</p>
+                        <a class="collector-note-link" href={collectorNotesHref}>View full image and details &rarr;</a>
+                      </div>
+                    </div>
+                    </>
+                  );
+                })}
+
+                {section.alternateCtaHref ? (
+                  <div class="ssr-card catalog-collection-cta catalog-collection-cta--split">
+                    <a class="catalog-collection-cta__inner catalog-collection-cta__primary" href={section.allHref}>
+                        {section.ctaThumb && (
+                          <span class="catalog-collection-cta__tombstone" aria-hidden="true">
+                            <img src={forceImageSize(section.ctaThumb, 's', section.galleryPath)} alt={sectionCtaAlt} loading="lazy" decoding="async" />
+                          </span>
+                        )}
+                        <span class="catalog-collection-cta__kicker">Full Collection</span>
+                        <strong>{section.ctaLabel || `See all ${section.title}`}</strong>
+                        <small>{sectionCount} works in this gallery</small>
+                    </a>
+                    <a class="catalog-collection-cta__alternate" href={section.alternateCtaHref}>
+                      <span>{section.alternateCtaKicker || "Alternative View"}</span>
+                      <strong>{section.alternateCtaLabel || "See the black and white collection"}</strong>
+                      {section.alternateCtaCount && <small>{section.alternateCtaCount}</small>}
+                    </a>
+                  </div>
+                ) : (
+                  <a class="ssr-card catalog-collection-cta" href={section.allHref}>
+                    <span class="catalog-collection-cta__inner">
+                      {section.ctaThumb && (
+                        <span class="catalog-collection-cta__tombstone" aria-hidden="true">
+                          <img src={forceImageSize(section.ctaThumb, 's', section.galleryPath)} alt={sectionCtaAlt} loading="lazy" decoding="async" />
+                        </span>
+                      )}
+                      <span class="catalog-collection-cta__kicker">Full Collection</span>
+                      <strong>{section.ctaLabel || `See all ${section.title}`}</strong>
+                      <small>{sectionCount} works in this gallery</small>
+                    </span>
+                  </a>
+                )}
+                </div>
+              </section>
+                );
+              })}
+            </div>
+          )}
+          {section.subhead === 'Step Inside' && <p class="step-inside-links">{stepInsideLinks.map((link, index) => <>{index > 0 && ' | '}<a href={link.href}>{link.label}</a></>)}</p>}
+        </article>
+      ))}
     </section>
 
     <SiteFooter class="pt-8 pb-12" />
@@ -308,7 +554,7 @@ const articleStructuredData = JSON.stringify({
     .story-section {
       letter-spacing: -0.03em;
     }
-    .story-block h2 {
+    .story-block > h2 {
       letter-spacing: -0.05em;
       font-size: 1.4rem !important;
       margin-top: -0.59rem;
@@ -362,12 +608,12 @@ const articleStructuredData = JSON.stringify({
   .story-block {
     margin-bottom: 2.5rem;
   }
-  .story-block h2 {
+  .story-block > h2 {
     font-weight: 500;
     font-size: 1.65rem;
     margin-bottom: 0.55rem;
   }
-  .story-block h3 {
+  .story-block > h3 {
     font-weight: 500;
     font-size: 1.2rem;
     margin-top: -0.5rem;
@@ -380,7 +626,7 @@ const articleStructuredData = JSON.stringify({
     margin-bottom: 1rem;
     color: #7a6250;
   }
-  .story-block p {
+  .story-block > p {
     line-height: 1.6;
     margin-bottom: 1rem;
     font-size: 1rem;
@@ -438,5 +684,806 @@ const articleStructuredData = JSON.stringify({
     transform: translateY(0);
     visibility: visible;
   }
+
+
+
+    .ssr-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(245px,1fr));
+      gap:24px;
+      margin:34px auto 44px;
+      max-width:1400px;
+      padding:0 34px;
+      align-items:stretch;
+    }
+    .catalog-section-stack {
+      max-width:1440px;
+      margin:16px auto 44px;
+    }
+    .catalog-gallery-section {
+      margin:0 auto 54px;
+      scroll-margin-top:92px;
+    }
+    .catalog-section-heading {
+      width:min(1400px, calc(100% - 68px));
+      margin:0 auto 24px;
+      padding:24px 0 22px;
+      border-top:1px solid #dccfbe;
+      border-bottom:1px solid #dccfbe;
+      text-align:left;
+      box-sizing:border-box;
+    }
+    .catalog-section-kicker {
+      margin:0 0 8px;
+      color:#7a6047;
+      font-size:.72rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .catalog-section-timezone {
+      margin:0 0 6px;
+      color:#8b3f23;
+      font-size:.86rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .catalog-section-heading h2 {
+      margin:0;
+      color:#231a13;
+      font-size:clamp(1.65rem, 2.8vw, 2.35rem);
+      line-height:1.16;
+      font-weight:700;
+      text-wrap:balance;
+    }
+    .catalog-section-heading p:not(.catalog-section-kicker):not(.catalog-section-timezone) {
+      max-width:none;
+      margin:12px 0 0;
+      color:#4f4034;
+      font-size:.96rem;
+      line-height:1.68;
+    }
+    .ssr-grid--catalog-section {
+      margin:0 auto;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+    }
+    .catalog-collection-cta {
+      min-height:390px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:2px solid #b46a5f;
+      background:
+        linear-gradient(180deg, rgba(255,253,249,.97), rgba(245,241,236,.98));
+      text-decoration:none;
+      color:#2f241b;
+    }
+    .catalog-collection-cta--split {
+      display:grid;
+      grid-template-rows:minmax(0, 1fr) auto;
+      align-items:stretch;
+      justify-content:stretch;
+      padding:0;
+      overflow:hidden;
+    }
+    .catalog-collection-cta:hover,
+    .catalog-collection-cta:focus-visible {
+      border-color:#9b7451;
+      box-shadow:0 0 0 2px rgba(155,116,81,.35), 0 10px 24px rgba(48,34,23,.22);
+      outline:none;
+    }
+    .catalog-collection-cta--split:hover,
+    .catalog-collection-cta--split:focus-within {
+      border-color:#9b7451;
+      box-shadow:0 0 0 2px rgba(155,116,81,.35), 0 10px 24px rgba(48,34,23,.22);
+    }
+    .catalog-collection-cta__inner {
+      display:grid;
+      gap:10px;
+      padding:28px;
+      text-align:center;
+      justify-items:center;
+    }
+    .catalog-collection-cta__primary {
+      color:inherit;
+      text-decoration:none;
+    }
+    .catalog-collection-cta--split .catalog-collection-cta__primary {
+      display:grid;
+      gap:8px;
+      place-content:center;
+      justify-items:center;
+      min-height:255px;
+      padding:22px 24px 16px;
+    }
+    .catalog-collection-cta__primary:hover,
+    .catalog-collection-cta__primary:focus-visible,
+    .catalog-collection-cta__alternate:hover,
+    .catalog-collection-cta__alternate:focus-visible {
+      outline:none;
+    }
+    .catalog-collection-cta__tombstone {
+      position:relative;
+      width:86px;
+      aspect-ratio:3.5 / 4;
+      margin:0 auto 8px;
+      background:#fffdf9;
+      border:2px solid #bda27c;
+      border-radius:0 0 25% 25% / 0 0 20% 20%;
+      box-shadow:
+        inset 0 -1px 1px rgba(255,255,255,.6),
+        inset 0 1px 2px rgba(0,0,0,.08),
+        0 10px 22px rgba(48,34,23,.13);
+      overflow:hidden;
+      display:block;
+      transition:border-color .72s ease, box-shadow .72s ease, filter .72s ease;
+    }
+    .catalog-collection-cta:hover .catalog-collection-cta__tombstone,
+    .catalog-collection-cta:focus-visible .catalog-collection-cta__tombstone,
+    .catalog-collection-cta--split:focus-within .catalog-collection-cta__tombstone {
+      border-color:#a44a3f;
+      box-shadow:0 0 0 2px rgba(164,74,63,.38), 0 10px 22px rgba(48,34,23,.22);
+    }
+    .catalog-collection-cta__tombstone img {
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 15%;
+      background:#efe7dc;
+    }
+    .catalog-collection-cta__kicker {
+      color:#7a6047;
+      font-size:.72rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .catalog-collection-cta strong {
+      color:#231a13;
+      font-size:1.3rem;
+      line-height:1.25;
+    }
+    .catalog-collection-cta small {
+      color:#6b594b;
+      font-size:.86rem;
+      line-height:1.4;
+    }
+    .catalog-collection-cta__alternate {
+      display:grid;
+      gap:6px;
+      padding:16px 20px 18px;
+      border-top:1px solid rgba(122,96,71,.34);
+      background:linear-gradient(180deg, rgba(60,55,50,.04), rgba(36,32,29,.09));
+      color:#2f241b;
+      text-align:center;
+      text-decoration:none;
+    }
+    .catalog-collection-cta__alternate span {
+      color:#6b594b;
+      font-size:.66rem;
+      letter-spacing:.12em;
+      line-height:1.2;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .catalog-collection-cta__alternate strong {
+      color:#2f241b;
+      font-size:1rem;
+      line-height:1.26;
+    }
+    .catalog-collection-cta__alternate small {
+      color:#6b594b;
+      font-size:.78rem;
+      line-height:1.3;
+    }
+    .catalog-collection-cta__alternate:hover,
+    .catalog-collection-cta__alternate:focus-visible {
+      background:linear-gradient(180deg, rgba(60,55,50,.08), rgba(36,32,29,.14));
+    }
+
+    .ssr-card {
+      --card-overlap:82px;
+      --card-border:#b46a5f;
+      --card-hover-border:#a44a3f;
+      --card-hover-halo:219, 72, 53;
+      position:relative;
+      isolation:isolate;
+      content-visibility:auto;
+      contain-intrinsic-size:520px;
+      border:1px solid var(--card-border);
+      border-radius:6px;
+      background:#fffdf9;
+      box-shadow:0 8px 22px rgba(48,34,23,.08);
+      overflow:hidden;
+      transition:border-color .32s ease, box-shadow .32s ease;
+    }
+    .sr-only {
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0, 0, 0, 0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .ssr-card:hover,
+    .ssr-card:focus-within {
+      border-color:var(--card-hover-border);
+      box-shadow:0 0 0 2px rgba(var(--card-hover-halo), 0.5), 0 10px 24px rgba(48,34,23,.41);
+    }
+    .ssr-card-link {
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      text-decoration:none;
+      color:inherit;
+      cursor:pointer;
+    }
+
+    .ssr-card-image {
+      display:block;
+      width:100%;
+      height:auto;
+      background:#efe7dc;
+      transition:filter .28s ease, opacity .28s ease;
+    }
+
+    .ssr-card:hover .ssr-card-image,
+    .ssr-card:focus-within .ssr-card-image {
+      filter:saturate(1.04) contrast(1.02);
+    }
+
+    .ssr-card-content {
+      display:flex;
+      flex-direction:column;
+      padding:14px 15px 16px;
+      min-height:172px;
+      height:252px;
+      overflow:hidden;
+      position:relative;
+      margin-top:calc(var(--card-overlap) * -1);
+      z-index:1;
+      background:#fffdf9;
+      border-top:1px solid #e6d9ca;
+      width:100%;
+      transition:transform 3.7s cubic-bezier(.16, 1, .3, 1);
+      transform:translateY(0);
+    }
+
+    .ssr-card:hover .ssr-card-content,
+    .ssr-card:focus-within .ssr-card-content {
+      transform:translateY(var(--card-overlap));
+      justify-content:flex-start;
+      transition-duration:1.35s;
+    }
+
+    .ssr-card-link:focus-visible {
+      outline:2px solid #b69570;
+      outline-offset:-2px;
+    }
+
+    .card-number {
+      font-size:.72rem;
+      color:#8a7562;
+      display:block;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .card-meta-row {
+      position:static;
+      display:block;
+      margin-bottom:6px;
+      padding-right:58px;
+      min-width:0;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
+    }
+
+    .ssr-card-content h3 {
+      font-size:1rem;
+      line-height:1.35;
+      font-weight:700;
+      color:#2d2118;
+      margin:0 0 8px;
+      display:-webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-line-clamp:3;
+      overflow:hidden;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
+    }
+    .card-series-strip {
+      display:flex;
+      position:absolute;
+      top:14px;
+      right:15px;
+      align-items:center;
+      justify-content:flex-end;
+      gap:2px;
+      color:#6f9aab;
+      font-size:.76rem;
+      line-height:1;
+      opacity:.78;
+      white-space:nowrap;
+      flex-wrap:nowrap;
+      flex:0 0 auto;
+    }
+    .card-series-icon {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:11px;
+    }
+    .card-series-separator {
+      color:#cdbba6;
+      font-size:.56rem;
+      opacity:.9;
+    }
+    .print-cue {
+      margin:0 0 10px;
+      color:#7b5c3e;
+      font-size:.86rem;
+      font-weight:700;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
+    }
+    .story-excerpt {
+      color:#5d4b3e;
+      font-size:.84rem;
+      line-height:1.45;
+      margin:0 0 14px;
+      display:-webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-line-clamp:5;
+      overflow:hidden;
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
+    }
+    .card-number {
+      transition:opacity 2.2s ease, transform 2.2s ease, max-height 2.2s ease, margin 2.2s ease;
+    }
+    .card-cta {
+      margin-top:auto;
+      color:#85644b;
+      font-size:calc(.84rem - 1px);
+      letter-spacing:-.024em;
+      white-space:nowrap;
+      border-top:1px solid #e3d7c9;
+      padding-top:10px;
+    }
+    .card-cta-mobile {
+      display:none;
+    }
+    .ssr-card:hover .card-cta,
+    .ssr-card:focus-within .card-cta {
+      margin-top:0;
+      color:#a44a3f;
+      font-weight:800;
+      border-top-color:rgba(164,74,63,.42);
+    }
+    .ssr-card:hover .card-number,
+    .ssr-card:focus-within .card-number,
+    .ssr-card:hover .card-meta-row,
+    .ssr-card:focus-within .card-meta-row,
+    .ssr-card:hover .ssr-card-content h3,
+    .ssr-card:focus-within .ssr-card-content h3,
+    .ssr-card:hover .print-cue,
+    .ssr-card:focus-within .print-cue,
+    .ssr-card:hover .story-excerpt,
+    .ssr-card:focus-within .story-excerpt {
+      opacity:0;
+      transform:translateY(-6px);
+      max-height:0;
+      margin:0;
+      overflow:hidden;
+      pointer-events:none;
+      transition-duration:.8s;
+    }
+    .collector-notes-trigger {
+      position:absolute;
+      top:10px;
+      right:10px;
+      z-index:4;
+      width:24px;
+      height:24px;
+      border:0;
+      border-radius:0;
+      background:transparent;
+      color:#c08a1f;
+      opacity:.92;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      transition:color .18s ease, opacity .18s ease;
+    }
+    .collector-notes-trigger::before {
+      content:"";
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:18px;
+      height:22px;
+      transform:translate(-50%, -50%);
+      border:0;
+      border-radius:4px;
+      background:rgba(0,0,0,.72);
+      transition:background .18s ease, border-color .18s ease;
+      pointer-events:none;
+    }
+    .collector-notes-trigger :global(svg) {
+      position:relative;
+      z-index:1;
+      width:22px;
+      height:22px;
+    }
+    .collector-notes-trigger:hover,
+    .collector-notes-trigger:focus-visible {
+      color:#dda52a;
+      opacity:1;
+      outline:none;
+    }
+    .collector-notes-trigger:hover::before,
+    .collector-notes-trigger:focus-visible::before {
+      background:rgba(0,0,0,.72);
+    }
+    .collector-note-overlay {
+      position:absolute;
+      top:44px;
+      left:10px;
+      right:10px;
+      z-index:3;
+      padding:10px 11px;
+      border:1px solid rgba(188, 173, 158, .86);
+      border-radius:8px;
+      background:rgba(218, 209, 198, .96);
+      box-shadow:0 10px 22px rgba(35, 26, 19, .2);
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      transform:translateY(4px);
+      transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
+    }
+    .collector-note-kicker {
+      margin:0 0 4px;
+      color:#7a6047;
+      font-size:.66rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .collector-note-teaser {
+      margin:0;
+      color:#3f3228;
+      font-size:.75rem;
+      line-height:1.45;
+    }
+    .collector-note-link {
+      display:inline-block;
+      margin-top:7px;
+      color:#85644b;
+      font-size:.74rem;
+      text-decoration:none;
+      border-bottom:1px solid rgba(133,100,75,.45);
+    }
+    .ssr-card:has(.collector-notes-trigger:hover) .collector-note-overlay,
+    .ssr-card:has(.collector-notes-trigger:focus-visible) .collector-note-overlay,
+    .ssr-card.is-notes-open .collector-note-overlay {
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+      transform:translateY(0);
+    }
+    .ssr-card:has(.collector-notes-trigger:hover) .ssr-card-image,
+    .ssr-card:has(.collector-notes-trigger:focus-visible) .ssr-card-image,
+    .ssr-card.is-notes-open .ssr-card-image {
+      filter:saturate(.9) contrast(.96) brightness(.78);
+    }
+
+    @media (max-width: 768px) {
+      .collector-notes-trigger {
+        width:38px;
+        height:38px;
+        top:8px;
+        right:8px;
+        opacity:.92;
+      }
+      .collector-notes-trigger :global(svg) {
+        width:20px;
+        height:20px;
+      }
+      .collector-note-overlay {
+        top:52px;
+      }
+      .catalog-section-heading {
+        width:calc(100% - 32px);
+        padding:18px 18px 20px;
+        text-align:center;
+      }
+      .catalog-section-heading p:not(.catalog-section-kicker):not(.catalog-section-timezone) {
+        margin-left:auto;
+        margin-right:auto;
+      }
+      .catalog-gallery-section {
+        margin-bottom:38px;
+      }
+      .ssr-grid--catalog-section {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .catalog-collection-cta {
+        min-height:260px;
+      }
+      .ssr-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        padding:0 16px;
+        gap:16px;
+      }
+      .ssr-grid--catalog-section {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .ssr-card-image {
+        width:100%;
+        height:auto;
+      }
+      .ssr-card-content {
+        display:flex;
+        flex-direction:column;
+        min-height:auto;
+        height:auto;
+        margin-top:0;
+        transform:none;
+        background:#fffdf9;
+        border-top:1px solid #e6d9ca;
+      }
+      .card-cta-desktop {
+        display:none;
+      }
+      .card-cta-mobile {
+        display:inline;
+      }
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      .ssr-card:hover,
+      .ssr-card:focus-within {
+        border-color:var(--card-border);
+        box-shadow:0 8px 22px rgba(48,34,23,.08);
+      }
+      .ssr-card:hover .ssr-card-content,
+      .ssr-card:focus-within .ssr-card-content {
+        transform:none;
+      }
+      .ssr-card-link {
+        pointer-events:auto;
+        touch-action:manipulation;
+      }
+      .ssr-card-content {
+        pointer-events:auto;
+      }
+      .ssr-card:hover .card-number,
+      .ssr-card:focus-within .card-number,
+      .ssr-card:hover .card-meta-row,
+      .ssr-card:focus-within .card-meta-row,
+      .ssr-card:hover .ssr-card-content h3,
+      .ssr-card:focus-within .ssr-card-content h3,
+      .ssr-card:hover .print-cue,
+      .ssr-card:focus-within .print-cue,
+      .ssr-card:hover .story-excerpt,
+      .ssr-card:focus-within .story-excerpt {
+        opacity:1;
+        transform:none;
+        max-height:none;
+        overflow:visible;
+        pointer-events:auto;
+      }
+      .ssr-card:hover .card-meta-row,
+      .ssr-card:focus-within .card-meta-row {
+        margin-bottom:6px;
+      }
+      .ssr-card:hover .ssr-card-content h3,
+      .ssr-card:focus-within .ssr-card-content h3 {
+        margin:0 0 8px;
+      }
+      .ssr-card:hover .story-excerpt,
+      .ssr-card:focus-within .story-excerpt {
+        margin:0 0 14px;
+      }
+      .ssr-card:has(.collector-notes-trigger:hover):not(.is-notes-open) .collector-note-overlay,
+      .ssr-card:has(.collector-notes-trigger:focus-visible):not(.is-notes-open) .collector-note-overlay {
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(4px);
+      }
+      .ssr-card:has(.collector-notes-trigger:hover):not(.is-notes-open) .ssr-card-image,
+      .ssr-card:has(.collector-notes-trigger:focus-visible):not(.is-notes-open) .ssr-card-image {
+        filter:none;
+      }
+    }
+
+  .story-section { width:100%; max-width:1440px; padding:2rem 0; }
+  .story-block { max-width:860px; margin:0 auto 2.5rem; padding:0 1.5rem; }
+  .story-block--collections { max-width:none; padding:0; }
+  .story-block--collections > h3, .story-block--collections > p { max-width:860px; margin-left:auto; margin-right:auto; padding-left:1.5rem; padding-right:1.5rem; }
+  .example-images { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin:1.5rem 0; }
+  .example-images figure, .painterly-focus-side { min-width:0; margin:0; }
+  .example-images img { display:block; width:100%; height:300px; object-fit:contain; }
+  .story-block figcaption { margin:.5rem 0 0; color:#6a5a4c; font-size:.875rem; line-height:1.5; text-align:center; }
+  .story-block figure a, .lesson-faq a, .step-inside-links a { color:#8b5a2b; text-decoration:underline; text-underline-offset:3px; }
+  .painterly-focus-grid { display:grid; grid-template-columns:minmax(0, .8fr) minmax(0, 1.2fr); gap:1.5rem; align-items:center; margin:1.5rem 0; }
+  .painterly-focus-side img { display:block; width:100%; height:auto; max-height:360px; object-fit:contain; }
+  .painterly-focus-main { margin:0; }
+  .lesson-faq details { border-top:1px solid #dccfbe; padding:1rem 0; }
+  .lesson-faq summary { cursor:pointer; font-weight:700; line-height:1.6; }
+  .lesson-faq .faq-answer { padding:.75rem 0 0; }
+  .step-inside-links { line-height:2; }
+  @media (max-width:600px) {
+    .story-block { padding:0 1rem; }
+    .story-block--collections { padding:0; }
+    .example-images { gap:.65rem; }
+    .example-images img { height:170px; }
+    .painterly-focus-grid { grid-template-columns:1fr; }
+    .painterly-focus-side { max-width:340px; margin:auto; }
+  }
 </style>
+<script is:inline>
+    (() => {
+      const cards = Array.from(document.querySelectorAll('.ssr-card'));
+      if (cards.length === 0) return;
+
+      const isDesktopHover = () =>
+        window.matchMedia('(min-width: 769px)').matches &&
+        window.matchMedia('(hover: hover)').matches &&
+        window.matchMedia('(pointer: fine)').matches;
+
+      const applyRowCropping = () => {
+        if (!isDesktopHover()) {
+          cards.forEach((card) => card.style.removeProperty('--card-overlap'));
+          return;
+        }
+
+        const measured = cards
+          .map((card) => {
+            const image = card.querySelector('.ssr-card-image');
+            if (!image) return null;
+            const imageHeight = image.getBoundingClientRect().height;
+            if (imageHeight <= 0) return null;
+            const top = Math.round(card.getBoundingClientRect().top);
+            return { card, imageHeight, top };
+          })
+          .filter(Boolean)
+          .sort((a, b) => a.top - b.top);
+
+        if (measured.length === 0) return;
+
+        const rows = [];
+        measured.forEach((item) => {
+          const row = rows[rows.length - 1];
+          if (!row || Math.abs(row.top - item.top) > 4) {
+            rows.push({ top: item.top, items: [item] });
+            return;
+          }
+          row.items.push(item);
+        });
+
+        rows.forEach((row) => {
+          const minImageHeight = Math.min(...row.items.map((item) => item.imageHeight));
+          row.items.forEach((item) => {
+            const overlap = Math.max(0, Math.round(item.imageHeight - minImageHeight));
+            item.card.style.setProperty('--card-overlap', `${overlap}px`);
+          });
+        });
+      };
+
+      let frame = 0;
+      const scheduleCropping = () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(applyRowCropping);
+      };
+
+      if (isDesktopHover()) {
+        cards.forEach((card) => {
+          const image = card.querySelector('.ssr-card-image');
+          if (!image || image.complete) return;
+          image.addEventListener('load', scheduleCropping, { once: true });
+        });
+      }
+
+      window.addEventListener('resize', scheduleCropping);
+      window.addEventListener('load', scheduleCropping, { once: true });
+      scheduleCropping();
+    })();
+
+    (() => {
+      const links = Array.from(document.querySelectorAll('[data-context-image-link]'));
+      if (links.length === 0) return;
+
+      const trackDoorwayImageClick = (link) => {
+        const imageId = link.getAttribute('data-image-id') || null;
+        const galleryId = link.getAttribute('data-gallery-id') || window.location.pathname;
+        const artworkNumber = link.getAttribute('data-artwork-number') || null;
+        const context = {
+          galleryId,
+          imageId,
+          pageType: 'image',
+          trigger: 'commercial_doorway_grid',
+          sourceLayer: 'commercial_doorway_all_page',
+          artworkNumber,
+        };
+
+        if (typeof window.k4track === 'function') {
+          window.k4track('browse_all_image_click', context);
+        }
+        if (typeof window.k4emitActionPixel === 'function') {
+          window.k4emitActionPixel('browse_all_image_click', imageId, {
+            galleryId,
+            sourceLayer: 'doorway_browse_all_image_click_pixel_v1',
+            pageType: 'image',
+            trigger: 'commercial_doorway_grid',
+          });
+        }
+      };
+
+      links.forEach((link) => {
+        link.addEventListener('click', () => trackDoorwayImageClick(link), { capture: true });
+      });
+    })();
+
+    (() => {
+      const noteCards = Array.from(document.querySelectorAll('.ssr-card'));
+      const noteTriggers = Array.from(document.querySelectorAll('[data-notes-trigger]'));
+      if (noteCards.length === 0 || noteTriggers.length === 0) return;
+
+      const closeAll = (except = null) => {
+        noteCards.forEach((card) => {
+          if (card !== except) card.classList.remove('is-notes-open');
+        });
+      };
+
+      noteTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const card = trigger.closest('.ssr-card');
+          if (!card) return;
+          const willOpen = !card.classList.contains('is-notes-open');
+          closeAll(card);
+          card.classList.toggle('is-notes-open', willOpen);
+          if (willOpen) {
+            const link = card.querySelector('[data-context-image-link]');
+            const imageId = link?.getAttribute('data-image-id') || null;
+            const galleryId = link?.getAttribute('data-gallery-id') || window.location.pathname;
+            if (typeof window.k4track === 'function') {
+              window.k4track('collector_notes_open', {
+                galleryId,
+                imageId,
+                pageType: 'gallery',
+                trigger: 'commercial_doorway_card_notes',
+                sourceLayer: 'commercial_doorway_all_page',
+              });
+            }
+            if (typeof window.k4emitActionPixel === 'function') {
+              window.k4emitActionPixel('collector_notes_open', imageId, {
+                galleryId,
+                sourceLayer: 'doorway_collector_notes_open_pixel_v1',
+                pageType: 'gallery',
+                trigger: 'commercial_doorway_card_notes',
+              });
+            }
+          }
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (event.target.closest('[data-notes-trigger]') || event.target.closest('[data-notes-overlay]')) return;
+        closeAll();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeAll();
+      });
+    })();
+
+
+</script>
 </BaseLayout>

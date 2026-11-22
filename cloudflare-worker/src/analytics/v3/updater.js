@@ -1,9 +1,10 @@
 import { buildV3RollupBatch, getV3EvidenceSessionKeys } from './model.js';
+import { SHOPPING_STAGES } from './shopping.js';
 
 const RAW_BATCH_SIZE = 250;
 // Production D1 accepts fewer bound variables per statement than Miniflare.
 // Production D1 currently rejects statements above 100 bound variables. The
-// widest V3 insert has fifteen columns, so six rows (90 bindings) stays below
+// widest V3 insert has sixteen columns, so six rows (96 bindings) stays below
 // that ceiling while still batching writes efficiently.
 const VALUE_CHUNK_SIZE = 6;
 
@@ -112,8 +113,8 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
   for (const group of chunks(rollup.sessions)) {
     statements.push(env.DB.prepare(`
       INSERT INTO analytics_v3_daily_sessions
-        (day,session_id,visitor_id,visitor_status,engaged,landing_page,entry_source,visitor_geo,image_geo,entry_is_image_fallback,page_view_count,site_device,image_device,oim_domain,entry_evidence)
-      VALUES ${valuesSql(group.length, 15)}
+        (day,session_id,visitor_id,visitor_status,engaged,landing_page,entry_source,visitor_geo,image_geo,entry_is_image_fallback,page_view_count,site_device,image_device,oim_domain,entry_evidence,shopping_activity)
+      VALUES ${valuesSql(group.length, 16)}
       ON CONFLICT(day,session_id) DO UPDATE SET
         visitor_id=COALESCE(analytics_v3_daily_sessions.visitor_id,excluded.visitor_id),
         visitor_status=COALESCE(analytics_v3_daily_sessions.visitor_status,excluded.visitor_status),
@@ -127,11 +128,15 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
         oim_domain=COALESCE(analytics_v3_daily_sessions.oim_domain,excluded.oim_domain),
         entry_is_image_fallback=CASE WHEN analytics_v3_daily_sessions.landing_page IS NULL OR (analytics_v3_daily_sessions.entry_is_image_fallback=1 AND excluded.entry_is_image_fallback=0) THEN excluded.entry_is_image_fallback ELSE analytics_v3_daily_sessions.entry_is_image_fallback END,
         page_view_count=analytics_v3_daily_sessions.page_view_count+excluded.page_view_count,
-        entry_evidence=excluded.entry_evidence
+        entry_evidence=excluded.entry_evidence,
+        shopping_activity=json_object(${SHOPPING_STAGES.map(({ event }) => `'${event}',
+          COALESCE(json_extract(analytics_v3_daily_sessions.shopping_activity,'$.${event}'),0)
+          + COALESCE(json_extract(excluded.shopping_activity,'$.${event}'),0)`).join(',')})
     `).bind(...group.flatMap((row) => [
       row.day, row.sessionId, row.visitorId, row.visitorStatus, row.engaged, row.landingPage,
       row.entrySource, row.visitorGeo, row.imageGeo, row.entryIsImageFallback, row.pageViewCount,
-      row.siteDevice, row.imageDevice, row.oimDomain, row.entryEvidence ? JSON.stringify(row.entryEvidence) : null
+      row.siteDevice, row.imageDevice, row.oimDomain, row.entryEvidence ? JSON.stringify(row.entryEvidence) : null,
+      JSON.stringify(row.shoppingActivity || {})
     ])));
   }
 
@@ -144,14 +149,21 @@ function buildWriteStatements(env, rollup, previousCursor, updateToken) {
 
   for (const group of chunks(rollup.images)) {
     statements.push(env.DB.prepare(`
-      INSERT INTO analytics_v3_daily_images (day,image_id,page_path,count,pricing_opens,smugmug_clicks,email_clicks)
-      VALUES ${valuesSql(group.length, 7)}
+      INSERT INTO analytics_v3_daily_images (day,image_id,page_path,count,pricing_opens,smugmug_clicks,email_clicks,shopping_activity)
+      VALUES ${valuesSql(group.length, 8)}
       ON CONFLICT(day,image_id,page_path) DO UPDATE SET
         count=count+excluded.count,
         pricing_opens=pricing_opens+excluded.pricing_opens,
         smugmug_clicks=smugmug_clicks+excluded.smugmug_clicks,
-        email_clicks=email_clicks+excluded.email_clicks
-    `).bind(...group.flatMap((row) => [row.day, row.imageId, row.pagePath || '', row.count, row.pricingOpens || 0, row.smugmugClicks || 0, row.emailClicks || 0])));
+        email_clicks=email_clicks+excluded.email_clicks,
+        shopping_activity=json_object(${SHOPPING_STAGES.map(({ event }) => `'${event}',
+          COALESCE(json_extract(analytics_v3_daily_images.shopping_activity,'$.${event}'),0)
+          + COALESCE(json_extract(excluded.shopping_activity,'$.${event}'),0)`).join(',')},
+          '_sessions',json((SELECT json_group_array(value) FROM (
+            SELECT value FROM json_each(analytics_v3_daily_images.shopping_activity,'$._sessions')
+            UNION SELECT value FROM json_each(excluded.shopping_activity,'$._sessions')
+          ))))
+    `).bind(...group.flatMap((row) => [row.day, row.imageId, row.pagePath || '', row.count, row.pricingOpens || 0, row.smugmugClicks || 0, row.emailClicks || 0, JSON.stringify(row.shoppingActivity || {})])));
   }
 
   for (const group of chunks(rollup.imageGeography)) {

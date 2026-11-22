@@ -332,6 +332,387 @@ export function getImageSlugPhraseForPath(path) {
   return imageSlugPhraseByPath[normalizedPath] || null;
 }
 
+// Gallery landing ident furniture. Edit each term and target here.
+// Traditional terms preserve the existing navigation category names.
+// The Traditional B&W train alias uses its landing category name.
+// WWII, Roaring Twenties, and painterly landscape/transportation/portrait
+// doorway targets are intentional ahead of the 2026-11-20 doorway build.
+export const galleryIdentEntries: { key: string; path: string; term: string; link: string | null }[] = [
+  {
+    key: "civilWarColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Color",
+    term: "Civil War Art",
+    link: "/Civil-War-Art",
+  },
+  {
+    key: "civilWarBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Civil-War-Portraits/Black-White",
+    term: "Civil War Art",
+    link: "/Civil-War-Art",
+  },
+  {
+    key: "westernCowboyColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color",
+    term: "Cowboy Fine Art Photography",
+    link: "/Cowboy-Fine-Art-Photography",
+  },
+  {
+    key: "westernCowboyBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
+    term: "Western Black and White Photography",
+    link: "/Western-Black-and-White-Photography",
+  },
+  {
+    key: "westernNarrativesColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color",
+    term: "Narrative Western Art",
+    link: "/Narrative-Western-Art",
+  },
+  {
+    key: "westernNarrativesBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White",
+    term: "Western Black and White Photography",
+    link: "/Western-Black-and-White-Photography",
+  },
+  {
+    key: "nativeAmericansColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color",
+    term: "Western Fine Art",
+    link: "/Western-Fine-Art",
+  },
+  {
+    key: "nativeAmericansBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Black-White",
+    term: "Western Black and White Photography",
+    link: "/Western-Black-and-White-Photography",
+  },
+  {
+    key: "roaring20sColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Color",
+    term: "Roaring 20s Photography",
+    link: "/Roaring-20s-Photography",
+  },
+  {
+    key: "roaring20sBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Roaring-20s-Portraits/Black-White",
+    term: "Roaring 20s Photography",
+    link: "/Roaring-20s-Photography",
+  },
+  {
+    key: "wwiiWarColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Color",
+    term: "WWII Photography",
+    link: "/WWII-Photography",
+  },
+  {
+    key: "wwiiWarBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/War/Black-White",
+    term: "WWII Photography",
+    link: "/WWII-Photography",
+  },
+  {
+    key: "wwiiMachinesColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Color",
+    term: "WWII Photography",
+    link: "/WWII-Photography",
+  },
+  {
+    key: "wwiiMachinesBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Machines/Black-White",
+    term: "WWII Photography",
+    link: "/WWII-Photography",
+  },
+  {
+    key: "wwiiPortraitsColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color",
+    term: "WWII Photography",
+    link: "/WWII-Photography",
+  },
+  {
+    key: "wwiiPortraitsBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Black-White",
+    term: "WWII Photography",
+    link: "/WWII-Photography",
+  },
+  {
+    key: "painterlyLandscapeInternational",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/International/Gallery",
+    term: "Painterly Landscape Photography",
+    link: "/Painterly-Landscape-Photography",
+  },
+  {
+    key: "painterlyLandscapeMidwest",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+    term: "Painterly Landscape Photography",
+    link: "/Painterly-Landscape-Photography",
+  },
+  {
+    key: "painterlyLandscapeNortheast",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+    term: "Painterly Landscape Photography",
+    link: "/Painterly-Landscape-Photography",
+  },
+  {
+    key: "painterlyLandscapeSouth",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+    term: "Painterly Landscape Photography",
+    link: "/Painterly-Landscape-Photography",
+  },
+  {
+    key: "painterlyLandscapeWest",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+    term: "Painterly Landscape Photography",
+    link: "/Painterly-Landscape-Photography",
+  },
+  {
+    key: "painterlyMountains",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    term: "Painterly Landscape Photography",
+    link: "/Painterly-Landscape-Photography",
+  },
+  {
+    key: "painterlySunsets",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    term: "Painterly Landscape Photography",
+    link: "/Painterly-Landscape-Photography",
+  },
+  {
+    key: "painterlyWater",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Theme/Water",
+    term: "Painterly Landscape Photography",
+    link: "/Painterly-Landscape-Photography",
+  },
+  {
+    key: "painterlyTransportationCars",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Transportation/Cars",
+    term: "Painterly Transportation Photography",
+    link: "/Painterly-Transportation-Photography",
+  },
+  {
+    key: "painterlyTrainsColor",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Color",
+    term: "Painterly Transportation Photography",
+    link: "/Painterly-Transportation-Photography",
+  },
+  {
+    key: "painterlyTrainsBW",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Transportation/Trains-Black-White",
+    term: "Painterly Transportation Photography",
+    link: "/Painterly-Transportation-Photography",
+  },
+  {
+    key: "painterlyMiscPortraits",
+    path: "/Galleries/Painterly-Fine-Art-Photography/Miscellaneous/Portraits",
+    term: "Painterly Portrait Photography",
+    link: "/Painterly-Portrait-Photography",
+  },
+  {
+    key: "traditionalArchitecture",
+    path: "/Galleries/Fine-Art-Photography/Architecture/Gallery",
+    term: "Architecture",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeCanadaWestern",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Canada-Western",
+    term: "Canada – Western",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeIceland",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Iceland",
+    term: "Iceland",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeNewfoundland",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/Newfoundland",
+    term: "Newfoundland",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeFaroe",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/International/The-Faroe-Islands",
+    term: "Faroe Islands",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeMidwest",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Midwest/Gallery",
+    term: "Midwest",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeNortheast",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/Northeast/Gallery",
+    term: "Northeast",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeSouth",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/South/Gallery",
+    term: "South",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeWest",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Location/West/Gallery",
+    term: "West",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeBW",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Black-White",
+    term: "Black & White",
+    link: null,
+  },
+  {
+    key: "traditionalLandscapeColor",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Color",
+    term: "Color",
+    link: null,
+  },
+  {
+    key: "traditionalMountains",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Mountains",
+    term: "Mountains",
+    link: null,
+  },
+  {
+    key: "traditionalSunsets",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Sunsets",
+    term: "Sunsets",
+    link: null,
+  },
+  {
+    key: "traditionalWater",
+    path: "/Galleries/Fine-Art-Photography/Landscapes/By-Theme/Water",
+    term: "Water & Waterfalls",
+    link: null,
+  },
+  {
+    key: "traditionalPets",
+    path: "/Galleries/Fine-Art-Photography/Miscellaneous/Pets",
+    term: "Pets",
+    link: null,
+  },
+  {
+    key: "traditionalReenactments",
+    path: "/Galleries/Fine-Art-Photography/Miscellaneous/Reenactments",
+    term: "Reenactments",
+    link: null,
+  },
+  {
+    key: "traditionalWildlife",
+    path: "/Galleries/Fine-Art-Photography/Miscellaneous/Wildlife",
+    term: "Wildlife",
+    link: null,
+  },
+  {
+    key: "traditionalPortraitsBW",
+    path: "/Galleries/Fine-Art-Photography/Portraits/Black-White",
+    term: "Black & White",
+    link: null,
+  },
+  {
+    key: "traditionalPortraitsColor",
+    path: "/Galleries/Fine-Art-Photography/Portraits/Color",
+    term: "Color",
+    link: null,
+  },
+  {
+    key: "traditionalReenactorPortraits",
+    path: "/Galleries/Fine-Art-Photography/Portraits/Reenactors",
+    term: "Reenactors",
+    link: null,
+  },
+  {
+    key: "traditionalBoats",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Boats",
+    term: "Boats & Watercraft",
+    link: null,
+  },
+  {
+    key: "traditionalCars",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Cars",
+    term: "Car Photography",
+    link: null,
+  },
+  {
+    key: "traditionalMilitary",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Military",
+    term: "Military Photography",
+    link: null,
+  },
+  {
+    key: "traditionalPlanes",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Planes",
+    term: "Plane Photography",
+    link: null,
+  },
+  {
+    key: "traditionalTrains",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Trains",
+    term: "Train Photography",
+    link: null,
+  },
+  {
+    key: "traditionalTrainsBW",
+    path: "/Galleries/Fine-Art-Photography/Transportation/Trains-Black-White",
+    term: "Black & White Train Photography",
+    link: null,
+  },
+  {
+    key: "engrained",
+    path: "/Other/K4-Select-Series/Engrained",
+    term: "Engrained",
+    link: "/Other/K4-Select-Series/Engrained",
+  },
+  {
+    key: "engrainedSeries",
+    path: "/Other/K4-Select-Series/Engrained/Engrained-Series",
+    term: "Engrained",
+    link: "/Other/K4-Select-Series/Engrained",
+  },
+];
+
+export function getGalleryIdentForPath(path: string) {
+  const normalizedPath = path.replace(/\/+$/, "");
+  return galleryIdentEntries.find(entry => entry.path === normalizedPath) || null;
+}
+
+// Zone H1 packet, approved 2026-11-19. Flip this one flag to suppress the pointer.
+export const ZONE_H1_POINTER_ENABLED = true;
+export const ZONE_H1_CLICK_EVENT = 'zone_h1_click';
+type ZoneH1Entry = { path: string; span: string; target: string; replacementH1?: string };
+const painterlyZone = '/Galleries/Painterly-Fine-Art-Photography';
+export const zoneH1Entries: ZoneH1Entry[] = [
+  { path: painterlyZone, span: 'Painterly Fine Art Photography', target: '/Blog/what-is-painterly-photography' },
+  { path: `${painterlyZone}/Facing-History`, span: 'Historically Themed Photography', target: '/Blog/what-is-historically-themed-photography', replacementH1: 'Facing History — Historically Themed Photography in Fine Art' },
+  { path: `${painterlyZone}/Facing-History/Civil-War-Portraits`, span: 'Civil War Art', target: '/Civil-War-Art', replacementH1: 'Civil War Art — Portraits in Historically Themed Fine Art Photography by Wayne Heim' },
+  { path: `${painterlyZone}/Facing-History/Roaring-20s-Portraits`, span: 'Roaring 20s Photography', target: '/Roaring-20s-Photography', replacementH1: 'Roaring 20s Photography — Prohibition-Era Portraits in Painterly Fine Art' },
+  { path: `${painterlyZone}/Facing-History/WWII`, span: 'WWII Photography', target: '/WWII-Photography', replacementH1: 'WWII Photography — Painterly Fine Art Stories of War, Portraits, and Machines' },
+  { path: `${painterlyZone}/Facing-History/WWII/Machines`, span: 'WWII Photography', target: '/WWII-Photography', replacementH1: 'Men & Machines — WWII Photography: Military Vehicles in Painterly Fine Art' },
+  { path: `${painterlyZone}/Facing-History/WWII/Portraits`, span: 'WWII Photography', target: '/WWII-Photography', replacementH1: 'WWII Photography — Portraits: Faces of the Greatest Generation' },
+  { path: `${painterlyZone}/Facing-History/WWII/War`, span: 'WWII Photography', target: '/WWII-Photography', replacementH1: 'The Art of War — WWII Photography in Painterly Fine Art' },
+  { path: `${painterlyZone}/Facing-History/Western-Cowboy-Portraits`, span: 'Cowboy Fine Art Photography', target: '/Cowboy-Fine-Art-Photography', replacementH1: 'Cowboy Fine Art Photography — Western Cowboy Portraits in Painterly Fine Art' },
+  { path: `${painterlyZone}/Facing-History/Wild-West`, span: 'Wild West Art', target: '/wild-west-art', replacementH1: 'Wild West Art of the American Frontier' },
+  { path: `${painterlyZone}/Facing-History/Wild-West/Native-Americans`, span: 'Western Fine Art', target: '/Western-Fine-Art', replacementH1: 'Native American Portraits — Western Fine Art Photography' },
+  { path: `${painterlyZone}/Facing-History/Wild-West/Western-Narratives`, span: 'Narrative Western Art', target: '/Narrative-Western-Art', replacementH1: 'Narrative Western Art — Painterly Fine Art Photography of the American West' },
+  { path: `${painterlyZone}/Landscapes`, span: 'Painterly Landscape Photography', target: '/Painterly-Landscape-Photography' },
+  { path: `${painterlyZone}/Miscellaneous`, span: 'Painterly Portrait Photography', target: '/Painterly-Portrait-Photography', replacementH1: 'Painterly Portrait Photography — Fine Art Portraits by Wayne Heim' },
+  { path: `${painterlyZone}/Transportation`, span: 'Painterly Transportation Photography', target: '/Painterly-Transportation-Photography', replacementH1: 'Painterly Transportation Photography — Fine Art by Wayne Heim' },
+];
+
+export function getZoneH1Parts(path: string, originalH1: string) {
+  const row = zoneH1Entries.find(entry => entry.path === path.replace(/\/+$/, ''));
+  const title = row?.replacementH1 ?? originalH1;
+  const index = row ? title.indexOf(row.span) : -1;
+  return index < 0 || !row
+    ? { title, before: title, span: '', after: '', target: null }
+    : { title, before: title.slice(0, index), span: row.span, after: title.slice(index + row.span.length), target: row.target };
+}
+
 export const semantic = {
  reenactorsTraditional: {
   path: "/Galleries/Fine-Art-Photography/Portraits/Reenactors",
@@ -1017,7 +1398,7 @@ westernBlackWhiteHub: {
   fallbackImagePath: "/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White",
   landingPhrases: [
     { phrase: "Western Black and White Photography", rating: 10, use: true, selfLinkPath: "/Blog/what-is-western-black-and-white-photography" },
-    { phrase: "Black and White Western Photography", rating: 5, use: true },
+    { phrase: "Black and White Western Photography", rating: 10, use: true },
     { phrase: "Black and White Cowboy Photography", rating: 5, use: true },
     { phrase: "black and white cowboy photos", rating: 5, use: true },
     { phrase: "cowboy black and white", rating: 5, use: true },
@@ -1748,6 +2129,8 @@ roaring20s: {
   def: "Deco mood and velvet light—jazz-age portraits with a modern finish.",
 
   landingPhrases: [
+    { phrase: "Roaring 20s Photography", rating: 5, use: true, link: "/Roaring-20s-Photography" },
+    { phrase: "Roaring Twenties Photography", rating: 5, use: true, link: "/Roaring-20s-Photography" },
     // --- Primary identity (WritingBrain core + SEO strongest) ---
     { phrase: "Roaring 20s Portraits", rating: 5, use: true },
     { phrase: "The Roaring 20s", rating: 5, use: true },

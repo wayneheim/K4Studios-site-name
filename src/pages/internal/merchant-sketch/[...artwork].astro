@@ -1,0 +1,37 @@
+---
+export const prerender = false;
+import GalleryShellCore from '@/components/GalleryShellCore.astro';
+import { getDirectChapterConfig } from '@/data/chapterDirectConfigs.js';
+
+Astro.response.headers.set('Cache-Control', 'no-store');
+Astro.response.headers.set('X-Robots-Tag', 'noindex');
+if (Astro.request.headers.get('X-K4-Merchant-Sketch') !== '1') {
+  return new Response('Not Found', { status: 404 });
+}
+const requestedPath = `/${Astro.params.artwork || ''}`;
+const match = requestedPath.match(/^(.*)\/(i-[A-Za-z0-9]+)$/);
+const galleryPath = match?.[1] || '';
+const imageId = match?.[2] || '';
+const config = getDirectChapterConfig(galleryPath);
+const modules = import.meta.glob('/src/data/**/*.mjs');
+const modulePath = config?.galleryModulePath?.replace(/^\.\.\/data\//, '/src/data/');
+const loader = modulePath ? modules[modulePath] : null;
+if (!config || !loader || galleryPath.includes('/Engrained/')) {
+  return new Response('Not Found', { status: 404 });
+}
+const data = await loader() as { galleryData?: any[] };
+const allImages = data.galleryData || [];
+const image = allImages.find(item => item.id === imageId && ['show', 'normal'].includes(String(item.visibility).toLowerCase()));
+if (!image || image.noSketch === true || image.hidden === true || image.show === false) {
+  return new Response('Not Found', { status: 404 });
+}
+---
+<GalleryShellCore
+  allImages={allImages}
+  galleryPath={galleryPath}
+  initialImageId={imageId}
+  merchantSketch={true}
+  landingData={{}}
+  entranceData={{ title: config.titleBase, description: image.description || image.title }}
+  baseFallbackDescription="Open edition Sketch Series photographic print by Wayne Heim."
+/>

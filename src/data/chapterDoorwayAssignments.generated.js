@@ -2157,9 +2157,9 @@ export const chapterDoorwayAssignments = {
     "frameIndex": 0
   },
   "i-LmpRvHw": {
-    "theme": "nativeAmerican",
-    "href": "/American-Western-Art",
-    "frameIndex": 0
+    "theme": "western",
+    "href": "/Western-Wall-Art",
+    "frameIndex": 4
   },
   "i-4Hz6D7k": {
     "theme": "nativeAmerican",
@@ -14945,7 +14945,7 @@ export const chapterDoorwayAssignments = {
 
 export const chapterDoorwayCursors = {
   "nativeAmerican": 32,
-  "western": 804,
+  "western": 805,
   "civilWar": 92,
   "wwii": 729,
   "roaring20s": 48,
@@ -14956,11 +14956,11 @@ export const chapterDoorwayCursors = {
 };
 
 export const chapterDoorwayAssignmentMeta = {
-  "generatedAt": "2026-11-18T22:44:09.811Z",
+  "generatedAt": "2026-11-21T05:57:33.822Z",
   "assignedCount": 2988,
   "themeCounts": {
-    "nativeAmerican": 31,
-    "western": 758,
+    "nativeAmerican": 30,
+    "western": 759,
     "civilWar": 92,
     "wwii": 726,
     "roaring20s": 48,

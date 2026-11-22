@@ -27,6 +27,10 @@ routes = [
 [vars]
 # Environment variables (if needed)
 
+[[services]]
+binding = "K4_COMMERCE"
+service = "k4-commerce-live"
+
 # D1 Database for analytics
 [[d1_databases]]
 binding = "DB"

@@ -1,4 +1,8 @@
 ---
+import { LIMITED_FIRST_DOORWAY_PATHS, alignDoorwayDescription, alignDoorwayGateway } from "@/data/doorway/limitedFirstCopy.js";
+import EditionGroupHeading from "@/components/gallery/EditionGroupHeading.astro";
+import { buildEditionCatalog } from "@/utils/editionCatalog.js";
+import "@/styles/edition-catalog.css";
 import Footer from "@/components/Footer.astro";
 import PrintSeriesIcon from "@/components/PrintSeriesIcon.jsx";
 import GridInfoIcon from "@/components/GridInfoIcon.jsx";
@@ -12,6 +16,7 @@ import { extractImageId, getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { getArtworkAltForImageSource } from "@/utils/imageAltLookup";
 import {
   getFormattedLowestStandardPrintPrice,
+  getFormattedLowestSeriesPrintPrice,
   getStandardPrintSeries,
 } from "@/data/pricing/printSeries.js";
 import { resolveImageCommerce } from "@/data/commerceResolver.js";
@@ -265,21 +270,21 @@ const gatewayBrandLabelLines = gatewayBrandLabelDisplay
   .map((line) => line.trim())
   .filter(Boolean);
 const seoTitle = formatCopy(copy.seoTitle || `${gatewayBrandLabel} - Wayne Heim`);
-const seoDescription = formatCopy(copy.seoDescription || `Browse ${imageCount} ${variantDescriptor} ${collectionName.toLowerCase()} fine art prints by Wayne Heim, with collector notes and print options from ${getFormattedLowestStandardPrintPrice()}.`);
+const seoDescription = alignDoorwayDescription(formatCopy(copy.seoDescription || `Browse ${imageCount} ${variantDescriptor} ${collectionName.toLowerCase()} fine art prints by Wayne Heim, with collector notes and print options from ${getFormattedLowestStandardPrintPrice()}.`), canonicalPath);
 
 // ✅ Genre definition (entity authority - what IS this type of photography)
 
 // ✅ Authoritative definition block (per Quill: scope, authorship, completeness)
 const indexDefinition = formatCopy(copy.indexDefinition || `This page presents the complete ${variantName.toLowerCase()} archive of ${collectionName} by Wayne Heim.`);
 const indexLinkNote = formatCopy(copy.indexLinkNote || `All ${imageCount} images link to individual image pages with full stories, metadata, and collector information.`);
-const printAvailabilityNote = formatCopy(copy.printAvailabilityNote || `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`);
+const printAvailabilityNote = alignDoorwayGateway(formatCopy(copy.printAvailabilityNote || `All works are available as fine art prints from ${getFormattedLowestStandardPrintPrice()}. Select images are also available in the Engrained Series - printed on Baltic Birch using a five-layer UV process - with pricing specific to each image.`), canonicalPath);
 const commercialH1 = formatCopy(copy.commercialH1 || `${collectionName} Fine Art Series`);
 const commercialDeck = formatCopy(copy.commercialDeck || `A collection of painterly fine art photography by Wayne Heim.`);
 const gridIntroTitle = formatCopy(copy.gridIntroTitle || "");
 const gridIntroCopy = formatCopy(copy.gridIntroCopy || "");
 const catalogEntranceTitle = formatCopy(copy.catalogEntranceTitle || `Story-Driven Fine Art Prints by Wayne Heim`);
 const catalogEntranceCopy = formatCopy(copy.catalogEntranceCopy || `Browse cinematic, painterly photography built as single-frame stories - artwork created for collectors who want more than decoration.`);
-const collectionIntro = stripVisiblePriceAnchors(formatCopy(copy.collectionIntro || `Browse the complete collection. Each artwork opens to its full story, collector notes, image metadata, and available print details.`));
+const collectionIntro = alignDoorwayGateway(stripVisiblePriceAnchors(formatCopy(copy.collectionIntro || `Browse the complete collection. Each artwork opens to its full story, collector notes, image metadata, and available print details.`)), canonicalPath);
 const collectionIntroParagraphs = collectionIntro
   .split(/\n{2,}/)
   .map((paragraph) => paragraph.trim())
@@ -293,7 +298,7 @@ const showSeriesBeforeCatalog = !isCinematicConceptLayout || isCinematicConceptS
 const showSeriesAfterCatalog = isCinematicConceptLayout && !isCinematicConceptSeriesTopLayout;
 const catalogSectionKickerTemplate = String(copy.catalogSectionKicker || "Selected Western Wall Art - {sectionCount} in Series");
 const splitConceptCopy = (value = "") =>
-  stripVisiblePriceAnchors(formatCopy(value))
+  alignDoorwayGateway(stripVisiblePriceAnchors(formatCopy(value)), canonicalPath)
     .split(/\n{2,}/)
     .map((paragraph) => paragraph.trim())
     .filter(Boolean);
@@ -328,14 +333,14 @@ const collectingTitle = formatCopy(copy.collectingTitle || "");
 const collectingParagraphs = splitConceptCopy(copy.collectingCopy || "");
 const archiveContextKicker = formatCopy(copy.archiveContextKicker || "");
 const archiveContextTitle = formatCopy(copy.archiveContextTitle || "");
-const archiveContextCopy = stripVisiblePriceAnchors(formatCopy(copy.archiveContextCopy || ""));
+const archiveContextCopy = alignDoorwayGateway(stripVisiblePriceAnchors(formatCopy(copy.archiveContextCopy || "")), canonicalPath);
 const archiveContextParagraphs = splitConceptCopy(archiveContextCopy);
 const cornerstoneVariant = String(copy.cornerstoneVariant || "").trim();
 const gatewayKicker = formatCopy(copy.gatewayKicker || "K4 STUDIOS FINE ART PRINT CATALOG");
 const gatewayCollectionName = formatCopy(copy.gatewayCollectionName || collectionName);
 const gatewayBrandClass = String(copy.gatewayBrandClass || "").trim();
-const gatewayIntroCopy = stripVisiblePriceAnchors(formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`));
-const gatewaySupportingCopy = stripVisiblePriceAnchors(formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`));
+const gatewayIntroCopy = alignDoorwayGateway(stripVisiblePriceAnchors(formatCopy(copy.gatewayIntroCopy || `${imageCount} painterly ${variantName.toLowerCase()} ${collectionName.toLowerCase()} fine art photographs by Wayne Heim, available as archival fine art prints from ${getFormattedLowestStandardPrintPrice()}. Four edition tiers - open-edition studies to ultra-limited signed collector works - on fine art paper and Baltic Birch wood panels.`)), canonicalPath);
+const gatewaySupportingCopy = alignDoorwayGateway(stripVisiblePriceAnchors(formatCopy(copy.gatewaySupportingCopy || `Every image below is a complete story in a single frame. Click any work to read the narrative, explore collector notes, and view print details.`)), canonicalPath, true, gatewayIntroCopy.includes("presented first as signed and numbered"));
 const gatewaySupportingCopyHtml = Boolean(copy.gatewaySupportingCopyHtml);
 const gatewaySupportingParagraphs = gatewaySupportingCopy
   .split(/\n{2,}/)
@@ -400,7 +405,7 @@ const visiblePrintSeries = canonicalPath === "/cowboy-wall-art"
   : standardPrintSeries;
 const showFullSeriesTreatment = isCommercialDoorway || isHeldDoorway;
 const engrainedAvailabilityClause = `Select works are offered in <a href="https://www.k4studios.com/Engrained">Engrained</a>™ — an Ultra-limited Edition of five plus one artist proof, printed directly onto natural Baltic Birch so the wood's grain and texture become part of the story being told.`;
-const availabilityCopy = isCommercialDoorway
+const availabilityCopy = LIMITED_FIRST_DOORWAY_PATHS.has(canonicalPath) ? "" : isCommercialDoorway
   ? canonicalPath === "/cowboy-wall-art"
     ? `Archival paper prints range from 5 × 7 studies through larger wall formats, beginning at ${getFormattedLowestStandardPrintPrice()}. ${engrainedAvailabilityClause}`
     : `Archival paper prints range from 5 × 7 studies through larger wall formats, beginning at ${getFormattedLowestStandardPrintPrice()}.`
@@ -506,6 +511,13 @@ const getCardSeries = (image: any, galleryPath = contentBasePath) => {
   return commerce?.tiers || [];
 };
 
+const editionCatalog = buildEditionCatalog(filteredGalleryData, getCardSeries);
+const orderedCatalogEntries = editionCatalog.orderedEntries;
+const hasEditionSplit = editionCatalog.hasSplit;
+const limitedEditionEntries = editionCatalog.entries.filter(entry => !entry.openEditionOnly);
+const limitedEditionStartingPrice = editionCatalog.limitedPrice;
+const openEditionStartingPrice = editionCatalog.openPrice;
+
 const toAbsoluteK4Url = (url = "") => {
   if (!url) return `${siteOrigin}/images/show-2t.webp`;
   if (/^https?:\/\//i.test(url)) return url;
@@ -607,7 +619,7 @@ const visibleFaqItems = faqItems
   .map((item: any) => ({
     ...item,
     a: Array.isArray(item?.a)
-      ? item.a.map((paragraph: string) => stripVisiblePriceAnchors(paragraph)).filter(Boolean)
+      ? item.a.map((paragraph: string) => alignDoorwayGateway(stripVisiblePriceAnchors(paragraph), canonicalPath)).filter(Boolean)
       : [],
   }))
   .filter((item: any) => item?.q && item.a.length > 0);
@@ -679,6 +691,7 @@ const structuredDataJson = JSON.stringify({
 }, null, 2);
 
 const pageMeta = {
+  ...(LIMITED_FIRST_DOORWAY_PATHS.has(canonicalPath) ? { completeDescription: seoDescription } : {}),
   canonicalUrl,
   robots: "index, follow",
   descriptionMaxLength: approvedUnifiedDescriptionPaths.has(canonicalPath)
@@ -856,7 +869,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
     )}
     {showSeriesBeforeCatalog && showFullSeriesTreatment && (
       <>
-        <p class="print-options-heading">K4 Series and Limited Editions &middot; Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
+        <p class="print-options-heading">K4 Series and Limited Editions &middot; Limited Edition Prints from {getFormattedLowestSeriesPrintPrice('chronicle')} &middot; Open Editions from {getFormattedLowestStandardPrintPrice()}</p>
 
         <!-- Available Print Series -->
         <section class="print-options" aria-labelledby="print-options-heading">
@@ -924,7 +937,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
 
         <!-- Image Grid -->
         <div class="ssr-grid" id="collection-grid">
-          {filteredGalleryData.map((item: any, idx: number) => {
+          {orderedCatalogEntries.map(({ item, idx, cardSeries, openEditionOnly }, displayIndex: number) => {
         // Use smallest sufficient size for 250px grid cards via proxy
         const imageUrl = getProxySrc(item.id, 's');
         const srcsetParts = [
@@ -961,14 +974,15 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
         const storyExcerpt = truncateStoryExcerpt(item.story || "", 100);
         const collectorNoteRaw = item.description || "";
         const collectorNoteTeaser = truncateBookendExcerpt(collectorNoteRaw, 100, 300);
-        const cardSeries = getCardSeries(item);
         const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
-        const needsRangeMarker = idx > 0 && idx % 50 === 0;
-        const rangeStart = idx + 1;
-        const rangeEnd = Math.min(idx + 50, imageCount);
+        const needsRangeMarker = displayIndex > 0 && displayIndex % 50 === 0;
+        const rangeStart = displayIndex + 1;
+        const rangeEnd = Math.min(displayIndex + 50, imageCount);
 
         return (
           <>
+            {hasEditionSplit && displayIndex === 0 && <EditionGroupHeading title="Limited Edition Prints" kind="limited" price={limitedEditionStartingPrice} />}
+            {hasEditionSplit && displayIndex === limitedEditionEntries.length && <EditionGroupHeading kind="open" price={openEditionStartingPrice} />}
             {needsRangeMarker && (
               <div class="catalog-range-marker">
                 <span>Artworks {rangeStart}&ndash;{rangeEnd} of {imageCount}</span>
@@ -976,11 +990,13 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
               </div>
             )}
             <div
-              class="ssr-card"
+              class:list={["ssr-card", { "ssr-card--open-edition": hasEditionSplit && openEditionOnly }]}
               id={item.id}
               data-artwork-number={idx + 1}
               data-original-index={idx}
               data-series={cardSeriesKeys}
+              data-edition-group={openEditionOnly ? "open" : "limited"}
+              data-title={title}
             >
               <a
                 href={linkUrl}
@@ -1069,6 +1085,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
         )}
         {normalizedGridSections.map((section, sectionIndex) => {
           const visibleItems = section.items.slice(0, section.limit);
+          const sectionCatalog = buildEditionCatalog(visibleItems, item => getCardSeries(item, section.galleryPath));
           const sectionCount = section.items.length;
           const conceptBlock = isCinematicConceptLayout ? conceptBlocks[sectionIndex] : null;
           const sectionKicker = formatCopy(catalogSectionKickerTemplate)
@@ -1096,7 +1113,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                 </div>
 
                 <div class="ssr-grid ssr-grid--catalog-section">
-                  {visibleItems.map((item: any, idx: number) => {
+                  {sectionCatalog.orderedEntries.map(({ item, idx, cardSeries, openEditionOnly }, displayIndex: number) => {
                   const imageUrl = getSectionProxySrc(item, section.galleryPath, 's');
                   const srcsetParts = [
                     `${getSectionProxySrc(item, section.galleryPath, 's')} 400w`,
@@ -1122,16 +1139,22 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                   const storyExcerpt = truncateStoryExcerpt(item.story || "", 100);
                   const collectorNoteRaw = item.description || "";
                   const collectorNoteTeaser = truncateBookendExcerpt(collectorNoteRaw, 100, 300);
-                  const cardSeries = getCardSeries(item, section.galleryPath);
                   const cardSeriesKeys = cardSeries.map((series: any) => series.key).join(' ');
 
                   return (
+                    <>
+                    {!sectionCatalog.hasSplit && displayIndex === 0 && Number.isFinite(sectionCatalog.openPrice) && <EditionGroupHeading kind="open" price={sectionCatalog.openPrice} anchorId={'open-edition-prints-' + section.slug} />}
+                    {!sectionCatalog.hasSplit && displayIndex === 0 && Number.isFinite(sectionCatalog.limitedPrice) && <EditionGroupHeading title="Limited Edition Prints" kind="limited" price={sectionCatalog.limitedPrice} />}
+                    {sectionCatalog.hasSplit && displayIndex === 0 && <EditionGroupHeading title="Limited Edition Prints" kind="limited" price={sectionCatalog.limitedPrice} />}
+                    {sectionCatalog.hasSplit && displayIndex === sectionCatalog.limitedCount && <EditionGroupHeading kind="open" price={sectionCatalog.openPrice} anchorId={'open-edition-prints-' + section.slug} />}
                     <div
-                      class="ssr-card"
+                      class:list={["ssr-card", { "ssr-card--open-edition": openEditionOnly }]}
                       id={`${sectionIndex + 1}-${item.id}`}
                       data-artwork-number={idx + 1}
                       data-original-index={idx}
                       data-series={cardSeriesKeys}
+                      data-edition-group={openEditionOnly ? "open" : "limited"}
+                      data-title={title}
                     >
                       <a
                         href={linkUrl}
@@ -1203,6 +1226,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                         <a class="collector-note-link" href={collectorNotesHref}>View full image and details &rarr;</a>
                       </div>
                     </div>
+                    </>
                   );
                 })}
 
@@ -1268,7 +1292,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
 
     {showSeriesAfterCatalog && showFullSeriesTreatment && (
       <>
-        <p class="print-options-heading">K4 Series and Limited Editions &middot; Fine Art Prints from {getFormattedLowestStandardPrintPrice()}</p>
+        <p class="print-options-heading">K4 Series and Limited Editions &middot; Limited Edition Prints from {getFormattedLowestSeriesPrintPrice('chronicle')} &middot; Open Editions from {getFormattedLowestStandardPrintPrice()}</p>
 
         <section class="print-options" aria-labelledby="print-options-heading">
           <div class="series-widget" aria-label="Standard K4 paper print series">
@@ -2878,11 +2902,14 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
 
     .ssr-card {
       --card-overlap:82px;
+      --card-border:#b46a5f;
+      --card-hover-border:#a44a3f;
+      --card-hover-halo:219, 72, 53;
       position:relative;
       isolation:isolate;
       content-visibility:auto;
       contain-intrinsic-size:520px;
-      border:1px solid #b46a5f;
+      border:1px solid var(--card-border);
       border-radius:6px;
       background:#fffdf9;
       box-shadow:0 8px 22px rgba(48,34,23,.08);
@@ -2903,19 +2930,9 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
 
     .ssr-card:hover,
     .ssr-card:focus-within {
-      border-color:#a44a3f;
-      box-shadow:0 0 0 2px rgba(219, 72, 53, 0.5), 0 10px 24px rgba(48,34,23,.41);
+      border-color:var(--card-hover-border);
+      box-shadow:0 0 0 2px rgba(var(--card-hover-halo), 0.5), 0 10px 24px rgba(48,34,23,.41);
     }
-    .ssr-card.is-series-sort-match {
-      border-color:#6f9aab;
-      box-shadow:0 0 0 3px rgba(111,154,171,.68), 0 8px 22px rgba(48,34,23,.08);
-    }
-    .ssr-card.is-series-sort-match:hover,
-    .ssr-card.is-series-sort-match:focus-within {
-      border-color:#4f879e;
-      box-shadow:0 0 0 3px rgba(111,154,171,.88), 0 10px 24px rgba(48,34,23,.32);
-    }
-
     .ssr-card-link {
       display:flex;
       flex-direction:column;
@@ -3744,7 +3761,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
     @media (hover: none), (pointer: coarse) {
       .ssr-card:hover,
       .ssr-card:focus-within {
-        border-color:#b46a5f;
+        border-color:var(--card-border);
         box-shadow:0 8px 22px rgba(48,34,23,.08);
       }
       .ssr-card:hover .ssr-card-content,
@@ -3801,6 +3818,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
   </style>
 
   <script is:inline>
+
     (() => {
       const titleNode = document.getElementById('dock-active-title');
       const prefixNode = document.getElementById('dock-active-prefix');
@@ -3851,137 +3869,7 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
       });
     })();
 
-    (() => {
-      const grid = document.getElementById('collection-grid');
-      const sortButtons = Array.from(document.querySelectorAll('[data-series-sort]'));
-      const countNode = document.querySelector('[data-catalog-count]');
-      if (!grid || sortButtons.length === 0) return;
 
-      const originalNodes = Array.from(grid.children);
-      const cards = originalNodes.filter((node) => node.classList?.contains('ssr-card'));
-      const totalCount = cards.length;
-      const seriesMeta = {
-        foundation: { label: 'Foundation', symbol: '\u2605' },
-        chronicle: { label: 'Chronicle', symbol: '\u2318' },
-        legend: { label: 'Legend', symbol: '\u2756' },
-      };
-      const seriesCounts = Object.keys(seriesMeta).reduce((counts, key) => {
-        counts[key] = cards.filter((card) =>
-          String(card.dataset.series || '').split(/\s+/).includes(key)
-        ).length;
-        return counts;
-      }, {});
-
-      sortButtons.forEach((button) => {
-        const seriesKey = button.getAttribute('data-series-sort') || 'catalog';
-        if (seriesKey === 'catalog') return;
-        const count = seriesCounts[seriesKey] || 0;
-        if (count === 0) {
-          const meta = seriesMeta[seriesKey] || { label: 'Series' };
-          button.disabled = true;
-          button.classList.add('is-disabled');
-          button.setAttribute('aria-disabled', 'true');
-          button.setAttribute('title', `No ${meta.label} works in this collection`);
-        }
-      });
-
-      const clearSortState = () => {
-        cards.forEach((card) => card.classList.remove('is-series-sort-match'));
-      };
-
-      const setActiveButton = (activeKey) => {
-        sortButtons.forEach((button) => {
-          const isActive = button.getAttribute('data-series-sort') === activeKey;
-          button.classList.toggle('is-active', isActive);
-          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-        });
-      };
-
-      const makeDivider = (seriesKey, matchCount) => {
-        const meta = seriesMeta[seriesKey] || { label: 'Selected', symbol: '' };
-        const divider = document.createElement('div');
-        divider.className = 'catalog-range-marker series-sort-divider';
-        divider.style.gridColumn = '1 / -1';
-        divider.setAttribute('data-series-sort-divider', 'true');
-        divider.innerHTML = `<span class="series-sort-divider-copy"><strong>End of ${meta.symbol} ${meta.label} Series Works</strong><small>Additional Series Works continue below in catalog order.</small></span><a href="#top">Back to top \u2191</a>`;
-        divider.dataset.matchCount = String(matchCount);
-        return divider;
-      };
-
-      const makeRangeMarker = (start, end, total, label = 'Artworks') => {
-        const marker = document.createElement('div');
-        marker.className = 'catalog-range-marker';
-        marker.style.gridColumn = '1 / -1';
-        marker.innerHTML = `<span>${label} ${start}&ndash;${end} of ${total}</span><a href="#top">Back to top</a>`;
-        return marker;
-      };
-
-      const withRangeMarkers = (cardList, total, label = 'Artworks') => {
-        const nodes = [];
-        cardList.forEach((card, idx) => {
-          if (idx > 0 && idx % 50 === 0) {
-            const rangeStart = idx + 1;
-            const rangeEnd = Math.min(idx + 50, total);
-            nodes.push(makeRangeMarker(rangeStart, rangeEnd, total, label));
-          }
-          nodes.push(card);
-        });
-        return nodes;
-      };
-
-      const withCatalogRangeMarkers = (cardList) => {
-        const nodes = [];
-        let activeGroup = 0;
-        cardList.forEach((card) => {
-          const artworkNumber = Number(card.dataset.artworkNumber || 0);
-          const group = Math.floor(Math.max(artworkNumber - 1, 0) / 50);
-          if (group > activeGroup) {
-            const rangeStart = group * 50 + 1;
-            const rangeEnd = Math.min(rangeStart + 49, totalCount);
-            nodes.push(makeRangeMarker(rangeStart, rangeEnd, totalCount));
-            activeGroup = group;
-          }
-          nodes.push(card);
-        });
-        return nodes;
-      };
-
-      const applySort = (seriesKey) => {
-        clearSortState();
-        setActiveButton(seriesKey);
-
-        if (seriesKey === 'catalog') {
-          grid.replaceChildren(...originalNodes);
-          if (countNode) countNode.textContent = `${totalCount} works`;
-          window.dispatchEvent(new Event('resize'));
-          return;
-        }
-
-        const matchingCards = cards.filter((card) =>
-          String(card.dataset.series || '').split(/\s+/).includes(seriesKey)
-        );
-        const remainingCards = cards.filter((card) => !matchingCards.includes(card));
-
-        matchingCards.forEach((card) => card.classList.add('is-series-sort-match'));
-        const divider = makeDivider(seriesKey, matchingCards.length);
-        grid.replaceChildren(
-          ...withRangeMarkers(matchingCards, matchingCards.length, 'Series works'),
-          divider,
-          ...withCatalogRangeMarkers(remainingCards)
-        );
-
-        const meta = seriesMeta[seriesKey] || { label: 'Selected' };
-        if (countNode) countNode.textContent = `${matchingCards.length} ${meta.label} \u00b7 ${totalCount} works`;
-        window.dispatchEvent(new Event('resize'));
-      };
-
-      sortButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          if (button.disabled) return;
-          applySort(button.getAttribute('data-series-sort') || 'catalog');
-        });
-      });
-    })();
 
     (() => {
       const faqTriggers = Array.from(document.querySelectorAll('[data-faq-trigger]'));
@@ -4289,6 +4177,12 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
       });
     })();
 
-  </script>
+
+</script>
+
+  <script>
+  import { initEditionCatalogs } from "@/utils/editionCatalogControls.js";
+  initEditionCatalogs();
+</script>
 
 </BaseLayout>

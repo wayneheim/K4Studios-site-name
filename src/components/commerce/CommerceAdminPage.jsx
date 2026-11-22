@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import { Ban, Download, KeyRound, LoaderCircle, PlusCircle, RefreshCw, Save, Trash2, TriangleAlert } from "lucide-react";
-import { getCommerceApiBase } from "../../lib/commerce/checkoutApi.js";
+import { Ban, Download, LoaderCircle, PlusCircle, RefreshCw, Save, Trash2, TriangleAlert } from "lucide-react";
+import { commerceAdminRequest as adminRequest, getEditorCommerceSession, EDITOR_COMMERCE_URL } from "../../lib/commerce/adminApi.js";
 import { formatCurrency } from "../../lib/commerce/cart.js";
+import { groupAdminOrders } from "../../lib/commerce/adminOrders.js";
+import PromotionSettings from "./PromotionSettings.jsx";
 
 const STATUS_LABELS = {
   physical_activity_review: "Physical activity review",
@@ -65,22 +67,6 @@ function financialStatusClass(status) {
   return "text-stone-700";
 }
 
-async function adminRequest(password, pathname, options = {}) {
-  const base = getCommerceApiBase();
-  if (!base) throw new Error("The commerce service is not connected to this environment.");
-  const response = await fetch(`${base}${pathname}`, {
-    ...options,
-    headers: {
-      authorization: `Basic ${window.btoa(`k4admin:${password}`)}`,
-      "content-type": "application/json",
-      ...(options.headers || {}),
-    },
-  });
-  const body = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(body?.error || `Admin service returned ${response.status}.`);
-  return body;
-}
-
 function csvCell(value) {
   const text = String(value ?? "");
   return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
@@ -113,7 +99,7 @@ function downloadReport(report) {
 }
 
 export default function CommerceAdminPage() {
-  const [password, setPassword] = useState("");
+  const [gatewayState, setGatewayState] = useState("checking");
   const [year, setYear] = useState(new Date().getFullYear());
   const [report, setReport] = useState(null);
   const [orders, setOrders] = useState([]);
@@ -126,17 +112,25 @@ export default function CommerceAdminPage() {
   const [adjustment, setAdjustment] = useState({ stateCode: "", salesDollars: "", transactionCount: "", sourceType: "manual", note: "", occurredOn: "" });
   const [nexusRule, setNexusRule] = useState({ stateCode: "", revenueThresholdDollars: "", transactionThreshold: "", thresholdLogic: "revenue_only", measurementPeriod: "calendar_year", salesBasis: "", verificationStatus: "needs_review", sourceUrl: "", notes: "", effectiveFrom: "" });
 
-  useEffect(() => setPassword(window.sessionStorage.getItem("k4-commerce-admin-password") || ""), []);
+  useEffect(() => {
+    let active = true;
+    getEditorCommerceSession().then((session) => {
+      if (!active) return;
+      if (!session) { setGatewayState(window.location.hostname === new URL(EDITOR_COMMERCE_URL).hostname ? "restart" : "external"); return; }
+      if (!session.commerce) { setMessage("Commerce access has not been configured on the EditorPro gateway."); setGatewayState("error"); return; }
+      setGatewayState("ready");
+    }).catch((error) => { if (active) { setMessage(error.message); setGatewayState("error"); } });
+    return () => { active = false; };
+  }, []);
 
   const loadReport = async (event) => {
     event?.preventDefault?.();
     setStatus("loading");
     setMessage("");
     try {
-      window.sessionStorage.setItem("k4-commerce-admin-password", password);
       const [next, orderData] = await Promise.all([
-        adminRequest(password, `/admin/report?year=${year}`),
-        adminRequest(password, "/admin/orders?limit=50"),
+        adminRequest(`/admin/report?year=${year}`),
+        adminRequest("/admin/orders?limit=50"),
       ]);
       setReport(next);
       setOrders(orderData.orders || []);
@@ -178,12 +172,14 @@ export default function CommerceAdminPage() {
     }
   };
 
+  useEffect(() => { if (gatewayState === "ready") loadReport(); }, [gatewayState]);
+
   const saveOhio = async (event) => {
     event.preventDefault();
     setStatus("saving");
     setMessage("");
     try {
-      await adminRequest(password, "/admin/ohio-tax-rate", {
+      await adminRequest("/admin/ohio-tax-rate", {
         method: "POST",
         body: JSON.stringify({
           rateBasisPoints: Math.round(Number(ohioRate.ratePercent) * 100),
@@ -206,7 +202,7 @@ export default function CommerceAdminPage() {
     setStatus("saving");
     setMessage("");
     try {
-      await adminRequest(password, "/admin/nexus-adjustments", {
+      await adminRequest("/admin/nexus-adjustments", {
         method: "POST",
         body: JSON.stringify({
           calendarYear: year,
@@ -270,7 +266,7 @@ export default function CommerceAdminPage() {
     setStatus("saving");
     setMessage("");
     try {
-      await adminRequest(password, `/admin/nexus-rules/${nexusRule.stateCode}`, {
+      await adminRequest(`/admin/nexus-rules/${nexusRule.stateCode}`, {
         method: "POST",
         body: JSON.stringify(nexusRulePayload(nexusRule)),
       });
@@ -288,7 +284,7 @@ export default function CommerceAdminPage() {
     setStatus("saving");
     setMessage("");
     try {
-      await adminRequest(password, `/admin/nexus-rules/${nexusRule.stateCode}`, {
+      await adminRequest(`/admin/nexus-rules/${nexusRule.stateCode}`, {
         method: "POST",
         body: JSON.stringify(nexusRulePayload(nexusRule, verificationStatus)),
       });
@@ -307,7 +303,7 @@ export default function CommerceAdminPage() {
     setMessage("");
     const dollarsToCents = (value) => Math.round(Number(value) * 100);
     try {
-      await adminRequest(password, "/admin/shipping-rates", {
+      await adminRequest("/admin/shipping-rates", {
         method: "POST",
         body: JSON.stringify({
           effectiveFrom: shippingRates.effectiveFrom,
@@ -332,7 +328,7 @@ export default function CommerceAdminPage() {
     setStatus("saving");
     setMessage("");
     try {
-      await adminRequest(password, "/admin/expedition-prices", {
+      await adminRequest("/admin/expedition-prices", {
         method: "POST",
         body: JSON.stringify({
           effectiveFrom: expeditionPricing.effectiveFrom,
@@ -354,7 +350,7 @@ export default function CommerceAdminPage() {
     setStatus("saving");
     setMessage("");
     try {
-      const result = await adminRequest(password, `/admin/orders/${encodeURIComponent(order.id)}/fulfillment`, {
+      const result = await adminRequest(`/admin/orders/${encodeURIComponent(order.id)}/fulfillment`, {
         method: "POST",
         body: JSON.stringify(draft),
       });
@@ -373,7 +369,7 @@ export default function CommerceAdminPage() {
     setStatus("saving");
     setMessage("");
     try {
-      const result = await adminRequest(password, `/admin/orders/${encodeURIComponent(order.id)}/cancel`, {
+      const result = await adminRequest(`/admin/orders/${encodeURIComponent(order.id)}/cancel`, {
         method: "POST",
         body: JSON.stringify({ note: report?.mode === "sandbox" ? "Sandbox test order canceled in Commerce Admin." : "Order canceled in Commerce Admin." }),
       });
@@ -391,7 +387,7 @@ export default function CommerceAdminPage() {
     setStatus("saving");
     setMessage("");
     try {
-      await adminRequest(password, `/admin/orders/${encodeURIComponent(order.id)}/delete`, {
+      await adminRequest(`/admin/orders/${encodeURIComponent(order.id)}/delete`, {
         method: "POST",
         body: JSON.stringify({ confirmSandboxDelete: true }),
       });
@@ -403,21 +399,78 @@ export default function CommerceAdminPage() {
     }
   };
 
+  const orderGroups = useMemo(() => groupAdminOrders(orders), [orders]);
+
+  const renderOrder = (order) => {
+    const draft = orderDrafts[order.id] || {};
+    const address = order.shippingAddress || {};
+    return (
+      <article key={order.id} data-order-id={order.id} className="rounded-lg border border-stone-300 bg-white p-4 shadow-sm">
+        <div className="flex flex-wrap justify-between gap-3 border-b border-stone-200 pb-3">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wide text-[#8a3d2b]">{order.orderNumber}</p>
+            <p className="mt-1 text-sm font-semibold text-stone-900">{order.buyerName} · {formatCurrency(order.totalCents / 100)}</p>
+            <p className="mt-1 text-xs text-stone-500">{order.buyerEmail} · {order.buyerPhone}</p>
+          </div>
+          <div className="text-right text-xs">
+            <p><span className="font-semibold">Payment:</span> {order.paymentStatus}</p>
+            <p className={`mt-1 font-semibold ${financialStatusClass(order.financialStatus)}`}>
+              Financial: {order.financialStatus || "pending"}
+            </p>
+            {order.refundedCents > 0 && <p className="mt-1 text-red-700">Refunded: {formatCurrency(order.refundedCents / 100)}</p>}
+            {order.disputedCents > 0 && <p className="mt-1 text-red-700">Disputed: {formatCurrency(order.disputedCents / 100)}</p>}
+            <p className="mt-1"><span className="font-semibold">Fulfillment:</span> {order.fulfillmentStatus}</p>
+            <p className="mt-1 text-stone-500">{order.paidAt ? new Date(order.paidAt).toLocaleString() : new Date(order.createdAt).toLocaleString()}</p>
+            <div className="mt-3 flex flex-wrap justify-end gap-2">
+              {order.paymentStatus !== "canceled" && <button type="button" disabled={status === "saving"} onClick={() => cancelAdminOrder(order)} className="inline-flex items-center gap-1 rounded-md border border-amber-700 bg-amber-50 px-2.5 py-1.5 font-semibold text-amber-900 disabled:opacity-50"><Ban className="h-3.5 w-3.5" /> Cancel order</button>}
+              {report.mode === "sandbox" && <button type="button" disabled={status === "saving"} onClick={() => deleteAdminOrder(order)} className="inline-flex items-center gap-1 rounded-md border border-red-700 bg-red-50 px-2.5 py-1.5 font-semibold text-red-800 disabled:opacity-50"><Trash2 className="h-3.5 w-3.5" /> Delete test order</button>}
+            </div>
+          </div>
+        </div>
+        <div className="mt-3 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+          <div className="text-xs text-stone-700">
+            <p className="font-semibold text-stone-900">Items</p>
+            <ul className="mt-1 space-y-1">{(order.items || []).map((item) => <li key={`${item.imageId}:${item.productKey}`}>{item.quantity} × {item.imageTitle} · {item.seriesLabel} · {item.size}</li>)}</ul>
+            <p className="mt-3 font-semibold text-stone-900">Ship to</p>
+            <p className="mt-1">{address.addressLine1}{address.addressLine2 ? `, ${address.addressLine2}` : ""}<br />{address.city}, {address.stateCode} {address.postalCode}</p>
+          </div>
+          {order.paymentStatus === "canceled" ? (
+            <div className="rounded-md border border-stone-200 bg-stone-50 p-3 text-xs text-stone-600"><strong>Order canceled.</strong><p className="mt-1">Edition inventory has been restored.{report.mode === "sandbox" ? " This sandbox test order can be deleted permanently." : " Retained for order history."}</p></div>
+          ) : orderGroups.unfinished.includes(order) ? <div className="rounded-md border border-stone-200 bg-stone-50 p-3 text-xs text-stone-600"><strong>Checkout not completed.</strong><p className="mt-1">No completed payment is recorded. This attempt is excluded from sales totals and does not need fulfillment.</p></div> : <form onSubmit={(event) => saveFulfillment(event, order)} className="grid gap-2 rounded-md bg-stone-50 p-3 sm:grid-cols-2">
+            <label className="text-xs font-semibold">Status<select value={draft.status || "unfulfilled"} onChange={(event) => setOrderDrafts({ ...orderDrafts, [order.id]: { ...draft, status: event.target.value } })} className="mt-1 w-full rounded-md border border-stone-300 px-2 py-2 text-sm"><option value="unfulfilled">Unfulfilled</option><option value="processing">Processing</option><option value="on_hold">On hold</option><option value="shipped">Shipped</option><option value="fulfilled">Fulfilled</option></select></label>
+            <label className="text-xs font-semibold">Carrier<select value={draft.trackingCarrier || "FedEx"} onChange={(event) => setOrderDrafts({ ...orderDrafts, [order.id]: { ...draft, trackingCarrier: event.target.value } })} className="mt-1 w-full rounded-md border border-stone-300 px-2 py-2 text-sm"><option value="FedEx">FedEx</option><option value="UPS">UPS</option><option value="USPS">USPS</option><option value="SmugMug">SmugMug</option></select></label>
+            <label className="text-xs font-semibold sm:col-span-2">Tracking number<input value={draft.trackingNumber || ""} onChange={(event) => setOrderDrafts({ ...orderDrafts, [order.id]: { ...draft, trackingNumber: event.target.value } })} className="mt-1 w-full rounded-md border border-stone-300 px-2 py-2 text-sm" /></label>
+            <label className="text-xs font-semibold sm:col-span-2">Internal note<input value={draft.note || ""} onChange={(event) => setOrderDrafts({ ...orderDrafts, [order.id]: { ...draft, note: event.target.value } })} className="mt-1 w-full rounded-md border border-stone-300 px-2 py-2 text-sm" /></label>
+            <button type="submit" disabled={status === "saving"} className="inline-flex items-center justify-center gap-2 rounded-md bg-[#63776a] px-3 py-2 text-xs font-semibold text-white sm:col-span-2"><Save className="h-3.5 w-3.5" /> Save fulfillment</button>
+          </form>}
+        </div>
+      </article>
+    );
+  };
+
   const visibleRows = useMemo(() => report?.rows || [], [report]);
+
+  if (gatewayState !== "ready") {
+    return <main className="mx-auto min-h-[70vh] max-w-2xl px-5 py-12">
+      <h1 className="text-3xl font-semibold text-stone-900">Commerce Administration</h1>
+      <p className="mt-4 text-stone-600">{gatewayState === "checking" ? "Checking EditorPro session..." : gatewayState === "external" ? "Use your EditorPro sign-in to manage orders, shipping, and coupons. The EditorPro tunnel must be running." : gatewayState === "restart" ? "Restart the EditorPro tunnel to load Commerce Admin access, then reload this page." : message}</p>
+      {gatewayState !== "checking" && <a href={EDITOR_COMMERCE_URL} className="mt-6 inline-flex rounded-md bg-[#63776a] px-4 py-3 font-semibold text-white">Open Commerce Admin through EditorPro</a>}
+    </main>;
+  }
 
   return (
     <main className="mx-auto min-h-[80vh] max-w-[1500px] px-4 py-8 sm:px-6" data-k4-commerce-admin>
       <div className="flex flex-wrap items-end justify-between gap-4 border-b border-stone-300 pb-5">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8a3d2b]">Private · {report?.mode === "live" ? "Live" : "Sandbox"}</p>
-          <h1 className="mt-1 text-3xl font-semibold text-stone-900">State Sales & Nexus Report</h1>
-          <p className="mt-2 max-w-3xl text-sm text-stone-600">Administrative monitoring only. A threshold warning is not an automatic tax-registration decision.</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8a3d2b]">Private · Live</p>
+          <h1 className="mt-1 text-3xl font-semibold text-stone-900">Commerce Administration</h1>
+          <p className="mt-2 max-w-3xl text-sm text-stone-600">Orders, shipping, coupons, and sales reporting.</p>
         </div>
+        <a href="/_editorpro/login?next=%2Fadmin%2Fcommerce" target="_blank" rel="noopener" className="text-sm text-[#8a3d2b] underline">EditorPro sign-in</a>
         {report && <button type="button" onClick={() => downloadReport(report)} className="inline-flex items-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-2 text-sm font-semibold"><Download className="h-4 w-4" /> Export CSV</button>}
       </div>
 
-      <form onSubmit={loadReport} className="mt-6 grid gap-3 rounded-lg border border-stone-300 bg-[#fbfaf7] p-4 sm:grid-cols-[1fr_140px_auto]">
-        <label className="text-xs font-semibold text-stone-700"><span className="mb-1 flex items-center gap-1"><KeyRound className="h-3.5 w-3.5" /> Admin password</span><input type="password" autoComplete="current-password" required value={password} onChange={(event) => setPassword(event.target.value)} className="w-full rounded-md border border-stone-300 px-3 py-2 text-sm" /></label>
+      <form onSubmit={loadReport} className="mt-6 grid gap-3 rounded-lg border border-stone-300 bg-[#fbfaf7] p-4 sm:grid-cols-[140px_auto]">
         <label className="text-xs font-semibold text-stone-700"><span className="mb-1 block">Report year</span><input type="number" min="2018" max="2100" required value={year} onChange={(event) => setYear(Number(event.target.value))} className="w-full rounded-md border border-stone-300 px-3 py-2 text-sm" /></label>
         <button type="submit" disabled={status === "loading"} className="mt-5 inline-flex min-h-10 items-center justify-center gap-2 rounded-md bg-[#63776a] px-4 text-sm font-semibold text-white"><RefreshCw className={`h-4 w-4 ${status === "loading" ? "animate-spin" : ""}`} /> Load report</button>
       </form>
@@ -440,58 +493,24 @@ export default function CommerceAdminPage() {
             <div className="flex flex-wrap items-end justify-between gap-2">
               <div>
                 <h2 className="text-xl font-semibold text-stone-900">Recent orders</h2>
-                <p className="mt-1 text-xs text-stone-600">Payment records, delivery details, and fulfillment controls for the latest 50 orders.</p>
+                <p className="mt-1 text-xs text-stone-600">Orders with a recorded payment. Unfinished checkouts and canceled orders appear separately below.</p>
               </div>
-              <span className="text-xs font-semibold text-stone-500">{orders.length} orders</span>
+              <span className="text-xs font-semibold text-stone-500">{orderGroups.completed.length} {orderGroups.completed.length === 1 ? "order" : "orders"}</span>
             </div>
             <div className="mt-4 space-y-4">
-              {orders.length === 0 && <div className="rounded-lg border border-stone-300 bg-white p-5 text-sm text-stone-600">No orders have been recorded.</div>}
-              {orders.map((order) => {
-                const draft = orderDrafts[order.id] || {};
-                const address = order.shippingAddress || {};
-                return (
-                  <article key={order.id} className="rounded-lg border border-stone-300 bg-white p-4 shadow-sm">
-                    <div className="flex flex-wrap justify-between gap-3 border-b border-stone-200 pb-3">
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-wide text-[#8a3d2b]">{order.orderNumber}</p>
-                        <p className="mt-1 text-sm font-semibold text-stone-900">{order.buyerName} · {formatCurrency(order.totalCents / 100)}</p>
-                        <p className="mt-1 text-xs text-stone-500">{order.buyerEmail} · {order.buyerPhone}</p>
-                      </div>
-                      <div className="text-right text-xs">
-                        <p><span className="font-semibold">Payment:</span> {order.paymentStatus}</p>
-                        <p className={`mt-1 font-semibold ${financialStatusClass(order.financialStatus)}`}>
-                          Financial: {order.financialStatus || "pending"}
-                        </p>
-                        {order.refundedCents > 0 && <p className="mt-1 text-red-700">Refunded: {formatCurrency(order.refundedCents / 100)}</p>}
-                        {order.disputedCents > 0 && <p className="mt-1 text-red-700">Disputed: {formatCurrency(order.disputedCents / 100)}</p>}
-                        <p className="mt-1"><span className="font-semibold">Fulfillment:</span> {order.fulfillmentStatus}</p>
-                        <p className="mt-1 text-stone-500">{order.paidAt ? new Date(order.paidAt).toLocaleString() : new Date(order.createdAt).toLocaleString()}</p>
-                        <div className="mt-3 flex flex-wrap justify-end gap-2">
-                          {order.paymentStatus !== "canceled" && <button type="button" disabled={status === "saving"} onClick={() => cancelAdminOrder(order)} className="inline-flex items-center gap-1 rounded-md border border-amber-700 bg-amber-50 px-2.5 py-1.5 font-semibold text-amber-900 disabled:opacity-50"><Ban className="h-3.5 w-3.5" /> Cancel order</button>}
-                          {report.mode === "sandbox" && <button type="button" disabled={status === "saving"} onClick={() => deleteAdminOrder(order)} className="inline-flex items-center gap-1 rounded-md border border-red-700 bg-red-50 px-2.5 py-1.5 font-semibold text-red-800 disabled:opacity-50"><Trash2 className="h-3.5 w-3.5" /> Delete test order</button>}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-3 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
-                      <div className="text-xs text-stone-700">
-                        <p className="font-semibold text-stone-900">Items</p>
-                        <ul className="mt-1 space-y-1">{(order.items || []).map((item) => <li key={`${item.imageId}:${item.productKey}`}>{item.quantity} × {item.imageTitle} · {item.seriesLabel} · {item.size}</li>)}</ul>
-                        <p className="mt-3 font-semibold text-stone-900">Ship to</p>
-                        <p className="mt-1">{address.addressLine1}{address.addressLine2 ? `, ${address.addressLine2}` : ""}<br />{address.city}, {address.stateCode} {address.postalCode}</p>
-                      </div>
-                      {order.paymentStatus === "canceled" ? (
-                        <div className="rounded-md border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900"><strong>Order canceled.</strong><p className="mt-1">Edition inventory has been restored. Sandbox orders can now be deleted permanently.</p></div>
-                      ) : <form onSubmit={(event) => saveFulfillment(event, order)} className="grid gap-2 rounded-md bg-stone-50 p-3 sm:grid-cols-2">
-                        <label className="text-xs font-semibold">Status<select value={draft.status || "unfulfilled"} onChange={(event) => setOrderDrafts({ ...orderDrafts, [order.id]: { ...draft, status: event.target.value } })} className="mt-1 w-full rounded-md border border-stone-300 px-2 py-2 text-sm"><option value="unfulfilled">Unfulfilled</option><option value="processing">Processing</option><option value="on_hold">On hold</option><option value="shipped">Shipped</option><option value="fulfilled">Fulfilled</option></select></label>
-                        <label className="text-xs font-semibold">Carrier<select value={draft.trackingCarrier || "FedEx"} onChange={(event) => setOrderDrafts({ ...orderDrafts, [order.id]: { ...draft, trackingCarrier: event.target.value } })} className="mt-1 w-full rounded-md border border-stone-300 px-2 py-2 text-sm"><option value="FedEx">FedEx</option><option value="UPS">UPS</option><option value="USPS">USPS</option><option value="SmugMug">SmugMug</option></select></label>
-                        <label className="text-xs font-semibold sm:col-span-2">Tracking number<input value={draft.trackingNumber || ""} onChange={(event) => setOrderDrafts({ ...orderDrafts, [order.id]: { ...draft, trackingNumber: event.target.value } })} className="mt-1 w-full rounded-md border border-stone-300 px-2 py-2 text-sm" /></label>
-                        <label className="text-xs font-semibold sm:col-span-2">Internal note<input value={draft.note || ""} onChange={(event) => setOrderDrafts({ ...orderDrafts, [order.id]: { ...draft, note: event.target.value } })} className="mt-1 w-full rounded-md border border-stone-300 px-2 py-2 text-sm" /></label>
-                        <button type="submit" disabled={status === "saving"} className="inline-flex items-center justify-center gap-2 rounded-md bg-[#63776a] px-3 py-2 text-xs font-semibold text-white sm:col-span-2"><Save className="h-3.5 w-3.5" /> Save fulfillment</button>
-                      </form>}
-                    </div>
-                  </article>
-                );
-              })}
+              {orderGroups.completed.length === 0 && <p className="text-sm text-stone-600">No orders with a recorded payment.</p>}
+              {orderGroups.completed.map(renderOrder)}
+              {orderGroups.unfinished.length > 0 && <details className="rounded-lg border border-stone-300 bg-stone-50" data-order-group="unfinished">
+                <summary className="cursor-pointer select-none px-4 py-4 text-sm font-semibold text-stone-600">Unfinished checkouts ({orderGroups.unfinished.length})</summary>
+                <div className="space-y-4 border-t border-stone-200 p-4">
+                  <p className="text-xs text-stone-600">No completed payment is recorded for these checkout attempts. They are excluded from sales totals and do not need fulfillment.</p>
+                  {orderGroups.unfinished.map(renderOrder)}
+                </div>
+              </details>}
+              {orderGroups.canceled.length > 0 && <details className="rounded-lg border border-stone-300 bg-stone-50" data-order-group="canceled">
+                <summary className="cursor-pointer select-none px-4 py-4 text-sm font-semibold text-stone-600">Canceled orders ({orderGroups.canceled.length})</summary>
+                <div className="space-y-4 border-t border-stone-200 p-4">{orderGroups.canceled.map(renderOrder)}</div>
+              </details>}
             </div>
           </section>
 
@@ -559,6 +578,8 @@ export default function CommerceAdminPage() {
             </div>
             <button type="submit" disabled={status === "saving"} className="mt-5 inline-flex items-center gap-2 rounded-md bg-[#8a3d2b] px-4 py-2 text-sm font-semibold text-white"><Save className="h-4 w-4" /> Save effective shipping rates</button>
           </form>
+
+          <PromotionSettings mode={report.mode} request={adminRequest} />
 
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             <form onSubmit={saveOhio} className="rounded-lg border border-stone-300 bg-[#fbfaf7] p-5">

@@ -1,7 +1,7 @@
 // src/components/utils/getStructuredData.ts
 import { getSemanticImageUrl, USE_SEMANTIC_IMAGE_URLS } from "../../utils/imageProxy.js";
 import { themes } from "../../data/themes/themes.mjs";
-import { getK4MerchantReturnPolicy, getSketchOfferShippingDetails } from "../../data/commerceResolver.js";
+import { getK4MerchantReturnPolicy, getSketchOfferShippingDetails, resolveImageCommerce } from "../../data/commerceResolver.js";
 import { siteNav } from "../../data/siteNav.ts";
 
 // Helper to convert image to proxy URL (never expose SmugMug URLs in structured data)
@@ -215,6 +215,23 @@ function buildSketchProductNode(data: any, imageUrl: string) {
     category: "Fine Art Print",
     mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
     offers: buildSketchOfferNode(pageUrl, price),
+  };
+}
+
+function buildLimitedPrintProductNode(data: any, imageUrl: string) {
+  if (data?.commerce?.mode !== "standard" || !data.commerce.schema ||
+      !data.commerce.tiers?.some((tier: any) => ["chronicle", "legend"].includes(tier.key))) return null;
+  const pageUrl = data.pageUrl || data.url;
+  return {
+    "@type": "Product",
+    "@id": `${pageUrl}#product-print`,
+    name: `${data.title || "Fine Art Photograph"} - Limited Edition Fine Art Print`,
+    image: imageUrl || undefined,
+    description: "A signed and numbered limited edition physical fine art print by Wayne Heim.",
+    sku: data.id,
+    brand: { "@type": "Brand", "@id": K4_ORGANIZATION_ID, name: "K4 Studios" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+    offers: data.commerce.schema,
   };
 }
 
@@ -650,9 +667,9 @@ export function getStructuredData({
     if (data.width) obj.width = data.width;
     if (data.height) obj.height = data.height;
 
-    const sketchProduct = buildSketchProductNode(data, proxyUrl);
+    const printProduct = buildSketchProductNode(data, proxyUrl) || buildLimitedPrintProductNode(data, proxyUrl);
 
-    if (!sketchProduct) {
+    if (!printProduct) {
       return stringifySchema(obj);
     }
 
@@ -660,7 +677,7 @@ export function getStructuredData({
       "@context": "https://schema.org",
       "@graph": [
         obj,
-        sketchProduct,
+        printProduct,
       ],
     });
   }
@@ -953,23 +970,14 @@ export function getCollectionImageGalleryGraph({
         "l",
         { absolute: true }
       );
-      const item = includeProductReferences && image.noSketch !== true
-        ? {
-            "@type": "Product",
-            "@id": `${imagePageUrl}#product-sketch`,
-            name: `${imageName} - Open Edition 5 x 7 Physical Photographic Print`,
-            url: imagePageUrl,
-            image: imageUrl || undefined,
-            description: SKETCH_SERIES_DESCRIPTION,
-            sku: `${image.id}-sketch`,
-            brand: {
-              "@type": "Brand",
-              "@id": K4_ORGANIZATION_ID,
-              name: "K4 Studios",
-            },
-            offers: buildSketchOfferNode(imagePageUrl),
-          }
-        : {
+      const commerce = includeProductReferences
+        ? resolveImageCommerce({ image, galleryPath: normalizedBasePath, pageUrl: imagePageUrl })
+        : null;
+      const productData = { ...image, title: imageName, pageUrl: imagePageUrl, commerce };
+      const product = includeProductReferences
+        ? buildSketchProductNode(productData, imageUrl) || buildLimitedPrintProductNode(productData, imageUrl)
+        : null;
+      const item = product ? { ...product, url: imagePageUrl } : {
             "@type": "ImageObject",
             "@id": `${imagePageUrl}#image`,
             url: imagePageUrl,

@@ -1,10 +1,15 @@
+import { getSeriesPricingEntries } from '../../pricing/printSeries.js';
+import { getLimitedFirstEditionLadder } from '../../doorway/limitedFirstCopy.js';
+
+const seriesPrices = (key: string) => `Sizes & prices: ${getSeriesPricingEntries(key).map(entry => `${entry.displaySize.replace(/\s*x\s*/i, ' × ')} · ${entry.displayPrice}`).join('; ')}.`;
+
 export const seriesStory = [
   {
     title: null,
     subhead: null,
     paragraphs: [
       "Every image at K4 Studios begins as a finished work — but not every image carries the same weight, scale, or intent.",
-      "This page outlines how images live, evolve, and are offered across distinct collector formats. Each edition reflects a different relationship between the work, the wall, and the person who chooses to live with it — from intimate studies held in the hand to statement works that define a space.",
+      `The work is ${getLimitedFirstEditionLadder()}. Each edition reflects a different relationship between the work, the wall, and the person who chooses to live with it — from intimate studies held in the hand to statement works that define a space.`,
       "These structures are not marketing devices. They are rules of authorship, scarcity, and stewardship — designed to protect the integrity of the work while allowing collectors to engage at the level that feels right.",
       "You'll notice subtle symbols accompanying images across the site. These marks indicate which collector formats an image belongs to — from intimate studies to formally issued archive works."
     ]
@@ -22,6 +27,7 @@ export const seriesStory = [
     title: "The Edition Structure",
     subhead: "✽ The Sketch Series — The Visual Lobby",
     paragraphs: [
+      seriesPrices('sketch'),
       "The Sketch Series is filled with larger-than-life characters, quiet studies, and fragments of story. Purposefully presented at an intimate scale, each piece is a finished work — carrying its own weight and narrative presence.",
       "Like travelers passing through, some arrive with more grit than grace, others with memories heavier than their baggage. Each Sketch holds a suspended moment — a brief encounter carried forward by the viewer.",
       "Held in the hand, these images invite close looking and personal reflection — experienced quietly, directly, and without distance."
@@ -37,6 +43,7 @@ export const seriesStory = [
     title: null,
     subhead: "✯ The Foundation Series — Where the Wall Begins",
     paragraphs: [
+      seriesPrices('foundation'),
       "Foundation works move from the intimacy of the hand to the presence of the wall — still approachable, still open, but carrying greater balance and composure. Characters linger longer here. Stories unfold more slowly.",
       "Printed on archival paper in collector-friendly sizes, this series introduces scale and refinement without losing the quiet emotional weight that defines the work.",
       "Foundation images remain available until an image advances further — marking a period where the work is lived with, returned to, and allowed to grow into its next chapter."
@@ -52,6 +59,7 @@ export const seriesStory = [
     title: null,
     subhead: "⌘ The Chronicle Series — Where the Story Settles",
     paragraphs: [
+      seriesPrices('chronicle'),
       "The Chronicle Series marks the point where an image crosses from open exploration into recorded history. These works are released as signed, limited editions — formally issued, tracked, and preserved as part of the long-term archive.",
       "Presented at a scale meant to be lived with — not glanced past — Chronicle works establish presence. They slow a room and invite pause, becoming part of the story told by the person who chooses them.",
       "Once issued, Chronicle editions remain in circulation — carrying their history forward, edition by edition, collector by collector."
@@ -65,8 +73,9 @@ export const seriesStory = [
   },
   {
     title: null,
-    subhead: "❖ Legends — A Statement of Voice and Legacy",
+    subhead: "❖ Legend Series — A Statement of Voice and Legacy",
     paragraphs: [
+      seriesPrices('legend'),
       "Legends exist for works that demand scale, restraint, and finality. These images no longer compete for attention — they command it.",
       "Choosing a Legend is not about what the image depicts, but what it communicates. These works reveal voice, confidence, and intention — reflecting as much about the collector as the story within the frame.",
       "Issued sparingly and with purpose, Legends are allowed to settle into the long arc of a life — where meaning deepens with time, not explanation."

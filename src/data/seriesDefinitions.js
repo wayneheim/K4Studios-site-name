@@ -8,7 +8,7 @@ import {
   getSeriesIcons,
   getSeriesPricingEntries,
 } from "./pricing/printSeries.js";
-import { getEffectiveSeries as resolveEffectiveSeries } from "./seriesAvailability.js";
+import { getOfferedSeries as resolveEffectiveSeries } from "./seriesAvailability.js";
 
 // Series Icons — Unicode symbols for each series level
 // Helper to format price for display
@@ -179,6 +179,6 @@ export function isOneImageMovieFromRegistry(imageId, registry = registryCache) {
 
 // Helper to get effective series for an image (includes Sketch and Foundation by default)
 // Now reads from seriesRegistry instead of image.availableSeries
-export function getEffectiveSeries(image, registry = registryCache) {
-  return resolveEffectiveSeries(image, getSeriesRecordFromRegistry(image?.id, registry));
+export function getEffectiveSeries(image, registry = registryCache, options = {}) {
+  return resolveEffectiveSeries(image, getSeriesRecordFromRegistry(image?.id, registry), options);
 }

@@ -111,6 +111,14 @@
           position: relative;
           z-index: 1;
         }
+  .gallery-enter-label {
+    margin-top: 0.2rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #999;
+  }
+
   .landing-divider {
           width: 200px;
           margin: 0.25rem auto;

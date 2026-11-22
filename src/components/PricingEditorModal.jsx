@@ -1,6 +1,7 @@
 // PricingEditorModal.jsx — In-app editor for series pricing & all copy
 // pricingConfig.json is the SINGLE SOURCE OF TRUTH for pricing, descriptions, cardCopy, infoCopy
 import { useState, useEffect, useRef } from "react";
+import pricingConfig from "../data/pricingConfig.json";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Save, ChevronDown, ChevronUp, Plus, Trash2, Pencil, Check, X, GripVertical } from "lucide-react";
 
@@ -246,26 +247,7 @@ export default function PricingEditorModal({ isOpen, onClose }) {
   };
 
   // Default values (fallback if not in config)
-  const defaults = {
-    descriptions: {
-      sketch: "Open edition proof prints on archival matte paper.",
-      foundation: "Open edition archival prints in collector-friendly sizes.",
-      chronicle: "Limited edition of 50, unsigned, museum-quality archival print.",
-      legend: "Ultra-limited edition of 25, signed, museum-grade canvas.",
-    },
-    cardCopy: {
-      sketch: "Open edition study prints — intimate, immediate, and tactile.\nA quiet entry point into the work.",
-      foundation: "Open edition archival prints — refined, balanced, and collectible.\nWhere images begin to take their full form.",
-      chronicle: "Signed, limited archival prints — historically recorded and tightly controlled.",
-      legend: "Ultra-limited, signed statement works — the highest expression of the image.",
-    },
-    infoCopy: {
-      sketch: { title: "The Sketch Series", body: "These small-format prints are the foundation of the work." },
-      foundation: { title: "The Foundation Series", body: "This series represents the first formal presentation of an image." },
-      chronicle: { title: "The Chronicle Series", body: "Each Chronicle image is released as a signed, limited edition." },
-      legend: { title: "The Legend Series", body: "Legend works represent the final and most complete expression." },
-    },
-  };
+  const defaults = pricingConfig;
 
   // Load pricing on open
   useEffect(() => {

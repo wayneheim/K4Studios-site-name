@@ -83,11 +83,12 @@ function findEngrainedForPaperImage(imageId) {
   return engrainedGalleryData.find((item) => item?.linkedImageId === imageId && !['hidden', 'hide', 'ghost', 'non', 'none', ''].includes(String(item.visibility ?? 'show').trim().toLowerCase())) || null;
 }
 
-function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
+function resolveStandardCommerce({ image, galleryPath, pageUrl, merchantSketch }) {
   const { seriesId, seriesRecord: series, tiers: effectiveSeries } = resolveImageSeries({
     image,
     galleryPath,
     registry: seriesRegistry,
+    merchantSketch,
   });
   const oneImageMovie = Boolean(series?.oneImageMovie || image?.oneImageMovie);
   const tierSet = new Set(effectiveSeries);
@@ -143,7 +144,6 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl }) {
     : null;
 
   const offerPrices = tiers.flatMap((tier) => tier.pricing.map((entry) => entry.price));
-  if (engrainedLink?.priceValue) offerPrices.push(engrainedLink.priceValue);
 
   return {
     mode: "standard",
@@ -234,12 +234,12 @@ function buildSketchMerchantOffer({ pageUrl, tiers }) {
   };
 }
 
-export function resolveImageCommerce({ image, galleryPath = "", pageUrl = "" }) {
+export function resolveImageCommerce({ image, galleryPath = "", pageUrl = "", merchantSketch = /\/i-[A-Za-z0-9]+-sketch\/?(?:[?#]|$)/i.test(pageUrl) }) {
   if (!image?.id) return null;
 
   if (String(galleryPath).includes("/Engrained/Engrained-Series")) {
     return resolveEngrainedCommerce({ image, pageUrl });
   }
 
-  return resolveStandardCommerce({ image, galleryPath, pageUrl });
+  return resolveStandardCommerce({ image, galleryPath, pageUrl, merchantSketch });
 }

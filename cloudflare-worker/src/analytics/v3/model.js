@@ -1,7 +1,9 @@
 import { mergeEntryEvidence, parseEntryEvidence } from './entry-engagement.js';
+import { SHOPPING_STAGES, shoppingTotal, mergeShoppingCounts, shoppingImageIds } from './shopping.js';
 import { isRotatingProxyCrawler } from '../../shared/rotating-proxy-crawl.js';
 
 export const V3_CORE_EVENT_TYPES = Object.freeze([
+  'zone_h1_click',
   'page_view', 'chapter_view', 'nav_next', 'nav_prev', 'sister_image_click',
   'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start',
   'grid_open', 'grid_image_click', 'grid_show_more', 'grid_show_previous',
@@ -13,11 +15,14 @@ export const V3_CORE_EVENT_TYPES = Object.freeze([
   'order_smugmug_clicked', 'order_email_clicked', 'xl_zoom',
   'native_cart_add', 'native_cart_view', 'native_checkout_start',
   'native_checkout_quote', 'native_payment_start', 'native_order_complete',
+  'native_checkout_error', 'native_checkout_cancel',
+  'order_native_cart_opened',
   'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start',
   'slideshow_nav_next', 'slideshow_nav_prev'
 ]);
 
 export const V3_ENGAGEMENT_EVENT_TYPES = new Set(V3_CORE_EVENT_TYPES.filter((type) => type !== 'page_view'));
+export const V3_SHOPPING_EVENT_TYPES = new Set(SHOPPING_STAGES.map(stage => stage.event));
 
 export const V3_OIM_DOMAINS = Object.freeze([
   'one-image-movie.com',
@@ -99,6 +104,15 @@ export function getV3OimDomain(row) {
 }
 
 export function getV3ActionLabel(type, sourceLayer = null) {
+  if (type === 'native_checkout_error' || type === 'native_checkout_cancel') {
+    const stage = ({ config: 'Checkout configuration', quote: 'Final total',
+      paypal_setup: 'PayPal loading / initialization', paypal_open: 'Opening PayPal',
+      paypal_capture: 'Capturing PayPal payment', paypal_error: 'PayPal SDK',
+      card_open: 'Opening card checkout', card_capture: 'Capturing card payment',
+      card_error: 'Card SDK', card_validation: 'Card validation',
+      paypal_cancel: 'PayPal', card_cancel: 'Card' })[sourceLayer] || 'Unknown step';
+    return `${type === 'native_checkout_error' ? 'Checkout error' : 'Checkout canceled'}: ${stage}`;
+  }
   if (type === 'order_clicked') {
     return ({
       pricing_main_button_v1: 'Pricing opened - main button',
@@ -108,9 +122,11 @@ export function getV3ActionLabel(type, sourceLayer = null) {
     })[String(sourceLayer || '')] || 'Pricing opened - legacy/unknown source';
   }
   return ({
+    zone_h1_click: 'Zone H1 clicked',
     order_submitted: 'Order choice clicked (legacy)',
     order_smugmug_clicked: 'Order clicked — SmugMug',
     order_email_clicked: 'Order clicked — email',
+    order_native_cart_opened: 'Opened ordering options',
     native_cart_add: 'Added to cart', native_cart_view: 'Viewed cart',
     native_checkout_start: 'Started checkout', native_checkout_quote: 'Calculated final total',
     native_payment_start: 'Started payment', native_order_complete: 'Order completed',
@@ -130,9 +146,9 @@ export function getV3ActionLabel(type, sourceLayer = null) {
 }
 
 export function getV3ActionGroup(type) {
-  if (['order_clicked', 'order_submitted', 'order_smugmug_clicked', 'order_email_clicked',
+  if (['order_clicked', 'order_submitted', 'order_smugmug_clicked', 'order_email_clicked', 'order_native_cart_opened',
     'native_cart_add', 'native_cart_view', 'native_checkout_start', 'native_checkout_quote',
-    'native_payment_start', 'native_order_complete'].includes(type)) return 'Commerce';
+    'native_payment_start', 'native_order_complete', 'native_checkout_error', 'native_checkout_cancel'].includes(type)) return 'Commerce';
   if (type.startsWith('grid_')) return 'Grid';
   if (type.startsWith('gallery_') || ['browse_all_click', 'browse_all_image_click', 'theme_click', 'all_list_click', 'exit_to_gallery'].includes(type)) return 'Gallery';
   if (['nav_next', 'nav_prev', 'slideshow_nav_next', 'slideshow_nav_prev', 'sister_image_click', 'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start'].includes(type)) return 'Image navigation';
@@ -317,7 +333,8 @@ export function buildV3RollupBatch(rows, previousSessions = []) {
         landingPage: prior?.landing_page || null, entrySource: prior?.entry_source || null,
         visitorGeo: prior?.visitor_geo || null, imageGeo: null,
         entryIsImageFallback: Number(prior?.entry_is_image_fallback || 0), pageViewCount: 0,
-        siteDevice: null, imageDevice: null, oimDomain: null, entryEvidence: prior?.entry_evidence || null
+        siteDevice: null, imageDevice: null, oimDomain: null, entryEvidence: prior?.entry_evidence || null,
+        shoppingActivity: {}
       });
     }
     // Lifecycle facts enrich an existing visit but never count as page loads,
@@ -336,6 +353,10 @@ export function buildV3RollupBatch(rows, previousSessions = []) {
 
     const engaged = V3_ENGAGEMENT_EVENT_TYPES.has(row.event_type) ? 1 : 0;
     const session = sessions.get(sessionKey);
+    if (V3_SHOPPING_EVENT_TYPES.has(row.event_type)) {
+      session.shoppingActivity[row.event_type] = (session.shoppingActivity[row.event_type] || 0) + 1;
+      session.visitorGeo ||= getV3GeoLabel(row);
+    }
     if (!session.visitorStatus && ['new', 'returning'].includes(row.visitor_status)) {
       session.visitorStatus = row.visitor_status;
     }
@@ -379,6 +400,19 @@ export function buildV3RollupBatch(rows, previousSessions = []) {
       if (row.event_type === 'order_email_clicked') image.emailClicks += 1;
       images.set(imageKey, image);
     }
+    if (V3_SHOPPING_EVENT_TYPES.has(row.event_type)) {
+      for (const imageId of shoppingImageIds(row.target_id)) {
+        // Cart pages are not artwork links. Keep the path empty so a real
+        // image view can supply it, or the renderer can use the /art resolver.
+        const imageKey = `${day}\u0000${imageId}\u0000`;
+        const image = images.get(imageKey) || { views: 0, pricingOpens: 0, smugmugClicks: 0, emailClicks: 0 };
+        image.shoppingActivity ||= {};
+        image.shoppingActivity._sessions ||= [];
+        if (!image.shoppingActivity._sessions.includes(row.session_id)) image.shoppingActivity._sessions.push(row.session_id);
+        image.shoppingActivity[row.event_type] = (image.shoppingActivity[row.event_type] || 0) + 1;
+        images.set(imageKey, image);
+      }
+    }
     if (row.event_type === 'chapter_view') {
       incrementDimension(day, 'image_geo_views', getV3GeoLabel(row) || 'Unknown location');
       const imageId = row.target_id || 'Unknown image';
@@ -413,7 +447,8 @@ export function buildV3RollupBatch(rows, previousSessions = []) {
     images: [...images].map(([key, counts]) => { const [day, imageId, pagePath] = split(key); return {
       day, imageId, pagePath: pagePath || null,
       count: counts.views, pricingOpens: counts.pricingOpens,
-      smugmugClicks: counts.smugmugClicks, emailClicks: counts.emailClicks
+      smugmugClicks: counts.smugmugClicks, emailClicks: counts.emailClicks,
+      shoppingActivity: counts.shoppingActivity || {}
     }; }),
     imageGeography: [...imageGeography].map(([key, count]) => {
       const [day, imageId, country, region, city] = split(key);
@@ -445,8 +480,15 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       if (!merged.has(value)) merged.set(value, new Set());
       merged.get(value).add(row.visitorId || row.sessionId);
     });
-    return [...merged].map(([itemLabel, visitors]) => ({ label: itemLabel, count: visitors.size,
-      ...(includeMix ? { visitorMix: classifyVisitorMix([...visitors].map((id) => periodVisitors.get(id) || {})) } : {}) }))
+    return [...merged].map(([itemLabel, visitors]) => {
+      const shoppingSessions = batch.sessions.filter((row) => shoppingTotal(row.shoppingActivity) && predicate(row)
+        && (typeof field === 'function' ? field(row) : row[field]) === itemLabel);
+      const shoppers = new Set(shoppingSessions.map((row) => row.visitorId || row.sessionId));
+      return { label: itemLabel, count: visitors.size,
+        ...(includeMix ? { visitorMix: classifyVisitorMix([...visitors].map((id) => periodVisitors.get(id) || {})),
+          ...(shoppers.size ? { shoppingVisitors: shoppers.size,
+            shoppingEvents: mergeShoppingCounts(shoppingSessions.map(row => row.shoppingActivity)) } : {}) } : {}) };
+    })
       .sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label)).slice(0, limit);
   };
   const fallbackPageCount = batch.sessions.filter((row) => row.entryIsImageFallback && !row.pageViewCount).length;
@@ -526,15 +568,27 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
     },
     topPages: topPagesWithFallback,
     topImages: (() => {
-      const all = batch.images.map((row) => ({
-        label: row.imageId, imageId: row.imageId, pagePath: row.pagePath,
-        count: row.count, pricingOpens: row.pricingOpens,
-        smugmugClicks: row.smugmugClicks, emailClicks: row.emailClicks
-      }));
+      const byImage = new Map();
+      for (const row of batch.images) {
+        const item = byImage.get(row.imageId) || { label: row.imageId, imageId: row.imageId, pagePath: null,
+          count: 0, pricingOpens: 0, smugmugClicks: 0, emailClicks: 0, shoppingEvents: {} };
+        item._shoppingSessionKeys ||= new Set();
+        for (const sessionId of row.shoppingActivity?._sessions || []) item._shoppingSessionKeys.add(row.day + '|' + sessionId);
+        item.pagePath ||= row.pagePath;
+        for (const key of ['count', 'pricingOpens', 'smugmugClicks', 'emailClicks']) item[key] += Number(row[key] || 0);
+        item.shoppingEvents = mergeShoppingCounts([item.shoppingEvents, row.shoppingActivity]);
+        byImage.set(row.imageId, item);
+      }
+      const all = [...byImage.values()].map(item => {
+        const { _shoppingSessionKeys, ...image } = item;
+        return { ...image, shoppingProgress: mergeShoppingCounts(batch.sessions
+          .filter(session => _shoppingSessionKeys.has(session.day + '|' + session.sessionId))
+          .map(session => session.shoppingActivity)) };
+      });
       const selected = new Map(all.filter((row) => row.count > 0)
         .sort((a, b) => b.count - a.count).slice(0, 25)
         .map((row) => [row.imageId, row]));
-      all.filter((row) => row.pricingOpens > 0).forEach((row) => selected.set(row.imageId, row));
+      all.filter((row) => row.pricingOpens > 0 || shoppingTotal(row.shoppingEvents) > 0).forEach((row) => selected.set(row.imageId, row));
       all.filter((row) => row.smugmugClicks > 0 || row.emailClicks > 0)
         .forEach((row) => selected.set(row.imageId, row));
       const geoByImage = new Map();
@@ -572,6 +626,8 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
     actionGroups: top('action_group', 10),
     actions: top('action', 20).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),
     cartFunnel: cartFunnelLabels.map((label) => ({ label, count: actionCounts.get(label) || 0 })),
+    checkoutIssues: [...actionCounts].filter(([label]) => /^Checkout (error|canceled):/.test(label))
+      .map(([label, count]) => ({ label, count })),
     population: { scanned: batch.scanned, accepted: batch.accepted }
   };
 }

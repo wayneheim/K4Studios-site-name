@@ -20,7 +20,10 @@ const VISITOR_STATUS_KEY = 'k4_visitor_status';
 let PAGE_INSTANCE_ID = safeRandomId();
 
 let inMemorySessionId: string | null = null;
+let inMemorySessionLastActivity: number | null = null;
 let inMemoryVisitorId: string | null = null;
+let inMemoryVisitorStatus: 'new' | 'returning' | null = null;
+let visitorCreatedBeforeSession = false;
 
 function getCurrentHostname(): string {
   if (typeof window === 'undefined') return '';
@@ -65,12 +68,20 @@ function clearSessionAttribution(): void {
 }
 
 function persistSessionId(sessionId: string, now: number, rotated = false): string {
+  let visitorStatus = getVisitorStatus();
+  if (rotated || !visitorStatus) {
+    // A missing/rotated session alone does not prove a previous visit. Resolve
+    // identity before deciding, including when bootstrap already minted the ID.
+    getVisitorId();
+    visitorStatus = visitorCreatedBeforeSession ? 'new' : 'returning';
+  }
+  visitorCreatedBeforeSession = false;
+  inMemoryVisitorStatus = visitorStatus;
   inMemorySessionId = sessionId;
-  let visitorStatus: string | null = rotated ? 'returning' : getCookie(VISITOR_STATUS_KEY);
+  inMemorySessionLastActivity = now;
   try {
     sessionStorage.setItem(SESSION_ID_KEY, sessionId);
     sessionStorage.setItem(SESSION_LAST_ACTIVITY_KEY, String(now));
-    visitorStatus ||= sessionStorage.getItem(VISITOR_STATUS_KEY);
     if (visitorStatus === 'new' || visitorStatus === 'returning') {
       sessionStorage.setItem(VISITOR_STATUS_KEY, visitorStatus);
     }
@@ -175,7 +186,7 @@ function getSessionId(): string {
   }
 
   const sessionId = getCookie('k4_sid') || storedSessionId || inMemorySessionId;
-  const lastActivity = parseActivityTimestamp(getCookie('k4_session_last_activity')) || storedLastActivity;
+  const lastActivity = parseActivityTimestamp(getCookie('k4_session_last_activity')) || storedLastActivity || inMemorySessionLastActivity;
 
   // Accept a legacy session with no activity marker once, then begin rolling expiry.
   if (sessionId && (lastActivity === null || now - lastActivity <= SESSION_TIMEOUT_MS)) {
@@ -253,6 +264,16 @@ function getVisitorId(): string {
 
   if (!inMemoryVisitorId) {
     inMemoryVisitorId = safeRandomId();
+    visitorCreatedBeforeSession = true;
+    inMemoryVisitorStatus = 'new';
+    // Preserve first-visit evidence even if another bootstrap reads the newly
+    // minted visitor ID before the first session is initialized.
+    try {
+      sessionStorage.setItem(VISITOR_STATUS_KEY, 'new');
+    } catch {
+      // ignore
+    }
+    setK4Cookie(VISITOR_STATUS_KEY, 'new', SESSION_TIMEOUT_SECONDS);
   }
 
   try {
@@ -280,7 +301,7 @@ function getVisitorStatus(): 'new' | 'returning' | null {
       // ignore
     }
   }
-  return value === 'new' || value === 'returning' ? value : null;
+  return value === 'new' || value === 'returning' ? value : inMemoryVisitorStatus;
 }
 
 type ClarityFn = (...args: any[]) => void;
@@ -432,6 +453,7 @@ function getAttributionPayload() {
 }
 
 interface TrackContext {
+  cartImageIds?: string[];
   galleryId?: string | null;
   imageId?: string | null;
   sourceLayer?: string | null;
@@ -782,13 +804,17 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
     return;
   }
 
+  const cartImageIds = Array.isArray(context.cartImageIds)
+    ? [...new Set(context.cartImageIds.filter(id => typeof id === 'string' && /^i-[a-zA-Z0-9_-]{1,80}$/.test(id)))].slice(0, 50)
+    : [];
   const payload = JSON.stringify({
     session_id: sessionId,
     visitor_id: getVisitorId() || null,
     visitor_status: getVisitorStatus(),
     event,
     gallery_id: inferredGalleryId || null,
-    image_id: inferredImageId || null,
+    image_id: event.startsWith('native_') && cartImageIds.length
+      ? `cart:${cartImageIds.join(',')}` : (inferredImageId || null),
     source_layer: context.sourceLayer || null,
     page_type: inferredPageType || null,
     theme: context.theme || null,

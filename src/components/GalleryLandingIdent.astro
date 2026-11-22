@@ -1,0 +1,117 @@
+---
+import { getGalleryIdentForPath } from '@/data/semantic/K4-Sem';
+
+// Exact landing paths only: no ident on chapter, collection, or home pages.
+const ident = getGalleryIdentForPath(Astro.url.pathname);
+---
+
+{ident && (
+  <div class="gallery-landing-ident">
+    <span class="gallery-ident-label">This is:</span>
+    <h2 class="gallery-ident-term">
+      <span class="gallery-ident-reveal">
+        <span class="gallery-ident-text">
+          {ident.link ? <a href={ident.link}>{ident.term}</a> : ident.term}
+        </span>
+      </span>
+    </h2>
+  </div>
+)}
+
+<style>
+  .gallery-landing-ident {
+    width: 100%;
+    margin: 1.5rem auto 0.25rem;
+    text-align: center;
+    font-family: 'Glegoo', serif;
+    color: #81766d;
+  }
+
+  .gallery-ident-term::before,
+  .gallery-ident-term::after {
+    content: '';
+    display: block;
+    /* Extend the fading tips beyond the six-thumbnail preview width. */
+    width: min(100%, calc((660px + 5rem) * 1.22));
+    margin-inline: auto;
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgba(129, 118, 109, 0.4) 18%, rgba(129, 118, 109, 0.4) 82%, transparent);
+  }
+
+  .gallery-ident-term::before {
+    margin-bottom: 0.3rem;
+  }
+
+  .gallery-ident-term::after {
+    margin-top: 0;
+  }
+
+  .gallery-ident-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  .gallery-ident-term {
+    margin: 0;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .gallery-ident-term a,
+  .gallery-ident-term a:hover,
+  .gallery-ident-term a:focus,
+  .gallery-ident-term a:active,
+  .gallery-ident-term a:visited {
+    color: inherit !important;
+    text-decoration: none !important;
+    cursor: default;
+  }
+
+  .gallery-ident-term a:focus-visible {
+    outline: 1px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  .gallery-ident-reveal {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.3rem;
+  }
+
+  .gallery-ident-text {
+    display: block;
+    animation: ident-slide-up 0.9s ease-out 1.75s both;
+  }
+
+  .gallery-ident-label {
+    animation: ident-fade-in 0.6s ease-out 0.75s both;
+  }
+
+  .gallery-ident-term::before,
+  .gallery-ident-term::after {
+    animation: ident-fade-in 1.2s ease-out 0.75s both;
+  }
+
+  @keyframes ident-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes ident-slide-up {
+    from { transform: translateY(calc(100% + 0.3rem)); }
+    to { transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-ident-text,
+    .gallery-ident-label,
+    .gallery-ident-term::before,
+    .gallery-ident-term::after {
+      animation: none;
+    }
+  }
+</style>

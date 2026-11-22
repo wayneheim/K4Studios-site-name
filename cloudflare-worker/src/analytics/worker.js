@@ -14,6 +14,7 @@ import {
   handleLegacyPatternOverrideRequest
 } from "./v2/legacy-patterns.js";
 import { shouldPersistAnalyticsEvent } from "../shared/analytics-write-gate.js";
+import { handleOrderTrackerRequest } from "./orders/route.js";
 
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
@@ -8843,6 +8844,7 @@ function isLevel4BlockCandidate({
 __name(isLevel4BlockCandidate, "isLevel4BlockCandidate");
 __name2(isLevel4BlockCandidate, "isLevel4BlockCandidate");
 const CANONICAL_TRACKED_EVENTS = /* @__PURE__ */ new Set([
+  "zone_h1_click",
   "xl_zoom",
   "browse_all_click",
   "order_clicked",
@@ -10716,6 +10718,9 @@ var worker_default = {
       if (!checkBasicAuth2(request, env)) {
         return requireAuth2();
       }
+    }
+    if (url.pathname === "/__k4stats/orders" || url.pathname.startsWith("/__k4stats/orders/")) {
+      return handleOrderTrackerRequest(request, env);
     }
     if ((url.pathname.startsWith("/track") || url.pathname.startsWith("/__k4e") || url.pathname.startsWith("/_state")) && shouldSilenceTrackingRequest(request)) {
       return new Response(null, { status: 204, headers: applyNoStore(new Headers()) });

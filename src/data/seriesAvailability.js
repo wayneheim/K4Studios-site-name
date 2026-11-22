@@ -49,13 +49,21 @@ export function getEffectiveSeries(image, seriesRecord = null) {
   return series.filter((tier) => tier !== "engrained");
 }
 
-export function resolveImageSeries({ image, galleryPath, registry }) {
+// Public offers are separate from stored assignments used by the editor.
+export function getOfferedSeries(image, seriesRecord = null, { merchantSketch = false } = {}) {
+  const series = getEffectiveSeries(image, seriesRecord);
+  if (merchantSketch) return series.includes("sketch") ? ["sketch"] : [];
+  const limited = series.filter((tier) => tier === "chronicle" || tier === "legend");
+  return limited.length > 0 ? limited : series;
+}
+
+export function resolveImageSeries({ image, galleryPath, registry, merchantSketch = false }) {
   const seriesId = findSeriesId(image?.id, galleryPath, registry);
   const seriesRecord = seriesId ? registry?.series?.[seriesId] || null : null;
 
   return {
     seriesId,
     seriesRecord,
-    tiers: getEffectiveSeries(image, seriesRecord),
+    tiers: getOfferedSeries(image, seriesRecord, { merchantSketch }),
   };
 }

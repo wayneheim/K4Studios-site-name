@@ -1,5 +1,6 @@
 ---
 import { normalizeImageSrc, extractImageId } from "@/utils/imageProxy.js";
+import { buildSearchImageGallery } from '@/utils/searchImageGallery.js';
 import { linkKeywordBodyHtml } from "@/components/utils/linkKeywordBodyHtml.ts";
 
 export const prerender = true;
@@ -150,9 +151,12 @@ const cleanTitleBase = isImagePage
     : normalizedTitleBase
       .replace(/\s*\|\s*Wayne Heim.*$/gi, '')
       .trim();
+const titleMaxLength = Number.isFinite(meta.titleMaxLength) && meta.titleMaxLength > 0
+  ? meta.titleMaxLength
+  : 95;
 const cleanTitle = isImagePage
   ? cleanTitleBase
-  : trimTitle(cleanTitleBase, 95, titleTextOptions);
+  : trimTitle(cleanTitleBase, titleMaxLength, titleTextOptions);
 
 const pathname = Astro.url?.pathname || '';
 const normalizedKeywordPath = pathname.replace(/\/+$/, '') || '/';
@@ -181,9 +185,11 @@ const shouldLinkKeywordBody = Boolean(enableKeywordLinking)
   || existingKeywordLinkerPages.has(normalizedKeywordPath)
   || /^\/Other\/Expeditions(?:\/|$)/i.test(normalizedKeywordPath)
   || normalizedKeywordPath.toLowerCase() === '/western-painterly-fine-art-photography';
+const enableSearchImages = !isImagePage && !/^\/(?:admin|internal|api)(?:\/|$)/i.test(pathname);
+const renderedPageBody = shouldLinkKeywordBody || enableSearchImages ? await Astro.slots.render('default') : '';
 const renderedKeywordBody = shouldLinkKeywordBody
-  ? linkKeywordBodyHtml(await Astro.slots.render('default'), normalizedKeywordPath)
-  : '';
+  ? linkKeywordBodyHtml(renderedPageBody, normalizedKeywordPath)
+  : renderedPageBody;
 let finalTitle = cleanTitle;
 if (/^\/Other\/Show(?:\/|$)/i.test(pathname) && !/\|\s*Show$/i.test(finalTitle)) {
   finalTitle = `${finalTitle} | Show`;
@@ -265,6 +271,8 @@ const isInternalPreviewPage =
   /\/index%20copy(?:\/|$)/i.test(pathname) ||
   /\/index copy(?:\/|$)/i.test(pathname);
 const robotsContent = meta.robots || (isInternalPreviewPage ? "noindex, follow" : (isImagePage ? "index, follow, noai, noimageai" : null));
+const searchRobotsContent = enableSearchImages && !isInternalPreviewPage && !/noindex|max-image-preview:/i.test(robotsContent || '')
+  ? `${robotsContent || 'index, follow'}, max-image-preview:large` : robotsContent;
 const clarityDelayMs = isImagePage ? 4000 : 2000;
 const analyticsDelayMs = isImagePage ? 4000 : 0;
 
@@ -468,6 +476,8 @@ const inferMimeType = (url) => {
 const ogImageType = meta.ogImageType || inferMimeType(ogImage) || 'image/jpeg';
 const twitterCard = meta.twitterCard || (twitterImage ? 'summary_large_image' : 'summary');
 const normalizedStructuredDataJSON = normalizeK4Host(structuredDataJSON);
+const searchImageGallery = enableSearchImages && !isInternalPreviewPage && !/noindex/i.test(robotsContent || '')
+  ? buildSearchImageGallery(renderedKeywordBody, stripHash(canonicalUrl), finalTitle) : null;
 const normalizedStructuredDataEntries = (Array.isArray(structuredDataEntries) ? structuredDataEntries : [])
   .map((entry) => ({
     label: String(entry?.label || '').replace(/[^a-z0-9_-]/gi, ''),
@@ -602,7 +612,8 @@ const jsonLdScripts = [
     <meta name="author" content="Wayne Heim" />
     <meta name="copyright" content="Copyright Wayne Heim, K4 Studios" />
     <meta name="creator" content="Wayne Heim" />
-    {robotsContent && <meta name="robots" content={robotsContent} />}
+    {searchRobotsContent && <meta name="robots" content={searchRobotsContent} />}
+    {searchImageGallery && <script type="application/ld+json" data-k4-schema="search-images" set:html={JSON.stringify(searchImageGallery).replace(/</g, '\\u003c')} />}
     {emitCanonical && <link rel="canonical" href={canonicalUrl} />}
     <noscript>
       <style>
@@ -821,7 +832,7 @@ const jsonLdScripts = [
     </script>
 
     <!-- Session + visitor cookie bridge: mint stable first-party IDs before analytics writes -->
-    <script>
+    <script is:inline>
       (function () {
         try {
           function readCookie(name) {
@@ -898,7 +909,7 @@ const jsonLdScripts = [
           if (visitorStatus !== 'new' && visitorStatus !== 'returning') {
             visitorStatus = hadVisitorId ? 'returning' : 'new';
           }
-          if (rotatedSession && sessionExpired) {
+          if (rotatedSession && sessionExpired && hadVisitorId) {
             visitorStatus = 'returning';
           }
           sessionStorage.setItem('k4_visitor_status', visitorStatus);
@@ -963,7 +974,7 @@ const jsonLdScripts = [
       </div>
     </div>
     <div class="page-container">
-      {shouldLinkKeywordBody ? <Fragment set:html={renderedKeywordBody} /> : <slot />}
+      {shouldLinkKeywordBody || enableSearchImages ? <Fragment set:html={renderedKeywordBody} /> : <slot />}
     </div>
     <div id="overlay-root"></div>
 

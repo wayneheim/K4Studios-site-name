@@ -13,6 +13,13 @@ function validYear(value) {
 
 export async function isAdminAuthorized(request, env) {
   const authorization = String(request.headers.get("authorization") || "");
+  if (env.EDITORPRO_COMMERCE_TOKEN && /^Bearer\s+/i.test(authorization)) {
+    const digestToken = async (value) => new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(value)));
+    const [expected,actual]=await Promise.all([digestToken(String(env.EDITORPRO_COMMERCE_TOKEN)),digestToken(authorization.replace(/^Bearer\s+/i,""))]);
+    let difference=0;
+    for(let i=0;i<expected.length;i+=1)difference|=expected[i]^actual[i];
+    if(difference===0)return true;
+  }
   let configured = String(env.COMMERCE_ADMIN_PASSWORD || "");
   let supplied = "";
   if (/^Basic\s+/i.test(authorization)) {
@@ -49,6 +56,21 @@ export async function isAdminAuthorized(request, env) {
   let difference = 0;
   for (let index = 0; index < expected.length; index += 1) difference |= expected[index] ^ actual[index];
   return difference === 0;
+}
+
+// This service credential is scoped to the tracker routes, not general admin.
+export async function isOrderTrackerAuthorized(request, env) {
+  const authorization = String(request.headers.get("authorization") || "");
+  const configured = String(env.STATS_ORDERS_TOKEN || "");
+  if (configured && /^Bearer\s+/i.test(authorization)) {
+    const supplied = authorization.replace(/^Bearer\s+/i, "");
+    const digest = async (value) => new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)));
+    const [expected, actual] = await Promise.all([digest(configured), digest(supplied)]);
+    let difference = 0;
+    for (let index = 0; index < expected.length; index += 1) difference |= expected[index] ^ actual[index];
+    if (difference === 0) return true;
+  }
+  return isAdminAuthorized(request, env);
 }
 
 function thresholdState(row) {
@@ -435,6 +457,7 @@ export async function cancelOrder(db, orderId, mode, noteInput = "") {
   const note = cleanText(noteInput, 500) || (mode === "sandbox" ? "Sandbox test order canceled by administrator." : "Order canceled by administrator.");
   const statements = editionRestorationStatements(db, allocations, now);
   statements.push(
+    db.prepare("UPDATE promotion_uses SET status='released',updated_at=? WHERE order_id=? AND status='reserved'").bind(now, order.id),
     db.prepare(`
       UPDATE orders
       SET status = 'canceled', financial_status = 'canceled', fulfillment_status = 'canceled', updated_at = ?
@@ -476,6 +499,7 @@ export async function deleteSandboxOrder(db, orderId, mode) {
     db.prepare("DELETE FROM order_fulfillment_events WHERE order_id = ?").bind(order.id),
     db.prepare("DELETE FROM email_outbox WHERE order_id = ?").bind(order.id),
     db.prepare("DELETE FROM edition_allocations WHERE order_id = ?").bind(order.id),
+    db.prepare("DELETE FROM promotion_uses WHERE order_id = ?").bind(order.id),
     db.prepare("DELETE FROM payments WHERE order_id = ?").bind(order.id),
     db.prepare("DELETE FROM orders WHERE id = ? AND mode = 'sandbox'").bind(order.id),
   ]);

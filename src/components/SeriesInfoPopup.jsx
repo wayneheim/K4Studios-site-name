@@ -4,20 +4,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CircleX } from "lucide-react";
 import { SERIES_DEFINITIONS, SERIES_ICONS } from "../data/seriesDefinitions.js";
 
-// Import config at build time for infoCopy
-import pricingConfigFallback from "../data/pricingConfig.json";
+// One authored source for Guide prose.
+import pricingConfig from "../data/pricingConfig.json";
+import { getSeriesPricingEntries } from '../data/pricing/printSeries.js';
 
 // Series order for display (excludes engrained which has its own flow)
 const DISPLAY_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 
-export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null, activeSeries = [], infoCopy = null, displaySeries = DISPLAY_SERIES }) {
+export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null, activeSeries = [], pricing = null, displaySeries = DISPLAY_SERIES }) {
   const contentRef = useRef(null);
   const visibleSeries = Array.isArray(displaySeries) && displaySeries.length > 0
     ? displaySeries.filter((seriesKey) => SERIES_DEFINITIONS[seriesKey])
     : DISPLAY_SERIES;
 
-  // Get info copy from props or fallback
-  const getInfoCopy = () => infoCopy || pricingConfigFallback.infoCopy || {};
+  // Guide prose has one authored source; runtime pricing remains data-driven.
 
   // Scroll to anchor when opening or scrollToSeries changes
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null
 
   if (!isOpen) return null;
 
-  const copy = getInfoCopy();
+  const copy = pricingConfig.infoCopy;
 
   return (
     <AnimatePresence>
@@ -126,6 +126,11 @@ export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null
                       <span className="text-lg">{def.icon || SERIES_ICONS[seriesKey]}</span>
                       <span>{info?.title || `${def.label} Series`}</span>
                     </h3>
+
+                    <p className="text-sm text-stone-700 mb-3" data-series-pricing={seriesKey}>
+                      {getSeriesPricingEntries(seriesKey, pricing).map(entry => `${entry.displaySize.replace(/\s*x\s*/i, ' × ')} · ${entry.displayPrice}`).join('; ')}
+                    </p>
+                    {def.editionLimit && <p className="text-sm text-stone-600 mb-3">Limited edition of {def.editionLimit} per image.</p>}
 
                     {/* Series Description */}
                     <div className="text-sm text-stone-600 leading-relaxed whitespace-pre-line">

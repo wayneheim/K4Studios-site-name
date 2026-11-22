@@ -10,6 +10,7 @@ import { galleryData as westernLandscapeData } from "@/data/Galleries/Painterly-
 import { entranceData } from "@/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/ColorEntranceData.ts";
 import { buildWesternWallArtDock } from "@/data/Western-Wall-Art/buildWesternWallArtDock.ts";
 import { getFormattedLowestStandardPrintPrice } from "@/data/pricing/printSeries.js";
+import { getLimitedFirstEditionLadder } from "@/data/doorway/limitedFirstCopy.js";
 import { wallArtFAQ } from "@/data/Western-Wall-Art/faq.ts";
 import { wallArtStory } from "@/data/Western-Wall-Art/story.ts";
 import { landingWestern as landscapeLocationLanding } from "@/data/Galleries/Painterly-Fine-Art-Photography/Landscapes/By-Location/landingstones.ts";
@@ -108,7 +109,7 @@ const westernWallArtLiveCount = countLiveItems(gridSections);
 
 const commercialMiddleCopy = [
   "Much of the Western wall art sold online is built around surface style - a silhouette, a desert palette, a rustic theme. Wayne Heim's work begins somewhere else. These images are camera-captured and individually shaped through the eye of an award-winning medical illustrator and fine art photographer. The result is Western art with atmosphere, authorship, and story pressure - pieces that read as decor from across a room, then deepen into character, tension, and memory up close.",
-  "Fine art prints are available from $25, with options ranging from small Sketch Series studies to larger collector-grade works and Engrained Baltic Birch wood-panel statement pieces.",
+  `Fine art prints are ${getLimitedFirstEditionLadder()}. Select works are also offered as Engrained Baltic Birch wood-panel statement pieces.`,
 ].join("\n\n");
 
 const copy = {

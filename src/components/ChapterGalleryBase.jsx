@@ -421,7 +421,8 @@ export default function ChapterGalleryBase({
   titleBase,
   sectionKey,
   galleryKey,
-  initialImageId
+  initialImageId,
+  merchantSketchVariant = false,
 }) {
   const sectionUrl = findSectionUrl(basePath);
   const isImageDetailRender = Boolean(
@@ -492,7 +493,7 @@ export default function ChapterGalleryBase({
   const [clientPath, setClientPath] = useState(() =>
     typeof window !== "undefined"
       ? window.location.pathname.toLowerCase()
-      : (basePath || "").toLowerCase()
+      : (merchantSketchVariant ? `${basePath}/${initialImageId}-sketch` : (basePath || "")).toLowerCase()
   );
   useEffect(() => {
     setClientPath(window.location.pathname.toLowerCase());
@@ -725,7 +726,7 @@ export default function ChapterGalleryBase({
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
   const currentImageData = galleryData[currentIndex] || null;
-  const currentSeries = getEffectiveSeries(currentImageData, seriesRegistry);
+  const currentSeries = getEffectiveSeries(currentImageData, seriesRegistry, { merchantSketch: isMerchantSketchVariant });
   const currentExcludeSizes = getExcludeSizesFromRegistry(currentImageData?.id, seriesRegistry);
   const currentCommerce = isEngrainedSeries ? null : {
     mode: "standard",
@@ -1676,7 +1677,7 @@ export default function ChapterGalleryBase({
                             }
                             
                             // For normal galleries: show standard series icons
-                            const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry);
+                            const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry, { merchantSketch: isMerchantSketchVariant });
                             const availableSeries = effectiveSeries
                               .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
                               .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
@@ -2011,7 +2012,7 @@ export default function ChapterGalleryBase({
                     {/* Mobile Series Icons - row below toolbar, above Play Show */}
                     {isMobile && (() => {
                       const currentImage = galleryData[currentIndex];
-                      const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry);
+                      const effectiveSeries = getEffectiveSeries(currentImage, seriesRegistry, { merchantSketch: isMerchantSketchVariant });
                       const availableSeries = effectiveSeries
                         .filter(s => SERIES_DEFINITIONS[s] && s !== "engrained")
                         .sort((a, b) => (SERIES_DEFINITIONS[a].sortOrder || 99) - (SERIES_DEFINITIONS[b].sortOrder || 99));
@@ -2443,6 +2444,8 @@ export default function ChapterGalleryBase({
                             commerce={currentCommerce}
                             collectionLabel={sectionDisplayTitle}
                             showLimited={!isMerchantSketchVariant}
+                            collectionOverview={!isImageDetailRender && !hasEnteredChapters && !isMerchantSketchVariant}
+                            pricing={summaryPricing}
                             onOrder={() => {
                               if (isEngrainedSeries) setShowPricingModal(true);
                               else setShowSeriesOrderModal(true);
@@ -2848,7 +2851,8 @@ export default function ChapterGalleryBase({
               setSeriesInfoScrollTo(null);
             }}
             scrollToSeries={seriesInfoScrollTo}
-            activeSeries={getEffectiveSeries(galleryData[currentIndex], seriesRegistry).filter(s => s !== "engrained")}
+            pricing={summaryPricing}
+            activeSeries={getEffectiveSeries(galleryData[currentIndex], seriesRegistry, { merchantSketch: isMerchantSketchVariant }).filter(s => s !== "engrained")}
             displaySeries={isMerchantSketchVariant ? ["sketch"] : undefined}
           />
         </Suspense>

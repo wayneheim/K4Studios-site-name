@@ -251,6 +251,7 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
                   </span>
                   <span class="image-meta">
                     <span class="preview-label">Image {reverseImageNumber(index)}</span>
+                    <span class="image-id" aria-label={`Image ID i-${image.key}`}>i-{image.key}</span>
                   </span>
                 </button>
               </article>
@@ -340,6 +341,7 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
       <div class="lightbox-details">
         <p class="eyebrow">{expedition.title}</p>
         <h2 data-lightbox-title></h2>
+        <p class="lightbox-image-id" data-lightbox-image-id></p>
         <hr class="lightbox-like-divider" />
         <div class="lightbox-like-inline">
           <ExpeditionLikeButton client:load images={expeditionLikeImages} />
@@ -375,6 +377,7 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
     const dialog = document.querySelector("[data-lightbox]");
     const dialogImage = dialog?.querySelector("[data-lightbox-image]");
     const dialogTitle = dialog?.querySelector("[data-lightbox-title]");
+    const dialogImageId = dialog?.querySelector("[data-lightbox-image-id]");
     const dialogOrder = dialog?.querySelector("[data-lightbox-order]");
     const previousButton = dialog?.querySelector("[data-lightbox-prev]");
     const nextButton = dialog?.querySelector("[data-lightbox-next]");
@@ -482,6 +485,7 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
 
       updatePreviewImage(button.dataset.largeSrc || "", title);
       if (dialogTitle) dialogTitle.textContent = title;
+      if (dialogImageId) dialogImageId.textContent = imageIdAt(activeIndex) || "";
       if (imageCounter) {
         imageCounter.textContent = `${activeIndex + 1} of ${previewButtons.length}`;
       }
@@ -833,6 +837,7 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
 
     .image-meta {
       display: flex;
+      align-items: baseline;
       justify-content: space-between;
       gap: 12px;
       padding-top: 10px;
@@ -845,6 +850,14 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+
+    .image-id {
+      margin-left: auto;
+      color: #999;
+      font-size: 0.75rem;
+      text-align: right;
+      white-space: nowrap;
     }
 
     .pagination {
@@ -1103,10 +1116,19 @@ const breadcrumbHtml = `<a href='/Other' style='color: inherit; text-decoration:
     }
 
     .lightbox-details h2 {
-      margin: 0 0 20px;
+      margin: 0 0 4px;
       font-family: "Glegoo", serif;
-      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      font-size: clamp(1.35rem, 2.5vw, 1.85rem);
       font-weight: 400;
+      line-height: 1.25;
+    }
+
+    .lightbox-image-id {
+      margin: 0 0 12px;
+      color: #96918a;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      user-select: text;
     }
 
     .lightbox-controls {

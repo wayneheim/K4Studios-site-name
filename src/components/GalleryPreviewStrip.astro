@@ -1,4 +1,6 @@
 ---
+import GalleryLandingIdent from './GalleryLandingIdent.astro';
+
 interface Props {
   images: {
     id: string;
@@ -136,6 +138,8 @@ const heroImageId = candidatePool[0]?.id || null;
 ---
 
 {landingJSON && <script type="application/ld+json" data-k4-schema="landing-works" set:html={landingJSON} />}
+
+<GalleryLandingIdent />
 
 <section class="gallery-preview-strip" aria-label="Gallery preview strip">
   <div class="gallery-label-frame">

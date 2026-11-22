@@ -26,6 +26,13 @@ function money(cents) {
   return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format((Number(cents) || 0) / 100);
 }
 
+function promotionSummary(quote) {
+  if (!quote.promotion) return "";
+  return `\nPromotion: ${clean(quote.promotion.name)}${quote.promotion.code ? ` (${clean(quote.promotion.code)})` : ""}`
+    + (quote.merchandiseDiscountCents ? `\nPrint discount: -${money(quote.merchandiseDiscountCents)}` : "")
+    + (quote.shippingDiscountCents ? `\nShipping savings: ${money(quote.shippingDiscountCents)} (included in shipping below)` : "");
+}
+
 function clean(value, max = 200) {
   return String(value || "").replace(/[<>\u0000-\u001F\u007F]/g, " ").replace(/\s+/g, " ").trim().slice(0, max);
 }
@@ -60,7 +67,7 @@ United States
 ITEMS
 ${itemLines}
 
-Merchandise: ${money(quote.merchandiseCents)}
+Merchandise: ${money(quote.merchandiseSubtotalCents ?? quote.merchandiseCents)}${promotionSummary(quote)}
 Shipping:    ${money(quote.shippingCents)}
 Tax:         ${money(quote.taxCents)}
 TOTAL:       ${money(quote.totalCents)}
@@ -90,7 +97,9 @@ function cleanSmugMugFulfillmentUrl(value) {
   try {
     const url = new URL(String(value || ""));
     if (url.protocol !== "https:" || url.hostname.toLowerCase() !== "wayne-heim.smugmug.com") return "";
-    if (!/\/i-[A-Za-z0-9]+\/A\/?$/.test(url.pathname)) return "";
+    if (!/\/i-[A-Za-z0-9]+\/(?:A|buy)\/?$/.test(url.pathname)) return "";
+    // Older saved orders use /A; every merchant link should open purchasing.
+    url.pathname = url.pathname.replace(/\/(?:A|buy)\/?$/, "/buy");
     url.hash = "";
     return url.toString();
   } catch {
@@ -114,8 +123,9 @@ function detailedOrderText(order) {
       `   Line total: ${money(item.lineTotalCents)}\n` +
       `   Image ID: ${clean(item.imageId)}\n` +
       `   Product: ${clean(item.productKey)}` +
-      (artworkUrl ? `\n   View on K4 Studios: ${artworkUrl}` : "") +
-      (fulfillmentUrl ? `\n   Open SmugMug fulfillment page: ${fulfillmentUrl}` : "");
+      (fulfillmentUrl
+        ? `\n   Order on SmugMug: ${fulfillmentUrl}`
+        : artworkUrl ? `\n   View on K4 Studios: ${artworkUrl}` : "");
   }).join("\n\n");
 
   return `${order.mode === "sandbox" ? "PAYPAL SANDBOX ORDER - NOT A LIVE TRANSACTION" : "K4 STUDIOS ORDER"}
@@ -139,7 +149,7 @@ United States
 ITEMS ORDERED
 ${itemLines || "No item details were supplied."}
 
-Merchandise: ${money(quote.merchandiseCents)}
+Merchandise: ${money(quote.merchandiseSubtotalCents ?? quote.merchandiseCents)}${promotionSummary(quote)}
 Shipping:    ${money(quote.shippingCents)}
 Tax:         ${money(quote.taxCents)}
 TOTAL:       ${money(quote.totalCents)}
@@ -174,7 +184,7 @@ Order number: ${clean(order.orderNumber)}
 ITEMS ORDERED
 ${itemLines || "No item details were supplied."}
 
-Merchandise: ${money(quote.merchandiseCents)}
+Merchandise: ${money(quote.merchandiseSubtotalCents ?? quote.merchandiseCents)}${promotionSummary(quote)}
 Shipping:    ${money(quote.shippingCents)}
 Tax:         ${money(quote.taxCents)}
 TOTAL:       ${money(quote.totalCents)}
@@ -195,6 +205,29 @@ Visit K4 Studios: https://www.k4studios.com
 Order policy: https://www.k4studios.com/Returns-and-Refunds
 
 Thank you for collecting K4 Studios artwork.`;
+}
+
+function customerProcessedText(order) {
+  const itemLines = (order.items || []).map((item, index) => (
+    `${index + 1}. ${clean(item.imageTitle)}\n` +
+    `   Image ID: ${clean(item.imageId)}\n` +
+    `   ${clean(item.seriesLabel)} - ${clean(item.size)} - ${clean(item.finish)}\n` +
+    `   Quantity: ${Number(item.quantity) || 0}`
+  )).join("\n\n");
+  return `Thank you again for your K4 Studios order.
+
+Your order has been reviewed, and production of your prints has been ordered.
+
+Order number: ${clean(order.orderNumber)}
+
+ITEMS IN PRODUCTION
+${itemLines || "Your selected K4 Studios prints."}
+
+If you need help, reply to this email and include your order number.
+
+Thank you for collecting K4 Studios artwork.
+Wayne Heim
+K4 Studios`;
 }
 
 function customerShippedText(order) {
@@ -285,9 +318,10 @@ export async function handler(event) {
     auth: { user: NOTIFY_EMAIL, pass: NOTIFY_EMAIL_PASS },
   });
   const customerConfirmation = order.notificationType === "customer_confirmation";
+  const customerProcessed = order.notificationType === "customer_processed";
   const customerShipped = order.notificationType === "customer_shipped";
   const merchantFinancialAlert = order.notificationType === "merchant_financial_alert";
-  const customerMessage = customerConfirmation || customerShipped;
+  const customerMessage = customerConfirmation || customerProcessed || customerShipped;
   const buyerEmail = clean(order.buyerEmail, 200);
   const subjectPrefix = order.mode === "sandbox" ? "[SANDBOX] " : "";
   if (customerMessage && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(buyerEmail)) {
@@ -295,13 +329,15 @@ export async function handler(event) {
   }
 
   await transporter.sendMail(customerMessage ? {
-    from: `"${customerShipped ? "K4 Studios Shipping Update" : "K4 Studios Order Confirmation"}" <${NOTIFY_EMAIL}>`,
+    from: `"${customerShipped ? "K4 Studios Shipping Update" : customerProcessed ? "K4 Studios Production Update" : "K4 Studios Order Confirmation"}" <${NOTIFY_EMAIL}>`,
     to: buyerEmail,
     replyTo: clean(ORDER_EMAIL_TO || "wayneheim@aol.com", 200),
     subject: customerShipped
       ? `${subjectPrefix}Your K4 Studios order has shipped - ${clean(order.orderNumber, 80)}`
-      : `${subjectPrefix}K4 Studios order confirmation - ${clean(order.orderNumber, 80)}`,
-    text: customerShipped ? customerShippedText(order) : customerConfirmationText(order),
+      : customerProcessed
+        ? `${subjectPrefix}Your K4 Studios order is in production - ${clean(order.orderNumber, 80)}`
+        : `${subjectPrefix}K4 Studios order confirmation - ${clean(order.orderNumber, 80)}`,
+    text: customerShipped ? customerShippedText(order) : customerProcessed ? customerProcessedText(order) : customerConfirmationText(order),
   } : merchantFinancialAlert ? {
     from: `"K4 Studios Payment Alert" <${NOTIFY_EMAIL}>`,
     to: recipients,
@@ -320,7 +356,7 @@ export async function handler(event) {
     orderNumber: order.orderNumber,
     notificationType: merchantFinancialAlert
       ? "merchant_financial_alert"
-      : (customerShipped ? "customer_shipped" : (customerConfirmation ? "customer_confirmation" : "merchant_order_paid")),
+      : (customerShipped ? "customer_shipped" : customerProcessed ? "customer_processed" : (customerConfirmation ? "customer_confirmation" : "merchant_order_paid")),
   });
 }
 

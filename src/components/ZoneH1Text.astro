@@ -1,0 +1,36 @@
+---
+import { getZoneH1Parts, ZONE_H1_POINTER_ENABLED } from '@/data/semantic/K4-Sem';
+const { title } = Astro.props;
+const parts = getZoneH1Parts(Astro.url.pathname, title);
+---
+{parts.before}{parts.target && <a class="zone-h1-link" href={parts.target} data-zone-h1-link style={`--zone-h1-cursor:${ZONE_H1_POINTER_ENABLED ? 'pointer' : 'default'}`}>{parts.span}</a>}{parts.after}
+
+<script>
+  import { trackEvent } from '@/utils/analytics';
+  import { ZONE_H1_CLICK_EVENT } from '@/data/semantic/K4-Sem';
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target instanceof Element && target.closest('a[data-zone-h1-link]')) {
+      trackEvent(ZONE_H1_CLICK_EVENT);
+    }
+  });
+</script>
+
+<style>
+  .zone-h1-link,
+  .zone-h1-link:link,
+  .zone-h1-link:visited,
+  .zone-h1-link:hover,
+  .zone-h1-link:active,
+  .zone-h1-link:focus {
+    color: inherit !important;
+    font: inherit !important;
+    letter-spacing: inherit !important;
+    text-decoration: none !important;
+    text-shadow: inherit !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    cursor: var(--zone-h1-cursor);
+  }
+</style>

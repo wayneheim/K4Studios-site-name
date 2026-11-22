@@ -13,6 +13,8 @@ import {
   savePaymentAndQueueEmail,
 } from "./database.js";
 import { flushEmailOutbox } from "./emailOutbox.js";
+import { emailOrderTracking, getOrderProcessingSummary, listTrackedOrders, markOrderProcessed } from "./orderProcessing.js";
+import { listPromotions, savePromotion, resolvePromotion, reservePromotionUse, commitPromotionUse, releasePromotionUse } from "./promotionStore.js";
 import {
   assertPayPalOrderMatches,
   capturePayPalOrder,
@@ -34,6 +36,7 @@ import {
   cancelOrder,
   deleteSandboxOrder,
   isAdminAuthorized,
+  isOrderTrackerAuthorized,
   listRecentOrders,
   saveOhioRate,
   saveNexusRule,
@@ -95,7 +98,7 @@ function validateCheckoutContact(payload) {
   return { buyerName, buyerEmail, buyerPhone, shippingAddress };
 }
 
-async function calculateServerQuote(rawItems, shippingAddress, env) {
+async function calculateServerQuote(rawItems, shippingAddress, env, { couponCode = "", buyerEmail = "", orderId = null } = {}) {
   const catalogItems = verifyCartItems(rawItems);
   const mode = commerceMode(env);
   const verifiedItems = applyExpeditionPrices(catalogItems, await resolveExpeditionPrices(env.DB, mode));
@@ -105,10 +108,19 @@ async function calculateServerQuote(rawItems, shippingAddress, env) {
   const taxConfig = env.DB
     ? await resolveTaxConfigForDestination(env.DB, env, shippingAddress.stateCode)
     : resolveCommerceTaxFallback(env);
-  return calculateCheckoutQuote({ verifiedItems, destination: shippingAddress, shippingConfig, taxConfig });
+  const baseQuote = calculateCheckoutQuote({ verifiedItems, destination: shippingAddress, shippingConfig, taxConfig });
+  const promotion = await resolvePromotion(env.DB, mode, couponCode, buyerEmail, {
+    items: verifiedItems, destination: shippingAddress, shippingConfig, taxConfig, shippingCents: baseQuote.shippingCents,
+  }, orderId);
+  return promotion ? calculateCheckoutQuote({ verifiedItems, destination: shippingAddress, shippingConfig, taxConfig, promotion }) : baseQuote;
 }
 
 function assertQuoteMatchesStored(quote, order) {
+  const savedPromotion = JSON.parse(order.quote_json || "{}").promotion;
+  if ((quote.promotion?.id || null) !== (savedPromotion?.id || null)
+    || (quote.promotion?.configVersion || null) !== (savedPromotion?.configVersion || null)) {
+    throw new Error("The promotion changed before payment. Refresh checkout before paying.");
+  }
   const fields = ["merchandiseCents", "shippingCents", "taxCents", "totalCents"];
   const stored = {
     merchandiseCents: order.merchandise_cents,
@@ -137,8 +149,8 @@ function assertCaptureMatches(capture, order) {
 
 async function handleQuote(request, env) {
   const payload = await request.json();
-  const { shippingAddress } = validateCheckoutContact(payload);
-  const quote = await calculateServerQuote(payload.items, shippingAddress, env);
+  const { shippingAddress, buyerEmail } = validateCheckoutContact(payload);
+  const quote = await calculateServerQuote(payload.items, shippingAddress, env, { couponCode: payload.couponCode, buyerEmail });
   return json(request, env, quote);
 }
 
@@ -149,7 +161,7 @@ async function handleCreateOrder(request, env) {
   }
   const payload = await request.json();
   const { buyerName, buyerEmail, buyerPhone, shippingAddress } = validateCheckoutContact(payload);
-  const quote = await calculateServerQuote(payload.items, shippingAddress, env);
+  const quote = await calculateServerQuote(payload.items, shippingAddress, env, { couponCode: payload.couponCode, buyerEmail });
   const id = crypto.randomUUID();
   const order = {
     id,
@@ -203,9 +215,17 @@ async function handleCapture(request, env, paypalOrderId, ctx) {
     alreadyCaptured: true,
     confirmationItems: confirmationItems(JSON.parse(order.verified_items_json)),
   });
+  if (order.status === "capturing") {
+    const error = new Error("Payment is already being processed for this order. Please wait for confirmation.");
+    error.status = 409;
+    throw error;
+  }
 
   // Recalculate from the authoritative catalog/rules immediately before capture.
-  const freshQuote = await calculateServerQuote(JSON.parse(order.raw_cart_json), JSON.parse(order.shipping_address_json), env);
+  const savedQuote = JSON.parse(order.quote_json);
+  const freshQuote = await calculateServerQuote(JSON.parse(order.raw_cart_json), JSON.parse(order.shipping_address_json), env, {
+    couponCode: savedQuote.promotion?.code || "", buyerEmail: order.buyer_email, orderId: order.id,
+  });
   assertQuoteMatchesStored(freshQuote, order);
 
   const { body: paypalOrder } = await getPayPalOrder(env, paypalOrderId);
@@ -214,12 +234,33 @@ async function handleCapture(request, env, paypalOrderId, ctx) {
 
   // Reserve scarce editions immediately before capture. The D1 constraint and
   // transactional batch make concurrent checkout attempts fail before money moves.
-  await reserveEditionInventory(env.DB, order.id, freshQuote.items);
+  if (freshQuote.promotion) {
+    const lock = await env.DB.prepare("UPDATE orders SET status='capturing',updated_at=? WHERE id=? AND status='pending_approval'")
+      .bind(new Date().toISOString(),order.id).run();
+    if (!Number(lock.meta?.changes)) {
+      const error = new Error("Payment is already being processed for this order. Please wait for confirmation.");
+      error.status = 409;
+      throw error;
+    }
+  }
+  try {
+    await reservePromotionUse(env.DB, order, freshQuote);
+    await reserveEditionInventory(env.DB, order.id, freshQuote.items);
+  } catch (error) {
+    if (freshQuote.promotion) {
+      await releasePromotionUse(env.DB, order.id);
+      await env.DB.prepare("UPDATE orders SET status='pending_approval',updated_at=? WHERE id=? AND status='capturing'")
+        .bind(new Date().toISOString(),order.id).run();
+    }
+    throw error;
+  }
   const { body: captureResult } = await capturePayPalOrder(env, paypalOrderId, order.id);
   const capture = extractCapture(captureResult);
   assertCaptureMatches(capture, order);
   if (capture.status === "COMPLETED") await commitEditionReservations(env.DB, order.id);
   if (capture.status === "DENIED") await releaseEditionReservations(env.DB, order.id);
+  if (capture.status === "COMPLETED") await commitPromotionUse(env.DB, order.id);
+  if (capture.status === "DENIED") await releasePromotionUse(env.DB, order.id);
   const saved = await savePaymentAndQueueEmail(env.DB, order, capture, captureResult);
   if (saved.outboxIds?.length) {
     ctx.waitUntil(Promise.all(saved.outboxIds.map((outboxId) => flushEmailOutbox(env, outboxId))));
@@ -256,9 +297,11 @@ async function handleWebhook(request, env, ctx) {
         if (event.event_type === "PAYMENT.CAPTURE.COMPLETED") {
           await reserveEditionInventory(env.DB, order.id, verifiedItems);
           await commitEditionReservations(env.DB, order.id);
+          await commitPromotionUse(env.DB, order.id);
         }
         if (event.event_type === "PAYMENT.CAPTURE.DENIED") {
           await releaseEditionReservations(env.DB, order.id);
+          await releasePromotionUse(env.DB, order.id);
         }
         const saved = await savePaymentAndQueueEmail(env.DB, order, event.resource, event);
         if (event.event_type === "PAYMENT.CAPTURE.COMPLETED" && saved.outboxIds?.length) {
@@ -276,6 +319,7 @@ async function handleWebhook(request, env, ctx) {
       const order = paypalOrderId ? await getOrderByPayPalId(env.DB, paypalOrderId) : null;
       if (order) {
         await releaseEditionReservations(env.DB, order.id);
+        await releasePromotionUse(env.DB, order.id);
         await markApprovalReversed(env.DB, order);
       }
     }
@@ -335,9 +379,41 @@ async function route(request, env, ctx) {
   if (request.method === "POST" && captureMatch) return handleCapture(request, env, captureMatch[1], ctx);
   if (request.method === "POST" && url.pathname === "/webhooks/paypal") return handleWebhook(request, env, ctx);
   if (url.pathname.startsWith("/admin/")) {
-    if (!(await isAdminAuthorized(request, env))) return json(request, env, { error: "Admin authorization required." }, 401);
+    const trackerRoute = ["/admin/order-summary", "/admin/order-tracker"].includes(url.pathname)
+      || /^\/admin\/orders\/[A-Za-z0-9-]+\/(?:processed|shipped)$/.test(url.pathname);
+    const authorized = await (trackerRoute ? isOrderTrackerAuthorized(request, env) : isAdminAuthorized(request, env));
+    if (!authorized) return json(request, env, { error: "Admin authorization required." }, 401);
+    if (request.method === "GET" && url.pathname === "/admin/order-summary") {
+      return json(request, env, await getOrderProcessingSummary(env.DB, mode));
+    }
+    if (request.method === "GET" && url.pathname === "/admin/order-tracker") {
+      const cursor = url.searchParams.has("cursor") ? JSON.parse(url.searchParams.get("cursor")) : null;
+      return json(request, env, await listTrackedOrders(env.DB, mode, {
+        view: url.searchParams.get("view") || "pending", limit: url.searchParams.get("limit") || 25, cursor,
+      }));
+    }
+    const processedMatch = url.pathname.match(/^\/admin\/orders\/([A-Za-z0-9-]+)\/processed$/);
+    if (request.method === "POST" && processedMatch) {
+      const origin = request.headers.get("origin");
+      if (origin && !allowedOrigins(env).has(origin)) return json(request, env, { error: "Origin not allowed." }, 403);
+      const result = await markOrderProcessed(env.DB, processedMatch[1], mode);
+      if (result.processingEmailQueued) ctx.waitUntil(flushEmailOutbox(env, `customer-processed:${result.id}`));
+      return json(request, env, result);
+    }
+    const shippedMatch = url.pathname.match(/^\/admin\/orders\/([A-Za-z0-9-]+)\/shipped$/);
+    if (request.method === "POST" && shippedMatch) {
+      const result = await emailOrderTracking(env.DB, shippedMatch[1], mode, await request.json());
+      if (result.shipmentEmailQueued) ctx.waitUntil(flushEmailOutbox(env, `customer-shipped:${result.id}`));
+      return json(request, env, result);
+    }
     if (request.method === "GET" && url.pathname === "/admin/report") {
       return json(request, env, await buildAnnualNexusReport(env.DB, url.searchParams.get("year") || new Date().getFullYear(), mode));
+    }
+    if (request.method === "GET" && url.pathname === "/admin/promotions") {
+      return json(request, env, await listPromotions(env.DB, mode));
+    }
+    if (request.method === "POST" && url.pathname === "/admin/promotions") {
+      return json(request, env, await savePromotion(env.DB, mode, await request.json()), 201);
     }
     if (request.method === "GET" && url.pathname === "/admin/orders") {
       return json(request, env, await listRecentOrders(env.DB, url.searchParams.get("limit") || 50, mode));

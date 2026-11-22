@@ -1,3 +1,5 @@
+import { getStandardPrintSeries } from '../data/pricing/printSeries.js';
+
 const SIGNED_SERIES = new Set(["chronicle", "legend"]);
 
 const sizeArea = (value) => {
@@ -21,12 +23,17 @@ export default function ImagePricingSummary({
   onOrder,
   compact = false,
   showLimited = true,
+  collectionOverview = false,
+  pricing = null,
 }) {
   if (!commerce || commerce.mode !== "standard") return null;
 
-  const openOffer = lowestOffer(commerce.tiers?.filter((tier) => tier.key === "sketch"));
+  const tiers = collectionOverview
+    ? getStandardPrintSeries(pricing ? { pricing } : undefined).map(series => ({ key: series.key, pricing: series.sizes }))
+    : commerce.tiers;
+  const openOffer = lowestOffer(tiers?.filter((tier) => tier.key === "sketch" || tier.key === "foundation"));
   const limitedOffer = lowestOffer(showLimited
-    ? commerce.tiers?.filter((tier) => SIGNED_SERIES.has(tier.key))
+    ? tiers?.filter((tier) => SIGNED_SERIES.has(tier.key))
     : []);
 
   if (!openOffer && !limitedOffer) return null;
@@ -43,7 +50,8 @@ export default function ImagePricingSummary({
   return (
     <section
       className="image-pricing-summary"
-      aria-label={`Sizes and pricing for ${commerce.imageTitle || "this artwork"}`}
+      aria-label={`Sizes and pricing for ${collectionOverview ? collectionLabel || "this collection" : commerce.imageTitle || "this artwork"}`}
+      data-pricing-scope={collectionOverview ? "collection" : "artwork"}
       style={{
         width: "100%",
         maxWidth: compact ? "34rem" : "30rem",
@@ -80,35 +88,19 @@ export default function ImagePricingSummary({
         </p>
       )}
 
-      {openOffer && (
-        <div style={rowStyle}>
+      {[limitedOffer && { offer: limitedOffer, label: 'Limited Edition', signed: true }, openOffer && { offer: openOffer, label: 'Open Edition' }].filter(Boolean).map(({ offer, label, signed }) => (
+        <div key={label} style={rowStyle}>
           <div style={{ textAlign: "left" }}>
-            <div style={{ color: "#716964", fontSize: "0.9rem", lineHeight: 1.25 }}>Open Edition</div>
+            <div style={{ color: "#716964", fontSize: "0.9rem", lineHeight: 1.25 }}>{label}{signed && !collectionOverview && ' · Signed'}</div>
             <div style={{ color: "#9a928d", fontSize: "0.72rem", lineHeight: 1.35 }}>
-              Sizes from {formatSize(openOffer.size)}
+              {signed && !collectionOverview && 'Numbered · '}Sizes from {formatSize(offer.size)}
             </div>
           </div>
           <div style={{ color: "#716964", fontSize: "0.86rem", whiteSpace: "nowrap", textAlign: "right" }}>
-            from {formatPrice(openOffer.price)}
+            from {formatPrice(offer.price)}
           </div>
         </div>
-      )}
-
-      {limitedOffer && (
-        <div style={rowStyle}>
-          <div style={{ textAlign: "left" }}>
-            <div style={{ color: "#716964", fontSize: "0.9rem", lineHeight: 1.25 }}>
-              Limited Edition · Signed
-            </div>
-            <div style={{ color: "#9a928d", fontSize: "0.72rem", lineHeight: 1.35 }}>
-              Numbered · Sizes from {formatSize(limitedOffer.size)}
-            </div>
-          </div>
-          <div style={{ color: "#716964", fontSize: "0.86rem", whiteSpace: "nowrap", textAlign: "right" }}>
-            from {formatPrice(limitedOffer.price)}
-          </div>
-        </div>
-      )}
+      ))}
 
       <div style={{ textAlign: "center", margin: compact ? "0.8rem 0 0.9rem" : "0.85rem 0 0.8rem" }}>
         <button type="button" onClick={onOrder} style={{

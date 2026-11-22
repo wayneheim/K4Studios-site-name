@@ -37,6 +37,8 @@ const COMMERCE_EVENT_TYPES = new Set([
   'native_checkout_quote',
   'native_payment_start',
   'native_order_complete',
+  'native_checkout_error',
+  'native_checkout_cancel',
 ]);
 
 export function isCommerceAnalyticsEvent(eventType) {

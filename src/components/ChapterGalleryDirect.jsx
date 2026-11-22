@@ -3,7 +3,7 @@ import { getDirectChapterConfig } from "@/data/chapterDirectConfigs.js";
 
 const galleryLoaders = import.meta.glob("../data/**/*.mjs");
 
-export default function ChapterGalleryDirect({ directImagePayload, initialImageId, galleryPath }) {
+export default function ChapterGalleryDirect({ directImagePayload, initialImageId, galleryPath, merchantSketchVariant = false }) {
   const directConfig = getDirectChapterConfig(galleryPath);
 
   if (!directConfig) {
@@ -28,6 +28,7 @@ export default function ChapterGalleryDirect({ directImagePayload, initialImageI
       sectionKey={directConfig.sectionKey}
       swipeHintKey={directConfig.swipeHintKey}
       initialImageId={initialImageId}
+      merchantSketchVariant={merchantSketchVariant}
     />
   );
 }

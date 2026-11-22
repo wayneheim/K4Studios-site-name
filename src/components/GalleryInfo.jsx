@@ -594,6 +594,7 @@ export default function GalleryInfo({
           <div className="landing-divider">
             <span style={{ fontSize: "1.5rem" }}>◆</span>
           </div>
+          <div className="gallery-enter-label">Enter</div>
         </motion.a>
       ) : null}
     </>

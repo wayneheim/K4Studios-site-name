@@ -1,0 +1,79 @@
+    .edition-group-heading {
+      grid-column:1 / -1;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:baseline;
+      gap:8px 24px;
+      width:100%;
+      box-sizing:border-box;
+      margin:0;
+      padding:10px 24px 10px 16px;
+      background:#f5f1ec;
+      border:1px solid #cec9c4;
+      color:#2f241b;
+      font-size:1.35rem;
+      font-weight:700;
+      line-height:1.4;
+    }
+    .edition-group-title {
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      margin:0;
+      font:inherit;
+    }
+    .edition-group-icons {
+      display:inline-flex;
+      align-items:center;
+      flex-shrink:0;
+      gap:8px;
+      font-size:1rem;
+    }
+    .edition-group-note {
+      margin:0 0 0 auto;
+      max-width:100%;
+      color:#7a6a58;
+      font-size:1rem;
+      font-weight:400;
+      font-style:italic;
+      text-align:right;
+    }
+    .edition-group-rule {
+      flex:1 1 32px;
+      min-width:24px;
+      align-self:center;
+      margin:0;
+      border:0;
+      border-top:1px solid #cec9c4;
+    }
+    .edition-group-heading--divider {
+      margin-top:24px;
+    }
+    .edition-group-heading--limited {
+      background:#e9ddce;
+      border-color:#b49a7d;
+    }
+    .edition-group-heading--limited .edition-group-rule {
+      border-top-color:#b49a7d;
+    }
+    .edition-group-heading--open {
+      scroll-margin-top:160px;
+      background:#edf1e9;
+      border-color:var(--open-edition-border);
+      color:#42533d;
+    }
+    .edition-group-heading--open .edition-group-note {
+      color:#66735f;
+    }
+    .edition-group-heading--open .edition-group-rule {
+      border-top-color:var(--open-edition-border);
+    }
+
+.ssr-grid { --open-edition-border:#8b9b82; }
+.ssr-grid .ssr-card[data-edition-group] { border-width:2px; }
+.ssr-grid .ssr-card.ssr-card--open-edition {
+  --card-border:var(--open-edition-border);
+  --card-hover-border:#697d60;
+  --card-hover-halo:139, 155, 130;
+}
+.ssr-grid .ssr-card.ssr-card--limited-edition { --card-border:#b46a5f; }

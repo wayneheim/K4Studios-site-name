@@ -4,6 +4,7 @@ import { buildCartItem, getExpeditionProducts } from "../../data/commerce/catalo
 import { addCartItem, formatCurrency, getCartCount, loadCart } from "../../lib/commerce/cart.js";
 import { getCommerceApiBase } from "../../lib/commerce/checkoutApi.js";
 import { trackEvent } from "../../utils/analytics.ts";
+import ImageId from "./ImageId.jsx";
 
 export default function ExpeditionOrderModal({ expeditionSlug, expeditionTitle }) {
   const baseProducts = useMemo(() => getExpeditionProducts(expeditionSlug), [expeditionSlug]);
@@ -74,7 +75,12 @@ export default function ExpeditionOrderModal({ expeditionSlug, expeditionTitle }
         <div className="p-5">
           <div className="flex gap-4 border-b border-stone-200 pb-5">
             <img src={image.src} alt="" className="h-28 w-36 bg-stone-100 object-contain" />
-            <div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a3d2b]">Pre-release Expedition photograph</p><h3 className="mt-2 text-xl font-semibold text-stone-900">{image.title}</h3><p className="mt-2 text-sm text-stone-600">Choose a physical print size and finish.</p></div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8a3d2b]">Pre-release Expedition photograph</p>
+              <h3 className="mt-2 text-lg font-semibold text-stone-900">{image.title}</h3>
+              <ImageId imageId={image.id} />
+              <p className="mt-2 text-sm text-stone-600">Choose a physical print size and finish.</p>
+            </div>
           </div>
 
           <div className="mt-5 space-y-3">

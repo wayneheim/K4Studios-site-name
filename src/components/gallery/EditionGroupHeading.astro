@@ -1,0 +1,22 @@
+---
+import PrintSeriesIcon from '@/components/PrintSeriesIcon.jsx';
+import { formatPrice } from '@/data/pricing/printSeries.js';
+const { kind, price, title, anchorId = kind === 'open' ? 'open-edition-prints' : undefined } = Astro.props;
+const open = kind === 'open';
+const series = open ? ['sketch', 'foundation'] : ['chronicle', 'legend'];
+---
+<div class:list={['edition-group-heading', `edition-group-heading--${kind}`, { 'edition-group-heading--divider': open }]} id={anchorId}>
+  <h2 class="edition-group-title">
+    <span>{title || (open ? 'Open Edition Prints' : 'Limited-Edition Prints')}</span>
+    <span class="edition-group-icons">
+      {series.map(key => {
+        const label = `${key.charAt(0).toUpperCase()}${key.slice(1)} Series`;
+        return <span role="img" aria-label={label} title={label}><PrintSeriesIcon seriesKey={key} /></span>;
+      })}
+    </span>
+  </h2>
+  {Number.isFinite(price) && <>
+    <hr class="edition-group-rule" />
+    <p class="edition-group-note">{open ? 'Open edition prints from' : 'Signed & numbered from'} {formatPrice(price)}</p>
+  </>}
+</div>

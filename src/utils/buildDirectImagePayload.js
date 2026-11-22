@@ -1,5 +1,7 @@
 import { getImageDimensions } from "@/utils/getImageDimensions.js";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
+import seriesRegistry from "../data/seriesRegistry.json";
+import { findSeriesId, getConfiguredSeries } from "../data/seriesAvailability.js";
 
 function isNavigableImage(img) {
   const visibility = String(img?.visibility || "").toLowerCase().trim();
@@ -33,6 +35,8 @@ function toDirectImage(entry, galleryPath) {
 
   return {
     ...safeEntry,
+    // Embed assignments for correct icons/prices before the client fetches the registry.
+    availableSeries: getConfiguredSeries(entry, seriesRegistry.series?.[findSeriesId(entry.id, galleryPath, seriesRegistry)]),
     ...(dims ? { width: dims.width, height: dims.height } : {}),
     src: getSemanticImageUrl(entry, { galleryPath }, "m"),
   };

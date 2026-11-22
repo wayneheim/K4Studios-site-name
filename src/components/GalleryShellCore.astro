@@ -18,6 +18,8 @@ import { getCollectionContextEntry } from "@/data/semantic/collectionContext";
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import ImageCommerceModalStatic from "@/components/ImageCommerceModalStatic.astro";
 import { resolveImageCommerce } from "@/data/commerceResolver.js";
+import ChapterGalleryDirect from "@/components/ChapterGalleryDirect.jsx";
+import { buildDirectImagePayload } from "@/utils/buildDirectImagePayload.js";
 import { sanitizeRepeatedSeoCopy } from "@/utils/repetitiveSeoCopy";
 
 interface Props {
@@ -28,6 +30,7 @@ interface Props {
   breadcrumb?: any;
   entranceData?: any;
   initialImageId?: string;
+  merchantSketch?: boolean;
 }
 
 const {
@@ -37,7 +40,8 @@ const {
   baseFallbackDescription,
   breadcrumb,
   entranceData = {},
-  initialImageId
+  initialImageId,
+  merchantSketch = false,
 } = Astro.props;
 
 /** ----------------------------------------------------------------
@@ -164,6 +168,7 @@ const imageCommerce = currentImage
       image: currentImage,
       galleryPath: previewPath,
       pageUrl: canonicalUrl,
+      merchantSketch,
     })
   : null;
 
@@ -249,7 +254,7 @@ function splitImageSchema(json: string | undefined) {
       const types = Array.isArray(node?.["@type"]) ? node["@type"] : [node?.["@type"]];
       const isProduct = types.includes("Product");
       return {
-        label: isProduct ? "sketch-product" : "artwork-license",
+        label: isProduct ? (String(node.sku || '').endsWith('-sketch') ? "sketch-product" : "artwork-product") : "artwork-license",
         json: JSON.stringify({
           "@context": parsed["@context"] || "https://schema.org",
           ...node,
@@ -376,8 +381,8 @@ const meta = {
   ogTitle: pageTitle,
   ogDescription: pageDescription,
   ogImage: preferredImageUrl || ogImage,
-  ogType: currentImage && imageCommerce?.merchantOffer ? "product" : (currentImage ? "article" : "website"),
-  commerceOffer: imageCommerce?.merchantOffer || null,
+  ogType: currentImage && imageCommerce?.schema ? "product" : (currentImage ? "article" : "website"),
+  commerceOffer: imageCommerce?.merchantOffer || imageCommerce?.schema || null,
   ogUrl: canonicalUrl,
   ogImageAlt: ogAlt,
   twitterTitle: pageTitle,
@@ -440,7 +445,15 @@ const meta = {
       data-k4-sketch-size={sketchSize || undefined}
     >
       <div data-k4-gallery-island style="display:contents">
-        <slot name="chapter-viewer" />
+        {merchantSketch && currentImage ? (
+          <ChapterGalleryDirect
+            client:load
+            merchantSketchVariant={true}
+            initialImageId={currentImage.id}
+            galleryPath={previewPath}
+            directImagePayload={buildDirectImagePayload({ allImages, initialImageId: currentImage.id, galleryPath: previewPath })}
+          />
+        ) : <slot name="chapter-viewer" />}
       </div>
       {currentImage && imageCommerce && (
         <ImageCommerceModalStatic commerce={imageCommerce} image={currentImage} galleryPath={previewPath} />

@@ -11,6 +11,7 @@ import {
 } from "../../lib/commerce/cart.js";
 import PayPalSandboxCheckout from "./PayPalSandboxCheckout.jsx";
 import { trackEvent } from "../../utils/analytics.ts";
+import ImageId from "./ImageId.jsx";
 
 export default function NativeCartPage() {
   const [cart, setCart] = useState(() => loadCart());
@@ -20,7 +21,7 @@ export default function NativeCartPage() {
   useEffect(() => {
     const initialCart = loadCart();
     if (initialCart.items.length) {
-      trackEvent("native_cart_view", { pageType: "other", trigger: "cart_with_items" });
+      trackEvent("native_cart_view", { pageType: "other", trigger: "cart_with_items", cartImageIds: initialCart.items.map(item => item.imageId) });
     }
 
     if (document.referrer?.startsWith(window.location.origin)) {
@@ -73,6 +74,7 @@ export default function NativeCartPage() {
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#8a3d2b]">{item.seriesLabel}</p>
                       <h2 className="mt-1 text-lg font-semibold leading-snug text-stone-900">{item.imageTitle}</h2>
+                      <ImageId imageId={item.imageId} />
                       <p className="mt-1 text-sm text-stone-500">{item.size} · {item.finish} · {item.seriesKey === "engrained" ? "Physical Baltic Birch wood-panel print" : "Physical photographic print"}</p>
                     </div>
                     <button type="button" onClick={() => removeItem(item.lineId)} className="rounded p-2 text-stone-400 hover:bg-red-50 hover:text-red-700" aria-label={`Remove ${item.imageTitle}`}>
@@ -97,6 +99,8 @@ export default function NativeCartPage() {
             <h2 className="text-lg font-semibold text-stone-900">Order Summary</h2>
             <div className="mt-4 space-y-2 border-b border-stone-200 pb-4 text-sm">
               <div className="flex justify-between text-stone-600"><span>Print subtotal</span><span>{formatCurrency(subtotal)}</span></div>
+              {checkoutQuote?.merchandiseDiscountCents > 0 && <div className="flex justify-between text-emerald-800"><span>Print discount</span><span>−{formatCurrency(checkoutQuote.merchandiseDiscountCents / 100)}</span></div>}
+              {checkoutQuote?.promotion && <p className="text-xs text-emerald-800">{checkoutQuote.promotion.name}{checkoutQuote.shippingDiscountCents > 0 ? ` · shipping savings ${formatCurrency(checkoutQuote.shippingDiscountCents / 100)}` : ""}</p>}
               <div className="flex justify-between text-stone-500"><span>Shipping</span><span>{checkoutQuote ? formatCurrency(checkoutQuote.shippingCents / 100) : "Calculated at checkout"}</span></div>
               <div className="flex justify-between text-stone-500"><span>Applicable tax</span><span>{checkoutQuote ? formatCurrency(checkoutQuote.taxCents / 100) : "Calculated at checkout"}</span></div>
             </div>

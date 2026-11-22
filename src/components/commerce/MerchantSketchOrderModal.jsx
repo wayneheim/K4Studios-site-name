@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { CircleX, Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
 import { normalizeImageSrc } from "../../utils/imageProxyCore.js";
 import { MERCHANT_SKETCH_PRODUCT, buildCartItem } from "../../data/commerce/catalog.js";
+import ImageId from "./ImageId.jsx";
 import {
   addCartItem,
   formatCurrency,
@@ -128,6 +129,7 @@ export default function MerchantSketchOrderModal({ isOpen, onClose, image, track
               <div>
                 <p className="text-xs uppercase tracking-[0.15em] text-stone-500">{product.edition}</p>
                 <h3 className="mt-1 text-lg font-semibold leading-snug text-stone-900">{image.title}</h3>
+                <ImageId imageId={image.id} />
                 <p className="mt-2 text-sm font-semibold text-[#8a3d2b]">
                   {product.seriesLabel} · {product.size}
                 </p>
@@ -194,6 +196,7 @@ export default function MerchantSketchOrderModal({ isOpen, onClose, image, track
                         <div className="flex items-start justify-between gap-2">
                           <div>
                             <h3 className="line-clamp-2 text-sm font-semibold text-stone-800">{item.imageTitle}</h3>
+                            <ImageId imageId={item.imageId} />
                             <p className="mt-0.5 text-xs text-stone-500">{item.seriesLabel} · {item.size} · {item.finish}</p>
                           </div>
                           <button type="button" onClick={() => removeItem(item.lineId)} className="p-1 text-stone-400 hover:text-red-700" aria-label={`Remove ${item.imageTitle}`}>

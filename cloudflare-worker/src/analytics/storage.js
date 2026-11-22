@@ -73,6 +73,7 @@ function isLevel4BlockCandidate({
 }
 
 const CANONICAL_TRACKED_EVENTS = new Set([
+  'zone_h1_click',
   'xl_zoom',
   'browse_all_click',
   'order_clicked',

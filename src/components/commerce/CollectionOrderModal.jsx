@@ -13,6 +13,7 @@ import {
   updateCartQuantity,
 } from "../../lib/commerce/cart.js";
 import { normalizeImageSrc } from "../../utils/imageProxyCore.js";
+import ImageId from "./ImageId.jsx";
 
 const SERIES_COLORS = {
   sketch: { surface: "#e7eee8", border: "#b9c9bc", accent: "#59695d" },
@@ -238,6 +239,7 @@ export default function CollectionOrderModal({
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#8a3d2b]">Select a print edition</p>
                 <h3 className="mt-1 text-xl font-semibold leading-snug text-stone-900">{image.title}</h3>
+                <ImageId imageId={image.id} />
                 {oneImageMovie && <p className="mt-1 text-xs text-[#8a3d2b]">A One-Image Movie™ work by Wayne Heim</p>}
                 <p className="mt-2 text-sm leading-relaxed text-stone-600">Choose the scale and edition structure that best fits the work and the room where it will live.</p>
               </div>
@@ -517,6 +519,7 @@ export default function CollectionOrderModal({
                           <div>
                             <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#8a3d2b]">{item.seriesLabel}</p>
                             <h3 className="line-clamp-2 text-sm font-semibold text-stone-800">{item.imageTitle}</h3>
+                            <ImageId imageId={item.imageId} />
                             <p className="mt-0.5 text-xs text-stone-500">{item.size} · {item.finish}</p>
                           </div>
                           <button type="button" onClick={() => removeItem(item.lineId)} className="p-1 text-stone-400 hover:text-red-700" aria-label={`Remove ${item.imageTitle}`}><Trash2 className="h-4 w-4" /></button>

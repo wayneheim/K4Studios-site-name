@@ -1,5 +1,17 @@
 import { centsToDecimal } from "../../src/lib/commerce/server/money.js";
 
+export function buildPayPalBreakdown(quote) {
+  const gross = quote.merchandiseSubtotalCents ?? quote.merchandiseCents;
+  const discount = quote.merchandiseDiscountCents || 0;
+  if (gross - discount + quote.shippingCents + quote.taxCents !== quote.totalCents) throw new Error("PayPal amount breakdown does not balance.");
+  return {
+    item_total: { currency_code: "USD", value: centsToDecimal(gross) },
+    shipping: { currency_code: "USD", value: centsToDecimal(quote.shippingCents) },
+    tax_total: { currency_code: "USD", value: centsToDecimal(quote.taxCents) },
+    ...(discount ? { discount: { currency_code: "USD", value: centsToDecimal(discount) } } : {}),
+  };
+}
+
 function allocateTotalAcrossLines(items, totalCents) {
   const merchandiseCents = items.reduce((sum, item) => sum + item.lineTotalCents, 0);
   if (!merchandiseCents) return items.map(() => 0);
