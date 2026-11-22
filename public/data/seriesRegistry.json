@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-11-18T22:37:45.118Z",
+    "lastUpdated": "2026-11-21T03:36:07.760Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs",
     "oneImageMovieMarkedAt": "2026-06-05T16:24:54.142Z"
@@ -3906,7 +3906,71 @@
     "i-sDZFJ6t:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-Hrxpgsd",
     "i-JbWnV3V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-YDEGYF2",
     "i-wdF6Hw3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-M6RBByU",
-    "i-9LC3ZrM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-h4MRyJD"
+    "i-9LC3ZrM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-h4MRyJD",
+    "i-4Hz6D7k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-kFdpGwR",
+    "i-LmpRvHw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-hrCXaFc",
+    "i-WfRwfpM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-sQudu7P",
+    "i-qLzRgbS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-xwE4VEc",
+    "i-thpSjMG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-WXA4nYe",
+    "i-48G2HVM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-RRPuWVy",
+    "i-cNbW8wV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-vVdRsrv",
+    "i-Cq3rbHT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-eaNBn9a",
+    "i-mqQxwNn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-bcbyeYc",
+    "i-hrx5g4S:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-FD9G25e",
+    "i-stm5tCK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-nehswnp",
+    "i-DLnxMgZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-WgYPyfg",
+    "i-RMdScDd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-hN4wXxs",
+    "i-BBZjZD6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-s8XV56n",
+    "i-N3S92fb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-vb8kr3R",
+    "i-d7DbWRC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-jp5nKk8",
+    "i-pdW6WgR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-rwHE9KH",
+    "i-K2f4VC2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-8bGMwpP",
+    "i-Gqw3s5s:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-53pxcYb",
+    "i-nnV6qtS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-FzWZYVn",
+    "i-qJLHBWD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-ngKBJ2K",
+    "i-rZpSGr2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-FbCHrew",
+    "i-4sbVfhW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-Zg2SLF4",
+    "i-bhb655B:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-3sRqfkC",
+    "i-sGtzTtH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-28yNwRP",
+    "i-gvxp8b8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-uP4fgQb",
+    "i-CT5ds2V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-TxNYVYT",
+    "i-Q9hVLPk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-tq3rbSm",
+    "i-pqcmRth:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-VsnV73e",
+    "i-FhwDm6k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-Xkz6MSN",
+    "i-FKmvVCn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-5ts64t9",
+    "i-BzhQxMz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-dRp6YsF",
+    "i-RRB2hNj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-UUj2qxa",
+    "i-vnbxvkh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-eDUxJeV",
+    "i-hM67hBK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-Sw4eeN8",
+    "i-xMCZJNR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-chapdNZ",
+    "i-tZhtz8w:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-ZaRDPD5",
+    "i-nKHmkvM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-kbyJj9B",
+    "i-9vczZrF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-dBQf6jZ",
+    "i-b7HtD4R:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-HpEyUVg",
+    "i-m2dqhjT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-9WeZYzB",
+    "i-M95HTNH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-pZdnuYw",
+    "i-Pd3vWBk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-mSCPLeH",
+    "i-QsNP7mR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-sHSzzkC",
+    "i-dTzLRVW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-rxe4G2b",
+    "i-G7vCDcw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-EKRqwUb",
+    "i-5xcvjQJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-jURZSKS",
+    "i-FqBfMJG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-xXtVcRY",
+    "i-wCzNMg3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-pqUK2DE",
+    "i-BQw2kzC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-894JDcz",
+    "i-863RbPv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-YXBTwNB",
+    "i-TzGJNJz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-c884LDk",
+    "i-6mQrB7h:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-acadsd2",
+    "i-qpF8JQN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-RNKSyda",
+    "i-Bq4p96c:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-tfEeDKW",
+    "i-5qMPjFM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-vzKaBaw",
+    "i-cxmJsHf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-9SKjNJ9",
+    "i-vPsFX8r:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-SfrYdR7",
+    "i-BVwQDrM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-AjPCsRX",
+    "i-MMmDhV2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-DUm6fBh",
+    "i-zHvS5jz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-DU2ZhvG",
+    "i-5VZVzTR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-HKUAuFX",
+    "i-JkFT62C:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-uH4zXJw",
+    "i-ZDGhLps:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-myFcrAR"
   },
   "series": {
     "s-BB65wHk": {
@@ -9743,9 +9807,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The Silent Pursuit",
           "src": "/img/i-TzGJNJz/l.jpg"
+        },
+        {
+          "imageId": "i-TzGJNJz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The Silent Pursuit",
+          "src": "/img/i-TzGJNJz/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.825Z",
       "excludeSizes": {
         "foundation": [
@@ -10249,9 +10319,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Charge of Reckoning",
           "src": "/img/i-DLnxMgZ/l.jpg"
+        },
+        {
+          "imageId": "i-DLnxMgZ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Charge of Reckoning",
+          "src": "/img/i-DLnxMgZ/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.826Z",
       "excludeSizes": {
         "chronicle": [
@@ -10384,9 +10460,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Standing My Ground: Cowgirl's Defiance in the Old West",
           "src": "/img/i-M95HTNH/l.jpg"
+        },
+        {
+          "imageId": "i-M95HTNH",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Standing My Ground: Cowgirl's Defiance in the Old West",
+          "src": "/img/i-M95HTNH/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.826Z",
       "excludeSizes": {
         "chronicle": [
@@ -10649,9 +10731,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Make Your Move: A Cowboy Poised for Action",
           "src": "/img/i-RMdScDd/l.jpg"
+        },
+        {
+          "imageId": "i-RMdScDd",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Make Your Move: A Cowboy Poised for Action",
+          "src": "/img/i-RMdScDd/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.826Z",
       "excludeSizes": {
         "chronicle": [
@@ -11323,9 +11411,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Silent Prairie Vigil",
           "src": "/img/i-BQw2kzC/l.jpg"
+        },
+        {
+          "imageId": "i-BQw2kzC",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Silent Prairie Vigil",
+          "src": "/img/i-BQw2kzC/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.828Z",
       "oneImageMovie": true
     },
@@ -11570,9 +11664,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "I Am Listening",
           "src": "/img/i-hrx5g4S/l.jpg"
+        },
+        {
+          "imageId": "i-hrx5g4S",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "I Am Listening",
+          "src": "/img/i-hrx5g4S/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.828Z",
       "excludeSizes": {
         "chronicle": [
@@ -11630,9 +11730,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Saddling Up on the Ranch",
           "src": "/img/i-BBZjZD6/l.jpg"
+        },
+        {
+          "imageId": "i-BBZjZD6",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Saddling Up on the Ranch",
+          "src": "/img/i-BBZjZD6/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.828Z",
       "oneImageMovie": true
     },
@@ -11898,9 +12004,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Frontier Duty",
           "src": "/img/i-5qMPjFM/l.jpg"
+        },
+        {
+          "imageId": "i-5qMPjFM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Frontier Duty",
+          "src": "/img/i-5qMPjFM/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.829Z",
       "excludeSizes": {
         "foundation": [
@@ -11970,9 +12082,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Hands That Learn",
           "src": "/img/i-qpF8JQN/l.jpg"
+        },
+        {
+          "imageId": "i-qpF8JQN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Hands That Learn",
+          "src": "/img/i-qpF8JQN/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.829Z",
       "excludeSizes": {
         "chronicle": [
@@ -12007,9 +12125,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Music Lessons",
           "src": "/img/i-6mQrB7h/l.jpg"
+        },
+        {
+          "imageId": "i-6mQrB7h",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Music Lessons",
+          "src": "/img/i-6mQrB7h/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.829Z",
       "excludeSizes": {
         "foundation": [],
@@ -12219,9 +12343,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Good to Be Together",
           "src": "/img/i-Bq4p96c/l.jpg"
+        },
+        {
+          "imageId": "i-Bq4p96c",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Good to Be Together",
+          "src": "/img/i-Bq4p96c/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.830Z",
       "oneImageMovie": true
     },
@@ -12400,9 +12530,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Riding the Cut",
           "src": "/img/i-tZhtz8w/l.jpg"
+        },
+        {
+          "imageId": "i-tZhtz8w",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Riding the Cut",
+          "src": "/img/i-tZhtz8w/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.830Z",
       "excludeSizes": {
         "chronicle": [
@@ -12592,7 +12728,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Pipe and Post",
+      "title": "Holding the Post",
       "src": "/img/i-QsNP7mR/l.jpg",
       "occurrences": [
         {
@@ -12606,9 +12742,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs",
           "title": "Pipe and Post",
           "src": "/img/i-QsNP7mR/l.jpg"
+        },
+        {
+          "imageId": "i-QsNP7mR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Holding the Post",
+          "src": "/img/i-QsNP7mR/l.jpg"
         }
       ],
-      "linkedCount": 2,
+      "linkedCount": 3,
       "createdAt": "2025-12-22T19:18:50.714Z",
       "excludeSizes": {
         "foundation": [
@@ -13123,9 +13265,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Impatient Hour",
           "src": "/img/i-pdW6WgR/l.jpg"
+        },
+        {
+          "imageId": "i-pdW6WgR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Impatient Hour",
+          "src": "/img/i-pdW6WgR/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.716Z",
       "oneImageMovie": true
     },
@@ -13135,13 +13283,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Don’t Test Me",
+      "title": "Don't Test Me",
       "src": "/img/i-sJDHsjN/l.jpg",
       "occurrences": [
         {
           "imageId": "i-sJDHsjN",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
-          "title": "Don’t Test Me",
+          "title": "Don't Test Me",
           "src": "/img/i-sJDHsjN/l.jpg"
         }
       ],
@@ -13208,9 +13356,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Waiting",
           "src": "/img/i-N3S92fb/l.jpg"
+        },
+        {
+          "imageId": "i-N3S92fb",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Waiting",
+          "src": "/img/i-N3S92fb/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.717Z",
       "editionData": {
         "chronicle": {
@@ -13240,9 +13394,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Keeping Watch",
           "src": "/img/i-Gqw3s5s/l.jpg"
+        },
+        {
+          "imageId": "i-Gqw3s5s",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Keeping Watch",
+          "src": "/img/i-Gqw3s5s/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.717Z",
       "excludeSizes": {
         "legend": [
@@ -13461,9 +13621,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Another Day in the Saddle",
           "src": "/img/i-CT5ds2V/l.jpg"
+        },
+        {
+          "imageId": "i-CT5ds2V",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Another Day in the Saddle",
+          "src": "/img/i-CT5ds2V/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.717Z",
       "excludeSizes": {
         "foundation": [
@@ -13511,9 +13677,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Rifle in Hand",
           "src": "/img/i-K2f4VC2/l.jpg"
+        },
+        {
+          "imageId": "i-K2f4VC2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Rifle in Hand",
+          "src": "/img/i-K2f4VC2/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "excludeSizes": {
         "foundation": [
@@ -13536,9 +13708,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Capturing the West",
           "src": "/img/i-d7DbWRC/l.jpg"
+        },
+        {
+          "imageId": "i-d7DbWRC",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Capturing the West",
+          "src": "/img/i-d7DbWRC/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "excludeSizes": {
         "foundation": [
@@ -13561,9 +13739,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The Silent Watcher",
           "src": "/img/i-Q9hVLPk/l.jpg"
+        },
+        {
+          "imageId": "i-Q9hVLPk",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The Silent Watcher",
+          "src": "/img/i-Q9hVLPk/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "oneImageMovie": true
     },
@@ -13581,9 +13765,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "No Hard Feelings",
           "src": "/img/i-bhb655B/l.jpg"
+        },
+        {
+          "imageId": "i-bhb655B",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "No Hard Feelings",
+          "src": "/img/i-bhb655B/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "excludeSizes": {
         "foundation": [
@@ -13711,9 +13901,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Sights on Tomorrow",
           "src": "/img/i-863RbPv/l.jpg"
+        },
+        {
+          "imageId": "i-863RbPv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Sights on Tomorrow",
+          "src": "/img/i-863RbPv/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "excludeSizes": {
         "foundation": []
@@ -13734,9 +13930,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Drawn in Dust",
           "src": "/img/i-qJLHBWD/l.jpg"
+        },
+        {
+          "imageId": "i-qJLHBWD",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Drawn in Dust",
+          "src": "/img/i-qJLHBWD/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "editionData": {
         "chronicle": {
@@ -13794,9 +13996,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Watching and Waiting",
           "src": "/img/i-4sbVfhW/l.jpg"
+        },
+        {
+          "imageId": "i-4sbVfhW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Watching and Waiting",
+          "src": "/img/i-4sbVfhW/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "oneImageMovie": true
     },
@@ -13814,9 +14022,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "No Going Back",
           "src": "/img/i-rZpSGr2/l.jpg"
+        },
+        {
+          "imageId": "i-rZpSGr2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "No Going Back",
+          "src": "/img/i-rZpSGr2/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "oneImageMovie": true
     },
@@ -13846,7 +14060,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Teacher’s Visitor",
+      "title": "The Teacher's Visitor",
       "src": "/img/i-pqcmRth/l.jpg",
       "occurrences": [
         {
@@ -13854,9 +14068,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The Teacher’s Visitor",
           "src": "/img/i-pqcmRth/l.jpg"
+        },
+        {
+          "imageId": "i-pqcmRth",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The Teacher's Visitor",
+          "src": "/img/i-pqcmRth/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "excludeSizes": {},
       "oneImageMovie": true
@@ -13867,7 +14087,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Crime Doesn’t Pay",
+      "title": "Crime Doesn't Pay",
       "src": "/img/i-gvxp8b8/l.jpg",
       "occurrences": [
         {
@@ -13875,9 +14095,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Crime Doesn’t Pay",
           "src": "/img/i-gvxp8b8/l.jpg"
+        },
+        {
+          "imageId": "i-gvxp8b8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Crime Doesn't Pay",
+          "src": "/img/i-gvxp8b8/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "excludeSizes": {
         "foundation": [
@@ -13899,9 +14125,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Watching the Rails",
           "src": "/img/i-hM67hBK/l.jpg"
+        },
+        {
+          "imageId": "i-hM67hBK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Watching the Rails",
+          "src": "/img/i-hM67hBK/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "oneImageMovie": true
     },
@@ -13919,9 +14151,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Got Your Back",
           "src": "/img/i-vnbxvkh/l.jpg"
+        },
+        {
+          "imageId": "i-vnbxvkh",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Got Your Back",
+          "src": "/img/i-vnbxvkh/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "editionData": {
         "chronicle": {
@@ -13949,9 +14187,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Taking Cover",
           "src": "/img/i-FhwDm6k/l.jpg"
+        },
+        {
+          "imageId": "i-FhwDm6k",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Taking Cover",
+          "src": "/img/i-FhwDm6k/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "oneImageMovie": true
     },
@@ -13969,9 +14213,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Getting Ready",
           "src": "/img/i-FKmvVCn/l.jpg"
+        },
+        {
+          "imageId": "i-FKmvVCn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Getting Ready",
+          "src": "/img/i-FKmvVCn/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "editionData": {
         "chronicle": {
@@ -13999,9 +14249,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Last Chance Ride",
           "src": "/img/i-9vczZrF/l.jpg"
+        },
+        {
+          "imageId": "i-9vczZrF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Last Chance Ride",
+          "src": "/img/i-9vczZrF/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.695Z",
       "oneImageMovie": true
     },
@@ -14324,9 +14580,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Public Defender",
           "src": "/img/i-nKHmkvM/l.jpg"
+        },
+        {
+          "imageId": "i-nKHmkvM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Public Defender",
+          "src": "/img/i-nKHmkvM/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.698Z",
       "oneImageMovie": true
     },
@@ -14405,9 +14667,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "No Second Guess",
           "src": "/img/i-sGtzTtH/l.jpg"
+        },
+        {
+          "imageId": "i-sGtzTtH",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "No Second Guess",
+          "src": "/img/i-sGtzTtH/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.698Z",
       "oneImageMovie": true
     },
@@ -14451,9 +14719,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Weathered Patience",
           "src": "/img/i-BzhQxMz/l.jpg"
+        },
+        {
+          "imageId": "i-BzhQxMz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Weathered Patience",
+          "src": "/img/i-BzhQxMz/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.698Z",
       "excludeSizes": {
         "chronicle": [
@@ -14627,9 +14901,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Trigger Man",
           "src": "/img/i-dTzLRVW/l.jpg"
+        },
+        {
+          "imageId": "i-dTzLRVW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Trigger Man",
+          "src": "/img/i-dTzLRVW/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.699Z",
       "oneImageMovie": true
     },
@@ -14677,9 +14957,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "True to the Trail",
           "src": "/img/i-RRB2hNj/l.jpg"
+        },
+        {
+          "imageId": "i-RRB2hNj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "True to the Trail",
+          "src": "/img/i-RRB2hNj/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.699Z",
       "editionData": {
         "chronicle": {
@@ -14764,9 +15050,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Standing Watch",
           "src": "/img/i-mqQxwNn/l.jpg"
+        },
+        {
+          "imageId": "i-mqQxwNn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Standing Watch",
+          "src": "/img/i-mqQxwNn/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.699Z",
       "excludeSizes": {
         "chronicle": [
@@ -15020,9 +15312,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "What He Carries Home",
           "src": "/img/i-FqBfMJG/l.jpg"
+        },
+        {
+          "imageId": "i-FqBfMJG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "What He Carries Home",
+          "src": "/img/i-FqBfMJG/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "chronicle": [
@@ -15056,9 +15354,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Where He Finally Rests",
           "src": "/img/i-G7vCDcw/l.jpg"
+        },
+        {
+          "imageId": "i-G7vCDcw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Where He Finally Rests",
+          "src": "/img/i-G7vCDcw/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "chronicle": [
@@ -15092,9 +15396,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "What She Guards",
           "src": "/img/i-Pd3vWBk/l.jpg"
+        },
+        {
+          "imageId": "i-Pd3vWBk",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "What She Guards",
+          "src": "/img/i-Pd3vWBk/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "chronicle": [
@@ -15128,9 +15438,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Where the Trail Speaks",
           "src": "/img/i-nnV6qtS/l.jpg"
+        },
+        {
+          "imageId": "i-nnV6qtS",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Where the Trail Speaks",
+          "src": "/img/i-nnV6qtS/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "legend": [
@@ -15213,9 +15529,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The World at Her Height",
           "src": "/img/i-5xcvjQJ/l.jpg"
+        },
+        {
+          "imageId": "i-5xcvjQJ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The World at Her Height",
+          "src": "/img/i-5xcvjQJ/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "foundation": [
@@ -15679,9 +16001,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Long Night",
           "src": "/img/i-JkFT62C/l.jpg"
+        },
+        {
+          "imageId": "i-JkFT62C",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Long Night",
+          "src": "/img/i-JkFT62C/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
@@ -16053,9 +16381,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Morning Oath of the Trail",
           "src": "/img/i-MMmDhV2/l.jpg"
+        },
+        {
+          "imageId": "i-MMmDhV2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Morning Oath of the Trail",
+          "src": "/img/i-MMmDhV2/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": []
       },
@@ -16279,9 +16613,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Good Riders, Good Company",
           "src": "/img/i-5VZVzTR/l.jpg"
+        },
+        {
+          "imageId": "i-5VZVzTR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Good Riders, Good Company",
+          "src": "/img/i-5VZVzTR/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
@@ -16898,9 +17238,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Where the Herd Finds Water",
           "src": "/img/i-zHvS5jz/l.jpg"
+        },
+        {
+          "imageId": "i-zHvS5jz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Where the Herd Finds Water",
+          "src": "/img/i-zHvS5jz/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-22T21:43:53.044Z",
       "editionData": {
@@ -23349,7 +23695,7 @@
         {
           "imageId": "i-xMk6ZJ9",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Won’t Take Me Alive!",
+          "title": "Won't Take Me Alive!",
           "src": "/img/i-xMk6ZJ9/l.jpg"
         },
         {
@@ -23979,9 +24325,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Care to Repeat That",
           "src": "/img/i-b7HtD4R/l.jpg"
+        },
+        {
+          "imageId": "i-b7HtD4R",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Care to Repeat That",
+          "src": "/img/i-b7HtD4R/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-22T22:19:36.761Z",
       "oneImageMovie": true
@@ -25181,7 +25533,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "He Didn’t Miss",
+      "title": "Didn't Miss",
       "src": "/img/i-ZDGhLps/l.jpg",
       "occurrences": [
         {
@@ -25189,9 +25541,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "He Didn’t Miss",
           "src": "/img/i-ZDGhLps/l.jpg"
+        },
+        {
+          "imageId": "i-ZDGhLps",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Didn't Miss",
+          "src": "/img/i-ZDGhLps/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:07:46.581Z",
       "oneImageMovie": true
@@ -25465,13 +25823,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Where Trouble Hasn’t Arrived",
+      "title": "Where Trouble Hasn't Arrived",
       "src": "/img/i-9Qt4nh7/l.jpg",
       "occurrences": [
         {
           "imageId": "i-9Qt4nh7",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Where Trouble Hasn’t Arrived",
+          "title": "Where Trouble Hasn't Arrived",
           "src": "/img/i-9Qt4nh7/l.jpg"
         }
       ],
@@ -26494,13 +26852,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "What He’s Seen",
+      "title": "What He's Seen",
       "src": "/img/i-rTwWXgw/l.jpg",
       "occurrences": [
         {
           "imageId": "i-rTwWXgw",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "What He’s Seen",
+          "title": "What He's Seen",
           "src": "/img/i-rTwWXgw/l.jpg"
         }
       ],
@@ -27148,7 +27506,7 @@
         {
           "imageId": "i-Vd5VW3L",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Something Isn’t Right",
+          "title": "Something Isn't Right",
           "src": "/img/i-Vd5VW3L/l.jpg"
         },
         {
@@ -28106,7 +28464,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "She Held the Gate",
+      "title": "Holding the Gate",
       "src": "/img/i-BVwQDrM/l.jpg",
       "occurrences": [
         {
@@ -28114,9 +28472,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "She Held the Gate",
           "src": "/img/i-BVwQDrM/l.jpg"
+        },
+        {
+          "imageId": "i-BVwQDrM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Holding the Gate",
+          "src": "/img/i-BVwQDrM/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:25:48.833Z",
       "oneImageMovie": true
@@ -28480,13 +28844,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "I Don’t Think So.",
+      "title": "I Don't Think So.",
       "src": "/img/i-tKZ2wgt/l.jpg",
       "occurrences": [
         {
           "imageId": "i-tKZ2wgt",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "I Don’t Think So.",
+          "title": "I Don't Think So.",
           "src": "/img/i-tKZ2wgt/l.jpg"
         }
       ],
@@ -28703,9 +29067,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "In the Presence of Time",
           "src": "/img/i-qLzRgbS/l.jpg"
+        },
+        {
+          "imageId": "i-qLzRgbS",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "In the Presence of Time",
+          "src": "/img/i-qLzRgbS/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
@@ -29283,9 +29653,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Held by the Land",
           "src": "/img/i-cNbW8wV/l.jpg"
+        },
+        {
+          "imageId": "i-cNbW8wV",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Held by the Land",
+          "src": "/img/i-cNbW8wV/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "foundation": [
           "11\" x 14\""
@@ -29309,9 +29685,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Carried Forward",
           "src": "/img/i-4Hz6D7k/l.jpg"
+        },
+        {
+          "imageId": "i-4Hz6D7k",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Carried Forward",
+          "src": "/img/i-4Hz6D7k/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:34:12.123Z",
       "editionData": {
@@ -29749,13 +30131,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "He Carries the Quiet",
+      "title": "Carrying the Quiet",
       "src": "/img/i-7CjNq8p/l.jpg",
       "occurrences": [
         {
           "imageId": "i-7CjNq8p",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
-          "title": "He Carries the Quiet",
+          "title": "Carrying the Quiet",
           "src": "/img/i-7CjNq8p/l.jpg"
         }
       ],
@@ -30300,9 +30682,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Watching the High Ground",
           "src": "/img/i-LmpRvHw/l.jpg"
+        },
+        {
+          "imageId": "i-LmpRvHw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Watching the High Ground",
+          "src": "/img/i-LmpRvHw/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:39:49.138Z",
       "editionData": {
@@ -30332,9 +30720,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Standing Into Tomorrow",
           "src": "/img/i-WfRwfpM/l.jpg"
+        },
+        {
+          "imageId": "i-WfRwfpM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Standing Into Tomorrow",
+          "src": "/img/i-WfRwfpM/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:40:02.408Z",
       "editionData": {
@@ -30364,9 +30758,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Bearing the West",
           "src": "/img/i-thpSjMG/l.jpg"
+        },
+        {
+          "imageId": "i-thpSjMG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Bearing the West",
+          "src": "/img/i-thpSjMG/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
@@ -31616,9 +32016,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Bearer of the Light",
           "src": "/img/i-m2dqhjT/l.jpg"
+        },
+        {
+          "imageId": "i-m2dqhjT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Bearer of the Light",
+          "src": "/img/i-m2dqhjT/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-14T15:08:02.615Z",
       "oneImageMovie": true
@@ -31924,9 +32330,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Where Are They Going?",
           "src": "/img/i-xMCZJNR/l.jpg"
+        },
+        {
+          "imageId": "i-xMCZJNR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Where Are They Going?",
+          "src": "/img/i-xMCZJNR/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "foundation": [
           "11\" x 14\""
@@ -32189,7 +32601,7 @@
         "foundation",
         "chronicle"
       ],
-      "title": "The Long Way Through",
+      "title": "Leading the Way",
       "src": "/img/i-tMGHpqv/l.jpg",
       "occurrences": [
         {
@@ -32201,7 +32613,7 @@
         {
           "imageId": "i-tMGHpqv",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
-          "title": "The Long Way Through",
+          "title": "Leading the Way",
           "src": "/img/i-tMGHpqv/l.jpg"
         }
       ],
@@ -32295,9 +32707,15 @@
           "galleryPath": "/src/data/Other/Archive/Archive.mjs",
           "title": "Carrying What Remains",
           "src": "/img/i-48G2HVM/l.jpg"
+        },
+        {
+          "imageId": "i-48G2HVM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Carrying What Remains",
+          "src": "/img/i-48G2HVM/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-15T22:56:37.557Z"
     },
@@ -32349,9 +32767,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Toward What Remains",
           "src": "/img/i-Cq3rbHT/l.jpg"
+        },
+        {
+          "imageId": "i-Cq3rbHT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Toward What Remains",
+          "src": "/img/i-Cq3rbHT/l.jpg"
         }
       ],
-      "linkedCount": 2,
+      "linkedCount": 3,
       "excludeSizes": {
         "foundation": [],
         "chronicle": [
@@ -32743,7 +33167,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Cowboy Artwork In Fine Art",
+      "title": "Working Cowboy",
       "src": "/img/i-xW97k2g/l.jpg",
       "occurrences": [
         {
@@ -37796,9 +38220,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Signal at First Light",
           "src": "/img/i-vPsFX8r/l.jpg"
+        },
+        {
+          "imageId": "i-vPsFX8r",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Signal at First Light",
+          "src": "/img/i-vPsFX8r/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-30T15:30:17.386Z",
       "oneImageMovie": true
@@ -37817,9 +38247,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Held Note",
           "src": "/img/i-cxmJsHf/l.jpg"
+        },
+        {
+          "imageId": "i-cxmJsHf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Held Note",
+          "src": "/img/i-cxmJsHf/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-30T15:30:40.786Z",
       "oneImageMovie": true
@@ -37888,9 +38324,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The Way Forward",
           "src": "/img/i-stm5tCK/l.jpg"
+        },
+        {
+          "imageId": "i-stm5tCK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The Way Forward",
+          "src": "/img/i-stm5tCK/l.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-30T15:36:33.144Z",
       "oneImageMovie": true
@@ -83034,7 +83476,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "His Father's Spear",
+      "title": "A Father's Spear",
       "src": "/img/i-c2JW8XZ/l.jpg",
       "occurrences": [
         {
@@ -83046,7 +83488,7 @@
         {
           "imageId": "i-c2JW8XZ",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "His Father's Spear",
+          "title": "A Father's Spear",
           "src": "/img/i-c2JW8XZ/l.jpg"
         }
       ],
@@ -83278,6 +83720,27 @@
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-18T06:14:21.762Z"
+    },
+    "s-pqUK2DE": {
+      "primaryImageId": "i-wCzNMg3",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "A Mind Beyond the Horizon",
+      "src": "/img/i-wCzNMg3/l.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wCzNMg3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "A Mind Beyond the Horizon",
+          "src": "/img/i-wCzNMg3/l.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-20T22:25:27.648Z"
     }
   }
 }

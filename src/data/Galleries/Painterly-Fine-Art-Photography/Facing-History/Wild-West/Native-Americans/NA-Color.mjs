@@ -66,6 +66,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/LnpTmc5XFghrqhmsKHCF2PFPBnxSBhKhZFg2xkwbF/S/_WHO3989-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Hz6D7k/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -76,12 +77,14 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition"
     ],
-    "story": "He does not look back.\n\nWhat came before is already moving through him -\nhands, breath, posture -\nthings learned long before words were used to explain them.\n\nWhat remains is not memory,\nbut continuation.",
+
+    "story": "The trail behind him needs no backward glance.\n\nWhat came before is already moving through him -\nhands, breath, posture -\nthings learned long before words were used to explain them.\n\nWhat remains is not memory,\nbut continuation.",
     "notes": "This work draws from pictorialist restraint rather than dramatic gesture, allowing posture and light to carry meaning. The composition echoes the quiet authority found in early ethnographic portraiture while rejecting its distance, replacing it with presence and continuity. The painterly surface softens time, positioning the figure not as a subject of history, but as a living extension of it - an image that endures through understatement.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 1
+    "sortOrder": 1,
+    contentSource: "human"
   },
   {
     "id": "i-LmpRvHw",
@@ -95,6 +98,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NHGdJwSS8NnXzdpvpdqnB6TjvCk5cWhFV2sT6DRFk/S/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -106,12 +110,14 @@ export const galleryData = [
       "spirit of the West",
       "Western Native American gallery"
     ],
-    "story": "He does not look down.\nHe looks past-past the ridge, past the hour, past the noise that never quite reaches this place.\n\nThe horse shifts once, then settles.\nWind lifts the feathers, tests the silence.\nNothing announces itself.\nThat's how it has always been.",
+
+    "story": "Above the ridge, the hour thins out and the land keeps its own counsel. Looking past — past the ridge, past the hour, past the noise that never quite reaches this place. The horse shifts once, then settles. Wind lifts the feathers, tests the silence. Nothing announces itself. That's how it has always been.",
     "notes": "This piece draws its strength from restraint rather than drama. The upright staff, calm posture, and elevated gaze establish quiet authority-an image that feels inherited rather than staged. The composition echoes the lineage of classical Western portraiture while rejecting romantic excess, allowing presence and posture to carry the narrative. It is a work that holds space rather than fills it, rewarding long looking and lived interpretation.",
     "rating": 5,
     "galleries": [],
-    "visibility": "show",
-    "sortOrder": 2
+    "visibility": "hidden",
+    "sortOrder": 2,
+    contentSource: "human"
   },
   {
     "id": "i-WfRwfpM",
@@ -125,6 +131,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/0/KkDTKbgnDHfR5q8F5ttdZWjJs2JN8qT7X7cn4n5Mx/S/_HF29518-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -141,12 +148,14 @@ export const galleryData = [
       "fine art Western photography",
       "pictorialist tradition"
     ],
-    "story": "She doesn't look back to remember.  \nShe looks forward to continue.\n\nThe wind moves past her without instruction.  \nThe land already knows who she is.\n\nWhat she carries isn't history alone-  \nit's direction.",
+
+    "story": "Dawn comes up over ground that asks for no remembering. Looking forward — to continue. The wind moves past without instruction. The land already knows who she is. What she carries isn't history alone — it's direction.",
     "notes": "This image centers presence over symbolism, allowing posture, light, and stillness to communicate continuity without narration. The figure's stance and forward gaze align with pictorialist approaches that privilege lived identity and quiet authority rather than historical reenactment.\n\nThe painterly surface softens edges while preserving intent, inviting the viewer to slow down and engage with the subject on her own terms. By emphasizing continuity and direction, the work appeals to collectors drawn to fine art that honors Indigenous presence through restraint, dignity, and enduring forward motion.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 3
+    "sortOrder": 3,
+    contentSource: "human"
   },
   {
     "id": "i-69qsFwx",
@@ -195,6 +204,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-NgkC4Zt/1/LjqDBDHrz9DFPXRffF4cknPQrGkHjdq3NHPkRRLwB/S/_HF24846-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-NgkC4Zt/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -205,12 +215,14 @@ export const galleryData = [
       "Native American tradition",
       "spirit of the West"
     ],
-    "story": "He has stood at this threshold longer than the path remembers itself.  \nNot watching for arrivals-watching for what is carried forward.\n\nTime moves around him, not through him.  \nWhat matters has already been decided.",
+
+    "story": "The threshold has outlasted every path that led to it, and still the crossing waits.\nNot watching for arrivals-watching for what is carried forward.\n\nTime moves around him, not through him.\nWhat matters has already been decided.",
     "notes": "This portrait draws its strength from restraint. The subdued palette, textured background, and controlled light place emphasis on the subject's expression rather than costume or setting. Painterly surface treatment and classical portrait structure align the work with historical Western and ethnographic portrait traditions while maintaining contemporary sensitivity. The result is a piece that rewards prolonged viewing, inviting collectors to engage with the quiet authority carried by age, memory, and lived experience.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 5
+    "sortOrder": 5,
+    contentSource: "human"
   },
   {
     "id": "i-qLzRgbS",
@@ -224,6 +236,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/Lg5bGG5Q2SmdLsSnJtszBZW5s9BgPMTdbKHPGPZKx/S/_WHO6157-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-qLzRgbS/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -235,12 +248,14 @@ export const galleryData = [
       "spirit of the West",
       "painterly Native American images"
     ],
-    "story": "He stands against the dust of ages, regalia shifting in the wind, gaze fixed on the line where memory meets horizon. The old stories, their legacy, alive in every feather and every wrinkle-each one earned, each one carried forward. The journey forward is written by those who remember.",
+
+    "story": "Dust of ages moves through the wind, and the line where memory meets horizon holds steady. The old stories, their legacy, alive in every feather and every wrinkle-each one earned, each one carried forward. The journey forward is written by those who remember.",
     "notes": "Time becomes the quiet subject here, carried through expression, posture, and surface detail rather than action. The seated position introduces a grounded stillness, while the outward gaze extends the image beyond the frame. Light and atmosphere soften the scene without removing its clarity, allowing age, experience, and presence to emerge gradually. It is a work that invites longer viewing, where meaning accumulates rather than declares itself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 6
+    "sortOrder": 6,
+    contentSource: "human"
   },
   {
     "id": "i-FTCst2K",
@@ -254,6 +269,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FTCst2K/0/Lnf45sHGDnFwMJRP4R6v4Gf5GdcC3HXBbtXq5rZLR/S/_WHO2281-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-FTCst2K/A",
+
     "keywords": [
       "fine art",
       "photography",
@@ -269,12 +285,14 @@ export const galleryData = [
       "painterly Native American images",
       "Native American fine art photography"
     ],
-    "story": "The weight is familiar.  \nNot heavy-just known.\n\nWhat she carries was given before it was chosen.  \nWorn soft by hands that learned patience long before her own.\n\nShe stands still, not waiting-  \nalready holding what matters.",
+
+    "story": "The weight is familiar. Not heavy — just known. What she carries was given before it was chosen. Worn soft by hands that learned patience long before her own. Still, not waiting — already holding what matters.",
     "notes": "What holds attention here is the balance between direct presence and restraint. The figure meets the viewer without overt gesture, allowing expression and posture to carry the weight of the image.\n\nThe surface softening and subdued environment keep focus on the face and the act of holding the blanket, reinforcing a sense of continuity without relying on narrative cues. The result is a piece that remains grounded while inviting extended viewing.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 7
+    "sortOrder": 7,
+    contentSource: "human"
   },
   {
     "id": "i-thpSjMG",
@@ -288,6 +306,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/KNcPn7HHQvFHsmmS2pmfZBZkxrPxkpSTJvL6ppQ3D/S/_HF29518-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -303,12 +322,14 @@ export const galleryData = [
       "Western Native American gallery",
       "heritage and tradition in art"
     ],
-    "story": "She doesn't claim the land.\nShe answers it.\n\nWind moves first.\nThen stillness settles where her feet are set.\n\nNothing asks her to prove herself.\nStanding is enough.",
+
+    "story": "The land waits to be answered, not claimed.\nShe answers it.\n\nWind moves first.\nThen stillness settles where her feet are set.\n\nNothing asks her to prove herself.\nStanding is enough.",
     "notes": "This image aligns with pictorial traditions that privilege posture and spatial relationship over narrative action. The upright stance and open horizon establish authority through balance rather than dominance, allowing presence to register without symbolic reinforcement.\n\nSoft tonal transitions and restrained contrast resist dramatization, situating the figure within a lineage of Western and Indigenous portraiture that values endurance, continuity, and lived identity. The work invites prolonged viewing, rewarding attention to bearing, proportion, and quiet resolve.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 8
+    "sortOrder": 8,
+    contentSource: "human"
   },
   {
     "id": "i-Cq3rbHT",
@@ -322,6 +343,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/KS24fNQc2tKJBpq6xzBnFQTmPft9FsmXvbmc8WLTN/S/_WHO4561-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -333,14 +355,18 @@ export const galleryData = [
       "spirit of the West",
       "Western Native American gallery"
     ],
-    "story": "He doesn't ride to be seen.\nHe rides because the land still expects him to pass through it.\n\nThe horse knows the pace. The regalia settles with each step.\nNothing here is hurried. Nothing needs proving.\n\nThe day opens the same way it always has-\nby being met.",
+
+    "story": "Dust rises slow behind a pace the horse already knows. The land still expects a passing through — the ride answers. The horse knows the pace. The regalia settles with each step. Nothing here is hurried. Nothing needs proving. The day opens the same way it always has — by being met.",
     "notes": "The centered posture, measured movement, and softened background echo pictorialist traditions that prioritize atmosphere and psychological presence. The work aligns with a lineage of Western art that values continuity, dignity, and cultural respect, allowing the subject to exist within the frame without explanation or embellishment.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "hidden",
-    "sortOrder": 9
+    "sortOrder": 9,
+    contentSource: "human"
   },
   {
     "id": "i-zt2btJ7",
@@ -354,6 +380,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zt2btJ7/1/NGw3MB5zmmB9VbLNMwb7nfLFdfs67sm38cTWrPv2D/S/_HF29701-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zt2btJ7/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -367,12 +394,14 @@ export const galleryData = [
       "heritage and tradition in art",
       "fine art Western photography"
     ],
-    "story": "He stands where the land exhales.\n\nNot performing. Not waiting.\nSimply present-breath rising and falling in time with the earth beneath his feet.\n\nNothing is announced.\nWhat matters has already been carried forward.",
+
+    "story": "Stillness settles where the ground breathes out.\n\nNot performing. Not waiting.\nSimply present-breath rising and falling in time with the earth beneath his feet.\n\nNothing is announced.\nWhat matters has already been carried forward.",
     "notes": "This piece leans fully into stillness as structure. The figure is not positioned as spectacle, but as presence-held within a softened field that removes distraction and compresses time. The near-monochrome palette and controlled texture echo pictorialist traditions, where atmosphere carries as much weight as form.\n\nThe vertical composition reinforces dignity and continuity, allowing the posture and regalia to read clearly without exaggeration. Rather than directing the viewer, the image holds space-inviting a slower engagement where identity is felt through endurance and quiet authority rather than action.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 10
+    "sortOrder": 10,
+    contentSource: "human"
   },
   {
     "id": "i-bvn9Rmz",
@@ -497,13 +526,13 @@ export const galleryData = [
       "Native American wall art"
     ],
 
-    "story": "He keeps it near, not for protection,\nbut because some things lose their meaning\nonce they're set down.\n\nThe wind moves past him.\nTime does too.\nWhat he carries stays.\n\nNothing needs saying.\nWhat matters is already held.",
+    "story": "Close enough to touch, kept near for reasons that have nothing to do with protection. The wind moves past. Time does too. What is carried stays. Nothing needs saying. What matters is already held.",
     "notes": "This work reflects a lineage of restraint found in classic American figurative painting, where meaning is carried through posture, gesture, and silence rather than overt narrative. The softened tonal palette and controlled light recall pictorialist traditions while maintaining a contemporary psychological depth. It is an image that rewards prolonged viewing, offering collectors a piece rooted in cultural continuity, inner resolve, and timeless presence.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 14,
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-gQmqxZJ",
@@ -517,6 +546,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/0/LmF9NH94v4XmWFGmBwt8Pnn8HFFw33NxMgQ8GDSLG/S/_WHO6048-923-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-gQmqxZJ/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -529,12 +559,14 @@ export const galleryData = [
       "Native American heritage art",
       "Native American wall art"
     ],
-    "story": "He does not look toward the past, yet it rests on him all the same.  \nEach feather carries a season, a decision, a name spoken once and never again.  \nHe stands still-not from hesitation, but from knowing exactly where he belongs.\n\nWhat presses on his shoulders is not ceremony.  \nIt is memory, held upright.",
+
+    "story": "The past rests on him all the same, though he never turns to look at it. Each feather carries a season, a decision, a name spoken once and never again. Still — not from hesitation, but from knowing exactly where he belongs. What presses on his shoulders is not ceremony. It is memory, held upright.",
     "notes": "Identity anchors this image through profile and bearing rather than direct engagement. The turned gaze shifts attention away from the viewer, placing emphasis on what lies beyond the frame. The headdress introduces vertical weight and historical presence, while the softened surroundings reduce distraction. The result is a work that holds its meaning through quiet continuity, allowing heritage to be felt as a living, carried presence rather than a fixed symbol.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 15
+    "sortOrder": 15,
+    contentSource: "human"
   },
   {
     "id": "i-kVr4LnG",
@@ -609,7 +641,7 @@ export const galleryData = [
   },
   {
     "id": "i-7CjNq8p",
-    "title": "He Carries the Quiet",
+    "title": "Carrying the Quiet",
     "description": "Holding a rifle with quiet composure, the figure stands grounded in stillness rather than confrontation. This painterly Native American portrait creates fine art wall art rooted in restraint, continuity, Indigenous experience, and the enduring emotional gravity of presence held in balance.\n\n© Wayne Heim",
     "alt": "Native American figure holding a rifle in painterly fine art photography.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
@@ -619,6 +651,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/NBZpn7kfThmWG9VWcd8xsCtx3HfMmNHQcj2RhBjd6/S/_WHO1979-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7CjNq8p/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -630,12 +663,14 @@ export const galleryData = [
       "Native American tradition",
       "spirit of the West"
     ],
-    "story": "Nothing presses him forward.\nNothing pulls him back.\n\nThe weight he bears is not the rifle,\nbut the pause before it is needed.\n\nHe stands where sound thins out\nand decisions learn to wait.",
+
+    "story": "Nothing presses forward. Nothing pulls back. The weight he bears is not the rifle, but the pause before it is needed. Where sound thins out, decisions learn to wait.",
     "notes": "The strength of this piece lies in its restraint. Composition, posture, and softened tonal control place emphasis on psychological presence rather than narrative action, aligning the work with the lineage of Western art that values implication over event. The figure's stillness becomes the focal point, allowing the viewer to sense history, responsibility, and continuity without instruction. It is a work that rewards patience, revealing its gravity through balance, texture, and quiet resolve.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 18
+    "sortOrder": 18,
+    contentSource: "human"
   },
   {
     "id": "i-B3mmMvb",
@@ -692,7 +727,7 @@ export const galleryData = [
       "Native American fine art photography; Native American photography; Native American Portraits; painterly Native American portraits; Indigenous experience; Native American heritage art; Native American tradition; spirit of the West; Western Native American gallery"
     ],
 
-    "story": "He doesn't ride to be seen.\nHe rides because the land still expects him to pass through it.\n\nThe horse knows the pace. The regalia settles with each step.\nNothing here is hurried. Nothing needs proving.\n\nThe day opens the same way it always has-\nby being met.",
+    "story": "Dust rises slow behind a pace the horse already knows. The land still expects a passing through — the ride answers. The horse knows the pace. The regalia settles with each step. Nothing here is hurried. Nothing needs proving. The day opens the same way it always has — by being met.",
     "notes": "The centered posture, measured movement, and softened background echo pictorialist traditions that prioritize atmosphere and psychological presence. The work aligns with a lineage of Western art that values continuity, dignity, and cultural respect, allowing the subject to exist within the frame without explanation or embellishment.",
     "rating": 4,
 
@@ -702,7 +737,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 20,
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-StJWnTh",
@@ -730,7 +765,7 @@ export const galleryData = [
       "spirit of the West"
     ],
 
-    "story": "The old ways had not disappeared. They had adapted.\n\nHe carries the rifle with the same quiet certainty found in the horned headdress, beadwork, hide, and feathers. One speaks to the world inherited. The other speaks to the world pressing in.\n\nBetween them stands a man prepared to meet both.",
+    "story": "The old ways never disappeared. They adapted. The rifle is carried with the same quiet certainty as the horned headdress, the beadwork, hide, and feathers. One speaks to the world inherited. The other speaks to the world pressing in. Between them — a man prepared to meet both.",
     "notes": "What carries the image is not action, but restraint. The figure is positioned between past and outcome, holding a readiness that never needs to announce itself. The visual language stays grounded and direct, allowing posture and presence to communicate the weight of experience without embellishment.",
     "rating": 3,
     "galleries": [],
@@ -781,6 +816,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/1/LQLQjfr8Zk7LJZRzdctqk28dsGV6kt6mJQq6GDLTH/S/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9FCHdBp/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -793,12 +829,14 @@ export const galleryData = [
       "spirit of the West",
       "cultural fine art prints"
     ],
-    "story": "He does not look up for answers.\nHe looks up to measure time.\n\nThe sky shifts, light softens, and the moment stretches long enough to listen.\nWhat he carries is not urgency - it is patience, earned and practiced.\n\nSome decisions are made before movement ever begins.\nThis is one of them.",
+
+    "story": "Upward, not for answers, but for the measure of the hour. The sky shifts, light softens, and the moment stretches long enough to listen. What he carries is not urgency — it is patience, earned and practiced. Some decisions are made before movement ever begins. This is one of them.",
     "notes": "Held in a quiet upward gaze, the figure reflects a relationship with time rather than urgency. The presence of the horse and staff reinforces continuity and lived experience, while the restrained posture allows the image to settle into stillness rather than action.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 23
+    "sortOrder": 23,
+    contentSource: "human"
   },
   {
     "id": "i-48G2HVM",
@@ -812,6 +850,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/0/LgDgj2Ntj2LpDbRWNrscBNWC9bf7FkcRjMRRGRcmD/S/_WHO1469-889-890-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/A",
+
     "keywords": [
       "fine art photography",
       "painterly western photography",
@@ -828,12 +867,14 @@ export const galleryData = [
       "Native American photography",
       "Native American Portraits"
     ],
-    "story": "He doesn't look up.  \nNot out of shame-out of habit.  \nThe ground remembers more than faces ever will.\n\nEach step settles something old.  \nNames, places, moments that no longer ask to be spoken.  \nWhat's carried isn't heavy because of weight-but because it stays.",
+
+    "story": "Some things are read in the dirt, not in faces.\nNot out of shame-out of habit.\nThe ground remembers more than faces ever will.\n\nEach step settles something old.\nNames, places, moments that no longer ask to be spoken.\nWhat's carried isn't heavy because of weight-but because it stays.",
     "notes": "This work is built on restraint. The downward gaze, softened edges, and muted palette place the emphasis on interior life rather than outward identity. Compositionally, the figure is allowed space to exist within atmosphere rather than dominate it, echoing traditions of pictorialism and narrative Western art where meaning emerges slowly. The image functions as a pause-an acknowledgment that history is often carried forward quietly, one step at a time.",
     "rating": 3,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 24
+    "sortOrder": 24,
+    contentSource: "human"
   },
   {
     "id": "i-q3f95K3",
@@ -852,12 +893,12 @@ export const galleryData = [
       "Native American art prints; Native American fine art photography; Native American photography; Native American portraits; painterly Native American portraits; spirit of the West; Western Native American gallery; Indigenous experience; Native American heritage art; Native American wall art"
     ],
 
-    "story": "He does not look toward the past, yet it rests on him all the same.\nEach feather carries a season, a decision, a name spoken once and never again.\nHe stands still-not from hesitation, but from knowing exactly where he belongs.\n\nWhat presses on his shoulders is not ceremony.\nIt is memory, held upright.",
+    "story": "The past rests on him all the same, though he never turns to look at it. Each feather carries a season, a decision, a name spoken once and never again. Still — not from hesitation, but from knowing exactly where he belongs. What presses on his shoulders is not ceremony. It is memory, held upright.",
     "notes": "Identity anchors this image through profile and bearing rather than direct engagement. The turned gaze shifts attention away from the viewer, placing emphasis on what lies beyond the frame. The headdress introduces vertical weight and historical presence, while the softened surroundings reduce distraction. The result is a work that holds its meaning through quiet continuity, allowing heritage to be felt as a living, carried presence rather than a fixed symbol.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 25,
-    contentSource: "ai"
+    contentSource: "human"
   }
 ];

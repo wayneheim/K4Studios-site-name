@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0",
-    "lastUpdated": "2026-11-18T22:37:45.118Z",
+    "lastUpdated": "2026-11-21T03:36:07.760Z",
     "editionDataMigrated": "2025-12-27T01:58:37.244Z",
     "lastSyncFrom": "Engrained-Series.mjs",
     "oneImageMovieMarkedAt": "2026-06-05T16:24:54.142Z"
@@ -3906,7 +3906,71 @@
     "i-sDZFJ6t:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-Hrxpgsd",
     "i-JbWnV3V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-YDEGYF2",
     "i-wdF6Hw3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-M6RBByU",
-    "i-9LC3ZrM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-h4MRyJD"
+    "i-9LC3ZrM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-h4MRyJD",
+    "i-4Hz6D7k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-kFdpGwR",
+    "i-LmpRvHw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-hrCXaFc",
+    "i-WfRwfpM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-sQudu7P",
+    "i-qLzRgbS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-xwE4VEc",
+    "i-thpSjMG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-WXA4nYe",
+    "i-48G2HVM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs": "s-RRPuWVy",
+    "i-cNbW8wV:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-vVdRsrv",
+    "i-Cq3rbHT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-eaNBn9a",
+    "i-mqQxwNn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-bcbyeYc",
+    "i-hrx5g4S:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-FD9G25e",
+    "i-stm5tCK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-nehswnp",
+    "i-DLnxMgZ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-WgYPyfg",
+    "i-RMdScDd:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-hN4wXxs",
+    "i-BBZjZD6:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-s8XV56n",
+    "i-N3S92fb:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-vb8kr3R",
+    "i-d7DbWRC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-jp5nKk8",
+    "i-pdW6WgR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-rwHE9KH",
+    "i-K2f4VC2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-8bGMwpP",
+    "i-Gqw3s5s:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-53pxcYb",
+    "i-nnV6qtS:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-FzWZYVn",
+    "i-qJLHBWD:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-ngKBJ2K",
+    "i-rZpSGr2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-FbCHrew",
+    "i-4sbVfhW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-Zg2SLF4",
+    "i-bhb655B:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-3sRqfkC",
+    "i-sGtzTtH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-28yNwRP",
+    "i-gvxp8b8:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-uP4fgQb",
+    "i-CT5ds2V:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-TxNYVYT",
+    "i-Q9hVLPk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-tq3rbSm",
+    "i-pqcmRth:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-VsnV73e",
+    "i-FhwDm6k:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-Xkz6MSN",
+    "i-FKmvVCn:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-5ts64t9",
+    "i-BzhQxMz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-dRp6YsF",
+    "i-RRB2hNj:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-UUj2qxa",
+    "i-vnbxvkh:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-eDUxJeV",
+    "i-hM67hBK:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-Sw4eeN8",
+    "i-xMCZJNR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-chapdNZ",
+    "i-tZhtz8w:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-ZaRDPD5",
+    "i-nKHmkvM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-kbyJj9B",
+    "i-9vczZrF:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-dBQf6jZ",
+    "i-b7HtD4R:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-HpEyUVg",
+    "i-m2dqhjT:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-9WeZYzB",
+    "i-M95HTNH:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-pZdnuYw",
+    "i-Pd3vWBk:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-mSCPLeH",
+    "i-QsNP7mR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-sHSzzkC",
+    "i-dTzLRVW:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-rxe4G2b",
+    "i-G7vCDcw:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-EKRqwUb",
+    "i-5xcvjQJ:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-jURZSKS",
+    "i-FqBfMJG:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-xXtVcRY",
+    "i-wCzNMg3:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs": "s-pqUK2DE",
+    "i-BQw2kzC:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-894JDcz",
+    "i-863RbPv:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-YXBTwNB",
+    "i-TzGJNJz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-c884LDk",
+    "i-6mQrB7h:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-acadsd2",
+    "i-qpF8JQN:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-RNKSyda",
+    "i-Bq4p96c:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-tfEeDKW",
+    "i-5qMPjFM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-vzKaBaw",
+    "i-cxmJsHf:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-9SKjNJ9",
+    "i-vPsFX8r:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs": "s-SfrYdR7",
+    "i-BVwQDrM:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-AjPCsRX",
+    "i-MMmDhV2:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-DUm6fBh",
+    "i-zHvS5jz:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-DU2ZhvG",
+    "i-5VZVzTR:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-HKUAuFX",
+    "i-JkFT62C:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-uH4zXJw",
+    "i-ZDGhLps:/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs": "s-myFcrAR"
   },
   "series": {
     "s-BB65wHk": {
@@ -9743,9 +9807,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The Silent Pursuit",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-TzGJNJz/0/MfQR4McgpXRfc3WmFBFFCDKc5wG6KRdpKp6QnRx4g/XL/_WHO0760-1136-1137-XL.jpg"
+        },
+        {
+          "imageId": "i-TzGJNJz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The Silent Pursuit",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-TzGJNJz/0/MfQR4McgpXRfc3WmFBFFCDKc5wG6KRdpKp6QnRx4g/XL/_WHO0760-1136-1137-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.825Z",
       "excludeSizes": {
         "foundation": [
@@ -10249,9 +10319,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Charge of Reckoning",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DLnxMgZ/0/K6zjbmr9rv9dHjJN5mxcHFNdxKfwhnfVVLkqs9BzJ/XL/_HF26558-983-2-XL.jpg"
+        },
+        {
+          "imageId": "i-DLnxMgZ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Charge of Reckoning",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DLnxMgZ/0/K6zjbmr9rv9dHjJN5mxcHFNdxKfwhnfVVLkqs9BzJ/XL/_HF26558-983-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.826Z",
       "excludeSizes": {
         "chronicle": [
@@ -10384,9 +10460,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Standing My Ground: Cowgirl's Defiance in the Old West",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-M95HTNH/0/M6vwSfpVJxzgsFL9JPtvCBpgwpZFSGbV2ZcS5VhhV/XL/_DSF9690-Edit-2-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-M95HTNH",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Standing My Ground: Cowgirl's Defiance in the Old West",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-M95HTNH/0/M6vwSfpVJxzgsFL9JPtvCBpgwpZFSGbV2ZcS5VhhV/XL/_DSF9690-Edit-2-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.826Z",
       "excludeSizes": {
         "chronicle": [
@@ -10649,9 +10731,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Make Your Move: A Cowboy Poised for Action",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RMdScDd/0/NVmLrfmdCJZ24ZDHwfCh9qwKPszrwNxkv286Gcbs8/XL/_DSF9039-Enhanced-NR-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-RMdScDd",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Make Your Move: A Cowboy Poised for Action",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-RMdScDd/0/NVmLrfmdCJZ24ZDHwfCh9qwKPszrwNxkv286Gcbs8/XL/_DSF9039-Enhanced-NR-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.826Z",
       "excludeSizes": {
         "chronicle": [
@@ -11323,9 +11411,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Silent Prairie Vigil",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-BQw2kzC/19/L6hJG2L9Z99mTJF7wpGWzvjRbDnQQppXMVdzSP3d2/XL/_HF20116-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-BQw2kzC",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Silent Prairie Vigil",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-BQw2kzC/19/L6hJG2L9Z99mTJF7wpGWzvjRbDnQQppXMVdzSP3d2/XL/_HF20116-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.828Z",
       "oneImageMovie": true
     },
@@ -11570,9 +11664,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "I Am Listening",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hrx5g4S/6/MZnDhzfrJbDH7xWXcCPwjTf23k9JmJPj3cNrqmGRR/XL/_HF20502-Enhanced-NR-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-hrx5g4S",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "I Am Listening",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-hrx5g4S/6/MZnDhzfrJbDH7xWXcCPwjTf23k9JmJPj3cNrqmGRR/XL/_HF20502-Enhanced-NR-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.828Z",
       "excludeSizes": {
         "chronicle": [
@@ -11630,9 +11730,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Saddling Up on the Ranch",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/LsjFpp8jmd6m5mgkJf8vgvxX7c257Shd9L3nzrLpG/XL/_ANA0584-Edit-Edit-3-XL.jpg"
+        },
+        {
+          "imageId": "i-BBZjZD6",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Saddling Up on the Ranch",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-BBZjZD6/3/LsjFpp8jmd6m5mgkJf8vgvxX7c257Shd9L3nzrLpG/XL/_ANA0584-Edit-Edit-3-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.828Z",
       "oneImageMovie": true
     },
@@ -11898,9 +12004,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Frontier Duty",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-5qMPjFM/0/LxPjbNVKFwt8RNS7GBJNkR3czsQ5kc6gWxxkWfVtg/XL/_HF22111-XL.jpg"
+        },
+        {
+          "imageId": "i-5qMPjFM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Frontier Duty",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-5qMPjFM/0/LxPjbNVKFwt8RNS7GBJNkR3czsQ5kc6gWxxkWfVtg/XL/_HF22111-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.829Z",
       "excludeSizes": {
         "foundation": [
@@ -11970,9 +12082,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Hands That Learn",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qpF8JQN/3/MQX2X6X3NCP3cDJms5RQFckGGLDPDnhvPR27XZ3b2/XL/_HF29382-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-qpF8JQN",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Hands That Learn",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-qpF8JQN/3/MQX2X6X3NCP3cDJms5RQFckGGLDPDnhvPR27XZ3b2/XL/_HF29382-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.829Z",
       "excludeSizes": {
         "chronicle": [
@@ -12007,9 +12125,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Music Lessons",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-6mQrB7h/3/LqHXtwFFxH86rnPmq939tMfTHSTCcqKhbx7xgxKjN/XL/_HF29317-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-6mQrB7h",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Music Lessons",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-6mQrB7h/3/LqHXtwFFxH86rnPmq939tMfTHSTCcqKhbx7xgxKjN/XL/_HF29317-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.829Z",
       "excludeSizes": {
         "foundation": [],
@@ -12219,9 +12343,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Good to Be Together",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Bq4p96c/1/M959z3Cgj85kdrt85rZngz7HhbTR6N9jDQ5Wkgptb/XL/_HF22202-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-Bq4p96c",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Good to Be Together",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-Bq4p96c/1/M959z3Cgj85kdrt85rZngz7HhbTR6N9jDQ5Wkgptb/XL/_HF22202-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.830Z",
       "oneImageMovie": true
     },
@@ -12400,9 +12530,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Riding the Cut",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tZhtz8w/0/KHJmKNnD5DwzCRpsMZstqz5b82Z6DqXgLFLHX3JQ5/XL/_HF26147-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-tZhtz8w",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Riding the Cut",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tZhtz8w/0/KHJmKNnD5DwzCRpsMZstqz5b82Z6DqXgLFLHX3JQ5/XL/_HF26147-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:13:28.830Z",
       "excludeSizes": {
         "chronicle": [
@@ -12592,7 +12728,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Pipe and Post",
+      "title": "Holding the Post",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QsNP7mR/0/L2Zrf8tjpqjrB6JJh4W9RWpXwQvM66JPkfQ28MRSq/L/_O2H2798-853-L.jpg",
       "occurrences": [
         {
@@ -12606,9 +12742,15 @@
           "galleryPath": "/src/data/Galleries/Fine-Art-Photography/Portraits/Reenactors.mjs",
           "title": "Pipe and Post",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QsNP7mR/0/L2Zrf8tjpqjrB6JJh4W9RWpXwQvM66JPkfQ28MRSq/L/_O2H2798-853-L.jpg"
+        },
+        {
+          "imageId": "i-QsNP7mR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Holding the Post",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-QsNP7mR/0/L2Zrf8tjpqjrB6JJh4W9RWpXwQvM66JPkfQ28MRSq/L/_O2H2798-853-L.jpg"
         }
       ],
-      "linkedCount": 2,
+      "linkedCount": 3,
       "createdAt": "2025-12-22T19:18:50.714Z",
       "excludeSizes": {
         "foundation": [
@@ -13123,9 +13265,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Impatient Hour",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-pdW6WgR/0/MXFqJfLD4r9b9HG9NQGxXkPLG2q6SDtpNwJKdxJt3/XL/_O1H0289-Enhanced-NR-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-pdW6WgR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Impatient Hour",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-pdW6WgR/0/MXFqJfLD4r9b9HG9NQGxXkPLG2q6SDtpNwJKdxJt3/XL/_O1H0289-Enhanced-NR-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.716Z",
       "oneImageMovie": true
     },
@@ -13135,13 +13283,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Don’t Test Me",
+      "title": "Don't Test Me",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-sJDHsjN/1/LkFf8JqBg5wdsJxQcVgvtZM6ZCKMqsX7zz5N69kND/XL/_O1H0323-Edit-Edit-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-sJDHsjN",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
-          "title": "Don’t Test Me",
+          "title": "Don't Test Me",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-sJDHsjN/1/LkFf8JqBg5wdsJxQcVgvtZM6ZCKMqsX7zz5N69kND/XL/_O1H0323-Edit-Edit-2-XL.jpg"
         }
       ],
@@ -13208,9 +13356,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Waiting",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-N3S92fb/1/LzQrVnQDjkwdLHJJRbpgd4DSfgJjV68gM8HfWS5W6/XL/_O1H0439-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-N3S92fb",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Waiting",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-N3S92fb/1/LzQrVnQDjkwdLHJJRbpgd4DSfgJjV68gM8HfWS5W6/XL/_O1H0439-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.717Z",
       "editionData": {
         "chronicle": {
@@ -13240,9 +13394,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Keeping Watch",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Gqw3s5s/2/KzK8VsNccVjCFFRqjdPXksrm2ZLrc5x3RvDmDKTrh/XL/_O1H0371-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-Gqw3s5s",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Keeping Watch",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-Gqw3s5s/2/KzK8VsNccVjCFFRqjdPXksrm2ZLrc5x3RvDmDKTrh/XL/_O1H0371-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.717Z",
       "excludeSizes": {
         "legend": [
@@ -13461,9 +13621,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Another Day in the Saddle",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-CT5ds2V/0/LXNb4gTWVq3vFFBXMkkbZMDfZXS3tcbPf6XF3pNXW/XL/_HF29662-277-XL.jpg"
+        },
+        {
+          "imageId": "i-CT5ds2V",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Another Day in the Saddle",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-CT5ds2V/0/LXNb4gTWVq3vFFBXMkkbZMDfZXS3tcbPf6XF3pNXW/XL/_HF29662-277-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.717Z",
       "excludeSizes": {
         "foundation": [
@@ -13511,9 +13677,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Rifle in Hand",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-K2f4VC2/0/KcDMp2wQM8h5zC58XKFZzz8GbmRHLw6S3Gw69QVHz/XL/_O1H3668-Edit-2-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-K2f4VC2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Rifle in Hand",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-K2f4VC2/0/KcDMp2wQM8h5zC58XKFZzz8GbmRHLw6S3Gw69QVHz/XL/_O1H3668-Edit-2-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "excludeSizes": {
         "foundation": [
@@ -13536,9 +13708,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Capturing the West",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-d7DbWRC/0/NC7SJHSMR3TfxGS739ZsH4ZkS6wfWVGBpCQTFkThr/L/_HF23855-738-L.jpg"
+        },
+        {
+          "imageId": "i-d7DbWRC",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Capturing the West",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-d7DbWRC/0/NC7SJHSMR3TfxGS739ZsH4ZkS6wfWVGBpCQTFkThr/L/_HF23855-738-L.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "excludeSizes": {
         "foundation": [
@@ -13561,9 +13739,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The Silent Watcher",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Q9hVLPk/0/M8Rg9kqn9MtnjdC8rBBzrh78nQVLshcdQRd4CZjbt/L/_O2H0605-781-L.jpg"
+        },
+        {
+          "imageId": "i-Q9hVLPk",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The Silent Watcher",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Q9hVLPk/0/M8Rg9kqn9MtnjdC8rBBzrh78nQVLshcdQRd4CZjbt/L/_O2H0605-781-L.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "oneImageMovie": true
     },
@@ -13581,9 +13765,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "No Hard Feelings",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bhb655B/1/NFscFMczHvWPX788x2DWbd3Zqs7sd4mKR3gjWkGPR/XL/_O2H2141-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-bhb655B",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "No Hard Feelings",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bhb655B/1/NFscFMczHvWPX788x2DWbd3Zqs7sd4mKR3gjWkGPR/XL/_O2H2141-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "excludeSizes": {
         "foundation": [
@@ -13711,9 +13901,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Sights on Tomorrow",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-863RbPv/0/KXSNZNX92TvXJL3zs4J6HdtkPTmhzG5dq3qb5MCKH/L/_O2H3934-719-720-L.jpg"
+        },
+        {
+          "imageId": "i-863RbPv",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Sights on Tomorrow",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-863RbPv/0/KXSNZNX92TvXJL3zs4J6HdtkPTmhzG5dq3qb5MCKH/L/_O2H3934-719-720-L.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "excludeSizes": {
         "foundation": []
@@ -13734,9 +13930,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Drawn in Dust",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qJLHBWD/0/Mk6FCvvxQsJrqczbkxz7dWDpWTCsjVLb6fWmjHssm/XL/_O2H0142-Enhanced-NR-Edit-Edit-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-qJLHBWD",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Drawn in Dust",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-qJLHBWD/0/Mk6FCvvxQsJrqczbkxz7dWDpWTCsjVLb6fWmjHssm/XL/_O2H0142-Enhanced-NR-Edit-Edit-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "editionData": {
         "chronicle": {
@@ -13794,9 +13996,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Watching and Waiting",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-4sbVfhW/1/M7ddKt7SM3844wNrd89PxhKF82wwvJLz9wHP8qb6S/XL/_O1H0785-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-4sbVfhW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Watching and Waiting",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-4sbVfhW/1/M7ddKt7SM3844wNrd89PxhKF82wwvJLz9wHP8qb6S/XL/_O1H0785-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "oneImageMovie": true
     },
@@ -13814,9 +14022,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "No Going Back",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rZpSGr2/0/MBD66Q2x2x9VG9KtBC5DZDM5DZxGrHnjs27CLcp76/XL/_O2H3282-Enhanced-NR-312-314-XL.jpg"
+        },
+        {
+          "imageId": "i-rZpSGr2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "No Going Back",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-rZpSGr2/0/MBD66Q2x2x9VG9KtBC5DZDM5DZxGrHnjs27CLcp76/XL/_O2H3282-Enhanced-NR-312-314-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.718Z",
       "oneImageMovie": true
     },
@@ -13846,7 +14060,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "The Teacher’s Visitor",
+      "title": "The Teacher's Visitor",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pqcmRth/4/MsVLb9LNSVb8ZbH6JwqRRCJ49DRdZf3Gfk58D2xNJ/XL/_HF20624-Edit-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -13854,9 +14068,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The Teacher’s Visitor",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pqcmRth/4/MsVLb9LNSVb8ZbH6JwqRRCJ49DRdZf3Gfk58D2xNJ/XL/_HF20624-Edit-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-pqcmRth",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The Teacher's Visitor",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-pqcmRth/4/MsVLb9LNSVb8ZbH6JwqRRCJ49DRdZf3Gfk58D2xNJ/XL/_HF20624-Edit-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "excludeSizes": {},
       "oneImageMovie": true
@@ -13867,7 +14087,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "Crime Doesn’t Pay",
+      "title": "Crime Doesn't Pay",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gvxp8b8/3/NBRpwwwGJ2GPQ853QhJ62jtqTnJc4Sph3gkBv7Nz9/XL/_HF29501-Enhanced-NR-Edit-2-XL.jpg",
       "occurrences": [
         {
@@ -13875,9 +14095,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Crime Doesn’t Pay",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gvxp8b8/3/NBRpwwwGJ2GPQ853QhJ62jtqTnJc4Sph3gkBv7Nz9/XL/_HF29501-Enhanced-NR-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-gvxp8b8",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Crime Doesn't Pay",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-gvxp8b8/3/NBRpwwwGJ2GPQ853QhJ62jtqTnJc4Sph3gkBv7Nz9/XL/_HF29501-Enhanced-NR-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "excludeSizes": {
         "foundation": [
@@ -13899,9 +14125,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Watching the Rails",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hM67hBK/1/NbcDCBKHRxKcjhWv4kx5bTpQNmw96HRFd2R8G32TS/XL/_O1H0318-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-hM67hBK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Watching the Rails",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-hM67hBK/1/NbcDCBKHRxKcjhWv4kx5bTpQNmw96HRFd2R8G32TS/XL/_O1H0318-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "oneImageMovie": true
     },
@@ -13919,9 +14151,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Got Your Back",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vnbxvkh/0/KWzDfWXtgcsmp2khvf9xxPDCTjXtWnTXcdhcLRTRS/XL/_O2H0192-203-XL.jpg"
+        },
+        {
+          "imageId": "i-vnbxvkh",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Got Your Back",
+          "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White/i-vnbxvkh/0/KWzDfWXtgcsmp2khvf9xxPDCTjXtWnTXcdhcLRTRS/XL/_O2H0192-203-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "editionData": {
         "chronicle": {
@@ -13949,9 +14187,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Taking Cover",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FhwDm6k/6/LLnpDmhLBh7LX3mmJrcJdkSkfPHjfCnmGNfmvg8hZ/XL/_O1H0781-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-FhwDm6k",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Taking Cover",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FhwDm6k/6/LLnpDmhLBh7LX3mmJrcJdkSkfPHjfCnmGNfmvg8hZ/XL/_O1H0781-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "oneImageMovie": true
     },
@@ -13969,9 +14213,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Getting Ready",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FKmvVCn/6/LFvKjkd3vWHhRSmX7sBKjfkHPnjkrKHxmnhsrFs2N/XL/_O1H0778-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-FKmvVCn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Getting Ready",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FKmvVCn/6/LFvKjkd3vWHhRSmX7sBKjfkHPnjkrKHxmnhsrFs2N/XL/_O1H0778-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:18:50.719Z",
       "editionData": {
         "chronicle": {
@@ -13999,9 +14249,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Last Chance Ride",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9vczZrF/0/KPXrX24tJCNdsdXV2ZznjMLWJvGBf22hfTzZzgGB4/XL/_HF26628-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-9vczZrF",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Last Chance Ride",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9vczZrF/0/KPXrX24tJCNdsdXV2ZznjMLWJvGBf22hfTzZzgGB4/XL/_HF26628-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.695Z",
       "oneImageMovie": true
     },
@@ -14324,9 +14580,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Public Defender",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-nKHmkvM/2/Mfq2NSsgSDrCGVNPvG9nTtghJXXFt4VsssvSfZ2j2/XL/_O2H3057-Edit-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-nKHmkvM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Public Defender",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-nKHmkvM/2/Mfq2NSsgSDrCGVNPvG9nTtghJXXFt4VsssvSfZ2j2/XL/_O2H3057-Edit-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.698Z",
       "oneImageMovie": true
     },
@@ -14405,9 +14667,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "No Second Guess",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sGtzTtH/3/L2mkgPrCSkhX46gmCmcXCwQSdShCRbLPNzm5tkf43/XL/_O2H2257-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-sGtzTtH",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "No Second Guess",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-sGtzTtH/3/L2mkgPrCSkhX46gmCmcXCwQSdShCRbLPNzm5tkf43/XL/_O2H2257-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.698Z",
       "oneImageMovie": true
     },
@@ -14451,9 +14719,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Weathered Patience",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzhQxMz/0/LbnXc2dCPxrjJDjw6FPBCRBKXFXhBghG5PfD7jLzQ/XL/_WHO6157-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-BzhQxMz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Weathered Patience",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzhQxMz/0/LbnXc2dCPxrjJDjw6FPBCRBKXFXhBghG5PfD7jLzQ/XL/_WHO6157-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.698Z",
       "excludeSizes": {
         "chronicle": [
@@ -14627,9 +14901,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Trigger Man",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dTzLRVW/1/KxVmTBGMcHkqZb7TJxkvnBbHRXn8zRLbgvKT2Q66r/XL/_WHO2926-1147-XL.jpg"
+        },
+        {
+          "imageId": "i-dTzLRVW",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Trigger Man",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-dTzLRVW/1/KxVmTBGMcHkqZb7TJxkvnBbHRXn8zRLbgvKT2Q66r/XL/_WHO2926-1147-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.699Z",
       "oneImageMovie": true
     },
@@ -14677,9 +14957,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "True to the Trail",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RRB2hNj/3/MKHw8stH6wHz9xPGrdmxgZrVWhpZTzGBvqkJjgmPW/XL/_HF26699-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-RRB2hNj",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "True to the Trail",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-RRB2hNj/3/MKHw8stH6wHz9xPGrdmxgZrVWhpZTzGBvqkJjgmPW/XL/_HF26699-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.699Z",
       "editionData": {
         "chronicle": {
@@ -14764,9 +15050,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Standing Watch",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mqQxwNn/0/MrrVjQWKrqMDSMChLpzbB82H4M6DxgwghJwMntGhG/XL/_HF23312-1246-XL.jpg"
+        },
+        {
+          "imageId": "i-mqQxwNn",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Standing Watch",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-mqQxwNn/0/MrrVjQWKrqMDSMChLpzbB82H4M6DxgwghJwMntGhG/XL/_HF23312-1246-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.699Z",
       "excludeSizes": {
         "chronicle": [
@@ -15020,9 +15312,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "What He Carries Home",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-FqBfMJG/0/LJsz5bsTFhP7fVPPthwHzL3h2rh2t7QHbsjzXV4mJ/XL/_HF21354-1220-XL.jpg"
+        },
+        {
+          "imageId": "i-FqBfMJG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "What He Carries Home",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-FqBfMJG/0/LJsz5bsTFhP7fVPPthwHzL3h2rh2t7QHbsjzXV4mJ/XL/_HF21354-1220-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "chronicle": [
@@ -15056,9 +15354,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Where He Finally Rests",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-G7vCDcw/0/LQBfC6ZtcdB7GNT4tdGRfnrDR6pq9wpZrdcgcfMCJ/XL/_HF21393-1250-1251-XL.jpg"
+        },
+        {
+          "imageId": "i-G7vCDcw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Where He Finally Rests",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-G7vCDcw/0/LQBfC6ZtcdB7GNT4tdGRfnrDR6pq9wpZrdcgcfMCJ/XL/_HF21393-1250-1251-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "chronicle": [
@@ -15092,9 +15396,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "What She Guards",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Pd3vWBk/0/LZ8BSzCGwjBsHX5cv3ph7gQLnb276hJTGBnJKFDvm/XL/_WHO1631-1200-1201-XL.jpg"
+        },
+        {
+          "imageId": "i-Pd3vWBk",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "What She Guards",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-Pd3vWBk/0/LZ8BSzCGwjBsHX5cv3ph7gQLnb276hJTGBnJKFDvm/XL/_WHO1631-1200-1201-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "chronicle": [
@@ -15128,9 +15438,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Where the Trail Speaks",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/0/NTGjd3SrNGD4SPBmZXNsHP7qDhVNZ74LrN4hX7ncR/XL/_HF21312-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-nnV6qtS",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Where the Trail Speaks",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-nnV6qtS/0/NTGjd3SrNGD4SPBmZXNsHP7qDhVNZ74LrN4hX7ncR/XL/_HF21312-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "legend": [
@@ -15213,9 +15529,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The World at Her Height",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5xcvjQJ/0/McmSqNbLTLrnbFbmNHHjTLWVCNqNcCNc284pPHnCD/XL/_WHO0135-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-5xcvjQJ",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The World at Her Height",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5xcvjQJ/0/McmSqNbLTLrnbFbmNHHjTLWVCNqNcCNc284pPHnCD/XL/_WHO0135-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "createdAt": "2025-12-22T19:24:02.700Z",
       "excludeSizes": {
         "foundation": [
@@ -15679,9 +16001,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Long Night",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/0/L3D3mBFVW4Hj7J9Pjmg6CbRDz2gkmVJJW2T2zvdpn/XL/_HF21393-1250-1251-2-XL.jpg"
+        },
+        {
+          "imageId": "i-JkFT62C",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Long Night",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/0/L3D3mBFVW4Hj7J9Pjmg6CbRDz2gkmVJJW2T2zvdpn/XL/_HF21393-1250-1251-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
@@ -16053,9 +16381,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Morning Oath of the Trail",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-MMmDhV2",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Morning Oath of the Trail",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/Mz7gCgHrmRpmPG8z7Sng5DMJzvmpDxCFGSDfRvbrJ/XL/_HF23060-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": []
       },
@@ -16279,9 +16613,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Good Riders, Good Company",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NTQx8hr6GDBPMWb2K8pdVLJPRxJFMScxND4F7mQm8/XL/_WHO5325-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-5VZVzTR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Good Riders, Good Company",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NTQx8hr6GDBPMWb2K8pdVLJPRxJFMScxND4F7mQm8/XL/_WHO5325-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
@@ -16898,9 +17238,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Where the Herd Finds Water",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/NM7RFBfNwPz5RmVVq2LV6qwbGVjbMcZMdmZcz7Xgj/XL/_WHO5559-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-zHvS5jz",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Where the Herd Finds Water",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/NM7RFBfNwPz5RmVVq2LV6qwbGVjbMcZMdmZcz7Xgj/XL/_WHO5559-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-22T21:43:53.044Z",
       "editionData": {
@@ -23349,7 +23695,7 @@
         {
           "imageId": "i-xMk6ZJ9",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Won’t Take Me Alive!",
+          "title": "Won't Take Me Alive!",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-xMk6ZJ9/1/KxLZ2ZVdssTGCC9zb2M4QFpXN6fKxj6MP8kShZFjG/XL/_HF21431-Edit-XL.jpg"
         },
         {
@@ -23979,9 +24325,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Care to Repeat That",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-b7HtD4R/2/LDHdxCfHMTb7LfWMvhn2ZZHcQD5BC9hqK6J6bv9X3/XL/vintage%20cowboy%20art%20_O2H2868-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-b7HtD4R",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Care to Repeat That",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-b7HtD4R/2/LDHdxCfHMTb7LfWMvhn2ZZHcQD5BC9hqK6J6bv9X3/XL/vintage%20cowboy%20art%20_O2H2868-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-22T22:19:36.761Z",
       "oneImageMovie": true
@@ -25181,7 +25533,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "He Didn’t Miss",
+      "title": "Didn't Miss",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZDGhLps/8/MZjM4S68JXRX6tSHVWVKMJ65js7KDZLj2zjqwpqsJ/XL/cowboy%20photography%20_O1H2142-Edit-Edit-XL.jpg",
       "occurrences": [
         {
@@ -25189,9 +25541,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "He Didn’t Miss",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZDGhLps/8/MZjM4S68JXRX6tSHVWVKMJ65js7KDZLj2zjqwpqsJ/XL/cowboy%20photography%20_O1H2142-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-ZDGhLps",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Didn't Miss",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZDGhLps/8/MZjM4S68JXRX6tSHVWVKMJ65js7KDZLj2zjqwpqsJ/XL/cowboy%20photography%20_O1H2142-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:07:46.581Z",
       "oneImageMovie": true
@@ -25465,13 +25823,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "Where Trouble Hasn’t Arrived",
+      "title": "Where Trouble Hasn't Arrived",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9Qt4nh7/4/KMvGk4ccGgBCHPC9w54hBqj72ZT78TkKHVGnqfGQp/XL/_HF28170-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-9Qt4nh7",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Where Trouble Hasn’t Arrived",
+          "title": "Where Trouble Hasn't Arrived",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9Qt4nh7/4/KMvGk4ccGgBCHPC9w54hBqj72ZT78TkKHVGnqfGQp/XL/_HF28170-Edit-XL.jpg"
         }
       ],
@@ -26494,13 +26852,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "What He’s Seen",
+      "title": "What He's Seen",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rTwWXgw/1/LwdDhXJ57CXthdxpMxn4LNt9Tmk9WJCWkcP8n4m5X/XL/_WHO1980-Edit-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-rTwWXgw",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "What He’s Seen",
+          "title": "What He's Seen",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rTwWXgw/1/LwdDhXJ57CXthdxpMxn4LNt9Tmk9WJCWkcP8n4m5X/XL/_WHO1980-Edit-XL.jpg"
         }
       ],
@@ -27148,7 +27506,7 @@
         {
           "imageId": "i-Vd5VW3L",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "Something Isn’t Right",
+          "title": "Something Isn't Right",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Vd5VW3L/0/K3fkRd7NqTM3cXxPqmb8zGJ2KVRLCFmQgdcJ36728/XL/_WHO3267-Edit-Edit-XL.jpg"
         },
         {
@@ -28106,7 +28464,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "She Held the Gate",
+      "title": "Holding the Gate",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/NX2pPS6MKZTRVGP5DFXpWqqqVdwFndBPpXgpZvrP2/XL/_HF29415-1256-XL.jpg",
       "occurrences": [
         {
@@ -28114,9 +28472,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "She Held the Gate",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/NX2pPS6MKZTRVGP5DFXpWqqqVdwFndBPpXgpZvrP2/XL/_HF29415-1256-XL.jpg"
+        },
+        {
+          "imageId": "i-BVwQDrM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Holding the Gate",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/NX2pPS6MKZTRVGP5DFXpWqqqVdwFndBPpXgpZvrP2/XL/_HF29415-1256-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:25:48.833Z",
       "oneImageMovie": true
@@ -28480,13 +28844,13 @@
       "tiers": [
         "sketch"
       ],
-      "title": "I Don’t Think So.",
+      "title": "I Don't Think So.",
       "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-tKZ2wgt/1/NcJ5CvCPTM28D8KLdk5xK9s4VDZ38WrxFdsnkz98w/XL/Old%20West%20themed%20photo%20_HF29003-Edit-2-586-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-tKZ2wgt",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "I Don’t Think So.",
+          "title": "I Don't Think So.",
           "src": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-tKZ2wgt/1/NcJ5CvCPTM28D8KLdk5xK9s4VDZ38WrxFdsnkz98w/XL/Old%20West%20themed%20photo%20_HF29003-Edit-2-586-XL.jpg"
         }
       ],
@@ -28703,9 +29067,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "In the Presence of Time",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/2/KLGwmMR57nK2V8mWm5Wcm7K2ChC39txffFTFh5WfB/XL/_HF20466-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-qLzRgbS",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "In the Presence of Time",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/2/KLGwmMR57nK2V8mWm5Wcm7K2ChC39txffFTFh5WfB/XL/_HF20466-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
@@ -29283,9 +29653,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Held by the Land",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/LfbKQpX3tSXNRNz9jsjJsdxGFzGdktCLRvGHJcvsC/XL/_WHO3531-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-cNbW8wV",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Held by the Land",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cNbW8wV/0/LfbKQpX3tSXNRNz9jsjJsdxGFzGdktCLRvGHJcvsC/XL/_WHO3531-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "foundation": [
           "11\" x 14\""
@@ -29309,9 +29685,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Carried Forward",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/KvnVJgjSnm9Vphqk8VSjwcLmqgtBwRSc7JRpD32pS/XL/_HF29701-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-4Hz6D7k",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Carried Forward",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/1/KvnVJgjSnm9Vphqk8VSjwcLmqgtBwRSc7JRpD32pS/XL/_HF29701-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:34:12.123Z",
       "editionData": {
@@ -29749,13 +30131,13 @@
         "sketch",
         "foundation"
       ],
-      "title": "He Carries the Quiet",
+      "title": "Carrying the Quiet",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg",
       "occurrences": [
         {
           "imageId": "i-7CjNq8p",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
-          "title": "He Carries the Quiet",
+          "title": "Carrying the Quiet",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7CjNq8p/0/MLSXtwkDffDFHrgrzvHjL3HXvFcTZwqcFPR2cxspN/XL/_HF24217-Edit-2-XL.jpg"
         }
       ],
@@ -30300,9 +30682,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Watching the High Ground",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NbkTFbFvpWFNc8fVqPX6FV2g5TL8NKVxXZDBfCDzq/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-LmpRvHw",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Watching the High Ground",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NbkTFbFvpWFNc8fVqPX6FV2g5TL8NKVxXZDBfCDzq/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:39:49.138Z",
       "editionData": {
@@ -30332,9 +30720,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Standing Into Tomorrow",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/0/LXZs4gzLQsvczGN2kr8WMMdNdZRRLXFHrczchhFRX/XL/_HF29518-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-WfRwfpM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Standing Into Tomorrow",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/0/LXZs4gzLQsvczGN2kr8WMMdNdZRRLXFHrczchhFRX/XL/_HF29518-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2025-12-23T01:40:02.408Z",
       "editionData": {
@@ -30364,9 +30758,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Bearing the West",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/LcDck6RhXRKm2MvPsw7tQhbHzcTKr2Tqw4nnPdpCj/XL/_HF29518-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-thpSjMG",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Bearing the West",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/LcDck6RhXRKm2MvPsw7tQhbHzcTKr2Tqw4nnPdpCj/XL/_HF29518-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "chronicle": [
           "20\" x 24\""
@@ -31616,9 +32016,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
           "title": "Bearer of the Light",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/MXdHKqV23WWCPN2sb3PVHnRGS3vXg9xHf4B8PGGb2/XL/_HF25639-1356-XL.jpg"
+        },
+        {
+          "imageId": "i-m2dqhjT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
+          "title": "Bearer of the Light",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/MXdHKqV23WWCPN2sb3PVHnRGS3vXg9xHf4B8PGGb2/XL/_HF25639-1356-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-14T15:08:02.615Z",
       "oneImageMovie": true
@@ -31924,9 +32330,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Where Are They Going?",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/KH82NhZvvf4pMZSsBMcCP7jW8rPH2zjW9KHDHTZkm/XL/_O1H0580-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-xMCZJNR",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Where Are They Going?",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Wild-West-Black-and-White/i-xMCZJNR/0/KH82NhZvvf4pMZSsBMcCP7jW8rPH2zjW9KHDHTZkm/XL/_O1H0580-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {
         "foundation": [
           "11\" x 14\""
@@ -32189,7 +32601,7 @@
         "foundation",
         "chronicle"
       ],
-      "title": "The Long Way Through",
+      "title": "Leading the Way",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/Lgh3c2fT7gntBP7XSmQhkwtnJTvShjm5hfV3gGPjT/XL/_HF21068-Edit-XL.jpg",
       "occurrences": [
         {
@@ -32201,7 +32613,7 @@
         {
           "imageId": "i-tMGHpqv",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
-          "title": "The Long Way Through",
+          "title": "Leading the Way",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-tMGHpqv/0/Lgh3c2fT7gntBP7XSmQhkwtnJTvShjm5hfV3gGPjT/XL/_HF21068-Edit-XL.jpg"
         }
       ],
@@ -32295,9 +32707,15 @@
           "galleryPath": "/src/data/Other/Archive/Archive.mjs",
           "title": "Carrying What Remains",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/0/MZ4cWThBh2qmvCss5XrCDcZmb7CpCcWXwHJFLRfwL/XL/_WHO1469-889-890-XL.jpg"
+        },
+        {
+          "imageId": "i-48G2HVM",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+          "title": "Carrying What Remains",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/0/MZ4cWThBh2qmvCss5XrCDcZmb7CpCcWXwHJFLRfwL/XL/_WHO1469-889-890-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-15T22:56:37.557Z"
     },
@@ -32349,9 +32767,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
           "title": "Toward What Remains",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/NLKH2sCmcgMTWjZBVZrdsKQ8fB3dV5rjLpBWw4fqF/XL/_WHO4561-Edit-Edit-2-XL.jpg"
+        },
+        {
+          "imageId": "i-Cq3rbHT",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "Toward What Remains",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Cq3rbHT/0/NLKH2sCmcgMTWjZBVZrdsKQ8fB3dV5rjLpBWw4fqF/XL/_WHO4561-Edit-Edit-2-XL.jpg"
         }
       ],
-      "linkedCount": 2,
+      "linkedCount": 3,
       "excludeSizes": {
         "foundation": [],
         "chronicle": [
@@ -32743,7 +33167,7 @@
       "tiers": [
         "sketch"
       ],
-      "title": "Cowboy Artwork In Fine Art",
+      "title": "Working Cowboy",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xW97k2g/0/KqtqsvS4r4cvN99TTcLcdVDD4dRH5F4hgMkdLP7tC/XL/_HF20510-Edit-XL.jpg",
       "occurrences": [
         {
@@ -37796,9 +38220,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Signal at First Light",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/NRJmsBGMr7kfrX2R572fpf665pVBpr49K6BZMbjkS/XL/_HF27565-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-vPsFX8r",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Signal at First Light",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vPsFX8r/0/NRJmsBGMr7kfrX2R572fpf665pVBpr49K6BZMbjkS/XL/_HF27565-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-30T15:30:17.386Z",
       "oneImageMovie": true
@@ -37817,9 +38247,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "Held Note",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/NG4LS8JRqtjF7kQxs8CQkTP6zgkdBWbx5FCKz7KQj/XL/_HF27565-Edit-2-2-XL.jpg"
+        },
+        {
+          "imageId": "i-cxmJsHf",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "Held Note",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cxmJsHf/2/NG4LS8JRqtjF7kQxs8CQkTP6zgkdBWbx5FCKz7KQj/XL/_HF27565-Edit-2-2-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-30T15:30:40.786Z",
       "oneImageMovie": true
@@ -37888,9 +38324,15 @@
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Black-White.mjs",
           "title": "The Way Forward",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LNQZf8wNJgLJphcSb4RKWpdnzTFqpsGKRQt84BGQK/XL/_HF20974-Edit-Edit-XL.jpg"
+        },
+        {
+          "imageId": "i-stm5tCK",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Black-White.mjs",
+          "title": "The Way Forward",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-stm5tCK/0/LNQZf8wNJgLJphcSb4RKWpdnzTFqpsGKRQt84BGQK/XL/_HF20974-Edit-Edit-XL.jpg"
         }
       ],
-      "linkedCount": 1,
+      "linkedCount": 2,
       "excludeSizes": {},
       "createdAt": "2026-01-30T15:36:33.144Z",
       "oneImageMovie": true
@@ -83034,7 +83476,7 @@
         "sketch",
         "foundation"
       ],
-      "title": "His Father's Spear",
+      "title": "A Father's Spear",
       "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c2JW8XZ/0/LZTLf7ThhGHWJhmbVfQsJdvKff8C66p8xkXb3T3dZ/XL/_WHO3087-1695-1698-XL.jpg",
       "occurrences": [
         {
@@ -83046,7 +83488,7 @@
         {
           "imageId": "i-c2JW8XZ",
           "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
-          "title": "His Father's Spear",
+          "title": "A Father's Spear",
           "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-c2JW8XZ/0/LZTLf7ThhGHWJhmbVfQsJdvKff8C66p8xkXb3T3dZ/XL/_WHO3087-1695-1698-XL.jpg"
         }
       ],
@@ -83278,6 +83720,27 @@
       "excludeSizes": {},
       "yearCreated": "",
       "createdAt": "2026-11-18T06:14:21.762Z"
+    },
+    "s-pqUK2DE": {
+      "primaryImageId": "i-wCzNMg3",
+      "tiers": [
+        "sketch",
+        "foundation"
+      ],
+      "title": "A Mind Beyond the Horizon",
+      "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wCzNMg3/0/LrLjj9FDKzwx983ZsfwnFF6rF4ZNkQD7q92rTJqgH/XL/_WHO3482-Edit-Edit-XL.jpg",
+      "occurrences": [
+        {
+          "imageId": "i-wCzNMg3",
+          "galleryPath": "/src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
+          "title": "A Mind Beyond the Horizon",
+          "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wCzNMg3/0/LrLjj9FDKzwx983ZsfwnFF6rF4ZNkQD7q92rTJqgH/XL/_WHO3482-Edit-Edit-XL.jpg"
+        }
+      ],
+      "linkedCount": 1,
+      "excludeSizes": {},
+      "yearCreated": "",
+      "createdAt": "2026-11-20T22:25:27.648Z"
     }
   }
 }

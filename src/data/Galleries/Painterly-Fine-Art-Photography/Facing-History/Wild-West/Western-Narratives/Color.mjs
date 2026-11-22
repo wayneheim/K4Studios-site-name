@@ -341,6 +341,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cfW89QP/0/Lb4rRfkWvfg45GRj2W9XRd9tDKfTfWbQLSzCNhRPc/S/_WHO3736-1702-1703-1704-1706-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-cfW89QP/A",
+
     "keywords": [
       "Signal from the Ridge",
       "cowboy firing rifle",
@@ -357,14 +358,18 @@ export const galleryData = [
       "unresolved image story",
       "Western storytelling photography"
     ],
-    "story": "He raises the rifle toward the open sky.\n\nPerhaps the shot is meant to warn someone away. Perhaps it is a signal to those still searching below. Or perhaps the answer he needs lies somewhere beyond the rocks and weather.\n\nThe horse waits. The ridge listens. The meaning belongs to whoever hears it.",
+
+    "story": "The sky is open, the ridge is listening, and a rifle is raised between them.\n\nPerhaps the shot is meant to warn someone away. Perhaps it is a signal to those still searching below. Or perhaps the answer he needs lies somewhere beyond the rocks and weather.\n\nThe horse waits. The ridge listens. The meaning belongs to whoever hears it.",
     "notes": "The elevated position gives the figure command of the landscape while the rifle directs the story beyond the frame. With no visible target, the shot can become warning, signal, challenge, celebration, or plea. The image holds the action at its loudest moment while refusing to explain what the sound was meant to accomplish.",
     "rating": 5,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "normal",
-    "sortOrder": 6
+    "sortOrder": 6,
+    contentSource: "human"
   },
   {
     "id": "i-gxMVNh3",
@@ -1105,6 +1110,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BxK562q/0/NKw8949jtwbr3fHHXFDLcBRH82qrcN4w7BJwRkbrc/S/_WHO3011-1689-1690-1691-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BxK562q/A",
+
     "keywords": [
       "A Reach of Faith",
       "Native American rider",
@@ -1122,17 +1128,23 @@ export const galleryData = [
       "unresolved image story",
       "Western storytelling photography"
     ],
-    "story": "He reaches toward something only he can see.\n\nThe horse waits beneath him as his open hand extends beyond the certainty of reins, trail, and reason. Whether the gesture is plea, promise, blessing, or defiance remains unanswered.\n\nFaith begins where proof runs out-and a man reaches anyway.",
+
+    "story": "An open hand reaches past everything certain, toward what only he can see.\n\nThe horse waits beneath him as his open hand extends beyond the certainty of reins, trail, and reason. Whether the gesture is plea, promise, blessing, or defiance remains unanswered.\n\nFaith begins where proof runs out-and a man reaches anyway.",
     "notes": "The open hand becomes the emotional center of the image, reaching beyond the visible scene toward something the viewer cannot confirm. The gesture may carry prayer, promise, invitation, or challenge. What matters is not whether an answer is waiting, but that he chooses to reach.",
     "rating": 5,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "normal",
     "sortOrder": 21,
+
     "themes": {
       "na-narrative-color-images": 62
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-RsLmsLZ",
@@ -2592,6 +2604,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/0/L9WZWJ37nnCGkw38gZjZxmdVVhvx3HHdJ3LbjGsF2/S/_HF23060-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-MMmDhV2/A",
+
     "keywords": [
       "western fine art",
       "American frontier",
@@ -2616,12 +2629,14 @@ export const galleryData = [
       "museum quality western decor",
       "collectible western print"
     ],
-    "story": "Before the day kicked up dust and duty, they shared this simple ritual-one man pouring, the other accepting, both bound by the quiet code of the range. The fire crackled low, the wagon cast its long shadow across the plain, and for a fleeting moment the world felt steady, almost gentle.\n\nCoffee wasn't just warmth. \nIt was a promise: \nWe ride together. \nWe endure together. \nWhatever waits beyond the horizon-we face it as one.",
+
+    "story": "Before the day kicks up dust and duty, they share this simple ritual-one man pouring, the other accepting, both bound by the quiet code of the range. The fire crackles low, the wagon casts its long shadow across the plain, and for a fleeting moment the world feels steady, almost gentle. Coffee isn't just warmth. It is a promise: We ride together. We endure together. Whatever waits beyond the horizon-we face it as one.",
     "notes": "Heim captures one of the most enduring motifs of Western visual history-the quiet bond between working men whose lives hinge on trust, endurance, and shared labor. The soft diffusion of light and the tonal restraint recall Remington's atmospheric studies, while the intimate gesture and compositional balance lean toward Wyeth's narrative sensitivity. The piece demonstrates Heim's mastery of merging historical authenticity with contemporary painterly technique, offering collectors a work rich in emotional depth and cultural resonance.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 52
+    "sortOrder": 52,
+    contentSource: "human"
   },
   {
     "id": "i-3SxncXS",
@@ -3093,6 +3108,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/0/KvHcCRFwWwRGL8T8V4B53zjRkWjfDdLLLqv9cTRfv/S/_WHO5559-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zHvS5jz/A",
+
     "keywords": [
       "western fine art photography",
       "cowboy art",
@@ -3116,17 +3132,21 @@ export const galleryData = [
       "Painterly Western photography",
       "painterly cowboy portraits"
     ],
-    "story": "He let the reins go slack as the horses stepped into the cool shallows, their reflections breaking softly in the moving water. After miles of dry wind and rising dust, this stretch of river felt like a small mercy-one the herd accepted without hesitation.\n\nThe mountains watched from a distance, the sky settling into a calm that only the open country truly knows. For the first time all day, he breathed easy.\n\nSome journeys aren't measured in miles, \nbut in moments of quiet like this.",
+
+    "story": "Reins go slack as the horses step into the cool shallows, their reflections breaking softly in the moving water. After miles of dry wind and rising dust, this stretch of river feels like a small mercy-one the herd accepts without hesitation. The mountains watch from a distance, the sky settling into a calm that only the open country truly knows. For the first time all day, he breathes easy. Some journeys aren't measured in miles, but in moments of quiet like this.",
     "notes": "The composition emphasizes harmony between figure, herd, and landscape, using the reflective water as a natural visual anchor. The subtle interplay of warm and cool tones recalls the atmospheric sensibilities of early Western painters while maintaining the photographic clarity needed for fine art collectors. The depth cues leading from the foreground ripples to the distant mountains create a sense of vastness that is both peaceful and cinematic. A standout landscape narrative for collectors seeking contemplative Western works.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 62,
+
     "themes": {
       "cowboys-with-horses": 6,
       "cowboys-and-horses": 7,
       "whispering-reflection": 10
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-QB4jLsH",
@@ -5464,6 +5484,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xmJ87ZT/0/LDxsNTKCwHFrxfFQQBMSh4mQg76mbrkjHrxbwfdP8/S/_HF29303-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xmJ87ZT/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -5488,15 +5509,19 @@ export const galleryData = [
       "western grit",
       "western painterly photography"
     ],
-    "story": "He's learned not to hurry answers. The ground's taught him that much.\n\nThere were years when everything was a wager - hands shaking, eyes searching for signs that luck hadn't turned its back for good. Some debts got paid. Some just learned how to wait.\n\nWhat's left now is weight. In the bones. In the beard. In the way he measures a moment before committing to it. He didn't come out clean. Nobody ever does. But he came out breathing. And sometimes that's the only proof that mattered.",
+
+    "story": "Some answers only arrive after the waiting is done. The ground's taught him that much.\n\nThere were years when everything was a wager - hands shaking, eyes searching for signs that luck hadn't turned its back for good. Some debts got paid. Some just learned how to wait.\n\nWhat's left now is weight. In the bones. In the beard. In the way he measures a moment before committing to it. He didn't come out clean. Nobody ever does. But he came out breathing. And sometimes that's the only proof that mattered.",
     "notes": "This work exemplifies Heim's ability to strip Western imagery of spectacle and leave only truth. The figure is neither triumphant nor defeated-he exists in the aftermath, carrying the cost of past choices. Collectors are drawn to its restraint, psychological depth, and its alignment with the Western canon's quieter, harder-earned narratives.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 109,
+
     "themes": {
       "sketches-of-legends": 24
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-5VZVzTR",
@@ -5510,6 +5535,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/0/NGQsw4rHLT2s4C7L5q748gbL35CdBsNBZ8mPvxHNr/S/_WHO5325-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-5VZVzTR/A",
+
     "keywords": [
       "western fine art photography",
       "cowboy camaraderie",
@@ -5536,17 +5562,21 @@ export const galleryData = [
       "fine art Western photography",
       "cowboy art"
     ],
-    "story": "They'd ridden half the country together and still managed to find something to laugh about on every trail. A shared joke, a jab about last night's poker hand, maybe just the relief of another sunrise where both were still in the saddle. \n\nThe horses knew the rhythm, the men knew each other, and the land stretched out ahead like an old friend welcoming them back.\n\nSome moments aren't about the miles- \nthey're about who rides beside you.",
+
+    "story": "They've ridden half the country together and still manage to find something to laugh about on every trail. A shared joke, a jab about last night's poker hand, maybe just the relief of another sunrise where both are still in the saddle. The horses know the rhythm, the men know each other, and the land stretches out ahead like an old friend welcoming them back. Some moments aren't about the miles- they're about who rides beside you.",
     "notes": "The composition embraces motion without sacrificing clarity, and the interplay of warm highlights and textural layering channels both Remington's kinetic storytelling and the tonal sophistication of modern cinematic portraiture. The riders' expressions anchor the image, offering collectors a rare blend of narrative charm, technical craft, and emotional resonance. A standout work for those who appreciate Western art with personality and heart.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 110,
+
     "themes": {
       "cowboys-with-horses": 3,
       "cowboys-and-horses": 2,
       "law-outlaws": 2
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-gF8j3Jz",
@@ -6023,7 +6053,7 @@ export const galleryData = [
       "museum-quality photography"
     ],
 
-    "story": "She comes when the light is doing its kindness. Mornings are easier than the hour deserves.\n\nShe tells him the news in order of size, saving the smallest for last because the smallest are the ones that prove the world is still running.\n\nThe hens. The roof. The boy's letter. Then she goes home and runs it.",
+    "story": "When the light is doing its kindness is when she comes now. Mornings are easier than the hour deserves.\n\nShe tells him the news in order of size, saving the smallest for last because the smallest are the ones that prove the world is still running.\n\nThe hens. The roof. The boy's letter. Then she goes home and runs it.",
     "notes": "More than a portrait of mourning, this image invites the viewer to inhabit a private, sacred moment of loss. The dark vignette draws you in as if glimpsing grief through a keyhole-intimate, cinematic, and timeless. The warm, living landscape behind her contrasts the hush of sorrow, echoing the duality between life moving forward and the burden of memory.\n\nThis is Western fine art photography at its most human: painterly, narrative, and rooted in the tradition of artists like Lange and Wyeth, yet wholly original in voice. For collectors, it's not only a Post Civil War story-it's a meditation on how loss shapes us all, across generations.",
     "rating": 4,
     "galleries": [],
@@ -6038,7 +6068,7 @@ export const galleryData = [
       "whispering-reflection": 42
     },
 
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-ZPmj5Wk",
@@ -6220,6 +6250,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-6GQxb97/6/Kk4BDKQjDssbJswgBd2C5g953Z2WnGmczWGWFmbK5/S/cowboy%20photography%20_O2H1630-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6GQxb97/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -6248,17 +6279,23 @@ export const galleryData = [
       "western fine art prints",
       "painterly western images"
     ],
-    "story": "He doesn't look over his shoulder. He doesn't have to.\n\nThe weight against his side tells him everything he needs to know-who's still standing, who isn't, and who's watching the horizon so he doesn't have to. Trust is built fast out here, usually under pressure.\n\nWhatever comes next, it won't come from behind.",
+
+    "story": "No backward glance — none needed. He doesn't have to.\n\nThe weight against his side tells him everything he needs to know-who's still standing, who isn't, and who's watching the horizon so he doesn't have to. Trust is built fast out here, usually under pressure.\n\nWhatever comes next, it won't come from behind.",
     "notes": "This piece centers on partnership rather than heroics. The tension is shared, distributed across posture and proximity, echoing Western narratives where survival is rarely solitary. The composition reinforces this balance-each figure incomplete without the other.\n\nDrawing from pictorialist restraint and cinematic staging, the image allows atmosphere and implication to do the work. The result is a quietly powerful narrative about trust under pressure, offering collectors a moment that feels earned, grounded, and enduring within the Western fine art canon.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 123,
+
     "themes": {
       "hardship-sorrow": 17
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-6pLTtkL",
@@ -6272,6 +6309,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6pLTtkL/1/MWrvxfkTnwV5Zw73jnDdGVTkj8J52SF2kWfsjmq3m/S/Wild%20West%20Cowboy%20Portrait%20Photography%20_DSF9331-Edit-Edit-5-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6pLTtkL/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -6301,14 +6339,18 @@ export const galleryData = [
       "painterly technique",
       "western fine art prints"
     ],
-    "story": "He lies still long enough to take inventory.\n\nPain is there-sharp, specific, inconvenient-but it hasn't crossed the line yet. Breath still comes. Fingers still answer when asked. That's what matters.\n\nWhatever happens next can wait until he's back on his feet.",
+
+    "story": "Stillness, held just long enough to take inventory of what still answers.\n\nPain is there-sharp, specific, inconvenient-but it hasn't crossed the line yet. Breath still comes. Fingers still answer when asked. That's what matters.\n\nWhatever happens next can wait until he's back on his feet.",
     "notes": "This image draws from the Western canon's quieter moments-those after the action, when consequence replaces motion. The humor implied by the title contrasts with the vulnerability of the figure, echoing the stoic understatement common to frontier survival narratives.\n\nCompositionally, the low vantage and partial concealment recall pictorialist restraint, allowing atmosphere and implication to carry the scene. The result is a work that resists heroics, favoring resilience instead-a hallmark of narrative Western art that rewards prolonged viewing.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 124
+    "sortOrder": 124,
+    contentSource: "human"
   },
   {
     "id": "i-8JSdTGz",
@@ -6957,6 +6999,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-SPTNHnP/2/L7CrQ8nmtwxxZSDxtsshWtpkJDj9JGWVmJN3cL3FM/S/vintage%20western%20art_HF26696-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-SPTNHnP/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -6978,17 +7021,23 @@ export const galleryData = [
       "painterly Western photograph",
       "Western Cowboy Portraits"
     ],
-    "story": "He steps out into the light with the bottle still in his hand.\n\nNot to celebrate.  \nNot to forget.  \n\nJust to see if the weight has shifted any. Some things don't leave when you ask them to. They linger. They wait. And so does he-measuring what's left against what it'll take to keep going.\n\nThe drink isn't the point.  \nStanding is.",
+
+    "story": "A step out into the light, bottle in hand, standing to take the measure of the day.\n\nNot to celebrate.\nNot to forget.\n\nJust to see if the weight has shifted any. Some things don't leave when you ask them to. They linger. They wait. And so does he-measuring what's left against what it'll take to keep going.\n\nThe drink isn't the point.\nStanding is.",
     "notes": "This work leans into restraint rather than spectacle, capturing a moment of persistence instead of collapse. The figure is framed mid-transition-neither inside nor fully out-echoing the emotional threshold the image explores. Painterly texture and controlled light recall classic Western realism while pushing the narrative inward. It is a study of endurance, offering collectors a quietly powerful meditation on resolve rather than myth.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 138,
+
     "themes": {
       "aces-smoke-whiskey": 31
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-FsLKLp3",
@@ -7002,6 +7051,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-FsLKLp3/8/L4gwXtkgNJH9NBZNFz3rx57Grf2LhzWV29mv56gFp/S/Wild%20West%20Cowboy%20Portrait%20Photography%20Edit%20_DSF9039-Enhanced-NR-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-FsLKLp3/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -7020,18 +7070,24 @@ export const galleryData = [
       "authentic frontier art prints",
       "Americana photography"
     ],
-    "story": "He pauses with one boot already committed, the other still deciding.\n\nEvery move out here costs something-time, blood, reputation. The street doesn't rush him. It waits. It always does. Somewhere just out of sight, the next moment is already forming.\n\nHe knows this part well.  \nThe quiet before the choice.  \nThe weight that settles in the chest right before you step forward anyway.",
+
+    "story": "One boot already committed, the other still deciding, on a street that waits.\n\nEvery move out here costs something-time, blood, reputation. The street doesn't rush him. It waits. It always does. Somewhere just out of sight, the next moment is already forming.\n\nHe knows this part well.\nThe quiet before the choice.\nThe weight that settles in the chest right before you step forward anyway.",
     "notes": "This piece draws its strength from restraint rather than action. The composition places the figure mid-decision, echoing Western painters and illustrators who favored psychological tension over overt drama. By freezing the moment before commitment, the image invites the viewer into the mental space of the subject-where judgment, consequence, and survival converge. It is a quiet, disciplined work that rewards close looking and sustained attention.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 139,
+
     "themes": {
       "law-outlaws": 45,
       "sketches-of-legends": 50
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-6G4PBd8",
@@ -7189,6 +7245,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/1/Mx49JdXmPqXrKs5Mxw8f5XGSrGkDNHvSCKtCrw4X3/S/Cowboy%20painting%20_HF21067-Enhanced-NR-Edit-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MDrw6sD/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -7210,17 +7267,23 @@ export const galleryData = [
       "western painterly photography",
       "western wall art for collectors"
     ],
-    "story": "He doesn't chase the heat.\nJust enough to wake the fingers,\nenough to steady the hands.\n\nThe fire works quietly, doing what it does best.\nNo promises.\nNo comfort beyond the moment it offers.\n\nThe cup will cool.\nThe night will stay.\nFor now, this is sufficient.",
+
+    "story": "The heat goes unchased — it will come to him soon enough.\nJust enough to wake the fingers,\nenough to steady the hands.\n\nThe fire works quietly, doing what it does best.\nNo promises.\nNo comfort beyond the moment it offers.\n\nThe cup will cool.\nThe night will stay.\nFor now, this is sufficient.",
     "notes": "This image draws strength from restraint, aligning with the pictorialist tradition where atmosphere and suggestion outweigh explicit narrative. The limited firelight creates a contained world, slowing the viewer's reading and emphasizing texture, gesture, and pause.\n\nThe composition resists comfort in favor of honesty. The fire offers only what is necessary-no more, no less-positioning the work within a Western lineage that values endurance through ritual and acceptance. Meaning emerges quietly, held in the balance between warmth and the surrounding dark.",
     "rating": 0,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 143,
+
     "themes": {
       "firelight-shadow": 36
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-3ppJNtd",
@@ -7296,6 +7359,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-bkjkPfH/2/NbQWpNTRxwnzxqxQbfttJR5Cb6DRJcmmWq8XF6jsQ/S/cowboy%20cards_HF26909-Enhanced-NR-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-bkjkPfH/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -7322,18 +7386,24 @@ export const galleryData = [
       "western painterly photography",
       "western wall art for collectors"
     ],
-    "story": "He studies the table like it can confess.\nFingers slow, deliberate-no hurry to reveal anything.\n\nThe cards don't matter as much as the pause.\nThat's where decisions show themselves,\nright before they harden.\n\nWhatever comes next was decided earlier.\nTonight just gives it a name.",
+
+    "story": "A table that might confess, if stared at long enough — and a man staring.\nFingers slow, deliberate-no hurry to reveal anything.\n\nThe cards don't matter as much as the pause.\nThat's where decisions show themselves,\nright before they harden.\n\nWhatever comes next was decided earlier.\nTonight just gives it a name.",
     "notes": "This image draws on the pictorialist tradition, using controlled light and softened edges to heighten psychological tension. The shallow illumination confines the scene, guiding attention to the hands and the charged space between decision and exposure.\n\nThe composition resists spectacle in favor of implication. By withholding outcome, the work invites the viewer to inhabit the pause-the moment where risk becomes personal. It is a Western image grounded in consequence, where character is revealed not by action, but by restraint.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 145,
+
     "themes": {
       "aces-smoke-whiskey": 7,
       "firelight-shadow": 41
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-MnX4pxX",
@@ -7347,6 +7417,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/4/KvchnDBRQ7mV8v3Zc8mV2ctqBBS3fFQ9j53MtKnpV/S/western%20themed%20portrait%20photo%20_ANA0981-Edit-2-Edit-2-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MnX4pxX/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -7365,20 +7436,26 @@ export const galleryData = [
       "western painterly photography",
       "western wall art for collectors"
     ],
-    "story": "She works closer to the window now.\nNot to finish-\njust to see.\n\nThe thread slips, catches, slips again.\nLight thins where it touches her hands,\nas if deciding what it's willing to give.\n\nWhatever isn't mended tonight\nwill wait.\nMost things do.",
+
+    "story": "Work moved closer to the window, chasing what light the day has left.\nNot to finish-\njust to see.\n\nThe thread slips, catches, slips again.\nLight thins where it touches her hands,\nas if deciding what it's willing to give.\n\nWhatever isn't mended tonight\nwill wait.\nMost things do.",
     "notes": "This work draws from the pictorialist tradition, using softened edges and diminishing light to slow the viewer's reading of the scene. The window becomes both source and limit, defining a narrow space where attention and care are concentrated.\n\nThe composition centers on quiet labor rather than outcome. Hands, cloth, and light carry equal weight, suggesting a form of endurance built not through endurance itself, but through repetition and patience. It is a Western image grounded in necessity, where meaning emerges as the day quietly gives way.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 146,
+
     "themes": {
       "women-of-the-west": 27,
       "firelight-shadow": 39,
       "frontier-women": 44,
       "whispering-reflection": 53
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-SVwxn5L",
@@ -7392,6 +7469,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-SVwxn5L/0/KGjFcLvKkKHZjKSGzpr8RT38nSFRGJRvMzZfM8gxM/S/_O2H2905-682-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-SVwxn5L/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -7412,17 +7490,21 @@ export const galleryData = [
       "western painterly photography",
       "western wall art for collectors"
     ],
-    "story": "He hasn't moved for a while.\nThe room has adjusted itself around that fact.\n\nLight drifts across the table, pauses, then moves on.\nHe stays where decisions tend to gather,\neven when no one else is ready to make one.\n\nWhatever comes next will come here.\nIt usually does.",
+
+    "story": "A long stillness at the table, and a room that has learned to wait with it.\nThe room has adjusted itself around that fact.\n\nLight drifts across the table, pauses, then moves on.\nHe stays where decisions tend to gather,\neven when no one else is ready to make one.\n\nWhatever comes next will come here.\nIt usually does.",
     "notes": "This image draws strength from restraint, aligning with the pictorialist tradition where atmosphere and implication outweigh overt narrative. The controlled light isolates the subject without dramatizing him, allowing presence itself to carry meaning.\n\nThe composition suggests authority that does not announce itself. By anchoring the figure in stillness, the work invites the viewer to recognize power as something earned through patience and experience rather than action. It is a Western image grounded in quiet command, where significance arrives by waiting rather than pursuit.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 147,
+
     "themes": {
       "firelight-shadow": 40,
       "law-outlaws": 52,
       "whispering-reflection": 55
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-5BtMrfM",
@@ -7436,6 +7518,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-5BtMrfM/17/LdBsf3Jsbdd8vfLJHBHsdT9PKcfKPQp7bfdqVcvnT/S/Old%20West%20themed%20photo%20_HF29137-Edit-2-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-5BtMrfM/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portrait",
@@ -7452,18 +7535,24 @@ export const galleryData = [
       "authentic frontier art prints",
       "western fine art prints"
     ],
-    "story": "He counts things differently now.\nNot cards. Not money. Not favors owed.\n\nWhat's left is measured in light on the porch rail,\nin how long the afternoon holds before it slips away.\n\nSome losses don't come all at once.\nThey just stop waiting for you.",
+
+    "story": "Time counts differently out here — not in hours, in what remains.\nNot cards. Not money. Not favors owed.\n\nWhat's left is measured in light on the porch rail,\nin how long the afternoon holds before it slips away.\n\nSome losses don't come all at once.\nThey just stop waiting for you.",
     "notes": "This piece leans into the Western tradition of consequence rather than confrontation. The subject is framed in a moment of pause, where age and experience replace action as narrative force. The muted palette and controlled lighting echo painterly realism, allowing time itself to become the central character. It is a contemplative piece-one that rewards close viewing and resonates through what is suggested rather than shown.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 148,
+
     "themes": {
       "sketches-of-legends": 64,
       "whispering-reflection": 60
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-Khb37pn",
@@ -7521,6 +7610,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/1/NcqfXx6vKZP4cMfS8jBGtP7pgN9bqXvD4SgVQHP4F/S/western%20themed%20art%20_O1H0196-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-R2JG4bd/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -7547,17 +7637,23 @@ export const galleryData = [
       "western painterly photography",
       "western wall art for collectors"
     ],
-    "story": "He doesn't raise his voice.\nDoesn't need to.\n\nOne hand stays where it belongs.\nThe other rests easy, already knowing what comes next.\n\nWhatever's at the door can wait.\nHe's been waiting longer.",
+
+    "story": "The voice stays low, level as still water.\nDoesn't need to.\n\nOne hand stays where it belongs.\nThe other rests easy, already knowing what comes next.\n\nWhatever's at the door can wait.\nHe's been waiting longer.",
     "notes": "This photograph draws power from understatement, aligning with the pictorialist tradition where implication carries greater weight than display. The controlled use of light isolates the figure without dramatizing him, allowing readiness to register through stance rather than action.\n\nThe composition suggests authority born of responsibility. By anchoring the moment indoors-before any confrontation-the work emphasizes protection as a quiet commitment rather than a reaction. It is a Western image grounded in resolve, where strength is measured by what does not need to be said.",
     "rating": 0,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 150,
+
     "themes": {
       "firelight-shadow": 45
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-fTHtL25",
@@ -7678,6 +7774,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qXd5779/1/LtFPjBfcjcnzmcDkdz8bncZcg5xCDKXGJWHJZWMzB/S/Western%20themed%20fine%20art%20photography%20_HF28964-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-qXd5779/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -7705,20 +7802,26 @@ export const galleryData = [
       "western grit",
       "western cowboy wall art for collectors"
     ],
-    "story": "She holds his face the way you hold something you might not see again.  \nNot tightly. Not desperately. Just enough to remember.\n\nThe world presses in at the edges, already asking for him.  \nFor one more moment, it waits.\n\nNothing is promised-only the asking.",
+
+    "story": "Holding his face – the way you hold something you might not see again.\nNot tightly. Not desperately. Just enough to remember.\n\nThe world presses in at the edges, already asking for him.\nFor one more moment, it waits.\n\nNothing is promised-only the asking.",
     "notes": "This work is built on closeness rather than action. The decision to frame the moment through touch places the emotional center between the figures, where resolve and vulnerability coexist.\n\nRooted in pictorialist tradition and classic Western narrative imagery, the composition favors implication over resolution. It invites the viewer into a suspended moment-one defined not by what happens next, but by what is being silently asked to endure.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 153,
+
     "themes": {
       "women-of-the-west": 22,
       "frontier-women": 52,
       "hardship-sorrow": 25,
       "love-goodbye": 34
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-6BgfRxb",
@@ -7732,6 +7835,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-6BgfRxb/7/K6gz4WRz5dM6chSMbhKwXKGH3bNxPq8C7zkThKtXL/S/Cowboy%20wall%20art%20_DSF9064-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-6BgfRxb/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -7758,14 +7862,18 @@ export const galleryData = [
       "western grit",
       "western cowboy wall art for collectors"
     ],
-    "story": "He bends because the ground asked him to.  \nNot out of hope exactly-more out of habit, learned over years of looking down when others looked ahead.\n\nThe world narrows to dirt, fingers, breath.  \nWhatever waits there will either change the day or confirm what he already knows.\n\nEither way, he straightens alone.",
+
+    "story": "A bend toward the ground, offered the way habit offers — because the dirt asked first.\nNot out of hope exactly-more out of habit, learned over years of looking down when others looked ahead.\n\nThe world narrows to dirt, fingers, breath.\nWhatever waits there will either change the day or confirm what he already knows.\n\nEither way, he straightens alone.",
     "notes": "The act of bending becomes the subject-not what is found, but the willingness to look. The composition echoes pictorialist traditions, where posture and tonal control carry the emotional weight of the frame.\n\nIts strength lies in what is withheld. Like the quiet labor scenes of Wyeth or the psychological pauses found in classic Western cinema, the image trusts the viewer to complete the moment. It rewards prolonged looking, offering a grounded, enduring presence rather than a single dramatic beat.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 154
+    "sortOrder": 154,
+    contentSource: "human"
   },
   {
     "id": "i-xr5chJG",
@@ -7920,6 +8028,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/2/NcvbGTqdxqtWhKGJjRXLrMh39pTNN8mBgHLFXd9CP/S/historic%20art_HF21481-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-zXnjqZZ/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portrait",
@@ -7936,14 +8045,18 @@ export const galleryData = [
       "authentic frontier art prints",
       "western fine art prints"
     ],
-    "story": "He knows this place without looking.\nThe boards, the rail, the way the air settles before anything arrives.\n\nThere was a time every stop meant something new.\nNow it means remembering which ones stayed.\n\nSome places don't let you leave.\nThey just wait for you to return.",
+
+    "story": "This place needs no looking — it is known by heart, by foot, by habit.\nThe boards, the rail, the way the air settles before anything arrives.\n\nThere was a time every stop meant something new.\nNow it means remembering which ones stayed.\n\nSome places don't let you leave.\nThey just wait for you to return.",
     "notes": "This work leans into restraint as its primary strength. The figure is positioned not as a traveler in motion, but as a witness to repetition and return. The subdued palette and controlled light echo painterly traditions where atmosphere carries as much meaning as subject. It speaks to familiarity earned over time-an image about presence, not departure-making it a quiet anchor within a Western fine art collection.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 158
+    "sortOrder": 158,
+    contentSource: "human"
   },
   {
     "id": "i-nLKscbQ",
@@ -7957,6 +8070,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/0/LQmSkg5VfDpmVP9QgsD8T5jRGpbz2trXhHZZ8qxLg/S/_HF23785-735-736-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-nLKscbQ/A",
+
     "keywords": [
       "cowboy art",
       "western cowboy art",
@@ -7974,12 +8088,14 @@ export const galleryData = [
       "western photography prints",
       "authentic frontier art prints"
     ],
-    "story": "He sets the bar where it needs to be.  \nNot by marks or numbers-by feel.\n\nPressure answers pressure.\nThe wood gives only when it's ready.\n\nWhen it moves, it's enough.\nThat's how he knows.",
+
+    "story": "The bar settles where it needs to be, found by hands, not by marks.\nNot by marks or numbers-by feel.\n\nPressure answers pressure.\nThe wood gives only when it's ready.\n\nWhen it moves, it's enough.\nThat's how he knows.",
     "notes": "The tension between body, tool, and material becomes the subject, echoing traditions found in early Western painting and pictorialist photography where labor carried quiet authority.\n\nCompositionally, the angled posture and controlled leverage guide the eye through the frame, reinforcing the idea that skill lives in subtle adjustments rather than force. It's a study of work as knowledge-earned, practiced, and trusted.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 159
+    "sortOrder": 159,
+    contentSource: "human"
   },
   {
     "id": "i-jLSNwCT",
@@ -8299,6 +8415,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XsdNV9s/0/NMShXbcB7hRr5KXJxf76xdVQJn6VsT6Sz97rdzFQQ/S/_WHO1880-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-XsdNV9s/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -8327,12 +8444,14 @@ export const galleryData = [
       "western grit",
       "western cowboy wall art for collectors"
     ],
-    "story": "He doesn't rush the words.  \nThere's no need.\n\nSome things only make sense after they've been carried long enough to settle.  \nThe pauses matter as much as the telling.\n\nWhat's true survives the retelling.",
+
+    "story": "The words come slow — each one weighed before it is given.\nThere's no need.\n\nSome things only make sense after they've been carried long enough to settle.\nThe pauses matter as much as the telling.\n\nWhat's true survives the retelling.",
     "notes": "Authority is conveyed through ease-how the figures occupy space, how time appears to slow around them. The composition privileges shared memory over spectacle, inviting the viewer into a moment shaped by lived experience.\n\nRooted in pictorialist tradition and classic Western genre painting, the work values suggestion and restraint. It rewards close looking, offering a layered narrative where meaning emerges gradually, much like the stories it quietly preserves.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 166
+    "sortOrder": 166,
+    contentSource: "human"
   },
   {
     "id": "i-dnxxDXH",
@@ -8346,6 +8465,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Photoshoot-Old-Bedford/Color/i-dnxxDXH/1/LVM7SGbr7LScpMrg9XdMx7xfrcjvF8PPS6vqpM4BD/S/old%20west%20cowboy%20art%20_O1H0237-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-dnxxDXH/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -8363,17 +8483,23 @@ export const galleryData = [
       "the American West",
       "authentic frontier art prints"
     ],
-    "story": "He didn't count them.\nCounting comes later.\n\nRight now there's only the smell of powder, the weight still pressed into his shoulder, and the question hanging in the room-quiet, unfinished, and already too late to matter.\n\nWhatever happened outside has already decided something.",
+
+    "story": "The tally waits — some sums aren't worth doing while the smoke still hangs.\nCounting comes later.\n\nRight now there's only the smell of powder, the weight still pressed into his shoulder, and the question hanging in the room-quiet, unfinished, and already too late to matter.\n\nWhatever happened outside has already decided something.",
     "notes": "This work sits firmly in the space after action, where the visible moment carries the residue of something already decided. The figure's expression and grip on the rifle suggest not escalation, but recognition-an inward turn that aligns with pictorialist traditions emphasizing psychological presence over event.\n\nIts strength lies in restraint. Rather than depicting conflict, it captures the moment when consequence begins to register. The image rewards quiet attention, allowing the viewer to inhabit the pause where understanding catches up to action.",
     "rating": 5,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 167,
+
     "themes": {
       "sketches-of-legends": 69
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-zW6Zb4W",
@@ -8714,6 +8840,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-qzGSQz7/0/KrkNgc3T2RKDhGKNHL53T8h4KVbdjpg54ThR5rBqf/S/_HF21898-1026-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-qzGSQz7/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -8733,17 +8860,21 @@ export const galleryData = [
       "western portraits",
       "western themed art"
     ],
-    "story": "He pauses longer than he meant to.  \nLong enough for doubt to creep in where certainty used to live.\n\nHer hands rise without thinking-  \nnot to stop him, not to beg-just to remember the shape of his face if this is the last time.\n\nThe world waits. Neither of them does.",
+
+    "story": "The pause stretches past leaving-time, and the world holds still around it.\nLong enough for doubt to creep in where certainty used to live.\n\nHer hands rise without thinking-\nnot to stop him, not to beg-just to remember the shape of his face if this is the last time.\n\nThe world waits. Neither of them does.",
     "notes": "Tension held in closeness defines the emotional center of this piece, where gesture replaces action and presence carries meaning. The figures exist within a shared space that feels suspended, neither fully departing nor remaining. Subtle tonal handling and softened edges align with painterly traditions that favor implication, allowing the moment to remain unresolved. The work invites reflection on what is about to be lost-or chosen-without declaring the outcome.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 175,
+
     "themes": {
       "women-of-the-west": 23,
       "frontier-women": 50,
       "love-goodbye": 32
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-dwVgbxR",
@@ -8757,6 +8888,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-dwVgbxR/0/KsTgLDfF9qSvgT3vGXMZrJbwL9Rq6zpjtkL5gpWHJ/S/_O2H1242-787-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-dwVgbxR/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -8778,12 +8910,14 @@ export const galleryData = [
       "frontier photography",
       "western porch scene"
     ],
-    "story": "He doesn't rush to stand.\n\nThere's no reason to. This place already knows him-the boards, the doorframe, the way the light leans in late afternoon. He's not waiting for anything. He's simply where he's supposed to be.\n\nWhatever comes next will have to meet him here.",
+
+    "story": "Standing can wait — the moment isn't going anywhere.\n\nThere's no reason to. This place already knows him-the boards, the doorframe, the way the light leans in late afternoon. He's not waiting for anything. He's simply where he's supposed to be.\n\nWhatever comes next will have to meet him here.",
     "notes": "Familiarity shapes the presence of this figure, expressed through posture, placement, and ease within the environment. The relationship between man and setting suggests a life shaped by repetition and belonging rather than motion. Subtle tonal control and softened detail align with painterly traditions, allowing atmosphere to carry meaning. The work invites a quiet recognition of place-where identity and environment meet without effort or display.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 176
+    "sortOrder": 176,
+    contentSource: "human"
   },
   {
     "id": "i-xZkmnnx",
@@ -9095,6 +9229,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/0/MH7Fr3DP9kQGbfBCFXs3zdM4DWFLTMXsGgsJ5tLBc/S/_HF29924-1328-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CNrD7G7/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -9115,14 +9250,18 @@ export const galleryData = [
       "Western frontier",
       "Western themed art"
     ],
-    "story": "She keeps her hand where it belongs, not to steady him, but to remind him he's still here.  \nWhatever came before hasn't finished speaking yet.\n\nThe town feels nearer than it should. Walls listening. Windows remembering.  \nThe kind of quiet that doesn't mean peace-only pause.\n\nThey stand together because separating would say too much.  \nBecause some things survive only when held close.",
+
+    "story": "A hand kept close, holding against whatever came before.\nWhatever came before hasn't finished speaking yet.\n\nThe town feels nearer than it should. Walls listening. Windows remembering.\nThe kind of quiet that doesn't mean peace-only pause.\n\nThey stand together because separating would say too much.\nBecause some things survive only when held close.",
     "notes": "Closeness becomes the true structure of this image. The figures are gathered so tightly that even the air around them feels shared, and that physical nearness turns the scene into more than portraiture. It reads as mutual bracing-a moment where comfort, worry, and resolve occupy the same space without needing to be announced.\n\nThe softened architecture and suspended atmosphere deepen that emotional focus. Rather than fully describing the town, the image lets it hover at the edges like memory or aftermath, keeping the real center in gesture and proximity. The result is a Western family portrait shaped by restraint, tenderness, and the quiet endurance of facing something together.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 184
+    "sortOrder": 184,
+    contentSource: "human"
   },
   {
     "id": "i-RdTR7GD",
@@ -9180,6 +9319,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-s79JnZ2/1/LRxRtHL9qs84fVWQkmtgSpQPq836RR53dfhHGZbRc/S/Old%20West%20Cowboy%20Portrait%20_HF28884-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-s79JnZ2/A",
+
     "keywords": [
       "cowboy art",
       "cowboy portraits",
@@ -9195,18 +9335,24 @@ export const galleryData = [
       "western grit",
       "fine art western photography"
     ],
-    "story": "He knows the weight of waiting.  \nNot the kind that fidgets-but the kind that settles into the bones.\n\nHand resting where it's rested before, eyes down, listening to the rails, the room, the silence between movements. Trouble always announces itself late.\n\nUntil then, he stands exactly where he needs to be.",
+
+    "story": "Waiting has a weight, and he knows it by heart.\nNot the kind that fidgets-but the kind that settles into the bones.\n\nHand resting where it's rested before, eyes down, listening to the rails, the room, the silence between movements. Trouble always announces itself late.\n\nUntil then, he stands exactly where he needs to be.",
     "notes": "What defines this image is not action, but the refusal of it. The subject holds position rather than asserting presence, allowing tension to settle into posture instead of movement.  \n\nThe vertical post serves as both physical support and compositional spine, stabilizing the frame while reinforcing the theme of quiet endurance. This approach aligns with pictorialist traditions, where structure and atmosphere guide the viewer more than overt narrative cues.  \n\nThe longer one stays with the image, the more its weight reveals itself-an expression of authority carried internally rather than performed.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 186,
+
     "themes": {
       "law-outlaws": 69,
       "whispering-reflection": 72
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-MB2KXB3",
@@ -9220,6 +9366,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MB2KXB3/1/NHRndR3qWZbdLkb5FTCS3xjzJ264s9CQgHQ3JJdnQ/S/cowboy%20art%20_O1H0289-Enhanced-NR-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-MB2KXB3/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -9236,17 +9383,23 @@ export const galleryData = [
       "outlaw portraits",
       "western themed art"
     ],
-    "story": "He's given it enough time to be polite.  \nMore than enough.\n\nThe weight shifts from one foot to the other,  \nnot restless-deciding.\n\nWhatever happens next won't be sudden.  \nIt's been building for a while now.",
+
+    "story": "Politeness has had its time — and the waiting has outlasted it.\nMore than enough.\n\nThe weight shifts from one foot to the other,\nnot restless-deciding.\n\nWhatever happens next won't be sudden.\nIt's been building for a while now.",
     "notes": "The moment is carried almost entirely by posture. A slight shift in stance becomes the visual hinge, suggesting that whatever comes next has already been decided internally.  \n\nSoft diffusion and controlled tone align the work with pictorialist tradition, allowing atmosphere to carry narrative weight instead of overt gesture. The image resists urgency, choosing to hold tension in suspension.  \n\nIt is a study in threshold-where patience thins, and consequence begins to take shape just beneath the surface.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 187,
+
     "themes": {
       "sketches-of-legends": 83
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-J3dh2p4",
@@ -9260,6 +9413,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-J3dh2p4/0/MSV2hvDdvWNzpcdHxj24xmMhMvMnZbXL2NKgCpj7b/S/_WHO7386-956-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-J3dh2p4/A",
+
     "keywords": [
       "fine art Western photography",
       "painterly cowboy portrait",
@@ -9277,19 +9431,23 @@ export const galleryData = [
       "western grit",
       "painterly Western images"
     ],
-    "story": "He's learned not to rush these pauses.  \nThe cup cools, the dust settles, and the road waits without asking questions.\n\nWhatever comes next can afford to be patient.  \nHe already has.",
+
+    "story": "These pauses are not to be rushed — they are the work itself.\nThe cup cools, the dust settles, and the road waits without asking questions.\n\nWhatever comes next can afford to be patient.\nHe already has.",
     "notes": "Restraint carries the weight of this piece. The figure's downward gaze and unhurried movement shift attention away from destination and toward lived experience, where time stretches between actions.\n\nInfluenced by pictorialist handling and classic Western narrative traditions, the softened tones and controlled light allow atmosphere to guide the eye. The work aligns with a lineage that values endurance and presence, offering a contemplative study of motion slowed to meaning.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 188,
+
     "themes": {
       "aces-smoke-whiskey": 40,
       "firelight-shadow": 66,
       "hardship-sorrow": 32,
       "sketches-of-legends": 106,
       "whispering-reflection": 86
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-jXC3shm",
@@ -9422,6 +9580,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-2pRkNng/8/KDfLrrrCpst7xbd6WW86LD9rsFW4fdxXphd87Pxvg/S/vintage%20cowboy%20art%20photo%20_O1H0781-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-2pRkNng/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -9442,14 +9601,18 @@ export const galleryData = [
       "outlaw portraits",
       "cinematic stills"
     ],
-    "story": "He counts without looking.  \nFeels it in the weight, the balance, the quiet click that didn't happen yet.\n\nThe tree takes the edge of him, steady and familiar.  \nCover isn't about hiding-it's about choosing when to move.\n\nFour chances left.  \nEnough, if he doesn't waste them.",
+
+    "story": "The count goes by feel, not by sight.\nFeels it in the weight, the balance, the quiet click that didn't happen yet.\n\nThe tree takes the edge of him, steady and familiar.\nCover isn't about hiding-it's about choosing when to move.\n\nFour chances left.\nEnough, if he doesn't waste them.",
     "notes": "This piece shifts focus away from confrontation and into calculation-the moment between actions where outcome is still undecided. The use of cover and the act of reloading emphasize awareness and timing rather than force, grounding the image in the realities of survival rather than spectacle.\n\nThe pictorialist influence is present in the softened atmosphere and tonal restraint, allowing the environment to carry equal weight with the figure. The tree becomes more than setting-it functions as a boundary between exposure and safety, reinforcing the quiet strategy embedded within the scene.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 192
+    "sortOrder": 192,
+    contentSource: "human"
   },
   {
     "id": "i-2s2LtQp",
@@ -9463,6 +9626,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/1/MjVrkVrTqGwXnxtLS93NDhHqqHHjWqkQ9wJp5sxLv/S/_WHO2552-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-2s2LtQp/A",
+
     "keywords": [
       "cowboy artwork",
       "cowboy art",
@@ -9488,16 +9652,20 @@ export const galleryData = [
       "western grit",
       "authentic frontier art prints"
     ],
-    "story": "He stops where the land gives him reason to stop.  \nFrom above, the distance feels deliberate-space enough to see without being seen.\n\nBelow, the work continues on a different scale.  \nEach step measured against stone and shadow, unaware of the quiet advantage being held overhead.\n\nNothing signals. Nothing changes.  \nPosition alone does the speaking.",
+
+    "story": "A stop where the rising land gives its reason, high above stone and shadow.\nFrom above, the distance feels deliberate-space enough to see without being seen.\n\nBelow, the work continues on a different scale.\nEach step measured against stone and shadow, unaware of the quiet advantage being held overhead.\n\nNothing signals. Nothing changes.\nPosition alone does the speaking.",
     "notes": "Elevation governs the structure of the image, creating a visual hierarchy that separates the figures without isolating them. The upper rider holds position while the lower figure moves within the terrain, establishing a relationship defined by placement rather than interaction.\n\nThe landscape becomes an active participant, shaping how the figures are read through distance and angle. By distributing attention across vertical space, the work reinforces a quieter form of control-one built on awareness and positioning rather than overt confrontation.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 193,
+
     "themes": {
       "cowboys-and-horses": 42,
       "na-narrative-color-images": 27
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-vrc7KkJ",
@@ -9511,6 +9679,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vrc7KkJ/2/Mv7WpRwhCJHdQNfwVX6XcLGbn9tbKmX9FpLF8hh4s/S/_HF26670-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-vrc7KkJ/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -9531,12 +9700,14 @@ export const galleryData = [
       "wild west painterly photography",
       "historic western prints"
     ],
-    "story": "He doesn't point to explain.  \nOnly to confirm.\n\nThey've walked enough miles together to trust the same signs-  \na break in the trees, a bend that feels right, the land opening its hand.\n\nNothing is decided yet.  \nBut they're looking the same way.",
+
+    "story": "No pointing, no explaining — the land speaks for itself.\nOnly to confirm.\n\nThey've walked enough miles together to trust the same signs-\na break in the trees, a bend that feels right, the land opening its hand.\n\nNothing is decided yet.\nBut they're looking the same way.",
     "notes": "This image centers on shared awareness rather than individual action. The pointing gesture becomes a form of quiet communication-direction established without urgency, understood without explanation. The figures operate in sync, shaped by experience rather than instruction.\n\nThe pictorialist influence softens the environment into a lived space rather than a backdrop, allowing the relationship between the two men to carry the narrative. It is less about where they are going and more about the fact that they already agree on the path forward.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 194
+    "sortOrder": 194,
+    contentSource: "human"
   },
   {
     "id": "i-WSQrZ3M",
@@ -9777,6 +9948,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-b7HtD4R/2/NVkDXBvNtvDk85M57cm23JdfCBxqvP8tp4NRkR7sx/S/vintage%20cowboy%20art%20_O2H2868-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-b7HtD4R/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -9794,18 +9966,24 @@ export const galleryData = [
       "western grit",
       "authentic frontier art prints"
     ],
-    "story": "He doesn't rush the answer.\n\nThe rifle comes up slow, deliberate, like it's been there before.\nThe woods quiet themselves, giving space to whatever comes next.\n\nIf there's something else to say, now's the moment.\nHe waits-patient enough to hear it again.",
+
+    "story": "The answer takes its time — no hurrying what hasn't finished forming.\n\nThe rifle comes up slow, deliberate, like it's been there before.\nThe woods quiet themselves, giving space to whatever comes next.\n\nIf there's something else to say, now's the moment.\nHe waits-patient enough to hear it again.",
     "notes": "Held tension defines the image, where the act of aiming becomes more important than any outcome that might follow. The figure is fixed within the environment, suggesting familiarity with both the terrain and the moment.\n\nThrough a pictorialist approach, the softened light and restrained palette reduce distraction, allowing posture and alignment to carry the narrative. The scene exists at the edge of action, grounded in control, patience, and the weight of decision.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 200,
+
     "themes": {
       "law-outlaws": 71,
       "sketches-of-legends": 86
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-SrcM3ZN",
@@ -9901,6 +10079,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-2024/i-z3VScfV/2/MVQwtbZhhv7SmbN5SvMTtmsgjL9FX2pHSHHxMSCm7/S/old%20west%20cowboy%20art%20_O2H2249-Enhanced-NR-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-z3VScfV/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -9917,19 +10096,25 @@ export const galleryData = [
       "cinematic western imagery",
       "authentic frontier art prints"
     ],
-    "story": "He notices before he means to.\n\nNot the face.\nThe pause.\n\nSomething in the room shifts just enough to make the long day feel shorter.",
+
+    "story": "Attention arrives before intention does.\n\nNot the face.\nThe pause.\n\nSomething in the room shifts just enough to make the long day feel shorter.",
     "notes": "Subtle interaction drives this piece, where meaning is carried through proximity and pause rather than overt action. The figures are positioned close enough to suggest familiarity, yet the moment remains unresolved.\n\nThe pictorialist influence is evident in the controlled light and softened transitions, allowing the scene to unfold gradually. It is an image built on observation-where what is noticed, rather than what is declared, shapes the experience.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 203,
+
     "themes": {
       "aces-smoke-whiskey": 8,
       "firelight-shadow": 56,
       "love-goodbye": 40
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-gkHPFXR",
@@ -10184,6 +10369,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-fcRrVV5/4/LGBG4SSgrr3cxvQnH9rVpMTLLNqM9pksswtvBwnSm/S/cowboy%20home%20decor%20_O2H2257-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-fcRrVV5/A",
+
     "keywords": [
       "cowboy art",
       "painterly cowboy photography",
@@ -10196,14 +10382,18 @@ export const galleryData = [
       "the American West",
       "western themed art"
     ],
-    "story": "He doesn't look up while he works.  \nThere's no rush left in him-only the habit of finishing what was started.\n\nWhatever words were exchanged have already spent themselves.  \nThis part was always going to be handled by the hands.",
+
+    "story": "The work holds his eyes — no looking up until it's done.\nThere's no rush left in him-only the habit of finishing what was started.\n\nWhatever words were exchanged have already spent themselves.\nThis part was always going to be handled by the hands.",
     "notes": "The image finds its strength in gesture rather than action. By isolating the hands and lowering the gaze, it shifts emphasis from confrontation to inevitability.\n\nThis approach aligns with the quieter lineage of Western imagery-where meaning is carried through preparation, restraint, and the subtle weight of what is about to unfold.",
     "rating": 3,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 210
+    "sortOrder": 210,
+    contentSource: "human"
   },
   {
     "id": "i-NzMs3RH",
@@ -10424,6 +10614,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-VhHKttr/7/LhMbFdBWnqMFCSPFgbH2Bxc4pKL2hwXwtcjWpBrR6/S/cowboy%20art%20_O1H0778-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-VhHKttr/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -10444,14 +10635,18 @@ export const galleryData = [
       "frontier photography",
       "western grit"
     ],
-    "story": "He waits where the woods decide things.  \nNot hidden-just reduced to what matters.\n\nThe rifle stays close, not raised, not lowered.  \nEvery sound arrives with weight. Every silence lasts too long.\n\nWhatever comes next will cross this line on its own.  \nHe won't rush it.",
+
+    "story": "The tree line, where the woods decide what crosses and what waits.\nNot hidden-just reduced to what matters.\n\nThe rifle stays close, not raised, not lowered.\nEvery sound arrives with weight. Every silence lasts too long.\n\nWhatever comes next will cross this line on its own.\nHe won't rush it.",
     "notes": "The tension is anchored in positioning rather than movement. The tree becomes both cover and boundary, shaping how the figure occupies the space.\n\nThis compositional choice reflects a long-standing Western visual language, where environment defines behavior. The restrained palette and softened detail reinforce a sense of anticipation held just beneath the surface.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
-    "sortOrder": 216
+    "sortOrder": 216,
+    contentSource: "human"
   },
   {
     "id": "i-XpH2QfG",
@@ -10510,6 +10705,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fsL7pfL/0/MGdXR4sSNpZ2nLK5k3F4gk2XNGP6S9qPh6jcvHPzV/S/_WHO9057-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-fsL7pfL/A",
+
     "keywords": [
       "fine art western photography",
       "cowboy art",
@@ -10523,12 +10719,14 @@ export const galleryData = [
       "western themed art",
       "outlaw portraits"
     ],
-    "story": "He doesn't rush.\nThe weight settles first - into his stance, into his breath.\n\nEverything unnecessary falls away.\nDistance, wind, consequence.\nAll accounted for.",
+
+    "story": "No rushing — the day keeps its own pace.\nThe weight settles first - into his stance, into his breath.\n\nEverything unnecessary falls away.\nDistance, wind, consequence.\nAll accounted for.",
     "notes": "This work shifts the Western gaze downward, trading elevation for immersion. The figure is not set apart from the land but embedded within it, creating a visual unity between man, tool, and environment. That integration alters the emotional register-less about dominance, more about precision and awareness.\n\nThere is a discipline here that recalls both hunting imagery and military studies, where survival depends on stillness and alignment rather than movement. By compressing the subject into the terrain, the image heightens tension without spectacle, inviting the viewer to feel the weight of decision carried through posture alone.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 218
+    "sortOrder": 218,
+    contentSource: "human"
   },
   {
     "id": "i-qDkTww8",
@@ -10579,6 +10777,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-drTwKMw/0/NPwxnxMF4DkPFvHKmqwMMzLDGzJLZjpkjCBmggd3s/S/_WHO0931-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-drTwKMw/A",
+
     "keywords": [
       "cowboy portraits",
       "cowboy artwork",
@@ -10601,12 +10800,14 @@ export const galleryData = [
       "frontier photography",
       "authentic frontier art prints"
     ],
-    "story": "He kneels without ceremony, the motion practiced enough to feel older than habit.  \nWater waits where it always has, indifferent to the years that passed between visits.\n\nThere's no rush. No one watching.  \nJust the quiet understanding that this is how the day begins-or ends-depending on what still needs doing.\n\nHe rises when it's finished, carrying nothing that can be seen.",
+
+    "story": "The water's edge, met on bent knee without ceremony, while the years keep their distance.\nWater waits where it always has, indifferent to the years that passed between visits.\n\nThere's no rush. No one watching.\nJust the quiet understanding that this is how the day begins-or ends-depending on what still needs doing.\n\nHe rises when it's finished, carrying nothing that can be seen.",
     "notes": "The image settles into a rhythm of repetition and necessity, where action is stripped to its most essential form. The figure's kneeling posture anchors the scene, creating a grounded relationship between body and landscape that speaks to routine rather than event.\n\nWhat emerges is a quiet meditation on continuity. The painterly surface softens transitions between water, stone, and figure, allowing the moment to feel both immediate and remembered. By centering an ordinary task, the work elevates endurance and habit as defining elements of frontier experience.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 220
+    "sortOrder": 220,
+    contentSource: "human"
   },
   {
     "id": "i-qJtstjP",
@@ -10896,7 +11097,7 @@ export const galleryData = [
       "authentic frontier art prints"
     ],
 
-    "story": "She does it before the lists start. Before the day gets its hands on her.\n\nEyes shut. Face up. One minute that belongs to nobody's emergency.\n\nThe horse waits the way horses do — like time is a rumor.",
+    "story": "Early, while the house is still deciding what the day will ask of it. Before the day gets its hands on her.\n\nEyes shut. Face up. One minute that belongs to nobody's emergency.\n\nThe horse waits the way horses do - like time is a rumor.",
     "notes": "Stillness becomes the primary gesture, with the figure's upward orientation redirecting attention away from the ground and toward something less defined. The horse remains grounded, creating a quiet contrast between elevation of gaze and rooted presence. This duality introduces a subtle tension without requiring movement.\n\nThe surrounding terrain and filtered light frame the figure without enclosing her, allowing the moment to remain open rather than resolved. By minimizing action and emphasizing posture, the work aligns with a contemplative thread in Western imagery-one where meaning is carried through presence, pause, and the space between intention and release.",
     "rating": 5,
     "galleries": [],
@@ -10910,7 +11111,7 @@ export const galleryData = [
       "whispering-reflection": 85
     },
 
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-msZxHgR",
@@ -11246,6 +11447,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/1/Nh7tMMT74Mvj3n2CrTvXxmq7Pg86cK9SLRzxdgd8q/S/_HF26210-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-bhXQ8Hx/A",
+
     "keywords": [
       "Western cowboys",
       "cowboy portraits",
@@ -11268,17 +11470,21 @@ export const galleryData = [
       "cowboy artwork",
       "western cowboy art"
     ],
-    "story": "He sits without leaning into the moment.\nThe horse waits with him, ears forward, weight balanced.\n\nNothing presses in.\nNothing pulls away.\nThe land holds its breath and he lets it.\n\nThis is how steadiness looks\nwhen it no longer needs instruction.",
+
+    "story": "A still seat, unleaning, in a moment that asks for nothing more.\nThe horse waits with him, ears forward, weight balanced.\n\nNothing presses in.\nNothing pulls away.\nThe land holds its breath and he lets it.\n\nThis is how steadiness looks\nwhen it no longer needs instruction.",
     "notes": "Equilibrium defines this piece. The rider's upright posture and the horse's attentive stillness establish a sense of control that feels practiced rather than performed-authority shaped by time, not urgency.\n\nThat restraint places the work within a quieter lineage of Western portraiture, where presence carries more weight than action. It invites sustained looking, allowing meaning to emerge through stillness rather than declaration.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 235,
+
     "themes": {
       "cowboys-and-horses": 37,
       "frontier-women": 88,
       "whispering-reflection": 94
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-6FGmZK4",
@@ -11292,6 +11498,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6FGmZK4/0/NLbhcwfBP3mG3RZZpR9JbQQP6jR5NLXxrCvgKTw5p/S/_WHO2056-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-6FGmZK4/A",
+
     "keywords": [
       "Western cowboys",
       "cowgirl portrait",
@@ -11310,18 +11517,22 @@ export const galleryData = [
       "western cowboy art",
       "cowboy artwork"
     ],
-    "story": "She does not hurry the moment.\nThe smaller steps are allowed to find their rhythm.\n\nNothing is said.\nNothing needs correcting.\nThe lesson is already moving forward.\n\nSome knowledge is passed\nby staying close enough not to lose it.",
+
+    "story": "The moment is given its full length — nothing hurried.\nThe smaller steps are allowed to find their rhythm.\n\nNothing is said.\nNothing needs correcting.\nThe lesson is already moving forward.\n\nSome knowledge is passed\nby staying close enough not to lose it.",
     "notes": "What stands out here is the absence of force. The rider allows the horse to learn through movement and proximity, creating a visual language built on trust rather than control. That restraint gives the image its emotional weight.\n\nIt aligns with a quieter lineage of Western work where meaning is carried through relationship rather than event. The paired figures move as one, offering a study in continuity-how knowledge is passed forward not through command, but through example.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 236,
+
     "themes": {
       "women-of-the-west": 42,
       "cowboys-and-horses": 53,
       "frontier-women": 84,
       "whispering-reflection": 92
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-FNSvKZz",
@@ -11422,6 +11633,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G9kSt8Q/0/KgPv5m8Xc5SrdfWDP2G545SNjsHMbDMF8gxFL5Tcb/S/_WHO4767-Edit-3-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-G9kSt8Q/A",
+
     "keywords": [
       "cowboy art",
       "western cowboy art",
@@ -11443,15 +11655,19 @@ export const galleryData = [
       "western grit",
       "authentic frontier art prints"
     ],
-    "story": "He stops where the land lifts just enough to see what's coming.\n\nNot searching. Not retreating.\nOnly measuring the distance between here and whatever waits beyond it.\n\nThe horse settles beneath him. The sky stays quiet.\nFor a moment, the world holds its breath-and so does he.",
+
+    "story": "A stop on the rise, where the land lifts just enough to see what's coming.\n\nNot searching. Not retreating.\nOnly measuring the distance between here and whatever waits beyond it.\n\nThe horse settles beneath him. The sky stays quiet.\nFor a moment, the world holds its breath-and so does he.",
     "notes": "Distance becomes the narrative here. The elevated position and solitary figure create a sense of watchfulness that feels deliberate, placing the rider in quiet command of both land and time.\n\nRather than resolving into action, the image remains suspended in assessment. It reflects a Western lineage that values awareness over spectacle, inviting the viewer into a moment where the outcome has yet to reveal itself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 239,
+
     "themes": {
       "cowboys-and-horses": 56
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-vP7bLLc",
@@ -11714,6 +11930,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T7Sjp7D/0/NDsdTMfvxGDvcRZfW2vXVdWD4nJBL9k8JBqnVXWX9/S/_WHO8536-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-T7Sjp7D/A",
+
     "keywords": [
       "cowboy art",
       "western cowboy art",
@@ -11731,12 +11948,14 @@ export const galleryData = [
       "western fine art",
       "western themed art"
     ],
-    "story": "He doesn't move because movement gives things away.  \nThe rifle is already shouldered, the angle chosen, the tree doing its quiet work. This is not the moment of action-this is the moment before permission disappears.\n\nOut here, survival isn't loud. It waits.  \nDust settles. Wind pauses. The world narrows to what's visible through branches and what might step into the open.\n\nIf someone comes, he's ready.  \nIf no one does, that's fine too. Either way, the decision has already been made.",
+
+    "story": "No movement as to not give things away.\nThe rifle is already shouldered, the angle chosen, the tree doing its quiet work. This is not the moment of action-this is the moment before permission disappears.\n\nOut here, survival isn't loud. It waits.\nDust settles. Wind pauses. The world narrows to what's visible through branches and what might step into the open.\n\nIf someone comes, he's ready.\nIf no one does, that's fine too. Either way, the decision has already been made.",
     "notes": "Concealment becomes the defining force here. The figure is not advancing or retreating-he is holding, allowing the moment to come to him rather than forcing it.\n\nThe tension lives in what is withheld. By limiting what is seen and delaying resolution, the image draws the viewer into the same narrowed focus, where attention sharpens and time stretches just before anything changes.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 246
+    "sortOrder": 246,
+    contentSource: "human"
   },
   {
     "id": "i-mWMXhcc",
@@ -11750,6 +11969,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-mWMXhcc/0/MtRR59Fmb6P83W5dVTTnchrQw7FkrMvbTgkzrjjX4/S/_HF21294-1062-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-mWMXhcc/A",
+
     "keywords": [
       "frontier life",
       "American frontier portraits",
@@ -11764,19 +11984,23 @@ export const galleryData = [
       "Americana photography",
       "authentic frontier art prints"
     ],
-    "story": "She does not look back.\n\nThe grave marker stands where words ran out, where promises ended without permission. What remains is the weight of leaving-carried alone, without witness, without ceremony.\n\nThis goodbye is not for the past.\nIt is for whatever waits beyond it.",
+
+    "story": "No backward glance — the road behind needs no watching.\n\nThe grave marker stands where words ran out, where promises ended without permission. What remains is the weight of leaving-carried alone, without witness, without ceremony.\n\nThis goodbye is not for the past.\nIt is for whatever waits beyond it.",
     "notes": "This piece shifts into a more intimate register within the Western canon, where narrative weight is carried through stillness rather than motion. The figure's placement and grounded posture create a contained space that draws attention inward.\n\nBy minimizing outward action, the image relies on atmosphere and presence to hold the viewer. It aligns with traditions that favor implication over declaration, allowing meaning to emerge gradually through observation.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 247,
+
     "themes": {
       "women-of-the-west": 43,
       "frontier-women": 83,
       "hardship-sorrow": 36,
       "love-goodbye": 46,
       "whispering-reflection": 93
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-JcHKH5f",
@@ -11790,6 +12014,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/0/LnpTmc5XFghrqhmsKHCF2PFPBnxSBhKhZFg2xkwbF/S/_WHO3989-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-JcHKH5f/A",
+
     "keywords": [
       "painterly cowboy portraits",
       "fine art Western photography",
@@ -11807,15 +12032,19 @@ export const galleryData = [
       "western themed art",
       "western cowboy wall art for collectors"
     ],
-    "story": "He chose the tree because it gave him time.\n\nNot cover-time. A moment to let the noise settle, to let the distance speak. The horse waits uphill, reins slack, trained not to move unless told otherwise. Everything that matters is already decided.\n\nWhat happens next depends on whether the world changes before he does.",
+
+    "story": "A tree to give him time.\n\nNot cover-time. A moment to let the noise settle, to let the distance speak. The horse waits uphill, reins slack, trained not to move unless told otherwise. Everything that matters is already decided.\n\nWhat happens next depends on whether the world changes before he does.",
     "notes": "Positioned between concealment and exposure, the figure holds a line that is both physical and psychological. The elevated horse and grounded rider create a layered tension that reinforces awareness over action.\n\nThe piece relies on spacing, elevation, and restraint to carry meaning-echoing a tradition where narrative weight is built through placement and anticipation rather than overt event.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 248,
+
     "themes": {
       "cowboys-and-horses": 58
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-h6SnLK4",
@@ -11866,6 +12095,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z3sHLGx/0/Ljh8LSP2mvLBNsdT24qMvrhQgPJ2pbSN6kqs87LHv/S/_WHO6158-930-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Z3sHLGx/A",
+
     "keywords": [
       "frontier life",
       "cowboy portraits",
@@ -11879,15 +12109,19 @@ export const galleryData = [
       "wild west photography",
       "authentic frontier art prints"
     ],
-    "story": "He lets the horse settle before he does.  \nThe land drops away beneath them, quiet enough to hear the wind move through grass and pine.\n\nNothing demands action yet-but that never lasts long out here.",
+
+    "story": "The horse settles first, and the rider follows into the quiet before whatever comes next.\nThe land drops away beneath them, quiet enough to hear the wind move through grass and pine.\n\nNothing demands action yet-but that never lasts long out here.",
     "notes": "Set at the edge of elevation and exposure, the composition uses height and stillness to establish both physical and psychological distance. The pairing of rider and horse becomes a single unit of awareness, oriented toward what cannot yet be seen.\n\nThe restrained palette and controlled spatial layering reflect a tradition where meaning is carried through position and atmosphere, allowing the land and sky to share equal weight in shaping the narrative.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 250,
+
     "themes": {
       "cowboys-and-horses": 59
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-PzwsgTk",
@@ -11901,6 +12135,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/0/LjSP7JHCjhqMBDB7f5HHBJqdV6tG58hKd7WmFsV4z/S/_O2H3934-719-720-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-PzwsgTk/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -11918,12 +12153,14 @@ export const galleryData = [
       "western photography prints",
       "authentic frontier art prints"
     ],
-    "story": "He doesn't rush it.  \nThe rifle settles where it always has, barrel resting against what little cover the frontier allows.\n\nNoise, smoke, movement-those come later.  \nRight now there is only distance, breath, and the knowledge that once he stands, there is no stepping back.",
+
+    "story": "No rushing it — the thing takes the time it takes.\nThe rifle settles where it always has, barrel resting against what little cover the frontier allows.\n\nNoise, smoke, movement-those come later.\nRight now there is only distance, breath, and the knowledge that once he stands, there is no stepping back.",
     "notes": "Tension here is not declared-it is held. The figure anchors the frame with a quiet authority, recalling the disciplined narrative control seen in Remington's more restrained compositions, where anticipation carries more weight than impact. The softened atmosphere and diffused light introduce a pictorialist sensibility, allowing the moment to hover between action and memory. What distinguishes the piece is its refusal to resolve; it asks the viewer to remain in that suspended breath, where consequence has not yet arrived but is undeniably present.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 251
+    "sortOrder": 251,
+    contentSource: "human"
   },
   {
     "id": "i-f9nZhvM",
@@ -11968,6 +12205,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r4TQwkx/3/MCxs2WZ3ntHqv6wpHWM8K22VkGM8tN4dTvfZCnKXD/S/_HF27307-1167-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-r4TQwkx/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -11998,16 +12236,20 @@ export const galleryData = [
       "western grit",
       "authentic frontier art prints"
     ],
-    "story": "He lowers himself without ceremony, close enough for the horse to feel it.  \nHands steady. Voice quiet. The water moves around their legs, indifferent.\n\nNothing is hurried. Crossing comes later. For now, there's this-weight shifted, breath matched, a small agreement renewed before the next step is taken.\n\nThe river will still be there. Trust has to be earned again, every time.",
+
+    "story": "A lowering without ceremony to the waterline, close enough for the horse to feel it.\nHands steady. Voice quiet. The water moves around their legs, indifferent.\n\nNothing is hurried. Crossing comes later. For now, there's this-weight shifted, breath matched, a small agreement renewed before the next step is taken.\n\nThe river will still be there. Trust has to be earned again, every time.",
     "notes": "The exchange between man and animal defines the emotional center of this work. The lowered posture and steady proximity create a moment that feels earned rather than arranged, echoing traditions where relationship is conveyed through gesture instead of display. The environment remains open and quiet, allowing the interaction to carry weight without interruption. With its softened tonal range and restrained composition, the image reflects a pictorialist influence-favoring atmosphere and implication over explicit narrative.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 253,
+
     "themes": {
       "cowboys-and-horses": 66,
       "whispering-reflection": 98
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-sCp6srZ",
@@ -12021,6 +12263,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sCp6srZ/0/MMxdh7fSGMMBzHVfsdZrJDbDjxJPCFhLH9Qm4fHJj/S/_WHO4245-Edit-1566-1576-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-sCp6srZ/A",
+
     "keywords": [
       "WH04245",
       "1566",
@@ -12041,14 +12284,18 @@ export const galleryData = [
       "frontier relationship",
       "Western storytelling photography"
     ],
-    "story": "He had started walking before the decision was fully made.\n\nThe rifle rides across his shoulders while she follows close behind, gathering her skirt against the uneven ground. Whether they are leaving something behind or heading back to confront it remains unanswered.\n\nSome roads are taken because the past is settled. Others because it is not.",
+
+    "story": "Walking forward before the decision was fully made.\n\nThe rifle rides across his shoulders while she follows close behind, gathering her skirt against the uneven ground. Whether they are leaving something behind or heading back to confront it remains unanswered.\n\nSome roads are taken because the past is settled. Others because it is not.",
     "notes": "The image withholds both destination and cause. Their forward movement suggests purpose, but the space between the figures leaves room for uncertainty about whether they share the same resolve. The title shifts the scene away from travel alone and toward a past that has not yet released them.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "normal",
-    "sortOrder": 254
+    "sortOrder": 254,
+    contentSource: "human"
   },
   {
     "id": "i-cRmVc3S",
@@ -12196,6 +12443,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Zp9288b/0/KHbS9BDgtf5QFNpmFhBMZb3xK3kHhFL8kQVQgn4Xg/S/_WHO0629-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Zp9288b/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -12226,17 +12474,21 @@ export const galleryData = [
       "western grit",
       "outlaw portraits"
     ],
-    "story": "She keeps her gaze down, not in retreat, but in control.  \nSome moments are meant to be held, not offered.\n\nThe air is thick with what hasn't happened yet. Sound dulls. Time stretches just enough to matter. Whatever comes next will come on her terms.\n\nFor now, she waits-steady, unreadable, complete in the pause.",
+
+    "story": "A gaze kept down, and a pause that answers to no one.\nSome moments are meant to be held, not offered.\n\nThe air is thick with what hasn't happened yet. Sound dulls. Time stretches just enough to matter. Whatever comes next will come on her terms.\n\nFor now, she waits-steady, unreadable, complete in the pause.",
     "notes": "Downward gaze becomes the anchor here. Rather than offering expression outwardly, the figure turns inward, creating a quiet boundary between subject and viewer. This restraint aligns with traditions where absence of eye contact deepens engagement, asking the viewer to remain at a respectful distance. The softened edges and tonal compression reflect a pictorialist influence, allowing mood to carry the work. What emerges is not a fixed narrative, but a held interior moment-one defined by control, privacy, and withheld meaning.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 258,
+
     "themes": {
       "frontier-women": 92,
       "hardship-sorrow": 38,
       "sketches-of-legends": 126
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-WMs24Db",
@@ -12250,6 +12502,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/0/K98ZRzXVwqB6JRbQQgFJX8NMKNG9przLQ3G7cXjCb/S/_HF27665-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WMs24Db/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -12281,12 +12534,14 @@ export const galleryData = [
       "outlaw portraits",
       "historic western prints"
     ],
-    "story": "She stops at the water's edge.  \nHe doesn't.\n\nThe horse steps forward, hooves breaking the surface, carrying him into the far side of the moment. She remains where the ground is still dry, watching distance take shape one step at a time.\n\nNothing is argued. Nothing is promised. The separation is quiet, complete, and already happening before either of them turns away.",
+
+    "story": "A stop at the water's edge.\nHe doesn't.\n\nThe horse steps forward, hooves breaking the surface, carrying him into the far side of the moment. She remains where the ground is still dry, watching distance take shape one step at a time.\n\nNothing is argued. Nothing is promised. The separation is quiet, complete, and already happening before either of them turns away.",
     "notes": "Distance becomes the subject here, not as absence but as structure. The separation between figures is deliberate and measured, echoing compositional strategies found in both Western painting and pictorialist photography. The environment does not simply surround the moment-it defines it, stretching space into meaning. What remains is a quiet inevitability, where the act of leaving carries more weight than any explanation could provide.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 259,
+
     "themes": {
       "women-of-the-west": 48,
       "cowboys-and-horses": 67,
@@ -12294,7 +12549,9 @@ export const galleryData = [
       "hardship-sorrow": 41,
       "love-goodbye": 49,
       "na-narrative-color-images": 10
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-DfmB2Hv",
@@ -12308,6 +12565,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DfmB2Hv/0/LJKCLFXTv7FLdqnKqLbSzgSdBRnkqPvTD7w7mr8bP/S/_WHO4413-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-DfmB2Hv/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -12338,15 +12596,19 @@ export const galleryData = [
       "western grit",
       "authentic frontier art prints"
     ],
-    "story": "He doesn't move because there's no need to.\nFrom here, everything that matters is already visible-the slow drift of cattle, the spacing between men, the silence that keeps order intact.\n\nControl isn't shouted from the saddle.\nIt's held quietly, earned through time, position, and the understanding that nothing happens all at once.\n\nHe stays where he is, watching.\nIf something breaks loose, it will start below him.",
+
+    "story": "Stillness, because stillness is what's needed — nothing more.\nFrom here, everything that matters is already visible-the slow drift of cattle, the spacing between men, the silence that keeps order intact.\n\nControl isn't shouted from the saddle.\nIt's held quietly, earned through time, position, and the understanding that nothing happens all at once.\n\nHe stays where he is, watching.\nIf something breaks loose, it will start below him.",
     "notes": "Elevation becomes a narrative device here. The separation between the mounted figure and the activity below introduces a quiet hierarchy, where awareness carries more weight than movement. This approach echoes compositional strategies found in Western painting, where distance and placement define authority without overt gesture. The softened atmosphere and restrained palette reinforce a pictorialist influence, allowing the scene to unfold through structure and silence rather than action.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 260,
+
     "themes": {
       "cowboys-and-horses": 69
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-FVZTmxz",
@@ -12523,6 +12785,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pN58VX3/0/KSzKRpWLkZCnMB6XkgfmFX9P8gMBNNRPpLZ4Vs6D9/S/_WHO8983-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-pN58VX3/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -12554,12 +12817,14 @@ export const galleryData = [
       "authentic frontier art prints",
       "historic western prints"
     ],
-    "story": "He doesn't move because there's no need to.  \nThe wind does enough of that for both of them.\n\nFrom this height, things reveal themselves early-weather, distance, intention. He waits without signaling, without hurry, letting the land say what it's going to say first.\n\nWhatever comes will come uphill. He'll be here when it does.",
+
+    "story": "Stillness, because stillness is what's needed — nothing more.\nThe wind does enough of that for both of them.\n\nFrom this height, things reveal themselves early-weather, distance, intention. He waits without signaling, without hurry, letting the land say what it's going to say first.\n\nWhatever comes will come uphill. He'll be here when it does.",
     "notes": "Watchfulness defines the emotional register here. The figure's stillness carries a sense of readiness that feels earned rather than imposed, echoing traditions where presence itself becomes the narrative. The surrounding environment remains quiet but not passive, reinforcing the idea that awareness is a form of action. With its softened tonal range and atmospheric restraint, the image aligns with pictorialist influence-allowing mood and implication to carry meaning rather than overt gesture.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 264
+    "sortOrder": 264,
+    contentSource: "human"
   },
   {
     "id": "i-66qXms3",
@@ -12573,6 +12838,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-66qXms3/0/Ngd24gJwLt4K6d4WqCPd5RDxzFkrGpLktdXxMKvbT/S/_WHO4978-Edit-Edit-Edit-3-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-66qXms3/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -12603,15 +12869,19 @@ export const galleryData = [
       "western grit",
       "authentic frontier art prints"
     ],
-    "story": "He stopped where the ground stopped rising.\nNot to pose-just to take stock.\n\nBelow him, the trail bent away into things already decided.\nAbove him, sky and distance offered no answers, only range.\nThis was the place you paused before committing-to the descent, to the work, to whatever waited past the next cut of land.\n\nHe didn't look heroic from here.\nHe looked responsible.",
+
+    "story": "Where the ground stopped rising, a pause to take stock of what lies past the next cut of land.\nNot to pose-just to take stock.\n\nBelow him, the trail bent away into things already decided.\nAbove him, sky and distance offered no answers, only range.\nThis was the place you paused before committing-to the descent, to the work, to whatever waited past the next cut of land.\n\nHe didn't look heroic from here.\nHe looked responsible.",
     "notes": "Pause defines the weight of this image. The rider and horse occupy a space where movement has stopped, allowing the surrounding land to take on equal presence. This reflects a Western tradition where elevation signals awareness rather than dominance, and where stillness becomes a form of decision. The softened tonal range and atmospheric treatment introduce a pictorialist quality, inviting the viewer to linger in a moment shaped by quiet responsibility rather than action.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 265,
+
     "themes": {
       "cowboys-and-horses": 83
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-sc9dBkm",
@@ -12678,6 +12948,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/0/NP623Dz7KmMGxwfKHTMDzJjS6tnZ3q4NtKrGrH57h/S/_WHO1631-1200-1201-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-CgTvzgP/A",
+
     "keywords": [
       "fine art Western photography",
       "painterly Western photography",
@@ -12690,18 +12961,22 @@ export const galleryData = [
       "Western themed art",
       "cinematic Western imagery"
     ],
-    "story": "She settles the weight where it belongs.  \nNot rushed. Not lifted. Just held.\n\nThe room has already gone quiet. Whatever comes next will announce itself soon enough. She has learned the difference between noise and intention.\n\nThe rifle waits with her.  \nIt always has.",
+
+    "story": "Weight settled where it belongs, held in a quiet room, while what comes next gathers itself.\nNot rushed. Not lifted. Just held.\n\nThe room has already gone quiet. Whatever comes next will announce itself soon enough. She has learned the difference between noise and intention.\n\nThe rifle waits with her.\nIt always has.",
     "notes": "This piece operates in the space of held intention. The lateral stance and measured aim create a psychological threshold-action deferred, but inevitable. The restrained light and softened edges echo pictorialist traditions, allowing tension to accumulate through atmosphere rather than movement. It is less about the act itself than the discipline required to hold it.",
     "rating": 2,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 267,
+
     "themes": {
       "women-of-the-west": 62,
       "firelight-shadow": 82,
       "frontier-women": 110,
       "law-outlaws": 87
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-DqNGjc2",
@@ -12860,6 +13135,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/0/MLSrwNqsV7hvHzwmCmqqccN2bq7k3wz6RcLM5x2kv/S/_WHO3730-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-GSQ3KDN/A",
+
     "keywords": [
       "American frontier",
       "cinematic stills",
@@ -12877,12 +13153,14 @@ export const galleryData = [
       "Western grit",
       "wild west painterly photography"
     ],
-    "story": "He doesn't rush it.\n\nHeight buys time. Distance buys truth. From here, movement tells on itself before words ever could.\n\nThe horse shifts under him, steady, patient. Dust rolls low across the ground, softening everything that matters least.\n\nWhatever comes next will announce itself long before it arrives. And when it does, he'll already be ready.",
+
+    "story": "No rushing it — let the moment finish what it started.\n\nHeight buys time. Distance buys truth. From here, movement tells on itself before words ever could.\n\nThe horse shifts under him, steady, patient. Dust rolls low across the ground, softening everything that matters least.\n\nWhatever comes next will announce itself long before it arrives. And when it does, he'll already be ready.",
     "notes": "The figure is not caught in action so much as poised above it, using height and distance as instruments of control. That choice gives the image a classical authority, allowing position itself to carry the narrative weight rather than movement or display.\n\nThe horse, dust, and broken stone create a visual structure that feels both monumental and spare, placing the piece in strong conversation with the older grammar of Western art. What makes it resonate beyond homage is its psychological clarity: vigilance here is not theatrical, but lived. The result is an image of earned command, where the frontier is felt less as backdrop than as a test of attention.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 272
+    "sortOrder": 272,
+    contentSource: "human"
   },
   {
     "id": "i-FkPcsBV",
@@ -12896,6 +13174,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/0/KXH4NsPxsXnpRRHMNxwwwvjJXNL74mBdRM5Wc3zXN/S/_HF20929-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-FkPcsBV/A",
+
     "keywords": [
       "American frontier",
       "American frontier portraits",
@@ -12911,17 +13190,21 @@ export const galleryData = [
       "Western themed art",
       "wild west photography"
     ],
-    "story": "She doesn't raise her voice. Doesn't need to.\nOne hand lifts, steady, certain - not a suggestion, not a guess.\n\nHe doesn't ask what she sees. He already knows.\nThe ground has been read. The distance measured. Whatever comes next has already been chosen.\n\nWhen he brings the rifle up, it isn't doubt he's steadying against -\nit's the knowledge that once you commit, there's no unpointing what's been set in motion.",
+
+    "story": "Quiet, and the room quiets with it. Doesn't need to.\nOne hand lifts, steady, certain - not a suggestion, not a guess.\n\nHe doesn't ask what she sees. He already knows.\nThe ground has been read. The distance measured. Whatever comes next has already been chosen.\n\nWhen he brings the rifle up, it isn't doubt he's steadying against -\nit's the knowledge that once you commit, there's no unpointing what's been set in motion.",
     "notes": "What makes this work compelling is its reversal of expectation. Authority does not begin with the rifle, but with perception. The woman's outstretched hand becomes the true compositional anchor, directing not only the eye but the moral center of the scene. In that decision, the image shifts from action picture to character picture.\n\nThe softened atmosphere and controlled palette keep the tension from becoming theatrical, allowing the exchange between the figures to carry the deeper narrative charge. It stands in meaningful dialogue with Western art traditions that value command, clarity, and human structure, while offering a more nuanced vision of leadership, trust, and shared resolve.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 273,
+
     "themes": {
       "cowboys-and-horses": 84,
       "frontier-women": 112,
       "na-narrative-color-images": 35
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-WBDjhsD",
@@ -12975,6 +13258,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-92mpb3g/0/M698q6bRBHJczT5QPJkD8s9W34TMbcR7LzxZxbjVD/S/_HF24324-758-759-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-92mpb3g/A",
+
     "keywords": [
       "American frontier",
       "American frontier portraits",
@@ -12995,17 +13279,21 @@ export const galleryData = [
       "western cowboy wall art for collectors",
       "wild west painterly photography"
     ],
-    "story": "The distance closed faster than anyone expected.\n\nSmoke hung where decisions had already been made-too late now to soften them. The horses knew before the men did, driving forward through dust and noise, hooves striking with the weight of inevitability.\n\nWhatever words might have existed were left behind with the ground they crossed. From here on, there was only motion, consequence, and the understanding that retreat had already been spent.",
+
+    "story": "The distance closing faster than anyone expects. Smoke hanging where decisions get made — too late to soften them now. The horses know before the men do, driving through dust and noise, hooves striking with the weight of inevitability. Whatever words there were belong to the ground already crossed. From here on: motion, consequence, and retreat already spent.",
     "notes": "Here, the true subject is not gunfire but irreversible motion. The scene is caught at the instant when choice has already passed into consequence, and every formal element-horse, smoke, cabin, distance-tightens that feeling. Rather than isolating action as entertainment, the image turns it into a study of pressure, urgency, and committed forward force.\n\nIts emotional power comes from contradiction. The softened haze and restrained tonal treatment draw from painterly traditions associated with memory and atmosphere, yet those same qualities make the violence feel more haunting, not less. The result is a work that lives in the charged space between frontier myth and lived danger, carrying both cinematic force and deeper psychological residue.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 275,
+
     "themes": {
       "cowboys-and-horses": 26,
       "dust-thunder": 20,
       "law-outlaws": 73
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-GPq6m5q",
@@ -13139,6 +13427,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-5PbMGPm/0/ND2pH33FDLS66nxJzxPHt5msvhVpKpt3LRZZ4jjnW/S/_O2H0635-676-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-5PbMGPm/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -13153,12 +13442,14 @@ export const galleryData = [
       "Western fine art",
       "Western themed art"
     ],
-    "story": "Her hand rests there longer than necessary.\nNot to stop him-just long enough to remind him where he stands.\n\nHe doesn't look down.\nDoesn't need to.\nThe weight is already familiar.",
+
+    "story": "A hand that lingers past necessity, steadying without stopping.\nNot to stop him-just long enough to remind him where he stands.\n\nHe doesn't look down.\nDoesn't need to.\nThe weight is already familiar.",
     "notes": "The gesture is small, almost casual, yet it carries the full emotional architecture of the piece-support, familiarity, warning, and steadiness all held in a single point of contact. Rather than building its meaning through action, the work lets human connection become the event.\n\nIts strength also lies in how gently it handles that idea. The softened atmosphere and restrained palette keep the scene from hardening into sentiment, allowing the relationship between the figures to remain open, dignified, and quietly complex. In that way, the piece stands apart within Western fine art, favoring emotional structure and lived intimacy over display.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 279
+    "sortOrder": 279,
+    contentSource: "human"
   },
   {
     "id": "i-BzFqL6f",
@@ -13172,6 +13463,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/2/NJtCwzBGBmmQjG3h3D98pV4gdmf38kdHMSVQjT4Q8/S/_WHO2926-1147-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-BzFqL6f/A",
+
     "keywords": [
       "American frontier",
       "cowboy art",
@@ -13191,12 +13483,14 @@ export const galleryData = [
       "Western frontier",
       "outlaw portraits"
     ],
-    "story": "He doesn't rush the moment.\n\nStone at his back, rifle already set, he watches the gap where the land pinches tight and choices narrow. If something comes through there, it won't get a warning.\n\nOut here, you don't draw first.\nYou draw ready.",
+
+    "story": "The moment is allowed its full measure — no hurrying it along.\n\nStone at his back, rifle already set, he watches the gap where the land pinches tight and choices narrow. If something comes through there, it won't get a warning.\n\nOut here, you don't draw first.\nYou draw ready.",
     "notes": "This piece works by narrowing the world. Rock closes in around the figure, light isolates him, and the rifle turns from prop into decision. Everything unnecessary falls away, leaving a portrait built on compression, alertness, and the unmistakable feeling that space itself has become part of the conflict.\n\nWhat sets it apart is its refusal to overstate. The image does not need motion to feel dangerous. It understands that pressure often lives in stillness-especially when a man is forced to read the edge between cover and exposure. That restraint gives the work a taut psychological presence and places it firmly within the more disciplined, character-driven edge of Western fine art.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 280
+    "sortOrder": 280,
+    contentSource: "human"
   },
   {
     "id": "i-JsN8MfX",
@@ -13497,6 +13791,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rcb3ZfN/0/NVcVdsfGr4PQFcTWs8rGbnC7wTtNtNfwCzD5rgt2B/S/_WHO4681-1583-1586-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-rcb3ZfN/A",
+
     "keywords": [
       "frontier rider",
       "cowboy on horseback",
@@ -13514,14 +13809,18 @@ export const galleryData = [
       "unresolved image story",
       "Western storytelling photography"
     ],
-    "story": "He rides without hurry, but not without purpose.\n\nThe rifle rests across the saddle. The reins remain loose in his hand. Whatever waits ahead has already been considered, weighed, and accepted.\n\nSome men ride toward trouble because they have no choice. Others because leaving it unanswered would cost more.",
+
+    "story": "Unhurried, but not without purpose, toward whatever waits ahead.\n\nThe rifle rests across the saddle. The reins remain loose in his hand. Whatever waits ahead has already been considered, weighed, and accepted.\n\nSome men ride toward trouble because they have no choice. Others because leaving it unanswered would cost more.",
     "notes": "The rider's calm posture gives the image its tension. Nothing in the scene suggests panic, yet the rifle and forward movement imply that his destination matters. The unanswered question is not whether he will continue, but what he has chosen to face.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "hidden",
-    "sortOrder": 288
+    "sortOrder": 288,
+    contentSource: "human"
   },
   {
     "id": "i-KK8RzH7",
@@ -13535,6 +13834,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/0/LT9BSwsVXFkZVfC3sR9wj8638HGNxkjvBjMzwtKGj/S/_HF29362-1380-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KK8RzH7/A",
+
     "keywords": [
       "American frontier",
       "American frontier portraits",
@@ -13554,14 +13854,18 @@ export const galleryData = [
       "western grit",
       "wild west photography"
     ],
-    "story": "She doesn't turn.\nNot because she hasn't heard-  \nbut because whatever lies ahead deserves to be faced without witnesses.\n\nThe wind carries dust low across the ground, softening edges, erasing distance. This is a place where choices aren't announced, only lived with. Waiting is not hesitation here. It's a measure.\n\nShe remains exactly where she is, balanced between what has been and what refuses to leave her alone.",
+
+    "story": "No turning — the moment holds her facing forward.\nNot because she hasn't heard-\nbut because whatever lies ahead deserves to be faced without witnesses.\n\nThe wind carries dust low across the ground, softening edges, erasing distance. This is a place where choices aren't announced, only lived with. Waiting is not hesitation here. It's a measure.\n\nShe remains exactly where she is, balanced between what has been and what refuses to leave her alone.",
     "notes": "What gives this portrait its force is refusal of access. By turning the figure away, the image denies the easy exchange of expression and instead asks the viewer to read posture, distance, and atmosphere. That decision creates a rarer kind of psychological tension-one built not on revelation, but on what remains withheld.\n\nThe softened field of tone is crucial to that effect. Light, dust, and space seem to dissolve the edges of the scene, making the figure feel both present and unreachable at once. Rather than describing a frontier life through incident, the work lets solitude, endurance, and inwardness become the subject. It is a portrait that holds by restraint and keeps opening through silence.",
     "rating": 5,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 289
+    "sortOrder": 289,
+    contentSource: "human"
   },
   {
     "id": "i-3Wh6vt9",
@@ -13690,6 +13994,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-BpW5dbj/0/M2rZb25Cd8nTCLTxv24B8vBbQk5KBv2LZLZcJB78x/S/_HF21238-1015-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-BpW5dbj/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -13707,12 +14012,14 @@ export const galleryData = [
       "western cowboy art",
       "wild west photography"
     ],
-    "story": "He leans in close enough that the rest of the street falls away.\n\nNot a secret exactly-just something that doesn't need witnesses.\nA question asked softly.\nAn answer delayed on purpose.\n\nWhatever passes between them will be carried longer than the afternoon.\nSome things only need a moment to change everything.",
+
+    "story": "A lean-in close enough for the street to fall away, and the afternoon to narrow to two people.\n\nNot a secret exactly-just something that doesn't need witnesses.\nA question asked softly.\nAn answer delayed on purpose.\n\nWhatever passes between them will be carried longer than the afternoon.\nSome things only need a moment to change everything.",
     "notes": "A quiet exchange becomes the center of gravity here. The figures are close enough to suggest confidence, hesitation, and possibility all at once, yet the image never forces the meaning into the open. That restraint is what gives it staying power. It trusts glance, posture, and proximity to carry the emotional load.\n\nThe porch setting matters as more than backdrop. Its worn boards, filtered light, and softened depth create a world that feels inhabited rather than staged, allowing the moment to unfold inside lived texture. The result is a Western image shaped by tenderness, suggestion, and the kind of human pause that can alter the whole direction of a story.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 293
+    "sortOrder": 293,
+    contentSource: "human"
   },
   {
     "id": "i-KBXKqD5",
@@ -13726,6 +14033,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/0/MFhsZFv9KsNTSvmrqwtrSJnkB5gmd56bVRk8ftcR7/S/_WHO1637-1198-1199-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-KBXKqD5/A",
+
     "keywords": [
       "American frontier",
       "authentic frontier art prints",
@@ -13743,12 +14051,14 @@ export const galleryData = [
       "western grit",
       "western themed art"
     ],
-    "story": "She doesn't raise the rifle in a hurry.\nIt comes up the way it always has-steady, familiar, without the need to think it through.\n\nThere's no anger in her face, no flare of warning.\nOnly the quiet certainty that if this moment exists, it exists because something crossed a line it shouldn't have.\n\nThe world narrows to weight, breath, and distance.\nAfter that, there is only consequence.",
+
+    "story": "The rifle rises slow — no hurry in the hands that hold it.\nIt comes up the way it always has-steady, familiar, without the need to think it through.\n\nThere's no anger in her face, no flare of warning.\nOnly the quiet certainty that if this moment exists, it exists because something crossed a line it shouldn't have.\n\nThe world narrows to weight, breath, and distance.\nAfter that, there is only consequence.",
     "notes": "Certainty is what gives this portrait its force. There is no visible panic, no theatrical anger, no need to oversell the moment. The figure's strength comes from steadiness-from the sense that the rifle is being held by someone who understands exactly why it is there and what it means to use it.\n\nThe image also benefits from its restraint. Warm light, dark wall, and the sweep of the red shawl create a composition that feels intimate rather than explosive, keeping the focus on judgment instead of action. That choice makes the work more psychologically resonant. It becomes less a picture of danger than a portrait of capability, where consequence is present long before anything happens.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 294
+    "sortOrder": 294,
+    contentSource: "human"
   },
   {
     "id": "i-sH4qBFd",
@@ -13848,6 +14158,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/0/LZNwz7D5sB865NsvN5jB2Zt3hFJ6H4B3MsL3WhNbN/S/_WHO3344-1399-1400-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8rcVT5Z/A",
+
     "keywords": [
       "American frontier",
       "American frontier portraits",
@@ -13865,14 +14176,18 @@ export const galleryData = [
       "western themed art",
       "wild west photography"
     ],
-    "story": "He stays low, breath held tight against the wood.\nThe barrel is rough, splintered, already scarred by other hands and other moments-none of them gentle.\n\nThe shot comes fast, louder than thought.\nThere's no room here for doubt, only angles, timing, and the thin space between cover and consequence.\n\nWhatever happens next will be decided in that narrow gap-\nbehind the barrel,\nbefore the smoke clears.",
+
+    "story": "Low against the wood, breath held tight, where doubt has no room and only timing counts.\nThe barrel is rough, splintered, already scarred by other hands and other moments-none of them gentle.\n\nThe shot comes fast, louder than thought.\nThere's no room here for doubt, only angles, timing, and the thin space between cover and consequence.\n\nWhatever happens next will be decided in that narrow gap-\nbehind the barrel,\nbefore the smoke clears.",
     "notes": "Close-quarters tension is the true engine of this image. The barrel is not just a prop or bit of scenery; it becomes a hard line between exposure and survival, forcing the figure into a posture that feels immediate, defensive, and fully committed. That compressed arrangement gives the scene its pressure.\n\nThe muzzle flash sharpens that effect without turning the picture into empty spectacle. Because the framing stays tight and the atmosphere remains softened, the violence reads as lived circumstance rather than theater. The result is a Western image built on proximity, timing, and the brutal intelligence of using whatever cover the world gives you.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 297
+    "sortOrder": 297,
+    contentSource: "human"
   },
   {
     "id": "i-tXGTbNp",
@@ -13886,6 +14201,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/0/NKRcSHBkfDW6Wb6FXkfZcjZmdwjGS4HrPCxNTdngx/S/_HF29174-1322-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-tXGTbNp/A",
+
     "keywords": [
       "American frontier",
       "American frontier portraits",
@@ -13901,14 +14217,18 @@ export const galleryData = [
       "Western interior scene",
       "Western themed art"
     ],
-    "story": "She reads it the way one reads something already known.  \nNot for answers-but to feel where the paper has thinned, where the words have been held too long.\n\nLight settles in through the window, catching dust, catching time.  \nOutside, the world keeps moving. Inside, this moment refuses to.\n\nWhatever the letter promised, whatever it took-  \nthis is what remains.",
+
+    "story": "A kept letter, opened once more, its words worn thin by holding.\nNot for answers-but to feel where the paper has thinned, where the words have been held too long.\n\nLight settles in through the window, catching dust, catching time.\nOutside, the world keeps moving. Inside, this moment refuses to.\n\nWhatever the letter promised, whatever it took-\nthis is what remains.",
     "notes": "Memory is doing most of the work in this image. The letter matters, but not as a prop or plot device. It functions more like a vessel for time-something held, reread, and quietly endured. That gives the portrait a rare interior gravity, where emotion is carried through stillness rather than display.\n\nThe window light is essential to the piece's authority. It falls across the face, hands, and paper with a restraint that keeps the scene intimate and psychologically contained, while the surrounding darkness protects what remains private. The result is a Western interior shaped by waiting, thought, and the durable emotional life that so often lives outside the louder myths of the frontier.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 298
+    "sortOrder": 298,
+    contentSource: "human"
   },
   {
     "id": "i-N9XLKc8",
@@ -13922,6 +14242,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/0/LNQJhLvC9vhRNpvpf6kCnDN9vbLMJZ8v86TJrvzJM/S/_HF28395-1371-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-N9XLKc8/A",
+
     "keywords": [
       "American frontier",
       "authentic frontier art prints",
@@ -13938,14 +14259,18 @@ export const galleryData = [
       "western grit",
       "western themed art"
     ],
-    "story": "He doesn't raise his voice.\nDoesn't need to.\n\nThe finger comes up slowly, deliberate, already knowing it will be answered. The room quiets-not because he demands it, but because everyone understands what follows when attention is called and not given freely.\n\nThis isn't accusation. It's selection.\nWhatever happens next, it starts here.",
+
+    "story": "The voice stays level — authority without volume.\nDoesn't need to.\n\nThe finger comes up slowly, deliberate, already knowing it will be answered. The room quiets-not because he demands it, but because everyone understands what follows when attention is called and not given freely.\n\nThis isn't accusation. It's selection.\nWhatever happens next, it starts here.",
     "notes": "Direct address becomes the central force of this portrait. The pointing gesture collapses distance at once, turning the viewer from observer into participant and giving the image an unusually immediate psychological charge. Yet nothing about it feels loud. The authority comes from economy, not excess.\n\nThe interior setting strengthens that effect by keeping the world close and controlled. Tabletop objects, muted light, and the figure's seated posture all suggest a room where decisions are made without hurry and rarely need repeating. The result is a Western portrait shaped by certainty, restraint, and the kind of command that speaks most clearly when almost nothing moves.",
     "rating": 5,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 299
+    "sortOrder": 299,
+    contentSource: "human"
   },
   {
     "id": "i-MZjsFRB",
@@ -13959,6 +14284,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/0/KFDZDQdxqCZGgZ639JLbsc6J52h9rR8MMZCLWx7t8/S/_HF28456-1373-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-MZjsFRB/A",
+
     "keywords": [
       "American frontier",
       "American frontier portraits",
@@ -13974,14 +14300,18 @@ export const galleryData = [
       "Western themed art",
       "Western fine art"
     ],
-    "story": "Some things are held because they're useful.\nOthers because letting them go would change what remains.\n\nShe keeps her hands busy, her posture composed, her thoughts folded inward where no one can reach them. The room carries its own hush, broken only by the soft persistence of time passing unnoticed.\n\nWhatever matters most isn't visible.\nThat's the point.\nWhat she keeps has learned how to stay.",
+
+    "story": "Some things are held because they're useful. Others because letting them go would change what remains. Hands stay busy. Thoughts fold inward, where no one reaches them. The room carries its own hush, broken only by the soft persistence of time passing unnoticed. Whatever matters most isn't visible. That's the point. What she keeps has learned how to stay.",
     "notes": "Stillness is carrying almost everything here. The figure is seated, composed, and self-contained, but the image never feels passive. Instead, it gathers force through what remains private-the lowered gaze, the held object, the hush of the room, the sense that thought itself has become the real event.\n\nThe lighting is especially effective in how it separates inner life from outer world. Lamplight and shadow do not simply model the form; they create an emotional architecture around her, allowing the scene to feel both intimate and withheld. The result is a Western interior that values preservation over declaration, and mood over spectacle, while still holding real psychological weight.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 300
+    "sortOrder": 300,
+    contentSource: "human"
   },
   {
     "id": "i-hcXLMwK",
@@ -13995,6 +14325,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/0/MHXfz67QbzS7B8FMLHQvxTBbmGBNpKtpxpgF6wSx7/S/_HF28482-1374-1375-1378-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-hcXLMwK/A",
+
     "keywords": [
       "American frontier",
       "American frontier portraits",
@@ -14012,14 +14343,18 @@ export const galleryData = [
       "western fine art",
       "western themed art"
     ],
-    "story": "He's learned not to name it.\nNaming gives it weight, and weight makes impatience.\n\nInstead, he lets the moment sit where it is-hands still, eyes steady, listening for something that hasn't decided whether it exists yet. Out here, answers arrive when they're ready, not when they're wanted.\n\nSo he waits.\nNot for a sign.\nJust for the next true thing to happen.",
+
+    "story": "Some things go unnamed — the naming would only shrink them.\nNaming gives it weight, and weight makes impatience.\n\nInstead, he lets the moment sit where it is-hands still, eyes steady, listening for something that hasn't decided whether it exists yet. Out here, answers arrive when they're ready, not when they're wanted.\n\nSo he waits.\nNot for a sign.\nJust for the next true thing to happen.",
     "notes": "Anticipation is doing the real work here. The figure is seated and outwardly still, yet nothing about the image feels settled. His turned gaze, the cup held low in the hand, and the close heat of the room suggest a man listening for something just beyond the visible world of the frame. That tension between pause and expectation gives the portrait its hold.\n\nThe warm tonal field deepens the effect by making the scene feel inhabited rather than staged. Firelit color, shadow, and softened edges wrap the figure in a mood that is part vigilance, part reflection. The result is a Western interior shaped by patience, ambiguity, and the kind of quiet readiness that often matters more than action.",
     "rating": 5,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 301
+    "sortOrder": 301,
+    contentSource: "human"
   },
   {
     "id": "i-jqZzRpS",
@@ -14182,6 +14517,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-459nCWS/0/M7cSJsZtmCjgRqpbvLhsbTmrmFwZ47QTJRnjS4Qww/S/_HF22003-1040-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-25/i-459nCWS/A",
+
     "keywords": [
       "American frontier",
       "American frontier portraits",
@@ -14202,12 +14538,14 @@ export const galleryData = [
       "western themed art",
       "wild west painterly photography"
     ],
-    "story": "He doesn't pull her closer.\nHe places himself where the rest of the world stops.\n\nHer hand rests against him, not asking, not reaching-just confirming what's already understood. Whatever noise or trouble exists beyond this moment is held at bay by presence alone.\n\nFor now, that's enough. For now, she's safe.",
+
+    "story": "The space between them stays as it is — close enough, and no closer.\nHe places himself where the rest of the world stops.\n\nHer hand rests against him, not asking, not reaching-just confirming what's already understood. Whatever noise or trouble exists beyond this moment is held at bay by presence alone.\n\nFor now, that's enough. For now, she's safe.",
     "notes": "Protection is the emotional architecture of this image. The figures are arranged not as spectacle or romance-first theater, but as a closed human structure-one body creating shelter, the other trusting it. That gives the work a grounded tenderness that feels earned rather than sentimental.\n\nThe softened atmosphere strengthens that reading by keeping the scene intimate and psychologically contained. Light, posture, and proximity do nearly all the narrative work, allowing the image to speak through reassurance rather than action. What remains is a Western portrait shaped by trust, nearness, and the quiet power of being held where the world cannot quite get in.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 306
+    "sortOrder": 306,
+    contentSource: "human"
   },
   {
     "id": "i-KJsmT8q",
@@ -14258,6 +14596,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wHspqpJ/0/MkCvTDhHKzf6gpVFQbf2brcWCQGqZ4GP6FhdPxMwW/S/_WHO6737-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wHspqpJ/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -14278,12 +14617,14 @@ export const galleryData = [
       "western fine art",
       "western themed art"
     ],
-    "story": "She does not brace herself. She leans because she knows the weight will be held. The horse does not shift, does not lower its head in response-nothing needs to be negotiated here. This is not rest taken from exhaustion, but rest allowed by trust. For a moment, the world asks nothing of her, and she accepts the offer without looking up.",
+
+    "story": "The horse stands steady under a lean it does not need to answer. She leans because she knows the weight will be held. The horse does not shift, does not lower its head in response-nothing needs to be negotiated here. This is not rest taken from exhaustion, but rest allowed by trust. For a moment, the world asks nothing of her, and she accepts the offer without looking up.",
     "notes": "Quiet trust is the real center of this image. The closeness between girl and horse is not presented as sentiment or symbol first, but as something fully inhabited and unquestioned. That makes the portrait feel intimate in a deeper way-less about display, more about the kind of calm that only appears when there is nothing left to prove between two beings.\n\nThe soft tonal field strengthens that feeling by dissolving unnecessary detail and holding attention on touch, breath, and nearness. Rather than building narrative through action, the image allows stillness itself to carry emotional weight. The result is a Western portrait shaped by gentleness, reliance, and the rare permission to rest inside another presence.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 308
+    "sortOrder": 308,
+    contentSource: "human"
   },
   {
     "id": "i-6XC3VfC",
@@ -14338,6 +14679,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fjhdhf2/0/LjwRpNLLPJ69nrtDG8mCvFwvScdvDzdtThB5JZr38/S/_HF27627-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-Fjhdhf2/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -14359,14 +14701,18 @@ export const galleryData = [
       "western canon",
       "western themed art"
     ],
-    "story": "He does not raise it for spectacle. The cloth lifts because it must, catching wind where history once asked men to stand still. There is no crowd here-only posture, grip, and the knowledge of what the symbol requires. The weight is not in the fabric. It is in what must be carried once it is seen.",
+
+    "story": "The hour asks for stillness, and the standing is the answer. The cloth lifts because it must, catching wind where history once asked men to stand still. There is no crowd here-only posture, grip, and the knowledge of what the symbol requires. The weight is not in the fabric. It is in what must be carried once it is seen.",
     "notes": "Symbol and figure are held in careful balance here. The flag is undeniably central, yet the image refuses to let it become mere spectacle. Instead, the man's grip, posture, and measured presence keep the meaning grounded in burden rather than flourish, which gives the portrait its seriousness.\n\nThat restraint is what makes the work resonate. The softened sky, muted handling, and upright vertical composition all allow the image to speak in a quieter register, where patriotism feels carried rather than proclaimed. The result is a Western portrait shaped by duty, endurance, and the visible weight of what one agrees to stand beneath.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "show",
-    "sortOrder": 310
+    "sortOrder": 310,
+    contentSource: "human"
   },
   {
     "id": "i-MFksKj9",
@@ -14532,6 +14878,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/0/KjMhfwJBt7j5LWQ7MsJjnK3JDxw4nRRXqFFtfWb2x/S/_HF21393-1250-1251-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-JkFT62C/A",
+
     "keywords": [
       "western fine art",
       "American frontier",
@@ -14555,12 +14902,14 @@ export const galleryData = [
       "collectible western print",
       "museum quality western art"
     ],
-    "story": "They'd weathered hard nights before - cold ones, long ones, nights when the wind clawed at the walls and sleep came only in pieces. But this one felt different. He shivered against her, breath thin, searching for warmth... or strength... or simply her touch.\n\nShe held him closer, steadying the tremor in his hands with her own. Whatever storm waited outside, whatever fear whispered in the corners of the room, she'd keep him anchored through it. Shoulder to shoulder. Breath to breath. Maybe morning would bring answers. Maybe it wouldn't. But for now, wrapped in shared resolve and the soft flicker of lantern light, surviving the long night was all that mattered.",
+
+    "story": "They've weathered hard nights before - cold ones, long ones, nights when the wind claws at the walls and sleep comes only in pieces. But this one feels different. He shivers against her, breath thin, searching for warmth... or strength... or simply her touch. She holds him closer, steadying the tremor in his hands with her own. Whatever storm waits outside, whatever fear whispers in the corners of the room, she'll keep him anchored through it. Shoulder to shoulder. Breath to breath. Maybe morning will bring answers. Maybe it wouldn't. But for now, wrapped in shared resolve and the soft flicker of lantern light, surviving the long night is all that matters.",
     "notes": "This image shifts the emotional center toward endurance and quiet devotion. The lantern's glow becomes the heart of the composition, casting gentle warmth across weathered boards and soft fabric folds while emphasizing the shelter these two characters create for each other. The palette leans into earth tones and softened edges, recalling classical domestic studies but grounded firmly in frontier realism.\n\nRather than framing the moment as an ending, the piece invites interpretation: Are they battling fever, storm, exhaustion - or simply the cold bite of a winter night? The ambiguity heightens the intimacy, allowing each viewer to bring their own story into the scene. The painterly textures and cinematic lighting elevate the work into a contemplative study of resilience, companionship, and the small lights that carry us through the darkest hours.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 315,
+
     "themes": {
       "women-of-the-west": 59,
       "firelight-shadow": 79,
@@ -14568,7 +14917,9 @@ export const galleryData = [
       "hardship-sorrow": 47,
       "love-goodbye": 56,
       "whispering-reflection": 106
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-z4M6gCv",
@@ -14582,6 +14933,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/0/MvhtHX4CtBCrq6RMPGzhvKHWVHPpgt8N9FLKbgQrL/S/_HF28750-1379-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-z4M6gCv/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -14595,14 +14947,18 @@ export const galleryData = [
       "western genre art",
       "western themed art"
     ],
-    "story": "He leans into the moment like it belongs to him.\nThe grin comes easy-too easy-earned somewhere else, earlier, when laughter cost less than consequence.\n\nShe doesn't answer right away.\nShe already knows the joke.\nWhat it costs.\nWhat it leaves behind once the sound fades.",
+
+    "story": "A lean into the moment like it belongs to him, uninvited and unhurried.\nThe grin comes easy-too easy-earned somewhere else, earlier, when laughter cost less than consequence.\n\nShe doesn't answer right away.\nShe already knows the joke.\nWhat it costs.\nWhat it leaves behind once the sound fades.",
     "notes": "Tension is carried here through relationship rather than event. The image does not need overt conflict because the emotional divide is already visible in the exchange of expressions-one figure playing into ease, the other holding back from it. That imbalance gives the work its narrative charge and makes the scene feel psychologically specific rather than broadly anecdotal.\n\nThe interior setting strengthens that reading by keeping everything close and inescapable. Warm light, wood walls, and compressed space create a domestic atmosphere that should feel safe, yet the image quietly resists that comfort. What remains is a Western interior shaped by familiarity, uneven emotional labor, and the subtle truths that surface when one person treats a moment lightly and the other cannot.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 316
+    "sortOrder": 316,
+    contentSource: "human"
   },
   {
     "id": "i-79P6kHT",
@@ -14663,6 +15019,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2024/i-Tcg3LZS/2/LTMFPfNqZL2xZNxLJfgT4vQjTp8s5RwTfgQtGP4SM/S/_O2H2281-Edit-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-Tcg3LZS/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -14694,19 +15051,25 @@ export const galleryData = [
       "western cowboy wall art for collectors",
       "western painterly photography"
     ],
-    "story": "He works by habit now.\nThe hour stopped mattering a long time ago.\n\nShelves sit heavy with inventory and memory, each bottle returned to its place like a confession never spoken aloud. Light cuts in from the side, just enough to remind him the world outside is still moving-even if he isn't. Whatever brought him here didn't leave when the door closed.\n\nSome debts don't wait for morning.\nThey keep their own hours.",
+
+    "story": "Habit now, not hours — work that goes on while the door stays shut behind him.\nThe hour stopped mattering a long time ago.\n\nShelves sit heavy with inventory and memory, each bottle returned to its place like a confession never spoken aloud. Light cuts in from the side, just enough to remind him the world outside is still moving-even if he isn't. Whatever brought him here didn't leave when the door closed.\n\nSome debts don't wait for morning.\nThey keep their own hours.",
     "notes": "This piece turns interior quiet into narrative weight. The angled light, deep shadow, and solitary posture create a mood of labor, fatigue, and private reckoning without forcing the scene into overt drama.\n\nIts strength lies in restraint. The pictorialist softness and compressed tonal range allow atmosphere to carry meaning, placing the work in a Western tradition that values implication, endurance, and the human cost beneath daily routine.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "show",
     "sortOrder": 318,
+
     "themes": {
       "aces-smoke-whiskey": 46,
       "firelight-shadow": 87,
       "whispering-reflection": 113
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-m2dqhjT",
@@ -14720,6 +15083,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/0/L7GKk7FDBNJ3KNq8cnB5xmfwFFC527JhtBT2dcnkw/S/_HF25639-1356-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-m2dqhjT/A",
+
     "keywords": [
       "American frontier",
       "cinematic Western imagery",
@@ -14734,14 +15098,18 @@ export const galleryData = [
       "western fine art",
       "western themed art"
     ],
-    "story": "She lifts the lantern not to guide others, but to confirm what she already suspects.\nThe darkness does not retreat-it listens.\n\nSomewhere beyond the circle of light, choices are waiting.\nShe stands still long enough to let them reveal themselves.",
+
+    "story": "A lantern lifted to confirm what she already suspects, held against a dark that keeps its choices waiting.\nThe darkness does not retreat-it listens.\n\nSomewhere beyond the circle of light, choices are waiting.\nShe stands still long enough to let them reveal themselves.",
     "notes": "Illumination is treated here as a moral act rather than a practical one. The lantern does not simply reveal the figure; it establishes a zone of judgment, a small circle in which uncertainty must briefly take shape. That gives the image its tension. She is not wandering through darkness, but confronting it with a steadiness that feels chosen and earned.\n\nThe composition strengthens that reading by isolating her within blue vapor and near-total shadow. The raised arm, the still body, and the halo of light create an image built on presence rather than event. What remains is a Western portrait shaped by vigilance, solitude, and the quiet burden of being the one who must hold the light when no one else will.",
     "rating": 3,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "show",
-    "sortOrder": 319
+    "sortOrder": 319,
+    contentSource: "human"
   },
   {
     "id": "i-7VSrLtw",
@@ -14755,6 +15123,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/0/KjGKsbPXNrwhRmLCXTML9WRVPpXNW2P2w9kSS5BCf/S/_HF28681-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7VSrLtw/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -14775,12 +15144,14 @@ export const galleryData = [
       "wild west photography",
       "river crossing"
     ],
-    "story": "He doesn't stop to test the depth.\n\nThe horse knows the footing. The rider trusts that knowledge more than memory. Water parts, closes, and leaves nothing behind-no mark worth keeping, no reason to look back.\n\nCrossing is just another motion that has learned to be quiet.",
+
+    "story": "No stopping to test the depth — the crossing is taken on trust.\n\nThe horse knows the footing. The rider trusts that knowledge more than memory. Water parts, closes, and leaves nothing behind-no mark worth keeping, no reason to look back.\n\nCrossing is just another motion that has learned to be quiet.",
     "notes": "What holds this image together is its lack of urgency. The crossing is not treated as ordeal or climax, but as something already absorbed into the rider's way of moving through the world. That decision gives the work a grounded authority, allowing water, horse, and posture to speak in the same measured language.\n\nEqually compelling is the contrast between vulnerability and calm. Water opens the figure to exposure, yet nothing in the scene feels anxious or performative. The picture trusts repetition, balance, and endurance more than drama, which gives it a quieter and more lasting kind of strength.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 320
+    "sortOrder": 320,
+    contentSource: "human"
   },
   {
     "id": "i-R7jg62J",
@@ -14829,6 +15200,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-7hD9CCh/3/M4QtNPq297SZ2BDkg6TXF3dKP9gm5SJmszVM47hpx/S/_WHO1676-887-888-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-7hD9CCh/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -14845,15 +15217,19 @@ export const galleryData = [
       "fine art Western photography",
       "pictorialist tradition"
     ],
-    "story": "He moves slowly, not to avoid the water,  \nbut to acknowledge it.\n\nNothing is taken without notice.  \nThe river sets the pace, and she follows.\n\nThis is not a pause.  \nIt's a conversation.",
+
+    "story": "Slow at the water's edge, giving the river its due.\n\nNothing is taken without notice.\nThe river sets the pace, and she follows.\n\nThis is not a pause.\nIt's a conversation.",
     "notes": "This image is grounded in observation rather than interpretation, allowing gesture and setting to carry meaning without intrusion. The figure's posture and placement emphasize attentiveness and continuity, aligning the work with pictorialist traditions that privilege presence over explanation.\n\nThe painterly surface treatment softens detail while preserving intent, encouraging the viewer to slow down and engage with the moment on its own terms. By centering respect, restraint, and relationship to place, the work appeals to collectors drawn to fine art that honors lived tradition through quiet, enduring imagery.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 322,
+
     "themes": {
       "na-narrative-color-images": 0
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-wWNfZsT",
@@ -14902,6 +15278,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WXNSQzk/0/MDsr8cx8d75VzppjZpjdmMsWfRChNnHvrPjhhz7Nr/S/_WHO0204-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-WXNSQzk/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -14917,15 +15294,19 @@ export const galleryData = [
       "Western Native American gallery",
       "heritage and tradition in art"
     ],
-    "story": "She doesn't know where they're going.\nOnly that the grip doesn't loosen.\n\nThe ground changes. Light shifts.\nWhat matters stays close.\n\nSome lessons arrive before words.\nThey are learned by walking.",
+
+    "story": "The destination is unknown — the going is the thing.\nOnly that the grip doesn't loosen.\n\nThe ground changes. Light shifts.\nWhat matters stays close.\n\nSome lessons arrive before words.\nThey are learned by walking.",
     "notes": "The figures are arranged to emphasize connection and transition, with negative space allowing movement to register as meaning rather than action.\n\nMuted tones and softened edges resist sentimentality, situating the work within a lineage of Western and Indigenous art that values continuity, instruction, and lived inheritance. The photograph rewards sustained viewing, revealing its depth through posture, spacing, and the quiet authority of shared direction.",
     "rating": 3,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 324,
+
     "themes": {
       "na-narrative-color-images": 15
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-QJXw3Sj",
@@ -15011,6 +15392,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-h679dhn/3/K3HTWCKcTZPVc94wzJJbr5LJpCkvnHWZtDFrB5jh3/S/_WHO0618-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-h679dhn/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -15022,15 +15404,19 @@ export const galleryData = [
       "Native American tradition",
       "spirit of the West"
     ],
-    "story": "She kneels where the water slows,  \nwhere the surface listens.\n\nNothing is spoken.  \nWhat matters has already been learned by the hands.\n\nThe river takes it without comment,  \nand keeps moving.",
+
+    "story": "Where the water slows and the surface listens, a kneel in the quiet the hands already know.\n\nNothing is spoken.\nWhat matters has already been learned by the hands.\n\nThe river takes it without comment,\nand keeps moving.",
     "notes": "The softened tonal range and painterly surface echo pictorialist traditions while maintaining a contemporary sensitivity to presence and dignity. The image functions less as a depiction of ritual and more as an acknowledgment of continuity - an unbroken line of knowledge carried through everyday acts. It rewards slow looking, revealing its depth through quiet attention rather than narrative instruction.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 327,
+
     "themes": {
       "na-narrative-color-images": 13
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-Gk8bBLn",
@@ -15294,6 +15680,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-zZJbbHG/0/MD7RbqMBSTV2FNNpVxDdTSKwm5wFHggmwx35RpvFn/S/_WHO0338-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-zZJbbHG/A",
+
     "keywords": [
       "Native American art prints",
       "Native American photography",
@@ -15304,15 +15691,19 @@ export const galleryData = [
       "Native American tradition",
       "spirit of the West"
     ],
-    "story": "She stands still, not waiting-listening.  \nTo the weight of cloth, to the quiet between breaths, to the things that stay after words are gone.\n\nThe wind lifts the edge of her garment but doesn't take it.  \nSome things are meant to be held, not followed.\n\nWhatever comes next will arrive on its own time.  \nFor now, she remains-gathered, present, unyielding.",
+
+    "story": "Stillness, not waiting — listening.\nTo the weight of cloth, to the quiet between breaths, to the things that stay after words are gone.\n\nThe wind lifts the edge of her garment but doesn't take it.\nSome things are meant to be held, not followed.\n\nWhatever comes next will arrive on its own time.\nFor now, she remains-gathered, present, unyielding.",
     "notes": "Stillness carries the weight here, with the figure held in a contained, inward gesture rather than outward action. The act of drawing the blanket close becomes the central anchor, allowing presence to take precedence over narrative.\n\nThe image avoids overt symbolism, instead relying on posture and restraint to hold attention. Its strength comes from what is withheld-inviting the viewer to sit with the quiet rather than resolve it.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 335,
+
     "themes": {
       "na-narrative-color-images": 20
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-6NQ6hQZ",
@@ -15432,6 +15823,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-whbHxkn/1/MLmmgv6Z3gft9h4T9J2QsfTRNKmfM9fMFTdSJsGtG/S/_WHO2615-1181-1182-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-whbHxkn/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -15446,15 +15838,19 @@ export const galleryData = [
       "Native American tradition",
       "Native American wall art"
     ],
-    "story": "She moves without hurry, because there is no reason to rush what has already lasted this long.\n\nThe water waits. The moment waits.\nEverything that matters has been done this way before.\n\nWhatever comes next is not hers to decide-only to carry forward without changing it.",
+
+    "story": "Without hurry, carrying forward what has lasted this long, unchanged.\n\nThe water waits. The moment waits.\nEverything that matters has been done this way before.\n\nWhatever comes next is not hers to decide-only to carry forward without changing it.",
     "notes": "There is a quiet discipline at work in this image, where meaning is carried through stillness rather than gesture. The composition favors profile and restraint, allowing posture and silhouette to speak without interruption, while the softened environment removes anything that might compete with that presence. It draws from a lineage of pictorial sensitivity-where dignity is revealed gradually, not announced. What holds the piece together is its sense of continuity: a moment that feels less observed than inherited, shaped by repetition, care, and time.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 339,
+
     "themes": {
       "na-narrative-color-images": 31
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-z4mTWBb",
@@ -15647,6 +16043,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NHGdJwSS8NnXzdpvpdqnB6TjvCk5cWhFV2sT6DRFk/S/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -15658,15 +16055,19 @@ export const galleryData = [
       "spirit of the West",
       "Western Native American gallery"
     ],
-    "story": "He does not look down.\nHe looks past-past the ridge, past the hour, past the noise that never quite reaches this place.\n\nThe horse shifts once, then settles.\nWind lifts the feathers, tests the silence.\nNothing announces itself.\nThat's how it has always been.",
+
+    "story": "Above the ridge, the hour thins out and the land keeps its own counsel.\nHe looks past-past the ridge, past the hour, past the noise that never quite reaches this place.\n\nThe horse shifts once, then settles.\nWind lifts the feathers, tests the silence.\nNothing announces itself.\nThat's how it has always been.",
     "notes": "This piece draws its strength from restraint rather than drama. The upright staff, calm posture, and elevated gaze establish quiet authority-an image that feels inherited rather than staged. The composition echoes the lineage of classical Western portraiture while rejecting romantic excess, allowing presence and posture to carry the narrative. It is a work that holds space rather than fills it, rewarding long looking and lived interpretation.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 345,
+
     "themes": {
       "na-narrative-color-images": 19
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-4Hz6D7k",
@@ -15680,6 +16081,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-4Hz6D7k/0/LnpTmc5XFghrqhmsKHCF2PFPBnxSBhKhZFg2xkwbF/S/_WHO3989-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-4Hz6D7k/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -15690,15 +16092,19 @@ export const galleryData = [
       "Native American heritage art",
       "Native American tradition"
     ],
-    "story": "He does not look back.\n\nWhat came before is already moving through him -\nhands, breath, posture -\nthings learned long before words were used to explain them.\n\nWhat remains is not memory,\nbut continuation.",
+
+    "story": "The trail behind him needs no backward glance.\n\nWhat came before is already moving through him -\nhands, breath, posture -\nthings learned long before words were used to explain them.\n\nWhat remains is not memory,\nbut continuation.",
     "notes": "This work draws from pictorialist restraint rather than dramatic gesture, allowing posture and light to carry meaning. The composition echoes the quiet authority found in early ethnographic portraiture while rejecting its distance, replacing it with presence and continuity. The painterly surface softens time, positioning the figure not as a subject of history, but as a living extension of it - an image that endures through understatement.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 346,
+
     "themes": {
       "na-narrative-color-images": 9
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-qLzRgbS",
@@ -15712,6 +16118,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-qLzRgbS/0/Lg5bGG5Q2SmdLsSnJtszBZW5s9BgPMTdbKHPGPZKx/S/_WHO6157-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Native-Americans/n-3qSRW8/i-qLzRgbS/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -15723,15 +16130,19 @@ export const galleryData = [
       "spirit of the West",
       "painterly Native American images"
     ],
-    "story": "He stands against the dust of ages, regalia shifting in the wind, gaze fixed on the line where memory meets horizon. The old stories, their legacy, alive in every feather and every wrinkle-each one earned, each one carried forward. The journey forward is written by those who remember.",
+
+    "story": "Dust of ages moves through the wind, and the line where memory meets horizon holds steady. The old stories, their legacy, alive in every feather and every wrinkle-each one earned, each one carried forward. The journey forward is written by those who remember.",
     "notes": "Time becomes the quiet subject here, carried through expression, posture, and surface detail rather than action. The seated position introduces a grounded stillness, while the outward gaze extends the image beyond the frame. Light and atmosphere soften the scene without removing its clarity, allowing age, experience, and presence to emerge gradually. It is a work that invites longer viewing, where meaning accumulates rather than declares itself.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 347,
+
     "themes": {
       "na-narrative-color-images": 30
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-FTCst2K",
@@ -15820,6 +16231,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/0/KkDTKbgnDHfR5q8F5ttdZWjJs2JN8qT7X7cn4n5Mx/S/_HF29518-Edit-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WfRwfpM/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American portraits",
@@ -15836,15 +16248,19 @@ export const galleryData = [
       "fine art Western photography",
       "pictorialist tradition"
     ],
-    "story": "She doesn't look back to remember.  \nShe looks forward to continue.\n\nThe wind moves past her without instruction.  \nThe land already knows who she is.\n\nWhat she carries isn't history alone-  \nit's direction.",
+
+    "story": "Dawn comes up over ground that asks for no remembering.\nShe looks forward to continue.\n\nThe wind moves past her without instruction.\nThe land already knows who she is.\n\nWhat she carries isn't history alone-\nit's direction.",
     "notes": "This image centers presence over symbolism, allowing posture, light, and stillness to communicate continuity without narration. The figure's stance and forward gaze align with pictorialist approaches that privilege lived identity and quiet authority rather than historical reenactment.\n\nThe painterly surface softens edges while preserving intent, inviting the viewer to slow down and engage with the subject on her own terms. By emphasizing continuity and direction, the work appeals to collectors drawn to fine art that honors Indigenous presence through restraint, dignity, and enduring forward motion.",
     "rating": 5,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 350,
+
     "themes": {
       "na-narrative-color-images": 16
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-bvn9Rmz",
@@ -15897,7 +16313,7 @@ export const galleryData = [
       "Native American art prints; Native American fine art photography; Native American photography; Native American Portraits; Indigenous experience; Native American heritage art; Native American tradition; spirit of the West"
     ],
 
-    "story": "He has stood at this threshold longer than the path remembers itself.\nNot watching for arrivals-watching for what is carried forward.\n\nTime moves around him, not through him.\nWhat matters has already been decided.",
+    "story": "The threshold has outlasted every path that led to it, and still the crossing waits.\nNot watching for arrivals-watching for what is carried forward.\n\nTime moves around him, not through him.\nWhat matters has already been decided.",
     "notes": "This portrait draws its strength from restraint. The subdued palette, textured background, and controlled light place emphasis on the subject's expression rather than costume or setting. Painterly surface treatment and classical portrait structure align the work with historical Western and ethnographic portrait traditions while maintaining contemporary sensitivity. The result is a piece that rewards prolonged viewing, inviting collectors to engage with the quiet authority carried by age, memory, and lived experience.",
     "rating": 5,
     "galleries": [],
@@ -15908,7 +16324,7 @@ export const galleryData = [
       "na-narrative-color-images": 56
     },
 
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-thpSjMG",
@@ -15922,6 +16338,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/0/KNcPn7HHQvFHsmmS2pmfZBZkxrPxkpSTJvL6ppQ3D/S/_HF29518-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-thpSjMG/A",
+
     "keywords": [
       "Native American fine art photography",
       "Native American photography",
@@ -15937,15 +16354,19 @@ export const galleryData = [
       "Western Native American gallery",
       "heritage and tradition in art"
     ],
-    "story": "She doesn't claim the land.\nShe answers it.\n\nWind moves first.\nThen stillness settles where her feet are set.\n\nNothing asks her to prove herself.\nStanding is enough.",
+
+    "story": "The land waits to be answered, not claimed.\nShe answers it.\n\nWind moves first.\nThen stillness settles where her feet are set.\n\nNothing asks her to prove herself.\nStanding is enough.",
     "notes": "This image aligns with pictorial traditions that privilege posture and spatial relationship over narrative action. The upright stance and open horizon establish authority through balance rather than dominance, allowing presence to register without symbolic reinforcement.\n\nSoft tonal transitions and restrained contrast resist dramatization, situating the figure within a lineage of Western and Indigenous portraiture that values endurance, continuity, and lived identity. The work invites prolonged viewing, rewarding attention to bearing, proportion, and quiet resolve.",
     "rating": 4,
     "galleries": [],
     "visibility": "show",
     "sortOrder": 353,
+
     "themes": {
       "na-narrative-color-images": 48
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-rRdrQBg",
@@ -16239,7 +16660,7 @@ export const galleryData = [
       "western fine art photography; narrative western art; western fine art; frontier life; western wall art; rifleman; point of view; western photography prints; fine art western photography; historic western imagery"
     ],
 
-    "story": "He's not angry. That's the part nobody believes afterward.\n\nA man doesn't grin down a barrel unless he's already done the arithmetic and likes the sum.\n\nYour move. Take your time. He's enjoying his.",
+    "story": "The room settles, and what fills it isn't anger at all. That's the part nobody believes afterward.\n\nA man doesn't grin down a barrel unless he's already done the arithmetic and likes the sum.\n\nYour move. Take your time. He's enjoying his.",
     "notes": "The barrel's foreshortened diagonal runs from the lower frame directly at the viewer, collapsing the distance a Western portrait usually keeps — the composition's aggression is structural, not theatrical. Against it, the grin: Wayne Heim lights the face openly under a bright sky rather than shadowing it into menace, so the threat reads as sport. The hat brim's long horizontal steadies the diagonal, and the shallow depth throws the muzzle soft while the eye stays tack-sharp — the picture aims its focus the way its subject aims the rifle.",
     "rating": 5,
 
@@ -16249,7 +16670,7 @@ export const galleryData = [
 
     "visibility": "normal",
     "sortOrder": 361,
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-SzHJVxh",
@@ -16263,6 +16684,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-SzHJVxh/1/Msn3QWmQrBCkD8h87st6xvhPDddjDs8Vk8JqLg2Kf/S/_HF23515-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-SzHJVxh/A",
+
     "keywords": [
       "cowboys resting",
       "Western landscape art",
@@ -16281,12 +16703,14 @@ export const galleryData = [
       "historical fine art photography",
       "Western storytelling photography"
     ],
-    "story": "For the moment, the trail could wait.\n\nTwo men settled beneath the pines while the horses stood watch farther up the slope. No one spoke of how far they had come or what waited beyond the ridge. Some things were better left to the quiet.\n\nThe West demanded motion. It also taught the value of knowing when to stop.",
+
+    "story": "For the moment, the trail can wait. Two men settle beneath the pines while the horses stand watch farther up the slope. No one speaks of how far they have come or what waits beyond the ridge. Some things are better left to the quiet. The West demands motion. It also teaches the value of knowing when to stop.",
     "notes": "The figures are separated across the hillside, creating layers of activity and rest within the same scene. The distant horses suggest that the journey is not over, while the seated men give the image its sense of temporary refuge-a quiet interval before the trail calls them forward again.",
     "rating": 0,
     "galleries": [],
     "visibility": "show",
-    "sortOrder": 362
+    "sortOrder": 362,
+    contentSource: "human"
   },
   {
     "id": "i-zt2btJ7",
@@ -16305,7 +16729,7 @@ export const galleryData = [
       "Native American fine art photography; Native American portraits; Indigenous experience; Indigenous heritage art; Native American tradition; spirit of the American West; painterly Native American images; Native American art prints; Western Native American gallery; heritage and tradition in art; fine art Western photography"
     ],
 
-    "story": "He stands where the land exhales.\n\nNot performing. Not waiting.\nSimply present-breath rising and falling in time with the earth beneath his feet.\n\nNothing is announced.\nWhat matters has already been carried forward.",
+    "story": "Stillness settles where the ground breathes out.\n\nNot performing. Not waiting.\nSimply present-breath rising and falling in time with the earth beneath his feet.\n\nNothing is announced.\nWhat matters has already been carried forward.",
     "notes": "This piece leans fully into stillness as structure. The figure is not positioned as spectacle, but as presence-held within a softened field that removes distraction and compresses time. The near-monochrome palette and controlled texture echo pictorialist traditions, where atmosphere carries as much weight as form.\n\nThe vertical composition reinforces dignity and continuity, allowing the posture and regalia to read clearly without exaggeration. Rather than directing the viewer, the image holds space-inviting a slower engagement where identity is felt through endurance and quiet authority rather than action.",
     "rating": 5,
     "galleries": [],
@@ -16316,7 +16740,7 @@ export const galleryData = [
       "na-narrative-color-images": 53
     },
 
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-4Wsxmqv",
@@ -16517,7 +16941,7 @@ export const galleryData = [
       "Western storytelling photography"
     ],
 
-    "story": "He rides without hurry, but not without purpose.\n\nThe rifle rests across the saddle. The reins remain loose in his hand. Whatever waits ahead has already been considered, weighed, and accepted.\n\nSome men ride toward trouble because they have no choice. Others because leaving it unanswered would cost more.",
+    "story": "Unhurried, but not without purpose, toward whatever waits ahead.\n\nThe rifle rests across the saddle. The reins remain loose in his hand. Whatever waits ahead has already been considered, weighed, and accepted.\n\nSome men ride toward trouble because they have no choice. Others because leaving it unanswered would cost more.",
     "notes": "The rider's calm posture gives the image its tension. Nothing suggests panic, yet the rifle and forward movement imply that his destination matters. The K4 Historical Works treatment enlarges the moment into a Western archetype while preserving the unanswered question: what has he chosen to face?",
     "rating": 0,
 
@@ -16546,7 +16970,7 @@ export const galleryData = [
       "American frontier; authentic frontier art prints; cowboy art; cowboy artwork; cowboy portraits; cowboys; fine art Western photography; frontier cowboy; frontier life; narrative Western art; painterly cowboy photography; rugged spirit; the American West; western cowboy portraits; western fine art; western themed art; working cowboy"
     ],
 
-    "story": "He doesn't lean for comfort.\nHe leans because the wall has been there long enough to earn it.\n\nThe tool rests easy in his hands, not ready, not idle-just present.\nWhatever needed doing has already been done, or will be, without ceremony.\n\nThere's no audience he's performing for now.\nOnly time, watching to see if he still belongs. He does.",
+    "story": "Comfort isn't what the lean is for — the post holds more than weight.\nHe leans because the wall has been there long enough to earn it.\n\nThe tool rests easy in his hands, not ready, not idle-just present.\nWhatever needed doing has already been done, or will be, without ceremony.\n\nThere's no audience he's performing for now.\nOnly time, watching to see if he still belongs. He does.",
     "notes": "Nothing in this portrait reaches for admiration, and that is exactly why it works. The crossed arms, the upright tool, and the plain strength of the stance create an image built on self-sufficiency rather than display. He is not presented as heroic in the theatrical sense, but as someone whose authority has been earned slowly, through repetition, labor, and time.\n\nThe wooden wall is more than backdrop. Its vertical grain and weathered surface reinforce the man's own durability, making the whole composition feel rooted, spare, and unadorned. That visual honesty gives the piece its staying power. It becomes a portrait of endurance without sentimentality-Western character stripped down to what remains when there is nothing left to prove.",
     "rating": 4,
 
@@ -16556,7 +16980,7 @@ export const galleryData = [
 
     "visibility": "show",
     "sortOrder": 371,
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-vP6ZvBw",
@@ -16575,7 +16999,7 @@ export const galleryData = [
       "Native American fine art photography; Native American photography; Native American Portraits; painterly Native American portraits; Indigenous experience; Native American heritage art; Native American tradition; spirit of the West; Western Native American gallery"
     ],
 
-    "story": "He doesn't ride to be seen.\nHe rides because the land still expects him to pass through it.\n\nThe horse knows the pace. The regalia settles with each step.\nNothing here is hurried. Nothing needs proving.\n\nThe day opens the same way it always has-\nby being met.",
+    "story": "Dust rises slow behind a pace the horse already knows.\nHe rides because the land still expects him to pass through it.\n\nThe horse knows the pace. The regalia settles with each step.\nNothing here is hurried. Nothing needs proving.\n\nThe day opens the same way it always has-\nby being met.",
     "notes": "The centered posture, measured movement, and softened background echo pictorialist traditions that prioritize atmosphere and psychological presence. The work aligns with a lineage of Western art that values continuity, dignity, and cultural respect, allowing the subject to exist within the frame without explanation or embellishment.",
     "rating": 4,
 
@@ -16590,7 +17014,7 @@ export const galleryData = [
       "na-narrative-color-images": 51
     },
 
-    contentSource: "ai"
+    contentSource: "human"
   },
   {
     "id": "i-3NNTv7n",
@@ -16695,6 +17119,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WkMCB7b/0/Mrnfjth2CSbD2VZMv4zSRzGCzmzJZX7QTFSS7Kgt7/S/_HF26494-1519-1520-1521-1522-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-WkMCB7b/A",
+
     "keywords": [
       "Shot in the Dark",
       "cowboy firing rifle",
@@ -16713,14 +17138,18 @@ export const galleryData = [
       "unresolved image story",
       "Western storytelling photography"
     ],
-    "story": "He fires before certainty has time to catch up.\n\nThe horse presses forward beneath him while another rider follows through the dust. Whether the shot is warning, signal, defense, or something less forgiving remains hidden beyond the frame.\n\nSome answers arrive only after the smoke clears.",
+
+    "story": "A shot fired before certainty catches up, out where the answers wait on the smoke.\n\nThe horse presses forward beneath him while another rider follows through the dust. Whether the shot is warning, signal, defense, or something less forgiving remains hidden beyond the frame.\n\nSome answers arrive only after the smoke clears.",
     "notes": "The rifle points directly beyond the edge of the scene while dust erases nearly every clue about what lies ahead. The second rider adds pursuit, support, or urgency without clarifying the purpose of the shot. By withholding both target and outcome, the image allows one action to become warning, signal, defense, or attack.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "normal",
-    "sortOrder": 375
+    "sortOrder": 375,
+    contentSource: "human"
   },
   {
     "id": "i-p8tcGNm",
@@ -16773,6 +17202,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-k7QLhp7/0/MhkFnC7WMMt8jk5T97QxdGBgT79gm8rxt6pdtBsGj/S/_WHO3736-1702-1703-1704-1706-1707-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-k7QLhp7/A",
+
     "keywords": [
       "K4 Historical Works",
       "Signal from the Ridge",
@@ -16789,14 +17219,18 @@ export const galleryData = [
       "narrative Western photography",
       "unresolved image story"
     ],
-    "story": "He raises the rifle toward the open sky.\n\nPerhaps the shot is meant to warn someone away. Perhaps it is a signal to those still searching below. Or perhaps the answer he needs lies somewhere beyond the rocks and weather.\n\nThe horse waits. The ridge listens. The meaning belongs to whoever hears it.",
+
+    "story": "The sky is open, the ridge is listening, and a rifle is raised between them.\n\nPerhaps the shot is meant to warn someone away. Perhaps it is a signal to those still searching below. Or perhaps the answer he needs lies somewhere beyond the rocks and weather.\n\nThe horse waits. The ridge listens. The meaning belongs to whoever hears it.",
     "notes": "The elevated position gives the figure command of the landscape while the rifle directs the story beyond the frame. Because no target is visible, the shot can become warning, signal, challenge, or plea. The K4 Historical Works presentation enlarges the moment into something mythic without resolving what the sound was meant to accomplish.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/South-Dakota"
     ],
+
     "visibility": "hidden",
-    "sortOrder": 377
+    "sortOrder": 377,
+    contentSource: "human"
   },
   {
     "id": "i-48jGpLt",
@@ -16877,6 +17311,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/0/Mph8jV6GPGzwfQd5NNBCDqfbKh9Dgx4crFd9Ck7P2/S/_HF28344-1369-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-kvNsMGB/A",
+
     "keywords": [
       "fine art Western photography",
       "painterly Western photography",
@@ -16891,14 +17326,18 @@ export const galleryData = [
       "painterly Western images",
       "Western themed art"
     ],
-    "story": "He doesn't read it for the headlines.\nHe reads it to see what still matters.\n\nThe paper crackles softly in the low light, carrying news from places neither of them is going today. One man reads. The other listens-not for facts, but for tone. For what's changed. For what hasn't.\n\nOutside, the day waits. Inside, time slows just enough to decide whether anything on that page is worth standing up for.",
+
+    "story": "The headlines go unread — what matters is in the smaller print of the day.\nHe reads it to see what still matters.\n\nThe paper crackles softly in the low light, carrying news from places neither of them is going today. One man reads. The other listens-not for facts, but for tone. For what's changed. For what hasn't.\n\nOutside, the day waits. Inside, time slows just enough to decide whether anything on that page is worth standing up for.",
     "notes": "This work is carried by familiarity rather than action. The leaning figure, the seated reader, and the newspaper itself create a private exchange that feels lived rather than staged.\n\nIts painterly softness and restrained light place the emphasis on character, memory, and human rhythm. What remains is a strong interior study of companionship, attention, and the slower pulse of frontier life.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "hidden",
-    "sortOrder": 380
+    "sortOrder": 380,
+    contentSource: "human"
   },
   {
     "id": "i-kNXVsdd",
@@ -17082,6 +17521,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/0/McrM2Frz6CFjhkL2Cv6r2BMxch8pxfx5s7MNhpJ9J/S/_HF26027-1343-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-8X7hMPk/A",
+
     "keywords": [
       "American frontier",
       "cinematic Western imagery",
@@ -17096,14 +17536,18 @@ export const galleryData = [
       "western fine art",
       "western themed art"
     ],
-    "story": "She does not search the darkness.\nShe holds her place within it.\n\nThe lantern burns steady, not as a signal, but as a boundary.\nWhatever waits beyond it will have to decide whether to cross.",
+
+    "story": "Night settles in, unsearched and unhurried.\nShe holds her place within it.\n\nThe lantern burns steady, not as a signal, but as a boundary.\nWhatever waits beyond it will have to decide whether to cross.",
     "notes": "Light becomes both subject and boundary in this image. The lantern does not simply illuminate the figure; it establishes a fragile perimeter of certainty inside a field of darkness. That gives the work its psychological force. She is not moving through the night so much as holding her ground within it, and that distinction is what makes the image feel resolute rather than theatrical.\n\nThe vertical composition deepens that effect by isolating the figure within atmosphere. Blue haze, swallowed edges, and the glow of the lamp compress the scene into a single act of endurance, allowing stillness to carry the full narrative load. The result is a Western image shaped by vigilance, solitude, and the quiet authority of a person who understands that sometimes presence itself is the only defense.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "hidden",
-    "sortOrder": 385
+    "sortOrder": 385,
+    contentSource: "human"
   },
   {
     "id": "i-r9dGJJx",
@@ -17154,6 +17598,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/0/Mw8XFW9BFpBGCFk64RhGg2JXMM38bBG4qnjq5W6Gk/S/_HF26697-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-s3f9DST/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -17185,14 +17630,18 @@ export const galleryData = [
       "western cowboy wall art for collectors",
       "western painterly photography"
     ],
-    "story": "He doesn't shift his feet.\nThe ground already knows him.\n\nSmoke drifts low, folding light back onto itself, turning distance into uncertainty. The rifle is held without urgency-ready, but not eager. Whatever crosses that line will do so by choice. He's only here to witness it.\n\nGuarding isn't about what you stop.\nIt's about what you allow to pass.",
+
+    "story": "Feet planted, unshifted — the ground holds him where he stands.\nThe ground already knows him.\n\nSmoke drifts low, folding light back onto itself, turning distance into uncertainty. The rifle is held without urgency-ready, but not eager. Whatever crosses that line will do so by choice. He's only here to witness it.\n\nGuarding isn't about what you stop.\nIt's about what you allow to pass.",
     "notes": "This portrait is built on watchfulness rather than confrontation. Smoke, open space, and cool light create a measured tension that gives the figure authority without forcing the drama.\n\nThe pictorialist softness and restrained palette place the work in a tradition that values atmosphere, posture, and implication over overt action. What remains is a study in solitude, vigilance, and quiet moral weight.",
     "rating": 4,
+
     "galleries": [
       "Other/Photo-Shoots/Pennsylvannia"
     ],
+
     "visibility": "hidden",
-    "sortOrder": 387
+    "sortOrder": 387,
+    contentSource: "human"
   },
   {
     "id": "i-xgqQnWv",
@@ -17292,6 +17741,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xhZhRpL/0/Mt2CxxWXWjTq7CSx9LMHmvQLDg4V3GPX5tcSvjNQF/S/_HF27052-989-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-xhZhRpL/A",
+
     "keywords": [
       "frontier life",
       "cowboy portraits",
@@ -17306,15 +17756,19 @@ export const galleryData = [
       "painterly cowboy photography",
       "the American West"
     ],
-    "story": "He doesn't press the horse forward.  \nThere's no reason to rush what the land hasn't finished saying yet.\n\nDust hangs low, sound carries farther than expected, and time stretches the way it always does out here. Whatever comes next will come on its own terms. He's learned to wait for that moment instead of trying to force it.",
+
+    "story": "The horse goes unpressed — forward comes when it comes.\nThere's no reason to rush what the land hasn't finished saying yet.\n\nDust hangs low, sound carries farther than expected, and time stretches the way it always does out here. Whatever comes next will come on its own terms. He's learned to wait for that moment instead of trying to force it.",
     "notes": "Stillness carries the weight here. The rider doesn't command the moment-he allows it to unfold, reflecting a deeper understanding of pace and place.\n\nThe image aligns with a quieter Western lineage, where presence replaces performance. It invites a slower read, revealing meaning through posture, atmosphere, and the subtle tension of waiting rather than doing.",
     "rating": 3,
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 390,
+
     "themes": {
       "sketches-of-legends": 123
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-ps4qwgF",
@@ -17328,6 +17782,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/1/K6nCWZJpRTDfmM2J72MJNpfPpgCC9KFSn6V54tqHm/S/cowboy%20art%20photo_O1H0363-Edit-Edit-4-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ps4qwgF/A",
+
     "keywords": [
       "fine art Western photography",
       "painterly cowboy photography",
@@ -17343,19 +17798,25 @@ export const galleryData = [
       "historic Western imagery",
       "painterly Western images"
     ],
-    "story": "He doesn't move away from the window.  \nHas learned that silence carries sound better than motion.\n\nWhatever's coming hasn't shown itself yet.  \nBut it's close enough to breathe.",
+
+    "story": "The window keeps him — no moving away from what it frames.\nHas learned that silence carries sound better than motion.\n\nWhatever's coming hasn't shown itself yet.\nBut it's close enough to breathe.",
     "notes": "What gives this piece its strength is not action, but awareness. The figure's stillness shifts the narrative toward perception-where listening and restraint become the defining forces rather than movement or confrontation.\n\nThe controlled light and interior framing place the viewer within the space, echoing traditions of Western narrative painting where atmosphere and timing carry the weight of the story. It invites sustained looking, rewarding those drawn to tension held just beneath the surface.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "",
     "sortOrder": 391,
+
     "themes": {
       "firelight-shadow": 72,
       "law-outlaws": 80,
       "sketches-of-legends": 121
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-wZ8Zn9p",
@@ -17369,6 +17830,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/0/KfdXzkkL4PkcwppjQbJtt9pVdTDmZSDpNWC6WgxVP/S/_HF26618-1000-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-wZ8Zn9p/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -17399,17 +17861,21 @@ export const galleryData = [
       "western cowboy wall art for collectors",
       "western painterly photography"
     ],
-    "story": "He commits before the dust does.\nBefore the horse feels it.\n\nMomentum takes over where doubt would slow him down. Leather snaps tight, ground disappears, and the space ahead narrows fast. Whatever waits at the end of this run won't be met cautiously-it will be met upright, moving, and decided.\n\nSome moments don't allow rehearsal.\nThey only allow arrival.",
+
+    "story": "Committed before the dust, before doubt has time to slow anything down.\nBefore the horse feels it.\n\nMomentum takes over where doubt would slow him down. Leather snaps tight, ground disappears, and the space ahead narrows fast. Whatever waits at the end of this run won't be met cautiously-it will be met upright, moving, and decided.\n\nSome moments don't allow rehearsal.\nThey only allow arrival.",
     "notes": "This work carries its impact through momentum rather than spectacle. Dust, posture, and forward motion compress the scene into a single act of commitment, giving the image both urgency and restraint.\n\nThe softened black-and-white treatment pushes the piece toward pictorialist atmosphere, where motion becomes emotional structure rather than mere action. What remains is a study in resolve, speed, and consequence.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 392,
+
     "themes": {
       "cowboys-and-horses": 25,
       "dust-thunder": 28,
       "law-outlaws": 72
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-j24GFVH",
@@ -17449,7 +17915,7 @@ export const galleryData = [
   },
   {
     "id": "i-ZDGhLps",
-    "title": "He Didn't Miss",
+    "title": "Didn't Miss",
     "description": "A cowboy braces in a wooded clearing as smoke bursts from his pistol, the angled stance and split-second discharge fixing the scene in a moment of violent consequence. The softened light and controlled treatment give the image the tension of painterly cowboy photography.\n\n© Wayne Heim",
     "alt": "A cowboy in a light hat fires a pistol in a forest clearing, smoke billowing from the shot as he twists through the motion.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZDGhLps/8/MZjM4S68JXRX6tSHVWVKMJ65js7KDZLj2zjqwpqsJ/XL/cowboy%20photography%20_O1H2142-Edit-Edit-XL.jpg",
@@ -17459,6 +17925,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/West-Virginia/Hardwood/Hardwood-Spring-2023/i-ZDGhLps/8/LCZdV6cGqHC4pZKZkFWvK3DpqmVS2wzMjZmM4qpKg/S/cowboy%20photography%20_O1H2142-Edit-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-ZDGhLps/A",
+
     "keywords": [
       "cowboy art",
       "cowboy artwork",
@@ -17475,18 +17942,24 @@ export const galleryData = [
       "rugged spirit",
       "outlaw portraits"
     ],
-    "story": "The sound came first.  \nToo sharp to mistake. Too final to reconsider.\n\nThere was no rush in the movement that followed-only decision.  \nThe kind made long before the hand ever reaches for steel.\n\nBy the time the smoke cleared, it was already over.  \nWhatever argument had existed before did not survive the moment.",
+
+    "story": "The sound comes first. Too sharp to mistake. Too final to reconsider. There is no rush in the movement that follows-only decision. The kind made long before the hand ever reaches for steel. By the time the smoke clears, it is already over. Whatever argument existed before does not survive the moment.",
     "notes": "This piece is driven by consequence rather than spectacle. The twisting posture, burst of smoke, and compressed moment of discharge give the image its force, while the restrained treatment keeps it from slipping into mere action.\n\nIts strength lies in the balance between motion and control. What remains is a Western study of decision made visible, where atmosphere and timing carry as much weight as the shot itself.",
     "rating": 2,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "hidden",
     "sortOrder": 394,
+
     "themes": {
       "dust-thunder": 32,
       "sketches-of-legends": 114
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-vhGcpWV",
@@ -17500,6 +17973,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Pennsylvania-Cowboy-Weekend/i-vhGcpWV/1/KHLxFv5j4Bc5Xh4CD4phx77HFjZfZTGqccLRfzW5j/S/_O1H2805-Enhanced-NR-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color/i-vhGcpWV/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -17531,17 +18005,23 @@ export const galleryData = [
       "western cowboy wall art for collectors",
       "western painterly photography"
     ],
-    "story": "He doesn't say it out loud.\nHe doesn't need to.\n\nThe way he leans in, the way her hand rests without asking-this is already decided. Not claimed loudly, not proven publicly. Just known. Whatever waits at the next stop can wait. This moment has already taken its seat.\n\nPossession here isn't force.\nIt's agreement.",
+
+    "story": "Unsaid aloud — the words stay where they were first thought.\nHe doesn't need to.\n\nThe way he leans in, the way her hand rests without asking-this is already decided. Not claimed loudly, not proven publicly. Just known. Whatever waits at the next stop can wait. This moment has already taken its seat.\n\nPossession here isn't force.\nIt's agreement.",
     "notes": "This piece finds its strength in restraint. Proximity, gesture, and shared stillness carry the narrative, allowing connection to take the place of spectacle.\n\nThe warm interior light and painterly softness pull the image toward a quieter Western tradition, one concerned less with conquest than with loyalty, choice, and human closeness. What remains is a study in partnership made visible through posture, touch, and silence.",
     "rating": 4,
+
     "galleries": [
       "Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color"
     ],
+
     "visibility": "hidden",
     "sortOrder": 395,
+
     "themes": {
       "love-goodbye": 58
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-wdF6Hw3",
@@ -17747,6 +18227,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-r9xCmwz/0/LvJ3wTDXTs65VRP6XZ573rMbFvGGQ6CCrHPZtHgS9/S/_O2H2856-855-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-r9xCmwz/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -17778,12 +18259,14 @@ export const galleryData = [
       "western cowboy wall art for collectors",
       "western painterly photography"
     ],
-    "story": "He stands without adjusting himself.\nThe clothes already know where they belong.\n\nNothing about the moment asks for explanation. The coat hangs the way it has learned to hang. The ground answers his weight without question. Whatever comes next will come on its own terms, and he'll meet it the same way he meets everything else-upright, unhurried, unchanged.\n\nOut here, bearing isn't attitude.\nIt's record.",
+
+    "story": "A stillness learned from standing in the same place long enough for it to become a record.\nThe clothes already know where they belong.\n\nNothing about the moment asks for explanation. The coat hangs the way it has learned to hang. The ground answers his weight without question. Whatever comes next will come on its own terms, and he'll meet it the same way he meets everything else-upright, unhurried, unchanged.\n\nOut here, bearing isn't attitude.\nIt's record.",
     "notes": "This portrait works by letting stance do the storytelling. Nothing in it asks for drama. The straight-on posture, the fall of the coat, and the open ground around him create a kind of visual oath, as though the figure has already been measured by life and found settled into himself.\n\nWhat gives the piece distinction is its refusal to overstate. The sepia surface and softened detail turn the image away from performance and toward character, where dress, bearing, and stillness become a record of lived identity rather than costume.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 399
+    "sortOrder": 399,
+    contentSource: "human"
   },
   {
     "id": "i-hXdn5Z8",
@@ -17837,6 +18320,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/0/MmqXLMGSTjWf2sn8fs9SPWKWQSNSVscdV2gnQpMfH/S/_O2H3085-861-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-TNm6hQ3/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -17867,16 +18351,20 @@ export const galleryData = [
       "wild west painterly photography",
       "wild west photography"
     ],
-    "story": "She moves without hurry.\nThe weight is familiar.\n\nThe wagon answers to her hands the way it always has-wood, iron, routine. Whatever was needed has already been chosen. Whatever waits back home will wait a little longer. The day isn't finished, but the hard part is.\n\nOut here, survival isn't dramatic.\nIt's handled.",
+
+    "story": "Without hurry, in the rhythm of wood, iron, and routine.\nThe weight is familiar.\n\nThe wagon answers to her hands the way it always has-wood, iron, routine. Whatever was needed has already been chosen. Whatever waits back home will wait a little longer. The day isn't finished, but the hard part is.\n\nOut here, survival isn't dramatic.\nIt's handled.",
     "notes": "Labor is the narrative force here. The figure is turned away from us, which keeps the image from becoming portraiture in the usual sense and shifts attention toward purpose, burden, and routine. That choice gives the work its dignity. It presents provision not as background detail, but as one of the true engines of frontier life.\n\nThe wagon is central to that reading. Its wheels, weight, and plain usefulness anchor the composition in necessity, while the softened architecture behind it broadens the scene into a lived settlement rather than an isolated anecdote. The result is a Western image shaped by endurance, care, and the often-unseen work that held households and communities together.",
     "rating": 3,
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 401,
+
     "themes": {
       "women-of-the-west": 45,
       "frontier-women": 86
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-9g57QXd",
@@ -17890,6 +18378,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/0/LhRgd89gVX67bVDz4xgtgqnWt2BVhcLSdtHcN9SkC/S/_HF24995-Edit-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-9g57QXd/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -17916,16 +18405,20 @@ export const galleryData = [
       "western wall art for collectors",
       "western grit"
     ],
-    "story": "She doesn't move closer to the water.\nShe doesn't move away either.\n\nThe land opens in front of her-quiet, measured, undecided. The river carries on without asking permission, but she waits, reading the distance the way others read weather. Nothing urgent. Nothing certain. Just the sense that what comes next will come whether she's ready or not.\n\nOut here, waiting isn't hesitation.\nIt's how you stay alive.",
+
+    "story": "The water keeps its distance — no moving closer to what it asks.\nShe doesn't move away either.\n\nThe land opens in front of her-quiet, measured, undecided. The river carries on without asking permission, but she waits, reading the distance the way others read weather. Nothing urgent. Nothing certain. Just the sense that what comes next will come whether she's ready or not.\n\nOut here, waiting isn't hesitation.\nIt's how you stay alive.",
     "notes": "Waiting is the true structure of this image. The figure is not arranged as a romantic solitary, but as someone reading distance, water, and possibility with the kind of patience frontier life required. That gives the work its tension. Nothing dramatic is happening, yet the scene feels charged because stillness here is clearly a form of judgment.\n\nThe river deepens that reading by functioning as more than landscape. It creates a physical and psychological threshold, while the pale tonality and open sky keep the image suspended between calm and uncertainty. The result is a Western portrait shaped by restraint, vigilance, and the quiet knowledge that what matters next may already be on its way.",
     "rating": 2,
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 402,
+
     "themes": {
       "women-of-the-west": 49,
       "frontier-women": 96
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-NTfST2B",
@@ -18142,7 +18635,7 @@ export const galleryData = [
   },
   {
     "id": "i-BVwQDrM",
-    "title": "She Held the Gate",
+    "title": "Holding the Gate",
     "description": "Set against a rough wooden gate, a woman in period dress stands in soft sepia light with one hand resting at her shawl and the other near the weathered rails. The muted palette and painterly atmosphere give the portrait the quiet dignity of fine art Western photography.\n\n© Wayne Heim",
     "alt": "A woman in frontier dress stands beside a weathered wooden gate in a soft sepia portrait, her posture calm and self-possessed.",
     "src": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/NX2pPS6MKZTRVGP5DFXpWqqqVdwFndBPpXgpZvrP2/XL/_HF29415-1256-XL.jpg",
@@ -18152,6 +18645,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/0/L9hPC8Vz7GQGtmQzNbK7GfkrGSKcDDKCKrtsTWzGT/S/_HF29415-1256-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Fall-Cowboys-25/i-BVwQDrM/A",
+
     "keywords": [
       "frontier life",
       "American frontier",
@@ -18166,17 +18660,21 @@ export const galleryData = [
       "authentic frontier art prints",
       "Pictorialist tradition"
     ],
-    "story": "They said it wouldn't be long.\nJust a ride out. Just business to finish.\n\nSo she stayed where she was told to stay,\nhands folded into the work of waiting,\nwatching the space between before and after stretch wider than promised.\n\nIf they didn't come back soon,\nsomeone still had to keep things standing.",
+
+    "story": "They said it wouldn't be long. Just a ride out. Just business to finish. So she stays where she was told to stay, hands folded into the work of waiting, watching the space between before and after stretch wider than promised. If they don't come back soon, someone still has to keep things standing.",
     "notes": "Stillness does the heaviest work here. The figure remains composed and upright, yet the image carries a clear sense of endurance, patience, and quiet self-command without needing overt drama to announce it.\n\nThe gate becomes more than background structure. It anchors the composition with a lived, domestic weight that keeps the portrait grounded in frontier reality rather than costume sentiment. What remains is a Western image shaped by steadiness, restraint, and presence.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 408,
+
     "themes": {
       "women-of-the-west": 53,
       "frontier-women": 102,
       "whispering-reflection": 101
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-CZrXGr9",
@@ -18406,6 +18904,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/0/LgDgj2Ntj2LpDbRWNrscBNWC9bf7FkcRjMRRGRcmD/S/_WHO1469-889-890-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-48G2HVM/A",
+
     "keywords": [
       "fine art photography",
       "painterly western photography",
@@ -18422,12 +18921,14 @@ export const galleryData = [
       "Native American photography",
       "Native American Portraits"
     ],
-    "story": "He doesn't look up.  \nNot out of shame-out of habit.  \nThe ground remembers more than faces ever will.\n\nEach step settles something old.  \nNames, places, moments that no longer ask to be spoken.  \nWhat's carried isn't heavy because of weight-but because it stays.",
+
+    "story": "Some things are read in the dirt, not in faces.\nNot out of shame-out of habit.\nThe ground remembers more than faces ever will.\n\nEach step settles something old.\nNames, places, moments that no longer ask to be spoken.\nWhat's carried isn't heavy because of weight-but because it stays.",
     "notes": "This work is built on restraint. The downward gaze, softened edges, and muted palette place the emphasis on interior life rather than outward identity. Compositionally, the figure is allowed space to exist within atmosphere rather than dominate it, echoing traditions of pictorialism and narrative Western art where meaning emerges slowly. The image functions as a pause-an acknowledgment that history is often carried forward quietly, one step at a time.",
     "rating": 3,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 414
+    "sortOrder": 414,
+    contentSource: "human"
   },
   {
     "id": "i-q3f95K3",
@@ -18441,6 +18942,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/1/LfGKqfbkgsx7rCrWqnNL45Bj43Hv4pktKFScTwZck/S/_WHO6048-922-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-q3f95K3/A",
+
     "keywords": [
       "Native American art prints",
       "Native American fine art photography",
@@ -18453,12 +18955,14 @@ export const galleryData = [
       "Native American heritage art",
       "Native American wall art"
     ],
-    "story": "He does not look toward the past, yet it rests on him all the same.  \nEach feather carries a season, a decision, a name spoken once and never again.  \nHe stands still-not from hesitation, but from knowing exactly where he belongs.\n\nWhat presses on his shoulders is not ceremony.  \nIt is memory, held upright.",
+
+    "story": "The past rests on him all the same, though he never turns to look at it.\nEach feather carries a season, a decision, a name spoken once and never again.\nHe stands still-not from hesitation, but from knowing exactly where he belongs.\n\nWhat presses on his shoulders is not ceremony.\nIt is memory, held upright.",
     "notes": "Identity anchors this image through profile and bearing rather than direct engagement. The turned gaze shifts attention away from the viewer, placing emphasis on what lies beyond the frame. The headdress introduces vertical weight and historical presence, while the softened surroundings reduce distraction. The result is a work that holds its meaning through quiet continuity, allowing heritage to be felt as a living, carried presence rather than a fixed symbol.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
-    "sortOrder": 415
+    "sortOrder": 415,
+    contentSource: "human"
   },
   {
     "id": "i-Zt47sk7",
@@ -18472,6 +18976,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-Zt47sk7/2/MTpZfZVGSC7zvCG2rFk98x59vfdZrBtnHGDDW5WZt/S/_O2H2740-851-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-Zt47sk7/A",
+
     "keywords": [
       "American frontier",
       "Americana photography",
@@ -18490,16 +18995,20 @@ export const galleryData = [
       "western themed art",
       "wild west photography"
     ],
-    "story": "He doesn't rush it anymore.\n\nThere was a time when every answer mattered, when the world demanded decisions in public and consequences in daylight. That time passed quietly, without ceremony.\n\nNow it's just the weight of years settling where it always belonged. The hands remember what the voice no longer needs to say. Some debts were paid in full. Others were simply carried long enough to become part of him.\n\nNothing left to prove. Only what remains to be lived with.",
+
+    "story": "The rushing is over — what remains moves at the pace of the years.\n\nThere was a time when every answer mattered, when the world demanded decisions in public and consequences in daylight. That time passed quietly, without ceremony.\n\nNow it's just the weight of years settling where it always belonged. The hands remember what the voice no longer needs to say. Some debts were paid in full. Others were simply carried long enough to become part of him.\n\nNothing left to prove. Only what remains to be lived with.",
     "notes": "Age becomes the real atmosphere of this portrait. The figure is not presented as diminished, but as someone shaped and settled by time, with the downward gaze and softened posture carrying more narrative weight than any overt action could. That gives the image an unusual gravity. It feels less like a character study than a reckoning quietly underway.\n\nThe handling of light is especially important here. Darkness closes gently around the figure while the face, beard, and coat remain just visible enough to hold attention, creating a portrait that feels intimate without becoming sentimental. The result is a Western image shaped by memory, endurance, and the long interior account that remains after the louder parts of life have passed.",
     "rating": 4,
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 416,
+
     "themes": {
       "hardship-sorrow": 37,
       "sketches-of-legends": 117
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-xNB7ZSk",
@@ -18552,6 +19061,7 @@ export const galleryData = [
     "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/OBV-Wild-West-Weekend-2025/i-R3CqrBr/0/KG6K7zkn5JxFKrbczr3bvSwnx78CgJwS3s29NfwtX/S/_HF23341-816-2-S.jpg",
     "srcOriginal": "",
     "buyLink": "https://www.k4studios.com/Other/Photo-Shoots/Pennsylvania/Old-Bedford-Historical-Village/Best-OF-OBV-25/n-swc6MX/i-R3CqrBr/A",
+
     "keywords": [
       "American frontier",
       "frontier life",
@@ -18579,15 +19089,19 @@ export const galleryData = [
       "western grit",
       "western cowboy wall art for collectors"
     ],
-    "story": "He hasn't climbed up yet.  \nThat part comes later.\n\nFor now, he stands where questions still outnumber answers, listening for something that isn't spoken.  \nA look. A pause. Permission.\n\nEvery journey starts lower than it ends.",
+
+    "story": "Not yet climbed — the height waits for its moment.\nThat part comes later.\n\nFor now, he stands where questions still outnumber answers, listening for something that isn't spoken.\nA look. A pause. Permission.\n\nEvery journey starts lower than it ends.",
     "notes": "Rooted in pictorialist tradition and classic Western genre painting, the work values suggestion over declaration. It rewards careful looking, inviting the viewer to recall their own moments of learning-when direction was given quietly, and the path forward was understood rather than explained.",
     "rating": 3,
     "galleries": [],
     "visibility": "hidden",
     "sortOrder": 418,
+
     "themes": {
       "cowboys-and-horses": 24
-    }
+    },
+
+    contentSource: "human"
   },
   {
     "id": "i-4dnFJRg",

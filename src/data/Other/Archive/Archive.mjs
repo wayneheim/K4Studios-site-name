@@ -2067,5 +2067,35 @@ export const galleryData = [
     "visibility": "show",
     "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color.mjs",
     "sortOrder": 340
+  },
+  {
+    "id": "i-LmpRvHw",
+    "title": "Watching the High Ground",
+    "description": "Standing beside his horse with staff held upright, the figure faces outward beneath an expanding sky where wind and distance shape the atmosphere around him. This Native American fine art photography portrait creates Western Native American wall art rooted in watchfulness, continuity, and the quiet authority of lived experience.\n\n© Wayne Heim",
+    "alt": "Elder Native American man with long hair stands beside a horse holding a staff with feathers, looking into the distance.",
+    "story": "Above the ridge, the hour thins out and the land keeps its own counsel.\nHe looks past-past the ridge, past the hour, past the noise that never quite reaches this place.\n\nThe horse shifts once, then settles.\nWind lifts the feathers, tests the silence.\nNothing announces itself.\nThat's how it has always been.",
+    "src": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NbkTFbFvpWFNc8fVqPX6FV2g5TL8NKVxXZDBfCDzq/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-XL.jpg",
+    "srcXL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NbkTFbFvpWFNc8fVqPX6FV2g5TL8NKVxXZDBfCDzq/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-XL.jpg",
+    "srcL": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NbkTFbFvpWFNc8fVqPX6FV2g5TL8NKVxXZDBfCDzq/XL/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-XL.jpg",
+    "srcM": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/LVzzgMXzj5jDQCSw34Q4T9zwXzVTT5Rf77BznPGbf/L/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-L.jpg",
+    "srcS": "https://photos.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/2/NHGdJwSS8NnXzdpvpdqnB6TjvCk5cWhFV2sT6DRFk/S/_HF29117-Edit-2-Edit-Edit-Edit-Edit-Edit-2-S.jpg",
+    "srcOriginal": "",
+    "buyLink": "https://wayne-heim.smugmug.com/Other/Photo-Shoots/South-Dakota/Artist-Ride-2025/i-LmpRvHw/A",
+    "keywords": [
+      "Native American art prints",
+      "Native American fine art photography",
+      "Native American photography",
+      "Native American portraits",
+      "Indigenous experience",
+      "Native American heritage art",
+      "Native American tradition",
+      "spirit of the West",
+      "Western Native American gallery"
+    ],
+    "notes": "This piece draws its strength from restraint rather than drama. The upright staff, calm posture, and elevated gaze establish quiet authority-an image that feels inherited rather than staged. The composition echoes the lineage of classical Western portraiture while rejecting romantic excess, allowing presence and posture to carry the narrative. It is a work that holds space rather than fills it, rewarding long looking and lived interpretation.",
+    "rating": 5,
+    "visibility": "show",
+    "archivedFrom": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Native-Americans/NA-Color.mjs",
+    "sortOrder": 2
   }
 ];
