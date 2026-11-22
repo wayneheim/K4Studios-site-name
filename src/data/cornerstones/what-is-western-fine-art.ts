@@ -141,7 +141,7 @@ export const breadcrumbStructuredData = getBreadcrumbList(
 export const structuredData = getStructuredData({
   type: "Article",
   data: {
-    headline: "What Is Western Fine Art? Definition, Meaning, and Why It Matters",
+    headline: titleTag,
     description: pageDescription,
     url: canonicalUrl,
     image: getAbsoluteProxySrc(image1.id, "l"),
@@ -186,7 +186,7 @@ export const meta = {
   ogType: "article",
   ogUrl: canonicalUrl,
   ogImage: getAbsoluteProxySrc(image1.id, "l"),
-  twitterTitle: pageTitle,
+  twitterTitle: titleTag,
   twitterDescription: pageDescription,
   twitterUrl: canonicalUrl,
   twitterImage: getAbsoluteProxySrc(image1.id, "l"),
