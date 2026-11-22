@@ -49,12 +49,13 @@ async function main() {
   const started = performance.now();
 
   await npmScript('gen:master-data');
+  // sitemap:matches must read this build's regenerated sitemap, never its cache.
+  await npmScript('gen:sitemap');
 
   await runParallel([
     'gen:prefetch-map',
     'gen:image-id-map',
     'gen:image-sitemaps',
-    'gen:sitemap',
     'gen:sitemap:matches',
     'gen:story-slider',
     'gen:image-manifest',
@@ -72,6 +73,7 @@ async function main() {
       K4_KWLINK_BUILD_SEED: kwlinkBuildSeed,
     },
   });
+  await npmScript('guard:deploy:ssr');
 
   await runParallel([
     'copy:redirects',

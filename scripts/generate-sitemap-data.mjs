@@ -2,9 +2,13 @@
 // Usage: node scripts/generate-sitemap-data.mjs
 
 import { writeFile, mkdir, readdir, stat, readFile } from 'node:fs/promises';
-import { execSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { parseArgs } from 'node:util';
+import { createPageSpecificSourceResolver, isExcludedSitemapSource } from './lib/page-specific-sitemap-sources.mjs';
+import { createFileTimestampReader } from './lib/sitemap-file-timestamps.mjs';
+import { applyPublishedLastmodFloor } from './lib/sitemap-lastmod-floors.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +16,24 @@ const __dirname = path.dirname(__filename);
 const SITE_URL = 'https://www.k4studios.com';
 const PAGES_DIR = path.resolve(__dirname, '..', 'src', 'pages');
 const REPO_ROOT = path.resolve(__dirname, '..');
+const { values: options } = parseArgs({ options: {
+  'output-root': { type: 'string' }, 'lastmod-report': { type: 'string' },
+} });
+const OUTPUT_ROOT = options['output-root'] ? path.resolve(options['output-root']) : REPO_ROOT;
+const lastmodSources = new Map();
+const fileTimestampMethods = new Map();
+let contentModuleServer;
+const contentModules = new Map();
+async function loadContentModule(modulePath) {
+  if (!contentModuleServer) {
+    const { createServer } = await import('vite');
+    contentModuleServer = await createServer({ configFile: false, root: REPO_ROOT,
+      appType: 'custom', server: { middlewareMode: true, watch: null },
+      resolve: { alias: { '@': path.join(REPO_ROOT, 'src') } }, optimizeDeps: { noDiscovery: true } });
+  }
+  if (!contentModules.has(modulePath)) contentModules.set(modulePath, contentModuleServer.ssrLoadModule(modulePath));
+  return contentModules.get(modulePath);
+}
 const MASTER_GALLERY_DATA_FILE = path.resolve(__dirname, '..', 'src', 'data', 'galleryMaps', 'MasterGalleryData.mjs');
 const DOORWAY_REGISTRY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'doorway', 'doorwayPages.ts');
 const COMMERCIAL_INTENT_DOORWAY_FILE = path.resolve(__dirname, '..', 'src', 'data', 'doorway', 'commercialIntentPages.ts');
@@ -31,40 +53,33 @@ function isGhostImageId(id) {
   return String(id || '').trim().toLowerCase() === GHOST_IMAGE_ID;
 }
 
-function getGitLastModifiedIso(absoluteFilePath) {
-  try {
-    const rel = path.relative(REPO_ROOT, absoluteFilePath).replace(/\\/g, '/');
-    const out = execSync(`git log -1 --format=%cI -- "${rel}"`, {
-      cwd: REPO_ROOT,
-      stdio: ['ignore', 'pipe', 'ignore']
-    }).toString().trim();
-    return out || null;
-  } catch {
-    return null;
+const timestampForFile = createFileTimestampReader(REPO_ROOT);
+async function getFileLastmodIso(file) {
+  const info = await timestampForFile(file);
+  fileTimestampMethods.set(file, info.timestampMethod);
+  return info.timestamp;
+}
+
+const pageSources = createPageSpecificSourceResolver({ repoRoot: REPO_ROOT,
+  resolveGalleryDataset: resolveGalleryDataFile, loadModule: loadContentModule });
+async function getPageLastmod(urlPath, routeFile, galleryFile) {
+  const sources = await pageSources(routeFile, urlPath);
+  if (galleryFile && !sources.some(source => source.file === galleryFile)) sources.push({ file: galleryFile, kind: 'gallery-dataset' });
+  if (!sources.length) throw new Error(`No eligible page-specific source for ${urlPath}`);
+  let newest;
+  for (const source of sources) {
+    const relative = path.relative(REPO_ROOT, source.file).replaceAll('\\', '/');
+    if (isExcludedSitemapSource(relative)) throw new Error(`Excluded lastmod source for ${urlPath}: ${relative}`);
+    source.timestamp = await getFileLastmodIso(source.file);
+    source.timestampMethod = fileTimestampMethods.get(source.file);
+    if (!Number.isFinite(Date.parse(source.timestamp))) throw new Error(`Invalid lastmod for ${source.file}`);
+    if (!newest || Date.parse(source.timestamp) > Date.parse(newest.timestamp)) newest = source;
   }
-}
-
-function hasUncommittedChanges(absoluteFilePath) {
-  try {
-    const rel = path.relative(REPO_ROOT, absoluteFilePath).replace(/\\/g, '/');
-    const out = execSync(`git status --porcelain -- "${rel}"`, {
-      cwd: REPO_ROOT,
-      stdio: ['ignore', 'pipe', 'ignore']
-    }).toString().trim();
-    return Boolean(out);
-  } catch {
-    return false;
-  }
-}
-
-function getStableLastmodIso(absoluteFilePath, fallbackMtimeIso) {
-  if (hasUncommittedChanges(absoluteFilePath)) return fallbackMtimeIso;
-  return getGitLastModifiedIso(absoluteFilePath) || fallbackMtimeIso;
-}
-
-async function getFileLastmodIso(absoluteFilePath) {
-  const fileStats = await stat(absoluteFilePath);
-  return getStableLastmodIso(absoluteFilePath, fileStats.mtime.toISOString());
+  const attribution = applyPublishedLastmodFloor(urlPath, { lastmod: newest.timestamp,
+    contributingFile: path.relative(REPO_ROOT, newest.file).replaceAll('\\', '/'),
+    sources: sources.map(source => ({ ...source, file: path.relative(REPO_ROOT, source.file).replaceAll('\\', '/') })) });
+  lastmodSources.set(SITE_URL + urlPath, attribution);
+  return attribution.lastmod;
 }
 
 async function pathExists(absoluteFilePath) {
@@ -128,7 +143,7 @@ const EXCLUDE_PATTERNS = [
 async function loadDynamicExpeditionRoutes() {
   try {
     const source = await readFile(EXPEDITIONS_REGISTRY_FILE, 'utf8');
-    const lastmod = await getFileLastmodIso(EXPEDITIONS_REGISTRY_FILE);
+    const lastmod = undefined; // Registry enumerates URLs; the final pass attributes dates.
     const slugs = [...source.matchAll(/\bslug:\s*["']([^"']+)["']/g)]
       .map((match) => match[1]?.trim())
       .filter(Boolean);
@@ -218,9 +233,7 @@ async function walkDir(dir, baseDir = dir) {
       const shouldExclude = EXCLUDE_PATTERNS.some(pattern => pattern.test(urlPath));
       if (shouldExclude) continue;
       
-      // Get file stats for lastmod
-      const stats = await stat(fullPath);
-      const lastmod = getStableLastmodIso(fullPath, stats.mtime.toISOString());
+      const lastmod = await getPageLastmod(urlPath, fullPath);
       
       entries.push({
         loc: SITE_URL + urlPath,
@@ -241,8 +254,6 @@ async function loadDynamicRoutes() {
 
   try {
     console.log('Loading dynamic routes from MasterGalleryData (siteNav-keyed)...');
-    const masterStats = await stat(MASTER_GALLERY_DATA_FILE);
-    const masterLastmod = getStableLastmodIso(MASTER_GALLERY_DATA_FILE, masterStats.mtime.toISOString());
 
     const masterMod = await import(pathToFileURL(MASTER_GALLERY_DATA_FILE).href);
     const galleryDataMap = masterMod?.galleryDataMap;
@@ -269,12 +280,15 @@ async function loadDynamicRoutes() {
       );
 
       if (imageIds.length === 0) continue;
+      const dataset = await resolveGalleryDataFile(href);
+      if (!dataset) throw new Error(`No gallery dataset for ${href}`);
+      const galleryLastmod = await getFileLastmodIso(dataset);
 
       for (const imageId of imageIds) {
         const urlPath = `${href}/${imageId}`;
         entries.push({
           loc: SITE_URL + urlPath,
-          lastmod: masterLastmod,
+          lastmod: galleryLastmod,
           changefreq: 'monthly',
           priority: getPriority(href),
         });
@@ -295,8 +309,7 @@ async function loadActiveDoorwayRoutes() {
 
   try {
     const source = await readFile(DOORWAY_REGISTRY_FILE, 'utf8');
-    const fileStats = await stat(DOORWAY_REGISTRY_FILE);
-    const lastmod = getStableLastmodIso(DOORWAY_REGISTRY_FILE, fileStats.mtime.toISOString());
+    const lastmod = undefined;
 
     // Match entries where `active: true` and capture the corresponding slug.
     const activeSlugRegex = /active:\s*true[\s\S]{0,160}?slug:\s*['\"]([^'\"]+)['\"]/g;
@@ -332,8 +345,7 @@ async function loadCommercialIntentDoorwayRoutes() {
 
   try {
     const source = await readFile(COMMERCIAL_INTENT_DOORWAY_FILE, 'utf8');
-    const fileStats = await stat(COMMERCIAL_INTENT_DOORWAY_FILE);
-    const lastmod = getStableLastmodIso(COMMERCIAL_INTENT_DOORWAY_FILE, fileStats.mtime.toISOString());
+    const lastmod = undefined;
 
     const pagePathRegex = /pagePath:\s*['"]([^'"]+)['"]/g;
     const paths = new Set();
@@ -367,8 +379,7 @@ async function loadVideoDetailRoutes() {
 
   try {
     const source = await readFile(VIDEO_REGISTRY_FILE, 'utf8');
-    const fileStats = await stat(VIDEO_REGISTRY_FILE);
-    const lastmod = getStableLastmodIso(VIDEO_REGISTRY_FILE, fileStats.mtime.toISOString());
+    const lastmod = undefined;
 
     const dedicatedVideoRegex = /\{\s*slug:\s*['"]([^'"]+)['"][\s\S]*?hasDedicatedPage:\s*true[\s\S]*?\}/g;
     const slugs = new Set();
@@ -402,8 +413,6 @@ async function loadDynamicAllCollectionRoutes() {
   const entries = [];
 
   try {
-    const routeStats = await stat(DYNAMIC_ALL_ROUTE_FILE);
-    const routeLastmod = getStableLastmodIso(DYNAMIC_ALL_ROUTE_FILE, routeStats.mtime.toISOString());
     const siteNavMod = await import(pathToFileURL(SITE_NAV_FILE).href);
     const navTree = siteNavMod?.siteNav;
 
@@ -431,18 +440,11 @@ async function loadDynamicAllCollectionRoutes() {
       const normalizedHref = String(href || '').trim();
       if (!normalizedHref.startsWith('/')) continue;
 
-      let lastmod = routeLastmod;
-
-      try {
-        const dataFilePath = await resolveGalleryDataFile(normalizedHref);
-        if (dataFilePath) {
-          lastmod = await getFileLastmodIso(dataFilePath) || routeLastmod;
-        }
-      } catch {
-        lastmod = routeLastmod;
-      }
-
       const urlPath = `${normalizedHref}/all`;
+      const dataFilePath = await resolveGalleryDataFile(normalizedHref);
+      const dedicatedRoute = path.join(PAGES_DIR, normalizedHref.replace(/^\//, ''), 'all.astro');
+      const routeFile = await pathExists(dedicatedRoute) ? dedicatedRoute : DYNAMIC_ALL_ROUTE_FILE;
+      const lastmod = await getPageLastmod(urlPath, routeFile, dataFilePath);
       entries.push({
         loc: SITE_URL + urlPath,
         lastmod,
@@ -461,6 +463,8 @@ async function loadDynamicAllCollectionRoutes() {
 }
 
 async function main() {
+  // A broken Git invocation must not silently turn checkout mtimes into dates.
+  execFileSync('git', ['rev-parse', '--is-inside-work-tree'], { cwd: REPO_ROOT, stdio: ['ignore', 'pipe', 'pipe'] });
   console.log('Scanning pages directory:', PAGES_DIR);
   
   // Get static page entries
@@ -491,8 +495,24 @@ async function main() {
   
   // Sort for stable output (by URL)
   dedupedEntries.sort((a, b) => a.loc.localeCompare(b.loc));
+
+  // URL registries and the master map enumerate routes only, never dates.
+  for (const entry of dedupedEntries) {
+    const urlPath = new URL(entry.loc).pathname;
+    if (/\/i-[A-Za-z0-9]+$/.test(urlPath)) continue;
+    if (!lastmodSources.has(entry.loc)) {
+      const routeFile = urlPath.startsWith('/Videos/')
+        ? path.join(PAGES_DIR, 'Videos', '[slug].astro')
+        : urlPath.startsWith('/Other/Expeditions/')
+          ? path.join(PAGES_DIR, 'Other', 'Expeditions', '[slug].astro')
+          : null;
+      if (!routeFile) throw new Error(`Missing page attribution for ${urlPath}`);
+      await getPageLastmod(urlPath, routeFile);
+    }
+    entry.lastmod = lastmodSources.get(entry.loc).lastmod;
+  }
   
-  const outDir = path.resolve(__dirname, '..', 'src', 'data');
+  const outDir = path.join(OUTPUT_ROOT, 'src', 'data');
   await mkdir(outDir, { recursive: true });
   const outFile = path.join(outDir, 'sitemap.ts');
 
@@ -550,7 +570,7 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml}\n</urlset>\n`;
 
-  const publicDir = path.resolve(__dirname, '..', 'public');
+  const publicDir = path.join(OUTPUT_ROOT, 'public');
   await mkdir(publicDir, { recursive: true });
   const publicSitemapPath = path.join(publicDir, 'sitemap.xml');
   await writeFile(publicSitemapPath, sitemapXml, 'utf8');
@@ -605,9 +625,17 @@ export const sitemap: SitemapEntry[] = ${JSON.stringify(dedupedEntries, null, 2)
   const sitemapIndexPath = path.join(publicDir, 'sitemap-index.xml');
   await writeFile(sitemapIndexPath, sitemapIndexXml, 'utf8');
   console.log(`Wrote master sitemap index (${childSitemaps.length} sitemaps) to ${path.relative(path.resolve(__dirname, '..'), sitemapIndexPath)}`);
+  {
+    const target = options['lastmod-report'] ? path.resolve(options['lastmod-report']) : path.join(OUTPUT_ROOT, '.netlify', 'sitemap-attribution.json');
+    await mkdir(path.dirname(target), { recursive: true });
+    await writeFile(target, JSON.stringify({ entries: Object.fromEntries(lastmodSources),
+      excluded: ['src/pages/[...gallery]/all.astro', 'Shared layouts/components/helpers',
+        'Generated lookups/maps/indexes/assignments', 'Global registries'],
+      rule: 'Newest page-specific file timestamp; git committer time if clean, mtime if uncommitted or without Git history' }, null, 2) + '\n');
+  }
 }
 
 main().catch((err) => {
   console.error(err);
   process.exit(1);
-});
+}).finally(async () => { if (contentModuleServer) await contentModuleServer.close(); });
