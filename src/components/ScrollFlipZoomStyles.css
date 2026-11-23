@@ -15,6 +15,43 @@
     display: none !important;
   }
 }
+.chapter-zoom-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: #4b5563;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  cursor: zoom-in;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image-detail-image-wrap > .chapter-image-mobile:hover ~ .chapter-zoom-hint,
+.chapter-zoom-hint:hover,
+.chapter-zoom-hint:focus-visible {
+  color: #fff;
+  background: #9bb69e;
+  border-color: #9bb69e;
+}
+
+.chapter-zoom-hint:hover {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.28);
+}
+
+.chapter-zoom-hint:focus-visible {
+  outline: 2px solid #4b5563;
+  outline-offset: 3px;
+}
+
 .zoom-mat-frame {
   position: relative;
   display: inline-block;

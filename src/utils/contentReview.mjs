@@ -5,6 +5,22 @@ export function getContentReviewState(entry) {
   };
 }
 
+export function isOimImage(imageId, galleryPath, registry) {
+  const id = String(imageId || '').replace(/-sketch$/i, '');
+  if (!id) return false;
+  const path = String(galleryPath || '').replace(/\\/g, '/').replace(/^\/+|\/+$/g, '');
+  const datasetPath = path.startsWith('src/data/') ? `/${path}` : `/src/data/${path}.mjs`;
+  const images = registry?.images || {};
+  const exactKey = `${id}:${datasetPath}`;
+  if (Object.prototype.hasOwnProperty.call(images, exactKey)) {
+    return getContentReviewState(images[exactKey]).isOim;
+  }
+  // Shared images can appear in another gallery or in a direct Sketch view.
+  return Object.entries(images).some(([key, entry]) =>
+    (key === id || key.startsWith(`${id}:`)) && getContentReviewState(entry).isOim,
+  );
+}
+
 const COPY_FIELDS = new Set([
   "title", "alt", "description", "story", "keywords", "tags", "collectorNotes", "notes",
 ]);

@@ -3,7 +3,24 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
-import { getContentReviewState, getManualCopyPatch, toggleContentReview } from "./contentReview.mjs";
+import { getContentReviewState, getManualCopyPatch, toggleContentReview, isOimImage } from "./contentReview.mjs";
+
+test('chapter OIM badges follow the EditorPro classification for the current gallery', () => {
+  const registry = { images: {
+    'i-oim:/src/data/Galleries/Test.mjs': { classification: 'oim', scout: true },
+    'i-scout:/src/data/Galleries/Test.mjs': { classification: 'scout' },
+    'i-oim:/src/data/Galleries/Other.mjs': { classification: 'scout' },
+  } };
+  assert.equal(isOimImage('i-oim', '/Galleries/Test', registry), true);
+  assert.equal(isOimImage('i-oim', '/src/data/Galleries/Test.mjs', registry), true);
+  assert.equal(isOimImage('i-oim-sketch', '/Galleries/Test', registry), true);
+  assert.equal(isOimImage('i-oim', '/Galleries/Shared', registry), true);
+  assert.equal(isOimImage('i-oim', '/Galleries/Other', registry), false);
+  assert.equal(isOimImage('i-scout', '/Galleries/Test', registry), false);
+  assert.equal(isOimImage('i-untagged', '/Galleries/Test', registry), false);
+  assert.equal(isOimImage('', '/Galleries/Test', registry), false);
+  assert.equal(isOimImage('i-oim', '/Galleries/Test', null), false);
+});
 
 test("manual edits to any copy field mark the record Human", () => {
   for (const field of ["title", "alt", "description", "story", "keywords", "tags", "collectorNotes", "notes"]) {

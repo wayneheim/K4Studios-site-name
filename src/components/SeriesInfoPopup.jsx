@@ -7,6 +7,7 @@ import { SERIES_DEFINITIONS, SERIES_ICONS } from "../data/seriesDefinitions.js";
 // One authored source for Guide prose.
 import pricingConfig from "../data/pricingConfig.json";
 import { getSeriesPricingEntries } from '../data/pricing/printSeries.js';
+import DisplayPreviewButton from './DisplayPreviewButton.jsx';
 
 // Series order for display (excludes engrained which has its own flow)
 const DISPLAY_SERIES = ["sketch", "foundation", "chronicle", "legend"];
@@ -128,7 +129,13 @@ export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null
                     </h3>
 
                     <p className="text-sm text-stone-700 mb-3" data-series-pricing={seriesKey}>
-                      {getSeriesPricingEntries(seriesKey, pricing).map(entry => `${entry.displaySize.replace(/\s*x\s*/i, ' × ')} · ${entry.displayPrice}`).join('; ')}
+                      {getSeriesPricingEntries(seriesKey, pricing).map((entry, index) => (
+                        <span key={entry.size}>
+                          {index > 0 && '; '}
+                          {entry.displaySize.replace(/\s*x\s*/i, ' × ')} · {entry.displayPrice}
+                          <DisplayPreviewButton size={entry.size} />
+                        </span>
+                      ))}
                     </p>
                     {def.editionLimit && <p className="text-sm text-stone-600 mb-3">Limited edition of {def.editionLimit} per image.</p>}
 

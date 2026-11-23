@@ -1,0 +1,186 @@
+.chapter-oim-badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 30;
+  display: block;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transform: translateX(50px);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.chapter-oim-popup {
+  box-sizing: border-box;
+  position: fixed;
+  inset: 0;
+  width: min(24rem, calc(100vw - 2rem));
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 1.75rem;
+  overflow-y: auto;
+  border: 1px solid #97999c;
+  border-radius: 0.5rem;
+  background: #f7f5f1;
+  color: #374151;
+  text-align: left;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 25%);
+}
+
+.chapter-oim-popup::backdrop {
+  background: rgb(0 0 0 / 20%);
+}
+
+.chapter-oim-popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #991b1b;
+  cursor: pointer;
+}
+
+.chapter-oim-popup-close:hover {
+  background: rgb(153 27 27 / 8%);
+}
+
+.chapter-oim-popup-heading {
+  margin: 0 0 1.25rem;
+}
+
+.chapter-oim-popup-heading img {
+  display: block;
+  width: 76px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.chapter-oim-popup-copy {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.chapter-oim-popup-copy p {
+  margin: 0 0 1rem;
+}
+
+.chapter-oim-popup-footer {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(107 94 84 / 20%);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Keep the information link visible when the zoom view hides page footers. */
+.chapter-oim-popup .chapter-oim-popup-footer {
+  opacity: 1;
+}
+
+.chapter-oim-popup-footer a {
+  color: #7f1d1d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.chapter-oim-popup-footer a:hover {
+  color: #35100d;
+}
+
+.chapter-oim-popup :is(button, a):focus-visible {
+  outline: 2px solid #8a3d2b;
+  outline-offset: 3px;
+}
+
+.chapter-oim-badge img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.2s ease;
+}
+
+.chapter-oim-badge:hover img,
+.chapter-oim-badge:focus-visible img {
+  filter: invert(1);
+}
+
+.chapter-oim-badge:focus-visible {
+  outline: 2px solid #8a3d2b;
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+.oim-badge-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  padding: 2px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.85;
+  vertical-align: middle;
+  transition: opacity 0.2s ease;
+}
+
+.oim-badge-inline img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.oim-badge-inline:hover,
+.oim-badge-inline:focus-visible {
+  opacity: 1;
+}
+
+.oim-badge-inline:focus-visible {
+  outline: 2px solid #8a3d2b;
+  outline-offset: 3px;
+}
+
+.oim-badge-zoom {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  margin: 6px auto;
+}
+
+@media (max-width: 767px), (pointer: coarse) and (orientation: landscape) and (max-width: 1024px) {
+  .chapter-oim-badge {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+    transform: none;
+    opacity: 0.8;
+  }
+
+  .chapter-oim-badge:hover,
+  .chapter-oim-badge:focus-visible {
+    opacity: 1;
+  }
+}
+

@@ -30,6 +30,13 @@ other requested reports provide more value for substantially less storage.
 
 ## Core population
 
+The **See on Wall** panel counts `wall_preview_open` browser events by print size.
+Size is encoded in the existing `source_layer` field as `wall_preview_size_5x7_v1`
+(and the other supported sizes). The updater writes `wall_preview_size` daily
+dimensions, so no schema migration or historical backfill is needed. Totals count
+clicks, including repeat opens, rather than distinct visitors. The existing date
+window and core traffic exclusions apply.
+
 Core reporting accepts selected meaningful events with both visitor and session
 IDs from the JavaScript collector. Known automation user agents, anonymous
 proxy traffic, and narrowly identified datacenter ASNs are kept out of core

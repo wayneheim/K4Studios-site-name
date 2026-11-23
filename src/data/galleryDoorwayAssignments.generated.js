@@ -266,7 +266,7 @@ export const galleryDoorwayCursors = {
 };
 
 export const galleryDoorwayAssignmentMeta = {
-  "generatedAt": "2026-11-21T05:57:33.899Z",
+  "generatedAt": "2026-11-23T07:14:47.128Z",
   "assignedCount": 50,
   "themeCounts": {
     "nativeAmerican": 2,

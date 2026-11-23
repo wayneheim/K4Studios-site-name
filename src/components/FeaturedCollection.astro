@@ -295,12 +295,11 @@ const structuredData = JSON.stringify({
     sendViaFetch();
   };
 
+  // Bind to this instance even when desktop and mobile share an analytics label.
+  const widget = document.currentScript?.previousElementSibling;
+
   // Track clicks on the Featured Collection CTA
   document.addEventListener('DOMContentLoaded', () => {
-    const widget = Array.from(document.querySelectorAll('.featured-collection-widget')).find((candidate) =>
-      candidate.getAttribute('data-featured-collection') === analyticsLabel &&
-      candidate.getAttribute('data-featured-event') === trackingEvent
-    );
     const link = widget?.querySelector('.fc-link');
     const imageStack = widget?.querySelector('.fc-image-stack');
     let hoverTimer = null;

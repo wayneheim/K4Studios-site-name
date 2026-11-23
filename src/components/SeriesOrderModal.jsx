@@ -7,6 +7,8 @@ import { getSpecialtyPrintSeries } from "../data/pricing/printSeries.js";
 import { normalizeImageSrc } from "../utils/imageProxyCore.js";
 import MerchantSketchOrderModal from "./commerce/MerchantSketchOrderModal.jsx";
 import CollectionOrderModal from "./commerce/CollectionOrderModal.jsx";
+import DisplayPreviewButton from './DisplayPreviewButton.jsx';
+import { OimBadge } from './ChapterOimBadge.jsx';
 import { shouldUseNativeCollectionCart, shouldUseNativeMerchantCart } from "../config/commerce.js";
 
 // Import config at build time as fallback (auto-synced, no manual copy needed)
@@ -331,7 +333,10 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                 alt={image.title}
                 className="w-full max-w-32 mx-auto rounded-lg shadow-md"
               />
-              <h3 className="text-sm font-semibold text-gray-800 mt-2">{image.title}</h3>
+              <div className="mt-2 flex items-center justify-center gap-3">
+                <h3 className="min-w-0 text-sm font-semibold text-gray-800">{image.title}</h3>
+                <OimBadge imageId={image.id} />
+              </div>
               {oneImageMovie && (
                 <p className="text-xs text-[#8a3d2b] mt-1">
                   A One-Image Movie™ work by Wayne Heim
@@ -413,8 +418,8 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                             const hasInventory = inventory > 0;
                             
                             return (
+                            <div key={size} className="flex items-center gap-2">
                             <a
-                              key={size}
                               href={getTierOrderHref(seriesKey, def, editionNumber, size, price)}
                               target={shouldUseBuyLink(seriesKey) ? "_blank" : undefined}
                               rel={shouldUseBuyLink(seriesKey) ? "nofollow noopener noreferrer" : undefined}
@@ -441,6 +446,8 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                                 <span className="text-xs font-semibold uppercase tracking-wide">Order</span>
                               </span>
                             </a>
+                            <DisplayPreviewButton size={size} imageId={image.id} />
+                            </div>
                           );})
                         ) : (
                           <a

@@ -1,4 +1,6 @@
 import { getStandardPrintSeries } from '../data/pricing/printSeries.js';
+import DisplayPreviewButton from './DisplayPreviewButton.jsx';
+import './ImagePricingSummary.css';
 
 const SIGNED_SERIES = new Set(["chronicle", "legend"]);
 
@@ -10,11 +12,11 @@ const sizeArea = (value) => {
 const formatSize = (value) => String(value || "").replace(/\s*x\s*/i, " × ");
 const formatPrice = (value) => `$${Number(value).toLocaleString("en-US")}`;
 
-function lowestOffer(tiers) {
+function getOffers(tiers) {
   return (tiers || [])
     .flatMap((tier) => (tier.pricing || []).map((offer) => ({ ...offer, seriesKey: tier.key })))
     .filter((offer) => Number.isFinite(Number(offer.price)))
-    .sort((a, b) => Number(a.price) - Number(b.price) || sizeArea(a.size) - sizeArea(b.size))[0] || null;
+    .sort((a, b) => sizeArea(a.size) - sizeArea(b.size) || Number(a.price) - Number(b.price));
 }
 
 export default function ImagePricingSummary({
@@ -31,12 +33,15 @@ export default function ImagePricingSummary({
   const tiers = collectionOverview
     ? getStandardPrintSeries(pricing ? { pricing } : undefined).map(series => ({ key: series.key, pricing: series.sizes }))
     : commerce.tiers;
-  const openOffer = lowestOffer(tiers?.filter((tier) => tier.key === "sketch" || tier.key === "foundation"));
-  const limitedOffer = lowestOffer(showLimited
-    ? tiers?.filter((tier) => SIGNED_SERIES.has(tier.key))
-    : []);
+  const seriesGroups = getStandardPrintSeries()
+    .filter((series) => showLimited || !SIGNED_SERIES.has(series.key))
+    .map((series) => ({
+      ...series,
+      offers: getOffers(tiers?.filter((tier) => tier.key === series.key)),
+    }))
+    .filter((series) => series.offers.length);
 
-  if (!openOffer && !limitedOffer) return null;
+  if (!seriesGroups.length) return null;
 
   const rowStyle = {
     display: "grid",
@@ -88,34 +93,49 @@ export default function ImagePricingSummary({
         </p>
       )}
 
-      {[limitedOffer && { offer: limitedOffer, label: 'Limited Edition', signed: true }, openOffer && { offer: openOffer, label: 'Open Edition' }].filter(Boolean).map(({ offer, label, signed }) => (
-        <div key={label} style={rowStyle}>
-          <div style={{ textAlign: "left" }}>
-            <div style={{ color: "#716964", fontSize: "0.9rem", lineHeight: 1.25 }}>{label}{signed && !collectionOverview && ' · Signed'}</div>
-            <div style={{ color: "#9a928d", fontSize: "0.72rem", lineHeight: 1.35 }}>
-              {signed && !collectionOverview && 'Numbered · '}Sizes from {formatSize(offer.size)}
+      {seriesGroups.map(({ key, name, offers, editionLimit }, index) => (
+        <div key={key} data-pricing-series={key} style={{
+          paddingTop: index > 0 ? "0.75rem" : "0.38rem",
+          marginTop: index > 0 ? "0.45rem" : 0,
+          borderTop: index > 0 ? "1px dashed rgba(200, 190, 180, 0.55)" : "none",
+          textAlign: "left",
+        }}>
+          <h4 style={{ margin: 0, color: "#716964", fontSize: "0.9rem", fontWeight: 400, lineHeight: 1.25 }}>{name}</h4>
+          <div style={{ color: "#9a928d", fontSize: "0.72rem", lineHeight: 1.35 }}>
+            {SIGNED_SERIES.has(key) ? `Limited Edition${editionLimit ? ` of ${editionLimit}` : ''}${collectionOverview ? '' : ' · Signed · Numbered'}` : 'Open Edition'}
+          </div>
+          {offers.map((offer) => (
+            <div key={`${offer.seriesKey}:${offer.size}`} style={rowStyle} data-pricing-size={offer.size}>
+              <div style={{ color: "#9a928d", fontSize: "0.8rem", lineHeight: 1.35 }}>
+                {formatSize(offer.size)}
+                <DisplayPreviewButton size={offer.size} imageId={commerce.imageId} />
+              </div>
+              <div style={{ color: "#716964", fontSize: "0.86rem", whiteSpace: "nowrap", textAlign: "right" }}>
+                {formatPrice(offer.price)}
+              </div>
             </div>
-          </div>
-          <div style={{ color: "#716964", fontSize: "0.86rem", whiteSpace: "nowrap", textAlign: "right" }}>
-            from {formatPrice(offer.price)}
-          </div>
+          ))}
         </div>
       ))}
 
+      <hr style={{
+        margin: "0.45rem 0 0",
+        border: 0,
+        borderTop: "1px dashed rgba(200, 190, 180, 0.55)",
+      }} />
+
       <div style={{ textAlign: "center", margin: compact ? "0.8rem 0 0.9rem" : "0.85rem 0 0.8rem" }}>
-        <button type="button" onClick={onOrder} style={{
+        <button type="button" className="image-pricing-order-button" onClick={onOrder} style={{
           border: "1px solid rgba(150, 140, 132, 0.18)",
           borderRadius: "999px",
           padding: "0.42rem 0.85rem",
-          background: "#eeeae5",
-          color: "#8a817b",
+          color: "#ffffff",
           cursor: "pointer",
           fontFamily: "'Glegoo', serif",
           fontSize: "0.78rem",
           lineHeight: 1.2,
-          boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
         }}>
-          See full pricing &amp; order
+          Place Order
         </button>
       </div>
     </section>

@@ -27,7 +27,7 @@ import { warmImage } from "../utils/warmImage";
 import { trackEvent, emitActionPixel, emitChapterViewPixel } from "../utils/analytics";
 import { useState, useRef, useEffect, useMemo, lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Grid, Notebook, CircleX, SquareChevronLeft, SquareChevronRight, Info } from "lucide-react";
+import { Grid, Notebook, CircleX, SquareChevronLeft, SquareChevronRight, Info, ZoomIn } from "lucide-react";
 import { sitemapMatches } from "../data/sitemapMatches.ts";
 import {
   buildCollectionContextStatement,
@@ -35,6 +35,7 @@ import {
 } from "../data/semantic/collectionContext.ts";
 import MobileMiniDrawer from "./MobileMiniDrawer";
 import "./ScrollFlipZoomStyles.css";
+import ChapterOimBadge from "./ChapterOimBadge.jsx";
 import "../styles/global.css";
 import SwipeHint from "./SwipeHint";
 import LikeButton from "@/components/LikeButton.jsx";
@@ -61,6 +62,8 @@ import { extractImageId, getSemanticImageUrl } from "../utils/imageProxy.js";
 import { sanitizeRepeatedSeoCopy } from "../utils/repetitiveSeoCopy";
 import { shouldUseNativeCollectionCart, shouldUseNativeMerchantCart } from "../config/commerce.js";
 import ImagePricingSummary from "./ImagePricingSummary.jsx";
+import contentClassificationRegistry from '../data/contentClassificationRegistry.json';
+import { isOimImage } from '../utils/contentReview.mjs';
 
 const ZoomOverlay = lazy(() => import("./ZoomOverlay.jsx"));
 const RebuiltScrollGrid = lazy(() => import("./RebuiltScrollGrid"));
@@ -726,6 +729,7 @@ export default function ChapterGalleryBase({
   // Sister link logic - use state to avoid SSR/client mismatch
   const currentImageId = galleryData[currentIndex]?.id;
   const currentImageData = galleryData[currentIndex] || null;
+  const currentIsOim = isOimImage(currentImageData?.id, basePath, contentClassificationRegistry);
   const currentSeries = getEffectiveSeries(currentImageData, seriesRegistry, { merchantSketch: isMerchantSketchVariant });
   const currentExcludeSizes = getExcludeSizesFromRegistry(currentImageData?.id, seriesRegistry);
   const currentCommerce = isEngrainedSeries ? null : {
@@ -837,6 +841,7 @@ export default function ChapterGalleryBase({
     titleBase
   );
   const [isLandscapeMobile, setIsLandscapeMobile] = useState(false);
+  const desktopOimOffset = currentIsOim && !isLandscapeMobile ? 44 : 0;
   const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(1200);
   const [showStoryShow, setShowStoryShow] = useState(false);
@@ -1393,8 +1398,8 @@ export default function ChapterGalleryBase({
 
   return (
     <div
-      className="min-h- bg-white text-black font-serif px-5 py-2 md:py-8 overflow-x-hidden"
-      style={{ fontFamily: "Glegoo, serif", maxWidth: '100%', width: '100%', boxSizing: 'border-box' }}
+      className="min-h- bg-white text-black font-serif px-5 py-2 md:pt-0 md:pb-8 overflow-x-hidden"
+      style={{ fontFamily: "Glegoo, serif", maxWidth: '100%', width: '100%', boxSizing: 'border-box', paddingTop: isZoomed ? 0 : undefined }}
       onMouseMove={() => setShowArrows(true)}
     >
       {/* 
@@ -1601,10 +1606,24 @@ export default function ChapterGalleryBase({
                               }
                             }}
                           />
+                          {!isMobile && !isLandscapeMobile && (
+                            <button
+                              type="button"
+                              className="chapter-zoom-hint desktop-only-element"
+                              aria-label="Enlarge image"
+                              title="Click to Zoom"
+                              onClick={() => chapterImageRef.current?.click()}
+                            >
+                              <ZoomIn size={18} strokeWidth={1.75} aria-hidden="true" />
+                            </button>
+                          )}
                           {currentImageData && (
                             <span className="image-price-signature">
                               ©Wayne Heim
                             </span>
+                          )}
+                          {currentIsOim && (
+                            <ChapterOimBadge key={currentId} />
                           )}
                           {/* Desktop Collector Notes button absolutely positioned outside/right of image edge */}
                           {!isMerchantSketchVariant && !isMobile && galleryData[currentIndex]?.notes?.trim() && (
@@ -1629,7 +1648,7 @@ export default function ChapterGalleryBase({
                               aria-label="View Collector Notes"
                               title={showNotes ? "Hide Collector Notes" : "View Collector Notes"}
                               className={`desktop-only-element absolute top-2 right-3 w-8 h-9 border border-gray-300 bg-white text-gray-400 rounded-md shadow hover:bg-gray-200 transition z-30 flex items-center justify-center ${showCollectorHint ? 'collector-hint-ring' : ''}`}
-                              style={{ boxShadow: "0 2px 6px rgba(80,60,30,0.10)", transform: "translateX(50px)" }}
+                              style={{ boxShadow: "0 2px 6px rgba(80,60,30,0.10)", transform: "translateX(50px)", top: 8 + desktopOimOffset }}
                             >
                               {showNotes ? (
                                 <span className="text-lg text-red-600 leading-none">✕</span>
@@ -1649,7 +1668,7 @@ export default function ChapterGalleryBase({
                             // For Engrained gallery: show only Engrained icon, clicking opens Engrained info modal
                             if (isEngrainedSeries) {
                               const hasNotes = currentImage?.notes?.trim();
-                              const topOffset = hasNotes ? '56px' : '8px';
+                              const topOffset = (hasNotes ? 56 : 8) + desktopOimOffset;
                               const engrainedDef = SERIES_DEFINITIONS.engrained;
                               
                               return (
@@ -1689,7 +1708,7 @@ export default function ChapterGalleryBase({
                             
                             // Calculate top offset based on whether collector notes button exists
                             const hasNotes = currentImage?.notes?.trim();
-                            const topOffset = hasNotes ? '56px' : '8px';
+                            const topOffset = (hasNotes ? 56 : 8) + desktopOimOffset;
                             
                             return (
                               <div

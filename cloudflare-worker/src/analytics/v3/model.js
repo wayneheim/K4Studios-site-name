@@ -12,7 +12,7 @@ export const V3_CORE_EVENT_TYPES = Object.freeze([
   'theme_click', 'all_list_click', 'story_audio_toggle', 'story_slider_click',
   'frontier_story_video_widget_click', 'guide_open', 'guide_close', 'guide_done',
   'guide_click_outside', 'order_clicked', 'order_submitted',
-  'order_smugmug_clicked', 'order_email_clicked', 'xl_zoom',
+  'order_smugmug_clicked', 'order_email_clicked', 'xl_zoom', 'wall_preview_open',
   'native_cart_add', 'native_cart_view', 'native_checkout_start',
   'native_checkout_quote', 'native_payment_start', 'native_order_complete',
   'native_checkout_error', 'native_checkout_cancel',
@@ -139,6 +139,7 @@ export function getV3ActionLabel(type, sourceLayer = null) {
     picture_shows_jump: 'Picture Shows widget clicked', story_audio_toggle: 'Narration toggled',
     story_slider_click: 'Story slide clicked',
     frontier_story_video_widget_click: 'Story video clicked', xl_zoom: 'XL zoom opened',
+    wall_preview_open: 'See on Wall opened',
     series_info: 'Series information opened', more_info_open: 'More information opened',
     collector_notes_open: 'Collector notes opened', slideshow_start: 'Slideshow started',
     slideshow_nav_next: 'Slideshow image advance', slideshow_nav_prev: 'Slideshow previous image'
@@ -154,7 +155,7 @@ export function getV3ActionGroup(type) {
   if (['nav_next', 'nav_prev', 'slideshow_nav_next', 'slideshow_nav_prev', 'sister_image_click', 'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start'].includes(type)) return 'Image navigation';
   if (type.startsWith('story_') || type === 'frontier_story_video_widget_click') return 'Story';
   if (type.startsWith('guide_')) return 'Guide';
-  if (['xl_zoom', 'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start'].includes(type)) return 'Engagement';
+  if (['xl_zoom', 'wall_preview_open', 'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start'].includes(type)) return 'Engagement';
   return null;
 }
 
@@ -422,6 +423,10 @@ export function buildV3RollupBatch(rows, previousSessions = []) {
       addCount(imageGeography, `${day}\u0000${imageId}\u0000${country}\u0000${region}\u0000${city}`);
     }
     const action = getV3ActionLabel(row.event_type, row.source_layer);
+    if (row.event_type === 'wall_preview_open') {
+      const size = String(row.source_layer || '').match(/^wall_preview_size_(5x7|8x10|11x14|16x20|20x24|30x40|40x60)_v1$/)?.[1];
+      incrementDimension(day, 'wall_preview_size', size ? size.replace('x', ' × ') : 'Unknown size');
+    }
     if (action) incrementDimension(day, 'action', action);
     const expeditionAction = getV3ExpeditionActionLabel(row.page, row.event_type);
     if (expeditionAction) incrementDimension(day, 'expedition_action', expeditionAction);
@@ -622,6 +627,7 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       return topDistinctVisitors('imageGeo', 20, (row) => Boolean(row.imageGeo), true)
         .map((row) => ({ ...row, imageViews: viewCounts.get(row.label) || 0 }));
     })(),
+    wallPreviews: top('wall_preview_size', 20),
     expeditionActions: top('expedition_action', 30),
     actionGroups: top('action_group', 10),
     actions: top('action', 20).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),

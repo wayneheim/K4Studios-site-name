@@ -14,6 +14,8 @@ import {
 } from "../../lib/commerce/cart.js";
 import { normalizeImageSrc } from "../../utils/imageProxyCore.js";
 import ImageId from "./ImageId.jsx";
+import DisplayPreviewButton from '../DisplayPreviewButton.jsx';
+import { OimBadge } from '../ChapterOimBadge.jsx';
 
 const SERIES_COLORS = {
   sketch: { surface: "#e7eee8", border: "#b9c9bc", accent: "#59695d" },
@@ -238,7 +240,10 @@ export default function CollectionOrderModal({
               <img src={imageSrc} alt={image.title || "K4 Studios fine art photograph"} className="mx-auto max-h-[150px] w-full max-w-[220px] bg-stone-100 object-contain shadow-md" />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#8a3d2b]">Select a print edition</p>
-                <h3 className="mt-1 text-xl font-semibold leading-snug text-stone-900">{image.title}</h3>
+                <div className="mt-1 flex items-center gap-3">
+                  <h3 className="min-w-0 text-xl font-semibold leading-snug text-stone-900">{image.title}</h3>
+                  <OimBadge imageId={image.id} />
+                </div>
                 <ImageId imageId={image.id} />
                 {oneImageMovie && <p className="mt-1 text-xs text-[#8a3d2b]">A One-Image Movie™ work by Wayne Heim</p>}
                 <p className="mt-2 text-sm leading-relaxed text-stone-600">Choose the scale and edition structure that best fits the work and the room where it will live.</p>
@@ -315,8 +320,9 @@ export default function CollectionOrderModal({
                                 data-k4-product-option
                                 className={`flex items-center justify-between gap-1.5 rounded-md border border-stone-300 bg-white px-2 py-2.5 shadow-sm transition sm:gap-3 sm:px-3 sm:py-3 ${unavailable ? "opacity-50" : "hover:border-stone-400"}`}
                               >
-                                <div className="flex min-w-0 items-baseline gap-1 whitespace-nowrap sm:gap-2">
+                                <div className="flex min-w-0 flex-wrap items-baseline gap-1 sm:gap-2">
                                   <span data-k4-option-size className="text-xs font-semibold text-stone-800 sm:text-sm">{product.size}</span>
+                                  <DisplayPreviewButton size={product.size} imageId={image.id} />
                                   <span className="hidden truncate text-[11px] text-stone-500 sm:inline">{product.finish}</span>
                                   {quickShip && <span className="hidden text-[10px] font-semibold uppercase tracking-wide text-emerald-700 sm:inline">Quick ship</span>}
                                 </div>

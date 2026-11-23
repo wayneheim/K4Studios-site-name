@@ -76,7 +76,7 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
         SELECT dimension,label,SUM(count) count
         FROM analytics_v3_daily_dimensions
         WHERE day BETWEEN ? AND ? AND dimension IN (
-          'page','action','action_group','image_geo_views','expedition_action',
+          'page','action','action_group','image_geo_views','expedition_action','wall_preview_size',
           'merchant_inspection_session','merchant_inspection_action',
           'merchant_inspection_product','merchant_inspection_location'
         )
@@ -292,6 +292,7 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     imageGeography: topSession('image_geo', 20).map((row) => ({
       ...row, imageViews: imageViewGeoCounts.get(row.label) || 0
     })),
+    wallPreviews: top('wall_preview_size', 20),
     expeditionActions: top('expedition_action', 30),
     actionGroups: top('action_group', 10),
     actions: top('action', 25).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),

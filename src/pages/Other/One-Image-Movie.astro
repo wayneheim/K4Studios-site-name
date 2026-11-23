@@ -33,6 +33,25 @@ function getProxySrc(imageId: string, size: string = 'm'): string {
 // ----------------------
 const sectionPath = "/Other/One-Image-Movie";
 
+const oimDefinition = "OIM-1 is a maker's mark reserved for a personally curated collection of Wayne's most signature One-Image Movie creations. Each of these images combines with Wayne's title and unresolved story to build an interrupted moment — asking you to finish the story that lives beyond the frame.";
+const faqItems = [
+  ...[
+      {
+        question: "What is a One-Image Movie?",
+        answer: "Wayne Heim’s One-Image Movies™ are finished narrative-art presentations built from image, title, authored writing, unresolved implication, atmosphere, and viewer participation. The photograph begins the scene, but the final unwritten movie is completed in the viewer’s mind."
+      },
+      {
+        question: "What makes a One-Image Movie different from regular photography?",
+        answer: "A One-Image Movie is not just any narrative image. It becomes this format only when image, title, authored writing, atmosphere, unresolved implication, and viewer interpretation lock together into a branded K4 Studios narrative-art presentation."
+      },
+      {
+        question: "What is a Picture Show?",
+        answer: "A Picture Show is not the One-Image Movie itself. It is a guided presentation of individual One-Image Movies™, inviting the viewer deeper into the image, title, story, and unresolved experience already present in each still work."
+      }
+    ].filter(({ question }) => question === "What is a One-Image Movie?"),
+  { question: "What does the OIM-1 mark mean?", answer: oimDefinition },
+];
+
 // Build structured data with Article + DefinedTerm schema
 const structuredData = getStructuredData({
   type: "Article",
@@ -60,20 +79,7 @@ const structuredData = getStructuredData({
       description: "Wayne Heim’s One-Image Movies™ name a specific K4 Studios narrative-art format where photographic image, title, authored writing, atmosphere, unresolved implication, and viewer participation operate together. The final unwritten story is completed in the viewer’s mind.",
       termSet: "https://www.k4studios.com/Glossary"
     },
-    faqItems: [
-      {
-        question: "What is a One-Image Movie?",
-        answer: "Wayne Heim’s One-Image Movies™ are finished narrative-art presentations built from image, title, authored writing, unresolved implication, atmosphere, and viewer participation. The photograph begins the scene, but the final unwritten movie is completed in the viewer’s mind."
-      },
-      {
-        question: "What makes a One-Image Movie different from regular photography?",
-        answer: "A One-Image Movie is not just any narrative image. It becomes this format only when image, title, authored writing, atmosphere, unresolved implication, and viewer interpretation lock together into a branded K4 Studios narrative-art presentation."
-      },
-      {
-        question: "What is a Picture Show?",
-        answer: "A Picture Show is not the One-Image Movie itself. It is a guided presentation of individual One-Image Movies™, inviting the viewer deeper into the image, title, story, and unresolved experience already present in each still work."
-      }
-    ].filter(({ question }) => question === "What is a One-Image Movie?")
+    faqItems,
   },
   defaults: {
     copyrightNotice: "© Wayne Heim",
@@ -261,6 +267,7 @@ const breadcrumbData = getBreadcrumbList([
     <section class="story-layout" style="font-family: 'Glegoo', serif;">
       <div class="text-column story-section" style="max-width: 860px; margin: 0 auto; padding: 0 1.5rem; line-height: 1.3;">
         {oneImageMoviePage.sections.map((section, index) => (
+          <Fragment>
           <article class="story-block" style="margin-bottom: 2.5rem;">
             <h2 style="font-weight: 500; font-size: 1.65rem; margin-bottom: 0.55rem;">{section.subhead}</h2>
 
@@ -311,7 +318,26 @@ const breadcrumbData = getBreadcrumbList([
               </div>
             )}
           </article>
+          {section.subhead === "When an Image Becomes a One-Image Movie™" && (
+            <section class="oim-mark-section" aria-labelledby="oim-mark-heading">
+              <h2 id="oim-mark-heading">The Maker's Mark — OIM-1</h2>
+              <img src="/images/OIM-1-web.webp" alt="OIM-1 maker's mark" width="120" height="119" loading="lazy" />
+              <p>{oimDefinition}</p>
+              <p>You'll see the mark on the chapter pages of the pieces in this collection. It is not an edition, a size, or a price — editions are stated on each chapter in their own terms. Across K4 Studios, the One-Image Movie™ is the invitation itself: step inside an unfinished story. The maker's mark gathers the pieces Wayne has personally curated as the most signature expressions of that idea.</p>
+              <p><a href="https://www.k4studios.com/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West/Western-Narratives/Color/i-bfKMXS9">See the mark on a chapter page</a></p>
+            </section>
+          )}
+          </Fragment>
         ))}
+        <section class="oim-page-faq" aria-labelledby="oim-faq-heading">
+          <h2 id="oim-faq-heading">Frequently Asked Questions</h2>
+          {faqItems.map(({ question, answer }) => (
+            <div class="oim-page-faq__item">
+              <h3>{question}</h3>
+              <p>{answer}</p>
+            </div>
+          ))}
+        </section>
       </div>
     </section>
 
@@ -329,6 +355,48 @@ const breadcrumbData = getBreadcrumbList([
   </div>
 
   <style>
+    .oim-mark-section,
+    .oim-page-faq {
+      margin-bottom: 2.5rem;
+    }
+
+    .oim-mark-section h2,
+    .oim-page-faq h2 {
+      font-weight: 500;
+      font-size: 1.65rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .oim-mark-section > img {
+      display: block;
+      width: 120px;
+      height: auto;
+      margin: 1.25rem auto;
+    }
+
+    .oim-mark-section p,
+    .oim-page-faq p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 1.01rem;
+    }
+
+    .oim-mark-section a {
+      color: #7b4a28;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .oim-page-faq__item {
+      margin-top: 1.5rem;
+    }
+
+    .oim-page-faq h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
     .one-image-movie-bridge {
       max-width: 1180px;
       margin: 2.5rem auto 2.35rem;

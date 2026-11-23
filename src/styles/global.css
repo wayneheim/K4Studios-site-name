@@ -315,6 +315,7 @@ html, body {
 }
 
 body.zoom-open {
+  margin-top: 0;
   /* Allow vertical scrollbar fallback so extremely small windows still can access controls */
   overflow-y: scroll;
   overflow-x: hidden;
@@ -640,8 +641,13 @@ body.react-mounted footer {
 
 /* add dynamic top padding only when viewport is taller than ~900px */
 #chapter-section.section-visible {
-  /* when vh > 900px, gives (vh - 900)/2 padding, capped to 160px */
-  padding-top: clamp(0px, calc((100vh - 900px) / 2), 160px);
+  /* Reduce the extra headroom by 40px, with no negative padding on shorter windows. */
+  padding-top: clamp(0px, calc((100vh - 900px) / 2 - 40px), 120px);
+}
+
+/* Bring zoom closer to the top without reducing mat padding or clipping the frame. */
+body.zoom-open #chapter-section.section-visible {
+  padding-top: clamp(0px, calc((100vh - 900px) / 2 - 50px), 110px);
 }
 
 /* Grid view opt-out: attribute added by RebuiltScrollGrid */

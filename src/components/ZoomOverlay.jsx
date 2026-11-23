@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import ImagePricingSummary from "./ImagePricingSummary.jsx";
+import { OimBadge } from './ChapterOimBadge.jsx';
 
 // ✅ Proxy URL helper - never expose SmugMug URLs to crawlers
 const getProxySrc = (id, size = "xl") => `/img/${id}/${size}.jpg`;
@@ -220,7 +221,7 @@ export default function ZoomOverlay({
 
   const context =
     (matColor === "no-wood" || matColor === "white3")
-      ? "Click the color icons above to preview different display ideas. Contact us for additional details."
+      ? "Click the color icons above to view a selection matting/finishing ideas."
       : matColor === "wood"
       ? "For an unforgetable presentation, order a custom 5-layer UV printed Maple / Baltic-Birch Wood Print"
       : "Additional Finishing/Display Suggestions for your prints. *Matting not included.";
@@ -255,7 +256,7 @@ export default function ZoomOverlay({
   };
 
   const longestContext =
-    "Click the color icons above to preview different display ideas. Contact us for additional details.";
+    "Click the color icons above to view a selection matting/finishing ideas.";
   const measureRef = useRef(null);
   const [reservedHeight, setReservedHeight] = useState(null);
 
@@ -285,6 +286,24 @@ export default function ZoomOverlay({
         }}
       >
         <div style={{ all: "unset", maxWidth: 1100, textAlign: "center" }}>
+          <OimBadge imageId={imageData.id} placement="zoom" />
+          {imageData.title && (
+            <h2
+              style={{
+                margin: "0 auto 4px",
+                padding: "0 0.5rem",
+                color: "#8b817a",
+                fontFamily: "'Glegoo', serif",
+                fontSize: "2.25rem",
+                fontWeight: 400,
+                lineHeight: 1.4,
+                textAlign: "center",
+                overflowWrap: "anywhere",
+              }}
+            >
+              {imageData.title}
+            </h2>
+          )}
           {/* FRAME */}
           <div
             ref={frameRef}
@@ -440,24 +459,6 @@ export default function ZoomOverlay({
                       }}
                     />
                   </button>
-                  <button
-                    title="Wood print"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setMatColor("wood");
-                    }}
-                    style={{
-                      width: 20,
-                      height: 20,
-                      border: matColor === "wood" ? "2px solid #b91c1c" : "1px solid #777",
-                      borderRadius: 4,
-                      backgroundImage: "url('/images/materials/Maple-w.jpg')",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      cursor: "pointer",
-                      boxShadow: matColor === "wood" ? "0 0 0 2px rgba(185,28,28,0.35)" : "none",
-                    }}
-                  />
                   {[
                     ["white", "#ffffff"],
                     ["white2", "#9e9d9d"],
@@ -568,7 +569,7 @@ export default function ZoomOverlay({
                 opacity: contextVisible ? 0.5 : 0,
                 transition: `opacity ${fadeDuration}ms ease`,
                 fontFamily: "'Glegoo', serif",
-                maxWidth: isMobile ? "88vw" : "60ch",
+                maxWidth: isMobile ? "88vw" : "80ch",
                 marginLeft: "auto",
                 marginRight: "auto",
                 lineHeight: 1.35,
@@ -589,7 +590,7 @@ export default function ZoomOverlay({
                   marginBottom: 6,
                 }}
               >
-                Explore Finishing Options
+                Explore Finishing Ideas
               </p>
               <p style={{ marginTop: 0 }}>{displayContext}</p>
             </div>
@@ -603,7 +604,7 @@ export default function ZoomOverlay({
                 marginTop: 18,
                 fontSize: "0.9rem",
                 fontFamily: "'Glegoo', serif",
-                maxWidth: isMobile ? "88vw" : "60ch",
+                maxWidth: isMobile ? "88vw" : "80ch",
                 lineHeight: 1.35,
                 whiteSpace: "normal",
               }}
@@ -611,6 +612,16 @@ export default function ZoomOverlay({
               {longestContext}
             </p>
           </div>
+          )}
+
+          {!isEngrained && (
+            <ImagePricingSummary
+              commerce={commerce}
+              collectionLabel={collectionLabel}
+              onOrder={onOrder}
+              compact
+              showLimited={showLimitedPricing}
+            />
           )}
 
           {!isEngrained && (
@@ -640,15 +651,6 @@ export default function ZoomOverlay({
           </div>
           )}
 
-          {!isEngrained && (
-            <ImagePricingSummary
-              commerce={commerce}
-              collectionLabel={collectionLabel}
-              onOrder={onOrder}
-              compact
-              showLimited={showLimitedPricing}
-            />
-          )}
         </div>
       </div>
     </div>

@@ -202,12 +202,18 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://www.k4studios.com/";
       <TombstoneNav client:load items={landingWestern.tombstones} />
     </div>
 
-    <section class="home-picture-shows-mobile" aria-label="Picture Shows link">
-      <div class="home-picture-shows-mobile__inner">
-        <span class="home-picture-shows-mobile__eyebrow">Picture Shows</span>
-        <p class="home-picture-shows-mobile__text">Explore the stories that live beyond the frame.</p>
-        <a class="home-picture-shows-mobile__link" href={pictureShowsUrl}>See where they will take you.</a>
-      </div>
+    <section class="home-cowboy-mobile" aria-label="Western Cowboy Collection">
+      <FeaturedCollection
+        image={featuredCowboyImage}
+        title="Western Cowboy Collection"
+        subtitle="Painterly portraits of the American West"
+        ctaText="Enter the Frontier"
+        ctaLink="/Galleries/Painterly-Fine-Art-Photography/Facing-History/Wild-West"
+        collectionName="Wild West Collection"
+        trackingId="Cowboy_Jump_Home"
+        itemCount={250}
+        emitStructuredData={false}
+      />
     </section>
 
     <div class="story-layout">
@@ -248,6 +254,14 @@ if (!meta.twitterUrl) meta.twitterUrl = "https://www.k4studios.com/";
         </div>
 
         <MobileStoryImages client:only="react" images={sanitizeForClient(featheredImages)} displayCount={headingCount} />
+
+        <section class="home-picture-shows-mobile" aria-label="Picture Shows link">
+          <div class="home-picture-shows-mobile__inner">
+            <span class="home-picture-shows-mobile__eyebrow">Picture Shows</span>
+            <p class="home-picture-shows-mobile__text">Explore the stories that live beyond the frame.</p>
+            <a class="home-picture-shows-mobile__link" href={pictureShowsUrl}>See where they will take you.</a>
+          </div>
+        </section>
       </div>
 
       <div class="sidebar-column hidden md:block">

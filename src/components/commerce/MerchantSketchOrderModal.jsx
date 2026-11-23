@@ -3,6 +3,8 @@ import { CircleX, Minus, Plus, ShoppingBag, Trash2 } from "lucide-react";
 import { normalizeImageSrc } from "../../utils/imageProxyCore.js";
 import { MERCHANT_SKETCH_PRODUCT, buildCartItem } from "../../data/commerce/catalog.js";
 import ImageId from "./ImageId.jsx";
+import DisplayPreviewButton from '../DisplayPreviewButton.jsx';
+import { OimBadge } from '../ChapterOimBadge.jsx';
 import {
   addCartItem,
   formatCurrency,
@@ -128,7 +130,10 @@ export default function MerchantSketchOrderModal({ isOpen, onClose, image, track
               />
               <div>
                 <p className="text-xs uppercase tracking-[0.15em] text-stone-500">{product.edition}</p>
-                <h3 className="mt-1 text-lg font-semibold leading-snug text-stone-900">{image.title}</h3>
+                <div className="mt-1 flex items-center gap-3">
+                  <h3 className="min-w-0 text-lg font-semibold leading-snug text-stone-900">{image.title}</h3>
+                  <OimBadge imageId={image.id} />
+                </div>
                 <ImageId imageId={image.id} />
                 <p className="mt-2 text-sm font-semibold text-[#8a3d2b]">
                   {product.seriesLabel} · {product.size}
@@ -145,7 +150,7 @@ export default function MerchantSketchOrderModal({ isOpen, onClose, image, track
               </p>
               <p className="mt-2 text-sm leading-relaxed text-stone-700">{product.description}</p>
               <dl className="mt-3 grid grid-cols-[88px_1fr] gap-x-3 gap-y-1 text-xs text-stone-600">
-                <dt className="font-semibold text-stone-700">Size</dt><dd>{product.size}</dd>
+                <dt className="font-semibold text-stone-700">Size</dt><dd>{product.size}<DisplayPreviewButton size={product.size} imageId={image.id} /></dd>
                 <dt className="font-semibold text-stone-700">Finish</dt><dd>{product.finish}</dd>
                 <dt className="font-semibold text-stone-700">Edition</dt><dd>{product.edition}</dd>
               </dl>
