@@ -56,7 +56,20 @@
       "linkedImageId": "i-8Ddjt5W",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-x6rrj3V",
@@ -123,7 +136,20 @@
       "linkedImageId": "i-Vr8vzjt",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-J6Gdmr4",
@@ -197,7 +223,20 @@
       "linkedImageId": "i-LL2Gp5r",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-G8gfsL5",
@@ -264,7 +303,20 @@
       "linkedImageId": "i-rfFBRQM",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-PnGsDQp",
@@ -331,7 +383,20 @@
       "linkedImageId": "i-B7ZSdfs",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-nmDtVXP",
@@ -400,7 +465,20 @@
       "linkedImageId": "i-T7TFJX2",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-gM5crmq",
@@ -476,7 +554,20 @@
       "linkedImageId": "i-kQfftQ2",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-8pfC4qn",
@@ -545,7 +636,20 @@
       "linkedImageId": "i-7VWX9vk",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-LdQzCRt",
@@ -614,7 +718,20 @@
       "linkedImageId": "i-trZrk2w",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-B8sDF3M",
@@ -692,7 +809,20 @@
       "linkedImageId": "i-c5K798H",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-wV53528",
@@ -762,7 +892,20 @@
       "linkedImageId": "i-hMXZ8Xh",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-zdvVgqx",
@@ -842,7 +985,20 @@
       "linkedImageId": "i-qVZ9m7j",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-gFTwXkq",
@@ -922,7 +1078,20 @@
       "linkedImageId": "i-TLDkd5q",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-svbQj25",
@@ -993,7 +1162,20 @@
       "linkedImageId": "i-G7csptc",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-rxQn29x",
@@ -1059,7 +1241,20 @@
       "linkedImageId": "i-7Mzzbvp",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-bVSh9xt",
@@ -1124,7 +1319,20 @@
       "linkedImageId": "i-Wx5scCf",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-vhmHCCM",
@@ -1192,7 +1400,20 @@
       "linkedImageId": "i-6Ffpw9t",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-4pQCmVZ",
@@ -1260,7 +1481,20 @@
       "linkedImageId": "i-jcLJT4J",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-hCk9fs9",
@@ -1326,7 +1560,20 @@
       "linkedImageId": "i-bq4FKvX",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-5VmRqpZ",
@@ -1396,7 +1643,20 @@
       "linkedImageId": "i-Nn7scqm",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-swWgKsW",
@@ -1479,7 +1739,20 @@
       "linkedImageId": "i-LCspRF4",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-4QZ7HPR",
@@ -1546,7 +1819,20 @@
       "linkedImageId": "i-HBRmWg4",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-jL4Gk5N",
@@ -1616,7 +1902,20 @@
       "linkedImageId": "i-RsLmsLZ",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-BmwzGg4",
@@ -1686,7 +1985,20 @@
       "linkedImageId": "i-89qzJ6S",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-wX39m6G",
@@ -1753,7 +2065,20 @@
       "linkedImageId": "i-MHGPvcs",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/Western-Cowboy-Portraits/Color.mjs",
       "oneImageMovie": true,
-      "yearCreated": "2026"
+      "yearCreated": "2026",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-HZVV8J2",
@@ -1805,7 +2130,20 @@
       "linkedImageId": "i-4cLQTsM",
       "linkedGalleryPath": "src/data/Galleries/Painterly-Fine-Art-Photography/Facing-History/WWII/Portraits/Color.mjs",
       "contentSource": "ai",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-ZWDpsxz",
@@ -1871,7 +2209,20 @@
       "srcL": "/img/i-ZWDpsxz/l.jpg",
       "srcM": "/img/i-ZWDpsxz/m.jpg",
       "srcS": "/img/i-ZWDpsxz/s.jpg",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-hVBkc7Q",
@@ -1929,7 +2280,20 @@
       "srcL": "/img/i-hVBkc7Q/l.jpg",
       "srcM": "/img/i-hVBkc7Q/m.jpg",
       "srcS": "/img/i-hVBkc7Q/s.jpg",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-Prk5NPT",
@@ -1980,7 +2344,20 @@
       "srcM": "/img/i-Prk5NPT/m.jpg",
       "srcS": "/img/i-Prk5NPT/s.jpg",
       "yearCreated": "2025",
-      "contentSource": "ai"
+      "contentSource": "ai",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-C58KMqF",
@@ -2034,7 +2411,20 @@
       "srcM": "/img/i-C58KMqF/m.jpg",
       "srcS": "/img/i-C58KMqF/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-NQ5tCTb",
@@ -2086,7 +2476,20 @@
       "srcM": "/img/i-NQ5tCTb/m.jpg",
       "srcS": "/img/i-NQ5tCTb/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-xF7p92v",
@@ -2146,7 +2549,20 @@
       "srcM": "/img/i-xF7p92v/m.jpg",
       "srcS": "/img/i-xF7p92v/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 2,
+        "sold": 0,
+        "inStock": 2
+      }
     },
     {
       "id": "i-b4wG4vh",
@@ -2198,7 +2614,20 @@
       "srcM": "/img/i-b4wG4vh/m.jpg",
       "srcS": "/img/i-b4wG4vh/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-4cdDwZt",
@@ -2258,7 +2687,20 @@
       "srcM": "/img/i-4cdDwZt/m.jpg",
       "srcS": "/img/i-4cdDwZt/s.jpg",
       "yearCreated": "2024",
-      "contentSource": "ai"
+      "contentSource": "ai",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 1,
+        "inStock": 0
+      }
     },
     {
       "id": "i-VGxwS5N",
@@ -2312,7 +2754,20 @@
       "srcM": "/img/i-VGxwS5N/m.jpg",
       "srcS": "/img/i-VGxwS5N/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2024"
+      "yearCreated": "2024",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 3,
+        "sold": 2,
+        "inStock": 1
+      }
     },
     {
       "id": "i-6rWZnHP",
@@ -2366,7 +2821,20 @@
       "srcM": "/img/i-6rWZnHP/m.jpg",
       "srcS": "/img/i-6rWZnHP/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2024"
+      "yearCreated": "2024",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-VrbD648",
@@ -2427,7 +2895,20 @@
       "srcM": "/img/i-VrbD648/m.jpg",
       "srcS": "/img/i-VrbD648/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2024"
+      "yearCreated": "2024",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 1,
+        "inStock": 0
+      }
     },
     {
       "id": "i-PkspRGs",
@@ -2492,7 +2973,20 @@
       "srcM": "/img/i-PkspRGs/m.jpg",
       "srcS": "/img/i-PkspRGs/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-hntD8Vp",
@@ -2556,7 +3050,20 @@
       "srcM": "/img/i-hntD8Vp/m.jpg",
       "srcS": "/img/i-hntD8Vp/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-ZNTzTJ7",
@@ -2620,7 +3127,20 @@
       "srcM": "/img/i-ZNTzTJ7/m.jpg",
       "srcS": "/img/i-ZNTzTJ7/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-thTwwHZ",
@@ -2701,7 +3221,20 @@
       "srcM": "/img/i-thTwwHZ/m.jpg",
       "srcS": "/img/i-thTwwHZ/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2024"
+      "yearCreated": "2024",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 2,
+        "sold": 1,
+        "inStock": 1
+      }
     },
     {
       "id": "i-Spk5gdH",
@@ -2762,7 +3295,20 @@
       "srcS": "/img/i-Spk5gdH/s.jpg",
       "linkedImageId": null,
       "linkedGalleryPath": null,
-      "yearCreated": "2024"
+      "yearCreated": "2024",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 3,
+        "sold": 2,
+        "inStock": 1
+      }
     },
     {
       "id": "i-mrHbrNb",
@@ -2840,7 +3386,20 @@
       "srcM": "/img/i-mrHbrNb/m.jpg",
       "srcS": "/img/i-mrHbrNb/s.jpg",
       "contentSource": "ai",
-      "yearCreated": "2024"
+      "yearCreated": "2024",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-Shpfdbm",
@@ -2903,7 +3462,20 @@
       "srcL": "/img/i-Shpfdbm/l.jpg",
       "srcM": "/img/i-Shpfdbm/m.jpg",
       "srcS": "/img/i-Shpfdbm/s.jpg",
-      "yearCreated": "2024"
+      "yearCreated": "2024",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-8hMzqz2",
@@ -2962,7 +3534,20 @@
       "srcM": "/img/i-8hMzqz2/m.jpg",
       "srcS": "/img/i-8hMzqz2/s.jpg",
       "yearCreated": "2024",
-      "contentSource": "ai"
+      "contentSource": "ai",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 2,
+        "sold": 1,
+        "inStock": 1
+      }
     },
     {
       "id": "i-JfqzrnN",
@@ -3021,7 +3606,20 @@
       "srcL": "/img/i-JfqzrnN/l.jpg",
       "srcM": "/img/i-JfqzrnN/m.jpg",
       "srcS": "/img/i-JfqzrnN/s.jpg",
-      "yearCreated": "2025"
+      "yearCreated": "2025",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 0,
+        "inStock": 1
+      }
     },
     {
       "id": "i-xqbdC8P",
@@ -3079,7 +3677,20 @@
       "srcL": "/img/i-xqbdC8P/l.jpg",
       "srcM": "/img/i-xqbdC8P/m.jpg",
       "srcS": "/img/i-xqbdC8P/s.jpg",
-      "yearCreated": "2024"
+      "yearCreated": "2024",
+      "artistProof": {
+        "printed": 0,
+        "sold": 0,
+        "availableForSale": false,
+        "price": null,
+        "reserved": 1,
+        "designation": "AP"
+      },
+      "inventory": {
+        "printed": 1,
+        "sold": 1,
+        "inStock": 0
+      }
     }
   ]
 }

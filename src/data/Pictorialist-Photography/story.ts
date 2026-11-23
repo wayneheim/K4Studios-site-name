@@ -66,8 +66,9 @@ export const facingHistoryStory = [
     subhead: "Historic Pictorialism vs Modern Pictorialism",
     paragraphs: [
       `Historic pictorialists worked with darkroom hand-work, specialty lenses, chemical processes, hand-coated papers, and alternative printing methods. Their methods often produced prints that felt singular and object-like.`,
-      `Modern pictorialist photography uses different tools: digital capture, refined optics, layered processing, controlled color, archival printing, and contemporary presentation. The tools changed. The artistic standard did not.`,
-      `The difference is not chemical versus digital. The difference is record versus interpretation. A modern pictorialist photograph should still show evidence of authorship, restraint, atmosphere, and emotional intent.`
+      `Modern pictorialist photography uses different tools: digital capture, refined optics, layered processing, controlled color, archival printing, and contemporary presentation.`,
+      `The argument around the work has changed, too. The historic pictorialists were fighting for photography's admission to fine art, and their hand-worked prints were the evidence — singular objects, made by hand, impossible to repeat exactly. That argument is settled. The modern pictorialist works against a different flood: literal images are infinite, instant, and increasingly automated, and the claim now is that a photograph's meaning is made, not merely taken. The signature has changed with it — soft focus and visible hand-work then; now a sharp capture, its atmosphere built through tone, texture, and color worked from within the image.`,
+      `The tools changed. The artistic standard did not. The difference is not chemical versus digital. The difference is record versus interpretation. A modern pictorialist photograph should still show evidence of authorship, restraint, atmosphere, and emotional intent.`
     ]
   },
 
@@ -126,7 +127,6 @@ export const facingHistoryStory = [
     list: [
       `<strong>Is pictorialist photography the same as pictorialism?</strong><br/>Pictorialism is the movement and philosophy. Pictorialist photography is the photographic work made under that philosophy.`,
       `<strong>Is pictorialist photography just soft focus?</strong><br/>No. Soft focus can be one trait, but pictorialism is defined by interpretation, atmosphere, composition, and artistic authorship.`,
-      `<strong>How is modern pictorialism different from filters or AI effects?</strong><br/>Modern pictorialism depends on intentional process from concept to final print. A filter may change a surface; pictorialism changes the artistic purpose of the photograph.`,
       `<strong>What is the connection between pictorialism and painterly photography?</strong><br/>Painterly photography carries forward pictorialism's belief that photographs can be shaped with the emotional structure and visual intention of art.`,
       `<strong>Why does this matter today?</strong><br/>Because image-making is faster and more automated than ever. Pictorialism reminds us that a photograph can still be authored, slowed down, interpreted, printed, and made to last.`
     ]

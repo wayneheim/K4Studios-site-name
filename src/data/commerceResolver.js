@@ -3,6 +3,7 @@ import seriesRegistry from "./seriesRegistry.json";
 import { galleryData as engrainedGalleryData } from "./Other/K4-Select-Series/Engrained/Engrained-Series.mjs";
 import { SERIES_DEFINITIONS } from "./seriesDefinitions.js";
 import { resolveImageSeries } from "./seriesAvailability.js";
+import { getEditionSummary, getSizeCount, getSizeEditionLimit } from './editionPolicy.js';
 
 const STANDARD_SERIES = ["sketch", "foundation", "chronicle", "legend"];
 const ENGRAINED_PATH = "/Other/K4-Select-Series/Engrained/Engrained-Series";
@@ -98,8 +99,6 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl, merchantSketch }
     .map((seriesKey) => {
       const def = SERIES_DEFINITIONS[seriesKey];
       const editionState = series?.editionData?.[seriesKey] || null;
-      const sold = editionState?.sold ?? Object.values(editionState?.soldBySize || {}).reduce((sum, value) => sum + (value || 0), 0);
-      const remaining = def.showEdition && def.editionLimit ? Math.max(0, def.editionLimit - sold) : null;
       const pricing = getSeriesPricingList(seriesKey, series?.excludeSizes || {});
       return {
         key: seriesKey,
@@ -111,14 +110,17 @@ function resolveStandardCommerce({ image, galleryPath, pageUrl, merchantSketch }
           pricingConfig?.descriptions?.[seriesKey] ||
           def.description,
         showEdition: Boolean(def.showEdition),
-        editionLimit: def.editionLimit || null,
-        remaining,
+        editionLabel: def.editionLabel || null,
+        editionSummary: getEditionSummary(seriesKey, pricing.map(entry => entry.size)),
+        remaining: def.showEdition ? pricing.reduce((sum, entry) => sum + Math.max(0, (getSizeEditionLimit(seriesKey, entry.size) || 0) - getSizeCount(editionState?.soldBySize, entry.size)), 0) : null,
         pricing: pricing.map((entry) => {
           const printed = editionState?.printedBySize?.[entry.size] || 0;
           const soldForSize = editionState?.soldBySize?.[entry.size] || 0;
           const quickShip = printed - soldForSize > 0;
           return {
             ...entry,
+            editionLimit: getSizeEditionLimit(seriesKey, entry.size),
+            remaining: getSizeEditionLimit(seriesKey, entry.size) ? Math.max(0, getSizeEditionLimit(seriesKey, entry.size) - getSizeCount(editionState?.soldBySize, entry.size)) : null,
             quickShip,
           };
         }),

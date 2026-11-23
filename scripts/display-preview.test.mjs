@@ -112,8 +112,8 @@ test('sample opens above its parent, traps focus, closes independently, and fits
     assert.deepEqual(await summary.locator('[data-pricing-series]').evaluateAll(groups => groups.map(group => group.getAttribute('data-pricing-series'))), ['chronicle', 'legend']);
     assert.equal(await summary.getByRole('heading', { name: 'Chronicle Series', exact: true }).count(), 1);
     assert.equal(await summary.getByRole('heading', { name: 'Legend Series', exact: true }).count(), 1);
-    assert.equal(await summary.getByText('Limited Edition of 50 · Signed · Numbered', { exact: true }).count(), 1);
-    assert.equal(await summary.getByText('Limited Edition of 25 · Signed · Numbered', { exact: true }).count(), 1);
+    assert.equal(await summary.getByText('Editions defined by size', { exact: true }).count(), 2);
+    for (const limit of [30, 20, 15, 5]) assert.equal(await summary.getByText(`Edition of ${limit} + 1 AP`, { exact: true }).count(), 1);
     assert.equal(await summary.locator('[data-pricing-series="legend"]').evaluate(group => getComputedStyle(group).borderTopStyle), 'dashed');
     assert.deepEqual(await summary.locator('[data-pricing-size]').evaluateAll(rows => rows.map(row => row.getAttribute('data-pricing-size'))), ['16" x 20"', '20" x 24"', '30" x 40"', '40" x 60"']);
     for (const price of ['$1,100', '$1,500', '$3,800', '$5,000']) assert.equal(await summary.getByText(price, { exact: true }).count(), 1);
@@ -129,17 +129,20 @@ test('sample opens above its parent, traps focus, closes independently, and fits
   }
 });
 
-test('See on Wall tracks the clicked size once per open and never on close', async () => {
+test('See on Wall tracks size and Z/P/O origin once per open and never on close', async () => {
   const { outputFiles } = await build({
     stdin: { contents: `
       import React from 'react';
       import { createRoot } from 'react-dom/client';
       import DisplayPreviewButton from './src/components/DisplayPreviewButton.jsx';
+      import ImagePricingSummary from './src/components/ImagePricingSummary.jsx';
       window.tracked = [];
       window.fetch = async (_url, options) => { window.tracked.push(JSON.parse(options.body)); return new Response(null, { status: 204 }); };
       createRoot(document.getElementById('app')).render(<>
-        <DisplayPreviewButton size={'5" x 7"'} imageId="i-target" />
-        <DisplayPreviewButton size={'16" x 20"'} imageId="i-target" />
+        <ImagePricingSummary previewSource="zoom" commerce={{ mode: 'standard', imageId: 'i-target', tiers: [{ key: 'sketch', pricing: [{ size: '5" x 7"', price: 25 }] }] }} />
+        <ImagePricingSummary commerce={{ mode: 'standard', imageId: 'i-target', tiers: [{ key: 'foundation', pricing: [{ size: '16" x 20"', price: 250 }] }] }} />
+        <DisplayPreviewButton size={'30" x 40"'} imageId="i-target" source="order" />
+        <DisplayPreviewButton size={'40" x 60"'} imageId="i-target" />
       </>);
     `, resolveDir: process.cwd(), loader: 'jsx' },
     bundle: true, write: false, format: 'iife', platform: 'browser', jsx: 'automatic',
@@ -158,17 +161,26 @@ test('See on Wall tracks the clicked size once per open and never on close', asy
     const first = (await page.evaluate(() => window.tracked))[0];
     assert.equal(first.event, 'wall_preview_open');
     assert.equal(first.image_id, 'i-target');
-    assert.equal(first.source_layer, 'wall_preview_size_5x7_v1');
-    assert.equal(first.trigger, 'see_on_wall_5x7');
+    assert.equal(first.source_layer, 'wall_preview_size_5x7_zoom_v2');
+    assert.equal(first.trigger, 'see_on_wall_5x7_zoom');
     assert.ok(first.session_id && first.visitor_id);
     await page.getByRole('button', { name: 'Close display preview' }).click();
     assert.equal(await page.evaluate(() => window.tracked.length), 1);
     await page.getByRole('button', { name: 'See on Wall for 16 x 20 prints', exact: true }).click();
     const second = (await page.evaluate(() => window.tracked))[1];
-    assert.equal(second.source_layer, 'wall_preview_size_16x20_v1');
+    assert.equal(second.source_layer, 'wall_preview_size_16x20_pricing_v2');
+    assert.equal(second.trigger, 'see_on_wall_16x20_pricing');
+    await page.getByRole('button', { name: 'Close display preview' }).click();
+    await page.getByRole('button', { name: 'See on Wall for 30 x 40 prints', exact: true }).click();
+    const third = (await page.evaluate(() => window.tracked))[2];
+    assert.equal(third.source_layer, 'wall_preview_size_30x40_order_v2');
+    assert.equal(third.trigger, 'see_on_wall_30x40_order');
+    await page.getByRole('button', { name: 'Close display preview' }).click();
+    await page.getByRole('button', { name: 'See on Wall for 40 x 60 prints', exact: true }).click();
+    assert.equal((await page.evaluate(() => window.tracked))[3].source_layer, 'wall_preview_size_40x60_v1');
     await page.getByRole('button', { name: 'Close display preview' }).click();
     await page.waitForTimeout(2600);
     await page.getByRole('button', { name: 'See on Wall for 5 x 7 prints', exact: true }).click();
-    assert.equal(await page.evaluate(() => window.tracked.length), 3);
+    assert.equal(await page.evaluate(() => window.tracked.length), 5);
   } finally { await browser.close(); }
 });

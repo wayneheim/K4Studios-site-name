@@ -336,8 +336,13 @@ function renderCoreActions(groups, actions) {
 
 function renderWallPreviews(rows = []) {
   const total = (rows || []).reduce((sum, row) => sum + Number(row.count || 0), 0);
-  const body = (rows || []).map((row) => `<tr><td>${escapeHtml(row.label)}</td><td>${formatNumber(row.count)}</td><td>${total ? (100 * Number(row.count || 0) / total).toFixed(1) : '0.0'}%</td></tr>`).join('');
-  return `<section class="panel wall-previews-panel"><h2>See on Wall</h2><p><strong>${formatNumber(total)}</strong> preview clicks</p><p class="fineprint">Clicks by print size in the selected reporting window. Repeat clicks are included.</p>${body ? `<table><thead><tr><th>Print size</th><th>Clicks</th><th>Share</th></tr></thead><tbody>${body}</tbody></table>` : '<p class="empty">No preview clicks recorded for this period.</p>'}</section>`;
+  const body = (rows || []).map((row) => {
+    const match = String(row.label).match(/^(.*) · ([ZPO])$/);
+    const source = match?.[2];
+    const sourceLabel = { Z: 'Zoom window', P: 'Pricing window', O: 'Order window' }[source] || 'Source not recorded';
+    return `<tr><td>${escapeHtml(match?.[1] || row.label)}</td><td><span title="${sourceLabel}" aria-label="${sourceLabel}">${source || '—'}</span></td><td>${formatNumber(row.count)}</td><td>${total ? (100 * Number(row.count || 0) / total).toFixed(1) : '0.0'}%</td></tr>`;
+  }).join('');
+  return `<section class="panel wall-previews-panel"><h2>See on Wall</h2><p><strong>${formatNumber(total)}</strong> preview clicks</p><p class="fineprint">Clicks by print size and source in the selected reporting window. Z = Zoom · P = Pricing · O = Order · — = Source not recorded. Repeat clicks are included.</p>${body ? `<table><thead><tr><th>Print size</th><th>Source</th><th>Clicks</th><th>Share</th></tr></thead><tbody>${body}</tbody></table>` : '<p class="empty">No preview clicks recorded for this period.</p>'}</section>`;
 }
 
 function renderCartFunnel(rows) {

@@ -52,7 +52,7 @@ export const galleryData = [
   {
     "id": "i-JfqzrnN",
     "title": "Hired Gun",
-    "description": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Each image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Each image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Hero's Ride",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-JfqzrnN/A",
     "keywords": [
@@ -61,7 +61,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Each image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Security my ass. Call it what you will. We all know what we signed up for. God forgive us all. Grizzled Texas Ranger cowboy riding the train. Each image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -80,7 +80,7 @@ export const galleryData = [
   {
     "id": "i-8hMzqz2",
     "title": "Just a Sip to Settle My Nerves",
-    "description": "Painterly photography portrait of old time cowboy drinking whiskey at the bar: With the weight of the world resting clearly on his shoulders, Chávez pores himself one last drink for the day. Weight of what he's done or weight of what is to come - most likely a mixture of both. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Painterly photography portrait of old time cowboy drinking whiskey at the bar: With the weight of the world resting clearly on his shoulders, Chávez pores himself one last drink for the day. Weight of what he's done or weight of what is to come - most likely a mixture of both. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Hired Gun",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-8hMzqz2/A",
     "keywords": [
@@ -89,7 +89,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Painterly photography portrait of old time cowboy drinking whiskey at the bar: With the weight of the world resting clearly on his shoulders, Chávez pores himself one last drink for the day. Weight of what he's done or weight of what is to come - most likely a mixture of both. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Painterly photography portrait of old time cowboy drinking whiskey at the bar: With the weight of the world resting clearly on his shoulders, Chávez pores himself one last drink for the day. Weight of what he's done or weight of what is to come - most likely a mixture of both. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -108,7 +108,7 @@ export const galleryData = [
   {
     "id": "i-Shpfdbm",
     "title": "The Long Goodbye",
-    "description": "Timeless Western portrait photography. Cowboy in scene: as he watched the loan coach disappear down the dusty road, he wondered whether their paths would ever cross again. Deep down, he knew saying goodbye was the right choice to make.\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Timeless Western portrait photography. Cowboy in scene: as he watched the loan coach disappear down the dusty road, he wondered whether their paths would ever cross again. Deep down, he knew saying goodbye was the right choice to make.\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Just a Sip to Settle My Nerves",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Shpfdbm/A",
     "keywords": [
@@ -117,7 +117,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Timeless Western portrait photography. Cowboy in scene: as he watched the loan coach disappear down the dusty road, he wondered whether their paths would ever cross again. Deep down, he knew saying goodbye was the right choice to make.\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Timeless Western portrait photography. Cowboy in scene: as he watched the loan coach disappear down the dusty road, he wondered whether their paths would ever cross again. Deep down, he knew saying goodbye was the right choice to make.\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -136,7 +136,7 @@ export const galleryData = [
   {
     "id": "i-mrHbrNb",
     "title": "Morning Joe",
-    "description": "Painterly Wild West themed photography of a cowboy with a coffee cup who is all smiles.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Painterly Wild West themed photography of a cowboy with a coffee cup who is all smiles.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "The Long Goodbye",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-mrHbrNb/A",
     "keywords": [
@@ -145,7 +145,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Painterly Wild West themed photography of a cowboy with a coffee cup who is all smiles.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Painterly Wild West themed photography of a cowboy with a coffee cup who is all smiles.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -164,7 +164,7 @@ export const galleryData = [
   {
     "id": "i-Spk5gdH",
     "title": "Longing and Regret",
-    "description": "Classic rustic cowboy in cowboy hat and red shirt longingly looking off into the distance deep in thought.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Classic rustic cowboy in cowboy hat and red shirt longingly looking off into the distance deep in thought.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Morning Joe",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Spk5gdH/A",
     "keywords": [
@@ -173,7 +173,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Classic rustic cowboy in cowboy hat and red shirt longingly looking off into the distance deep in thought.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Classic rustic cowboy in cowboy hat and red shirt longingly looking off into the distance deep in thought.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -192,7 +192,7 @@ export const galleryData = [
   {
     "id": "i-thTwwHZ",
     "title": "Over My Dead Body",
-    "description": "Vintage cowboy portrait of old west cowboy in cowboy hat with gun in the window of his cabin saying: They said they would come for me... just didn't think this would be the day. Martha forgive me. I did what needed to be done. Old Jim had it coming! Bring it on boys. I don't know where I'm going but I'm sure of one thing; some of you are coming with me! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Vintage cowboy portrait of old west cowboy in cowboy hat with gun in the window of his cabin saying: They said they would come for me... just didn't think this would be the day. Martha forgive me. I did what needed to be done. Old Jim had it coming! Bring it on boys. I don't know where I'm going but I'm sure of one thing; some of you are coming with me! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Longing and Regret",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-thTwwHZ/A",
     "keywords": [
@@ -201,7 +201,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Vintage cowboy portrait of old west cowboy in cowboy hat with gun in the window of his cabin saying: They said they would come for me... just didn't think this would be the day. Martha forgive me. I did what needed to be done. Old Jim had it coming! Bring it on boys. I don't know where I'm going but I'm sure of one thing; some of you are coming with me! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Vintage cowboy portrait of old west cowboy in cowboy hat with gun in the window of his cabin saying: They said they would come for me... just didn't think this would be the day. Martha forgive me. I did what needed to be done. Old Jim had it coming! Bring it on boys. I don't know where I'm going but I'm sure of one thing; some of you are coming with me! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -220,7 +220,7 @@ export const galleryData = [
   {
     "id": "i-ZNTzTJ7",
     "title": "Up to No Good",
-    "description": "Outside of his keen sense of humor, patience is one of Big Jim's strongest qualities. The warmth of the afternoon slips by as he patiently waits for what undoubtably will be a non-laughing matter. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Outside of his keen sense of humor, patience is one of Big Jim's strongest qualities. The warmth of the afternoon slips by as he patiently waits for what undoubtably will be a non-laughing matter. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Over My Dead Body",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZNTzTJ7/A",
     "keywords": [
@@ -229,7 +229,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Outside of his keen sense of humor, patience is one of Big Jim's strongest qualities. The warmth of the afternoon slips by as he patiently waits for what undoubtably will be a non-laughing matter. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Outside of his keen sense of humor, patience is one of Big Jim's strongest qualities. The warmth of the afternoon slips by as he patiently waits for what undoubtably will be a non-laughing matter. \n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -248,7 +248,7 @@ export const galleryData = [
   {
     "id": "i-hntD8Vp",
     "title": "Wounded",
-    "description": "Cowboy portrait photography. Photo tells the story: A bolt of lightning shot through him as the bullet pierced his left side. A momentary thought of mortality.... Vengeance will be mine! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Cowboy portrait photography. Photo tells the story: A bolt of lightning shot through him as the bullet pierced his left side. A momentary thought of mortality.... Vengeance will be mine! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Up to No Good",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hntD8Vp/A",
     "keywords": [
@@ -257,7 +257,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Cowboy portrait photography. Photo tells the story: A bolt of lightning shot through him as the bullet pierced his left side. A momentary thought of mortality.... Vengeance will be mine! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Cowboy portrait photography. Photo tells the story: A bolt of lightning shot through him as the bullet pierced his left side. A momentary thought of mortality.... Vengeance will be mine! \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -276,7 +276,7 @@ export const galleryData = [
   {
     "id": "i-PkspRGs",
     "title": "The Brain Trust",
-    "description": "Three old time cowboys sitting on the porch solving the problems of the world. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Three old time cowboys sitting on the porch solving the problems of the world. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Wounded",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-PkspRGs/A",
     "keywords": [
@@ -285,7 +285,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Three old time cowboys sitting on the porch solving the problems of the world. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Three old time cowboys sitting on the porch solving the problems of the world. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -304,7 +304,7 @@ export const galleryData = [
   {
     "id": "i-VrbD648",
     "title": "Three Wise Men",
-    "description": "Three cowboys about to get into some serious trouble.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Three cowboys about to get into some serious trouble.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "The Brain Trust",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VrbD648/A",
     "keywords": [
@@ -313,7 +313,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Three cowboys about to get into some serious trouble.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Three cowboys about to get into some serious trouble.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -332,7 +332,7 @@ export const galleryData = [
   {
     "id": "i-6rWZnHP",
     "title": "Arizona Sunset at the Bend",
-    "description": "Painterly landscape photograph: \nRed rocks and green grass create foreground for iconic western sunset with purple, orange and yellow clouds filling the sky as the day comes to an end.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Painterly landscape photograph: \nRed rocks and green grass create foreground for iconic western sunset with purple, orange and yellow clouds filling the sky as the day comes to an end.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Arizona Sunset at the Bend",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-6rWZnHP/A",
     "keywords": [
@@ -341,7 +341,7 @@ export const galleryData = [
       "Bend",
       "landscape"
     ],
-    "story": "Painterly landscape photograph: \nRed rocks and green grass create foreground for iconic western sunset with purple, orange and yellow clouds filling the sky as the day comes to an end.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Painterly landscape photograph: \nRed rocks and green grass create foreground for iconic western sunset with purple, orange and yellow clouds filling the sky as the day comes to an end.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -360,7 +360,7 @@ export const galleryData = [
   {
     "id": "i-VGxwS5N",
     "title": "Aspen Grove",
-    "description": "Towering view of an Aspen grove with blue sky above. Fine art painterly landscape photography.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Towering view of an Aspen grove with blue sky above. Fine art painterly landscape photography.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Aspen Grove",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-VGxwS5N/A",
     "keywords": [
@@ -369,7 +369,7 @@ export const galleryData = [
       "landscape",
       "trees"
     ],
-    "story": "Towering view of an Aspen grove with blue sky above. Fine art painterly landscape photography.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Towering view of an Aspen grove with blue sky above. Fine art painterly landscape photography.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -388,7 +388,7 @@ export const galleryData = [
   {
     "id": "i-4cdDwZt",
     "title": "Buffy",
-    "description": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Buffy -  The Bison",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-4cdDwZt/A",
     "keywords": [
@@ -397,7 +397,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Painterly Photograph of The Grand Tetons and Bison (Buffalo). Tetons are the iconic rugged mountains in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -416,7 +416,7 @@ export const galleryData = [
   {
     "id": "i-b4wG4vh",
     "title": "Western Cotton Candy",
-    "description": "Painterly photograph of some iconic Western Cotton Candy - A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Painterly photograph of some iconic Western Cotton Candy - A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Western Cotton Candy",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-b4wG4vh/A",
     "keywords": [
@@ -425,7 +425,7 @@ export const galleryData = [
       "Cotton Candy",
       "landscape"
     ],
-    "story": "Painterly photograph of some iconic Western Cotton Candy - A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Painterly photograph of some iconic Western Cotton Candy - A lone pink \"impressionistic\" cloud puff floating defiantly above the 55mph road sign in Jackson Hole, Wyoming.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -444,7 +444,7 @@ export const galleryData = [
   {
     "id": "i-xF7p92v",
     "title": "Crystal Mill",
-    "description": "Fine art painterly mountain photography of Crystal Mill near Marble, Colorado.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Fine art painterly mountain photography of Crystal Mill near Marble, Colorado.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Crystal Mill",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-xF7p92v/A",
     "keywords": [
@@ -453,7 +453,7 @@ export const galleryData = [
       "Mountain",
       "Photography"
     ],
-    "story": "Fine art painterly mountain photography of Crystal Mill near Marble, Colorado.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Fine art painterly mountain photography of Crystal Mill near Marble, Colorado.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -472,7 +472,7 @@ export const galleryData = [
   {
     "id": "i-NQ5tCTb",
     "title": "In the Weeds",
-    "description": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole, Wyoming and just outside of Grand Teton National Park. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole, Wyoming and just outside of Grand Teton National Park. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "In the Weeds",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-NQ5tCTb/A",
     "keywords": [
@@ -481,7 +481,7 @@ export const galleryData = [
       "Golden",
       "Colors"
     ],
-    "story": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole, Wyoming and just outside of Grand Teton National Park. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Painterly Photograph of Tetons in Fall - Teton mountains near Schwabacher Landing with golden fall colors outside of Jackson Hole, Wyoming and just outside of Grand Teton National Park. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -500,7 +500,7 @@ export const galleryData = [
   {
     "id": "i-C58KMqF",
     "title": "Moral High Ground",
-    "description": "Fine art painterly landscape photography of a lone white church on the hill.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Fine art painterly landscape photography of a lone white church on the hill.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Moral High Ground",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-C58KMqF/A",
     "keywords": [
@@ -509,7 +509,7 @@ export const galleryData = [
       "white",
       "landscape"
     ],
-    "story": "Fine art painterly landscape photography of a lone white church on the hill.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Fine art painterly landscape photography of a lone white church on the hill.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -528,7 +528,7 @@ export const galleryData = [
   {
     "id": "i-Prk5NPT",
     "title": "Upper Yellowstone Falls",
-    "description": "Fine art painterly photo of the Upper Yellowstone waterfall in Yellowstone National Park.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Fine art painterly photo of the Upper Yellowstone waterfall in Yellowstone National Park.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Upper Yellowstone Falls",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-Prk5NPT/A",
     "keywords": [
@@ -537,7 +537,7 @@ export const galleryData = [
       "Nature",
       "Park"
     ],
-    "story": "Fine art painterly photo of the Upper Yellowstone waterfall in Yellowstone National Park.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Fine art painterly photo of the Upper Yellowstone waterfall in Yellowstone National Park.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -556,7 +556,7 @@ export const galleryData = [
   {
     "id": "i-hVBkc7Q",
     "title": "Mormon Row",
-    "description": "Western photo of lone cowboy and Moulton barn on Mormon Row in Jackson Hole, Wyoming at sunset. Fine art painterly mountain photography. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Western photo of lone cowboy and Moulton barn on Mormon Row in Jackson Hole, Wyoming at sunset. Fine art painterly mountain photography. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Mormon Row",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-hVBkc7Q/A",
     "keywords": [
@@ -565,7 +565,7 @@ export const galleryData = [
       "cowboy",
       "old barn"
     ],
-    "story": "Western photo of lone cowboy and Moulton barn on Mormon Row in Jackson Hole, Wyoming at sunset. Fine art painterly mountain photography. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Western photo of lone cowboy and Moulton barn on Mormon Row in Jackson Hole, Wyoming at sunset. Fine art painterly mountain photography. \nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -584,7 +584,7 @@ export const galleryData = [
   {
     "id": "i-ZWDpsxz",
     "title": "Farewell!",
-    "description": "Painterly Wild West themed photography of a lady waving goodbye from the train.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "Painterly Wild West themed photography of a lady waving goodbye from the train.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Mormon Row",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-ZWDpsxz/A",
     "keywords": [
@@ -593,7 +593,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "Painterly Wild West themed photography of a lady waving goodbye from the train.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "Painterly Wild West themed photography of a lady waving goodbye from the train.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [
@@ -612,7 +612,7 @@ export const galleryData = [
   {
     "id": "i-HZVV8J2",
     "title": "Under Pressure",
-    "description": "A WWII nurse tending to the sick and the wounded on the battlefield.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "description": "A WWII nurse tending to the sick and the wounded on the battlefield.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "alt": "Farewell!",
     "buyLink": "https://wayne-heim.smugmug.com/Other/K4-Select-Series/Engrained/Engrained-Series/i-HZVV8J2/A",
     "keywords": [
@@ -621,7 +621,7 @@ export const galleryData = [
       "Heros",
       "ride"
     ],
-    "story": "A WWII nurse tending to the sick and the wounded on the battlefield.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited Edition. 50 in the series. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
+    "story": "A WWII nurse tending to the sick and the wounded on the battlefield.\n\nEach image in this series is beautifully printed on 1/2\" Baltic Birch hardwood ply. Ready to hang. Featuring a float-mount hanging bracket. Alternatively, any wood print can be framed for added effect. Limited edition of five numbered works per image, plus one artist’s proof. Call for pricing and shipping information. [Click here] to view/order a paper print of this image.",
     "notes": "",
     "rating": 0,
     "galleries": [

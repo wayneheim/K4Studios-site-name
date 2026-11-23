@@ -67,20 +67,24 @@ function bgColorFor(sortOrder: number) {
                       <h4 class="font-semibold text-gray-800 text-sm">{tier.label} Series</h4>
                       <span class="text-stone-400 text-xs" aria-hidden="true">i</span>
                     </div>
-                    {tier.showEdition && tier.remaining !== null && (
+                    {tier.showEdition && (
                       <span class="text-xs text-amber-700 font-semibold">
-                        {tier.remaining} remaining in series
+                        Editions defined by size
                       </span>
                     )}
                   </div>
                   <p class="text-xs text-gray-600 mb-2 whitespace-pre-line leading-relaxed">{tier.description}</p>
+                  {tier.showEdition && <details class="text-xs text-stone-600 mb-2">
+                    <summary title={tier.editionSummary.tooltip}>{tier.editionSummary.shorthand}</summary>
+                    <p>{tier.editionSummary.disclosure}</p>
+                  </details>}
                   <div class="space-y-1.5">
                     {tier.pricing.map((entry: any) => (
                       <div
                         class="flex items-center justify-between w-full px-3 py-2 text-white rounded text-sm font-medium"
                         style="background:linear-gradient(to bottom, #64748b 0%, #516474ff 100%);box-shadow:0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3);border:1px solid #334155;text-shadow:0 1px 1px rgba(0,0,0,0.2)"
                       >
-                        <span>{entry.size}: ${entry.price.toLocaleString()}</span>
+                        <span>{entry.size}: ${entry.price.toLocaleString()}{entry.editionLimit && <small class="block">Edition of {entry.editionLimit} + 1 AP · {entry.remaining} remaining</small>}</span>
                         <span class="flex items-center gap-2">
                           {entry.quickShip && <span class="text-xs text-green-200/80 font-normal italic">Quick ship</span>}
                           <span class="text-xs font-semibold uppercase tracking-wide">Physical print</span>

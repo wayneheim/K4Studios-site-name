@@ -1,6 +1,7 @@
 ---
 // Admin page for viewing and managing series registry
 // Shows all registered limited edition images with occurrence info
+import editionLimits from '../../data/editionPolicy.json';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -515,7 +516,16 @@
     </div>
   </div>
 
+  <script type="application/json" id="edition-policy" set:html={JSON.stringify(editionLimits)} />
   <script type="module">
+    const editionLimits = JSON.parse(document.getElementById('edition-policy').textContent);
+    function editionDetail(tier, series) {
+      const limits = editionLimits[tier];
+      if (!limits) return '';
+      const entries = Object.entries(limits).filter(([size]) => !(series.excludeSizes?.[tier] || []).includes(size));
+      const text = entries.map(([size, limit]) => `${size.replaceAll('"', '')}: ${limit} + 1 AP`).join('; ');
+      return '<small style="display:block;color:#b8b8ae">Editions defined by size · ' + text + '</small>';
+    }
     let registry = null;
     let selectedSeriesId = null;
     let similaritySorted = false;
@@ -998,6 +1008,7 @@
         // Fetch from Netlify function to get fresh data (cache-bust)
         const res = await fetch('/.netlify/functions/seriesRegistry?t=' + Date.now());
         registry = await res.json();
+        if (!Object.keys(registry?.series || {}).length) registry = await (await fetch('/data/seriesRegistry.json?t=' + Date.now(), { cache: 'no-store' })).json();
         console.log('[SeriesMatcher] Loaded registry:', Object.keys(registry.series || {}).length, 'series');
         updateStats();
         renderGrid();
@@ -1065,7 +1076,7 @@
         const tierHtml = tiersToShow.map(t => {
           const label = t.charAt(0).toUpperCase() + t.slice(1);
           const color = t === 'chronicle' ? '#fbbf24' : t === 'legend' ? '#7dd3fc' : t === 'foundation' ? '#34d399' : '#9ca3af';
-          return '<div class="tier ' + t + '" style="color: ' + color + '; font-size: 0.7rem; font-weight: 500;">• ' + label + '</div>';
+          return '<div class="tier ' + t + '" style="color: ' + color + '; font-size: 0.7rem; font-weight: 500;">• ' + label + editionDetail(t, series) + '</div>';
         }).join('');
         
         // Build badge HTML with inline styles - only show if more than 1 occurrence
@@ -1130,7 +1141,7 @@
           : (series.tiers || []).filter(t => t !== 'sketch' && t !== 'engrained');
         const tierHtml = tiersToShow.map(t => {
           const label = t.charAt(0).toUpperCase() + t.slice(1);
-          return '<span class="tier ' + t + '">' + label + '</span>';
+          return '<span class="tier ' + t + '">' + label + editionDetail(t, series) + '</span>';
         }).join('');
         
         // Check if this is a potential dupe
@@ -1767,7 +1778,7 @@
       // Tiers in modal
       const tierHtml = (series.tiers || []).map(function(t) {
         const label = t.charAt(0).toUpperCase() + t.slice(1);
-        return '<div class="tier ' + t + '">' + label + '</div>';
+        return '<div class="tier ' + t + '">' + label + editionDetail(t, series) + '</div>';
       }).join('');
       document.getElementById('modal-tiers').innerHTML = tierHtml;
       

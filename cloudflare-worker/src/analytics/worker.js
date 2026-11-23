@@ -8851,6 +8851,7 @@ const CANONICAL_TRACKED_EVENTS = /* @__PURE__ */ new Set([
   "order_smugmug_clicked",
   "order_email_clicked",
   "collector_notes_open",
+  "oim_info_open",
   "cowboy_jump",
   "picture_shows_jump",
   "frontier_story_video_widget_click",

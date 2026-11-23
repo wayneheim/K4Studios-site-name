@@ -843,6 +843,15 @@ export function trackEvent(event: string, context: TrackContext = {}): void {
   }
 }
 
+// All OIM-1 logo locations share one concept-interest action.
+export function trackOimOpen(imageId: string | null = null): void {
+  trackEvent('oim_info_open', {
+    imageId,
+    sourceLayer: 'oim_info_open_v1',
+    trigger: 'oim_logo',
+  });
+}
+
 export function emitActionPixel(action: string, imageId: string | null = null, context: ActionPixelContext = {}): void {
   if (typeof window === 'undefined') return;
   if (shouldSuppressClientAnalytics()) return;

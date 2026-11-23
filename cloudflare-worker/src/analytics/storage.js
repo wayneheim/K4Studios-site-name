@@ -80,6 +80,7 @@ const CANONICAL_TRACKED_EVENTS = new Set([
   'order_smugmug_clicked',
   'order_email_clicked',
   'collector_notes_open',
+  'oim_info_open',
   'cowboy_jump',
   'picture_shows_jump',
   'exit_to_gallery',

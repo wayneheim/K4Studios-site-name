@@ -4,6 +4,7 @@ import { CircleX } from 'lucide-react';
 import contentClassificationRegistry from '../data/contentClassificationRegistry.json';
 import { isOimImage } from '../utils/contentReview.mjs';
 import { oimParagraphs } from '../data/oimCopy.js';
+import { trackOimOpen } from '../utils/analytics';
 import './ChapterOimBadge.css';
 
 function OimInfoPopup({ onClose }) {
@@ -73,24 +74,26 @@ function OimInfoPopup({ onClose }) {
 // Use the same curated classification as the chapter badge in every view.
 export function OimBadge({ imageId, placement = 'inline' }) {
   if (!isOimImage(imageId, null, contentClassificationRegistry)) return null;
-  return <ChapterOimBadge key={imageId} placement={placement} />;
+  return <ChapterOimBadge key={imageId} imageId={imageId} placement={placement} />;
 }
 
-export default function ChapterOimBadge({ placement = 'chapter' }) {
+export default function ChapterOimBadge({ placement = 'chapter', imageId = null }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <button
         type="button"
-        className={placement === 'chapter' ? 'chapter-oim-badge' : `oim-badge-inline${placement === 'zoom' ? ' oim-badge-zoom' : ''}`}
+        className={placement === 'chapter' ? 'chapter-oim-badge' : `oim-badge-inline${placement === 'zoom' ? ' oim-badge-zoom' : placement === 'index' ? ' oim-badge-index' : ''}`}
         title="About OIM-1"
         aria-label="About OIM-1"
         aria-haspopup="dialog"
         aria-expanded={isOpen}
         onClick={(event) => {
           event.stopPropagation();
+          if (isOpen) return;
           setIsOpen(true);
+          trackOimOpen(imageId);
         }}
       >
         <img src="/images/OIM-1-web.webp" alt="OIM-1" width={95} height={94} />

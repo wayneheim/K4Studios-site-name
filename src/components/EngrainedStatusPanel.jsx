@@ -2,9 +2,11 @@
 // Handles: P/S/I tracking, pricing, Link to Master Image, Metadata Sync
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { createPortal } from "react-dom";
+import ArtistProofControls from './ArtistProofControls.jsx';
+import { ENGRAINED_EDITION_LIMIT } from '../data/editionPolicy.js';
 
 // Edition size for all Engrained prints
-const EDITION_SIZE = 5;
+const EDITION_SIZE = ENGRAINED_EDITION_LIMIT;
 
 /* ---------- MasterImageLinkModal ---------- */
 function MasterImageLinkModal({ isOpen, onClose, onSelect, currentLinkedId, currentLinkedPath }) {
@@ -658,13 +660,14 @@ function MetadataSyncModal({ isOpen, onClose, engrainedItem, masterItem, masterG
 export default function EngrainedStatusPanel({ current, backupMade, onUpdate, onSave, galleryPath, onBeforeSave }) {
   // Inventory state: { printed: 0, sold: 0, inStock: 0 }
   const [inventory, setInventory] = useState({ printed: 0, sold: 0, inStock: 0 });
+  const [artistProof, setArtistProof] = useState(undefined);
   const [pendingChanges, setPendingChanges] = useState(false);
   const [loading, setLoading] = useState(false);
   
   // Local state for price/size fields (tracks if changed from original)
   const [localImageSize, setLocalImageSize] = useState("");
   const [localPrice, setLocalPrice] = useState("");
-  const [localEditionSize, setLocalEditionSize] = useState(50);
+  const [localEditionSize, setLocalEditionSize] = useState(EDITION_SIZE);
   const [localYearCreated, setLocalYearCreated] = useState(""); // Year the artwork was created
   
   // Link to Master modal
@@ -691,6 +694,7 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
         const engrainedState = data.states?.engrained;
         console.log("[EditionState] Engrained state:", engrainedState);
         if (engrainedState) {
+          setArtistProof(engrainedState.artistProof);
           const printed = engrainedState.printed || 0;
           const sold = engrainedState.sold || 0;
           setInventory({
@@ -714,6 +718,7 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
     // Fallback to zeros if no state found
     console.log("[EditionState] No data found, using zeros");
     setInventory({ printed: 0, sold: 0, inStock: 0 });
+    setArtistProof(undefined);
   }
 
   // Initialize from current item - only reset when switching to a different image
@@ -1031,6 +1036,7 @@ export default function EngrainedStatusPanel({ current, backupMade, onUpdate, on
       </div>
 
       {/* Year Created */}
+      <ArtistProofControls imageId={current.id} seriesKey="engrained" value={artistProof} disabled={!backupMade || loading} onSaved={() => loadEditionState(current.id)} />
       <div className="mb-4">
         <label className="block text-xs opacity-70 mb-1">Year Created</label>
         <input

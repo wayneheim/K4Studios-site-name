@@ -1,3 +1,6 @@
+import { getSizeEditionLimit, getSizeEditionLabel, ENGRAINED_EDITION_LIMIT } from "../editionPolicy.js";
+import { buildArtistProofProduct } from '../editionPolicy.js';
+
 export const MERCHANT_SKETCH_PRODUCT = Object.freeze({
   productKey: "sketch-5x7-pearl",
   seriesKey: "sketch",
@@ -60,8 +63,8 @@ export const CHRONICLE_PRINT_PRODUCTS = Object.freeze([
     unitPrice: 1100,
     currency: "USD",
     checkoutEnabled: true,
-    edition: "Signed limited edition of 50",
-    editionLimit: 50,
+    edition: getSizeEditionLabel("chronicle", '16" x 20"'),
+    editionLimit: getSizeEditionLimit("chronicle", '16" x 20"'),
     fulfillment: "k4-manual",
     description:
       "A signed and numbered limited edition on Moab Entrada Bright Rag, a smooth, museum-grade 100% cotton fine art paper selected for permanence and substantial presence.",
@@ -76,8 +79,8 @@ export const CHRONICLE_PRINT_PRODUCTS = Object.freeze([
     unitPrice: 1500,
     currency: "USD",
     checkoutEnabled: true,
-    edition: "Signed limited edition of 50",
-    editionLimit: 50,
+    edition: getSizeEditionLabel("chronicle", '20" x 24"'),
+    editionLimit: getSizeEditionLimit("chronicle", '20" x 24"'),
     fulfillment: "k4-manual",
     description:
       "A signed and numbered limited edition on Moab Entrada Bright Rag, a smooth, museum-grade 100% cotton fine art paper selected for permanence and substantial presence.",
@@ -95,8 +98,8 @@ export const LEGEND_PRINT_PRODUCTS = Object.freeze([
     unitPrice: 3800,
     currency: "USD",
     checkoutEnabled: true,
-    edition: "Signed ultra-limited edition of 25",
-    editionLimit: 25,
+    edition: getSizeEditionLabel("legend", '30" x 40"'),
+    editionLimit: getSizeEditionLimit("legend", '30" x 40"'),
     fulfillment: "k4-manual",
     description:
       "A large-scale, signed and numbered statement edition on museum-grade Moab Entrada Bright Rag, issued in an ultra-limited edition for lasting presence and provenance.",
@@ -111,8 +114,8 @@ export const LEGEND_PRINT_PRODUCTS = Object.freeze([
     unitPrice: 5000,
     currency: "USD",
     checkoutEnabled: true,
-    edition: "Signed ultra-limited edition of 25",
-    editionLimit: 25,
+    edition: getSizeEditionLabel("legend", '40" x 60"'),
+    editionLimit: getSizeEditionLimit("legend", '40" x 60"'),
     fulfillment: "k4-manual",
     description:
       "A large-scale, signed and numbered statement edition on museum-grade Moab Entrada Bright Rag, issued in an ultra-limited edition for lasting presence and provenance.",
@@ -212,14 +215,14 @@ export function getCatalogProduct(productKey) {
   return PRODUCT_BY_KEY.get(String(productKey || "")) || null;
 }
 
-export function getCatalogProductsForSeries(seriesKey, excludedSizes = []) {
+export function getCatalogProductsForSeries(seriesKey, excludedSizes = [], artistProofsBySize = {}) {
   const excluded = new Set(Array.isArray(excludedSizes) ? excludedSizes : []);
   return STANDARD_CART_PRODUCTS.filter((product) => (
     product.catalogScope !== "expedition" &&
     product.seriesKey === seriesKey &&
     product.checkoutEnabled &&
     !excluded.has(product.size)
-  ));
+  )).flatMap(product => [product, buildArtistProofProduct(product, artistProofsBySize[product.size])].filter(Boolean));
 }
 
 export function getExpeditionProducts(expeditionSlug) {
@@ -252,8 +255,8 @@ export function buildEngrainedCartProduct(engrainedLink) {
     unitPrice,
     currency: "USD",
     checkoutEnabled: true,
-    edition: `Signed limited edition of ${Number(engrainedLink?.editionSize) || 5} (+1 Artist Proof)`,
-    editionLimit: Number(engrainedLink?.editionSize) || 5,
+    edition: `Signed limited edition of ${Number(engrainedLink?.editionSize) || ENGRAINED_EDITION_LIMIT} (+1 Artist Proof)`,
+    editionLimit: Number(engrainedLink?.editionSize) || ENGRAINED_EDITION_LIMIT,
     fulfillment: "k4-manual",
     description: "A signed and numbered Baltic Birch wood-panel edition created with K4's five-layer UV process, allowing the natural grain to become part of the finished image.",
     engrainedId,
@@ -275,6 +278,7 @@ export function buildCartItem(product, image, quantity = 1) {
     seriesKey: product.seriesKey,
     seriesLabel: product.seriesLabel,
     edition: product.edition,
+    editionType: product.editionType || (product.editionLimit ? 'numbered' : 'open'),
     size: product.size,
     finish: product.finish,
     shippingRateKey: product.shippingRateKey || product.productKey,

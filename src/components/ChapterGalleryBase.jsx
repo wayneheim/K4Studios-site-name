@@ -731,7 +731,9 @@ export default function ChapterGalleryBase({
   const currentImageData = galleryData[currentIndex] || null;
   const currentIsOim = isOimImage(currentImageData?.id, basePath, contentClassificationRegistry);
   const currentSeries = getEffectiveSeries(currentImageData, seriesRegistry, { merchantSketch: isMerchantSketchVariant });
-  const currentExcludeSizes = getExcludeSizesFromRegistry(currentImageData?.id, seriesRegistry);
+  const currentExcludeSizes = seriesRegistry
+    ? getExcludeSizesFromRegistry(currentImageData?.id, seriesRegistry)
+    : currentImageData?._excludeSizes || {};
   const currentCommerce = isEngrainedSeries ? null : {
     mode: "standard",
     imageId: currentImageData?.id || "",

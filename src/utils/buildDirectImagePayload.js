@@ -33,10 +33,12 @@ function toDirectImage(entry, galleryPath) {
     ...safeEntry
   } = entry;
 
+  const seriesRecord = seriesRegistry.series?.[findSeriesId(entry.id, galleryPath, seriesRegistry)];
   return {
     ...safeEntry,
     // Embed assignments for correct icons/prices before the client fetches the registry.
-    availableSeries: getConfiguredSeries(entry, seriesRegistry.series?.[findSeriesId(entry.id, galleryPath, seriesRegistry)]),
+    availableSeries: getConfiguredSeries(entry, seriesRecord),
+    _excludeSizes: seriesRecord?.excludeSizes || {},
     ...(dims ? { width: dims.width, height: dims.height } : {}),
     src: getSemanticImageUrl(entry, { galleryPath }, "m"),
   };

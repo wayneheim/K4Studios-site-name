@@ -1,6 +1,8 @@
 // src/components/GalleryEditorPro.jsx
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import PricingEditorModal from "./PricingEditorModal.jsx";
+import ArtistProofControls from './ArtistProofControls.jsx';
+import { PAPER_EDITION_LIMITS, getEditionSummary, getSizeEditionLimit, validateEditionCounts } from '../data/editionPolicy.js';
 import EngrainedStatusPanel from "./EngrainedStatusPanel.jsx";
 import SectionKeywordSuggestions from "./SectionKeywordSuggestions.jsx";
 import { generateSmartMetadata } from "../utils/autoTextGenerator.mjs";
@@ -254,8 +256,8 @@ const btnBlue = "bg-blue-300 border-blue-700 text-black";
 const SERIES_DEFINITIONS = {
   sketch: { label: "Sketch", limit: null, description: "Open edition, 5×7 only" },
   foundation: { label: "Foundation", limit: null, description: "Open edition, larger formats" },
-  chronicle: { label: "Chronicle", limit: 50, description: "Limited edition of 50" },
-  legend: { label: "Legend", limit: 25, description: "Limited edition of 25" },
+  chronicle: { label: "Chronicle", limit: 'size', description: "Editions defined by size" },
+  legend: { label: "Legend", limit: 'size', description: "Editions defined by size" },
 };
 
 /* ---------- Available Sizes per Series (from pricingConfig.json) ---------- */
@@ -263,8 +265,8 @@ const SERIES_DEFINITIONS = {
 // Sketch has only one size, so no exclusion checkboxes needed
 const SERIES_SIZES = {
   foundation: ['8" x 10"', '11" x 14"'],
-  chronicle: ['16" x 20"', '20" x 24"'],
-  legend: ['30" x 40"', '40" x 60"'],
+  chronicle: Object.keys(PAPER_EDITION_LIMITS.chronicle),
+  legend: Object.keys(PAPER_EDITION_LIMITS.legend),
 };
 
 /* ---------- Series Resolution Logic ---------- */
@@ -280,6 +282,8 @@ function getStoredSeriesTiers(image) {
 
 /* ---------- Per-Size Edition Tracker (P/S/I boxes for each size) ---------- */
 function PerSizeEditionTracker({ 
+  imageId,
+  onProofSaved,
   seriesKey,
   sizes,
   limit,
@@ -298,14 +302,6 @@ function PerSizeEditionTracker({
   const soldBySize = editionState?.soldBySize || {};
   const printedBySize = editionState?.printedBySize || {};
   
-  // Calculate totals for "Next Print #" (only meaningful for limited series)
-  let totalPrinted = 0;
-  sizes.forEach(size => {
-    const p = pendingPrinted[size] !== undefined ? pendingPrinted[size] : (printedBySize[size] || 0);
-    totalPrinted += p;
-  });
-  const nextPrintNumber = totalPrinted + 1;
-  
   const isLimited = limit !== null;
 
   return (
@@ -313,16 +309,16 @@ function PerSizeEditionTracker({
       {/* Summary box (only for limited series) */}
       {isLimited && (
         <div className="flex flex-col justify-center p-2 rounded-lg border-2 border-amber-300 bg-amber-50">
-          <div className="text-xs text-amber-700 font-medium text-center">{limit} In Series</div>
+          <div className="text-xs text-amber-700 font-medium text-center">Editions defined by size</div>
           <div className="flex items-center justify-center gap-1 text-xs">
-            <span className="text-stone-600">Next Print #</span>
-            <span className="text-blue-600 font-bold">{nextPrintNumber}</span>
+            <span className="text-stone-600" title={getEditionSummary(seriesKey, sizes.filter(size => !(excludeSizes || []).includes(size))).tooltip}>{getEditionSummary(seriesKey, sizes.filter(size => !(excludeSizes || []).includes(size))).shorthand}</span>
           </div>
         </div>
       )}
       
       {/* Per-size boxes */}
       {sizes.map(size => {
+        const sizeLimit = getSizeEditionLimit(seriesKey, size);
         const serverP = printedBySize[size] || 0;
         const serverS = soldBySize[size] || 0;
         const displayP = pendingPrinted[size] !== undefined ? pendingPrinted[size] : serverP;
@@ -358,6 +354,7 @@ function PerSizeEditionTracker({
             </button>
             
             {/* P/S/I row (only for limited series) */}
+            {isLimited && <div className="text-xs text-stone-600 mb-1" title="One artist’s proof is reserved separately from this numbered size edition.">Edition of {sizeLimit} + 1 AP · {displayP < sizeLimit ? `Next #${displayP + 1}` : 'All printed'}</div>}
             {isLimited && (
               <div className={`flex items-center gap-2 ${!isAvailable ? "opacity-40 pointer-events-none" : ""}`}>
                 {/* P (Printed) - Blue */}
@@ -366,6 +363,7 @@ function PerSizeEditionTracker({
                   <input
                     type="number"
                     min="0"
+                    max={sizeLimit}
                     value={displayP}
                     onChange={(e) => onPrintedChange(size, parseInt(e.target.value, 10) || 0)}
                     disabled={disabled || !isAvailable}
@@ -382,6 +380,7 @@ function PerSizeEditionTracker({
                   <input
                     type="number"
                     min="0"
+                    max={sizeLimit}
                     value={displayS}
                     onChange={(e) => onSoldChange(size, parseInt(e.target.value, 10) || 0)}
                     disabled={disabled || !isAvailable}
@@ -406,6 +405,7 @@ function PerSizeEditionTracker({
                 </div>
               </div>
             )}
+            {isLimited && isAvailable && <ArtistProofControls imageId={imageId} seriesKey={seriesKey} size={size} value={editionState?.artistProofsBySize?.[size]} disabled={disabled} onSaved={onProofSaved} />}
           </div>
         );
       })}
@@ -459,6 +459,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         const states = {};
         for (const [tier, tierData] of Object.entries(editionData)) {
           states[tier] = {
+            artistProofsBySize: tierData.artistProofsBySize || {},
             soldBySize: tierData.soldBySize || {},
             printedBySize: tierData.printedBySize || {},
             released: tierData.released || false,
@@ -622,6 +623,10 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
       
       // Save each tier's P/S edition data FIRST
       for (const [tier, data] of Object.entries(changesByTier)) {
+        validateEditionCounts(tier, data.soldBySize);
+        validateEditionCounts(tier, data.printedBySize);
+      }
+      for (const [tier, data] of Object.entries(changesByTier)) {
         const res = await fetch("/.netlify/functions/seriesRegistry", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -637,7 +642,8 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         });
         
         if (!res.ok) {
-          console.error("[SeriesStatusPanel] Failed to save edition data for tier:", tier);
+          const result = await res.json();
+          throw new Error(result.error || `Failed to save ${tier} edition data.`);
         }
       }
       
@@ -670,6 +676,9 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
         setPendingYearCreated(false);
         // Update the current image's _excludeSizes to match
         onUpdate("_excludeSizes", excludeSizes);
+      } else {
+        const result = await regRes.json();
+        throw new Error(result.error || 'Unable to save series and sizes.');
       }
       
       // Force refresh edition states from server to ensure UI is in sync
@@ -677,6 +686,7 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
       
     } catch (err) {
       console.error("[SeriesStatusPanel] Error saving series and sizes:", err);
+      alert(err.message);
     }
     setLoading(false);
   }
@@ -793,6 +803,8 @@ function SeriesStatusPanel({ current, backupMade, onUpdate, onSave, onOpenPricin
                 {/* Row 2: Size boxes with P/S/I (for limited series) or just size checkboxes (for unlimited) */}
                 {isActive && seriesSizes.length > 0 && (
                   <PerSizeEditionTracker
+                    imageId={current.id}
+                    onProofSaved={() => fetchEditionState(current.id)}
                     seriesKey={key}
                     sizes={seriesSizes}
                     limit={def.limit}

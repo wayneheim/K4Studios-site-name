@@ -130,23 +130,23 @@ test("PayPal item tax allocation exactly matches aggregate tax with quantities a
   assert.ok(rows.length <= 4);
 });
 
-test("limited-edition reservation groups combine sizes that share one edition pool", () => {
+test("limited-edition reservation groups combine duplicate lines of the same size", () => {
   const groups = buildEditionReservationGroups([
     {
-      inventoryKey: "series:s-one:chronicle", imageId: "i-one", seriesKey: "chronicle",
-      editionLimit: 50, editionBaselineSold: 7, quantity: 2,
+      inventoryKey: "series:s-one:chronicle:chronicle-16x20-cotton-rag", imageId: "i-one", seriesKey: "chronicle",
+      editionLimit: 30, editionBaselineSold: 7, quantity: 2,
     },
     {
-      inventoryKey: "series:s-one:chronicle", imageId: "i-one", seriesKey: "chronicle",
-      editionLimit: 50, editionBaselineSold: 7, quantity: 3,
+      inventoryKey: "series:s-one:chronicle:chronicle-16x20-cotton-rag", imageId: "i-one", seriesKey: "chronicle",
+      editionLimit: 30, editionBaselineSold: 7, quantity: 3,
     },
     { inventoryKey: null, imageId: "i-one", seriesKey: "foundation", quantity: 10 },
   ]);
   assert.deepEqual(groups, [{
-    inventoryKey: "series:s-one:chronicle",
+    inventoryKey: "series:s-one:chronicle:chronicle-16x20-cotton-rag",
     imageId: "i-one",
     seriesKey: "chronicle",
-    editionLimit: 50,
+    editionLimit: 30,
     baselineSold: 7,
     quantity: 5,
   }]);
@@ -155,12 +155,12 @@ test("limited-edition reservation groups combine sizes that share one edition po
 test("combined cart lines cannot exceed remaining limited-edition availability", () => {
   assert.throws(() => buildEditionReservationGroups([
     {
-      inventoryKey: "series:s-one:legend", imageId: "i-one", seriesKey: "legend",
-      editionLimit: 25, editionBaselineSold: 23, quantity: 1,
+      inventoryKey: "series:s-one:legend:legend-30x40-cotton-rag", imageId: "i-one", seriesKey: "legend",
+      editionLimit: 15, editionBaselineSold: 13, quantity: 1,
     },
     {
-      inventoryKey: "series:s-one:legend", imageId: "i-one", seriesKey: "legend",
-      editionLimit: 25, editionBaselineSold: 23, quantity: 2,
+      inventoryKey: "series:s-one:legend:legend-30x40-cotton-rag", imageId: "i-one", seriesKey: "legend",
+      editionLimit: 15, editionBaselineSold: 13, quantity: 2,
     },
   ]), /sold out|sufficient availability/);
 });

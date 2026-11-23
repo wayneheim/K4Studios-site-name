@@ -620,6 +620,7 @@ export default function ZoomOverlay({
               collectionLabel={collectionLabel}
               onOrder={onOrder}
               compact
+              previewSource="zoom"
               showLimited={showLimitedPricing}
             />
           )}

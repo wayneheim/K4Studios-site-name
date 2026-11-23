@@ -1,5 +1,6 @@
 import { getSeriesPricingEntries } from '../../pricing/printSeries.js';
 import { getLimitedFirstEditionLadder } from '../../doorway/limitedFirstCopy.js';
+import { getEditionSummary } from '../../editionPolicy.js';
 
 const seriesPrices = (key: string) => `Sizes & prices: ${getSeriesPricingEntries(key).map(entry => `${entry.displaySize.replace(/\s*x\s*/i, ' × ')} · ${entry.displayPrice}`).join('; ')}.`;
 
@@ -60,13 +61,14 @@ export const seriesStory = [
     subhead: "⌘ The Chronicle Series — Where the Story Settles",
     paragraphs: [
       seriesPrices('chronicle'),
+      `Editions defined by size. When both sizes are offered: ${getEditionSummary('chronicle').disclosure} A single-size artwork keeps that size’s stated limit, plus one artist’s proof.`,
       "The Chronicle Series marks the point where an image crosses from open exploration into recorded history. These works are released as signed, limited editions — formally issued, tracked, and preserved as part of the long-term archive.",
       "Presented at a scale meant to be lived with — not glanced past — Chronicle works establish presence. They slow a room and invite pause, becoming part of the story told by the person who chooses them.",
       "Once issued, Chronicle editions remain in circulation — carrying their history forward, edition by edition, collector by collector."
     ],
     list: [
       "Signed and numbered",
-      "Limited edition of 50 per image",
+      ...getEditionSummary('chronicle').entries.map(entry => `${entry.size}: edition of ${entry.limit} + 1 AP`),
       "Larger formats than Foundation",
       "Upgraded fine art paper"
     ]
@@ -76,13 +78,14 @@ export const seriesStory = [
     subhead: "❖ Legend Series — A Statement of Voice and Legacy",
     paragraphs: [
       seriesPrices('legend'),
-      "Legends exist for works that demand scale, restraint, and finality. These images no longer compete for attention — they command it.",
+      `Editions defined by size. When both sizes are offered: ${getEditionSummary('legend').disclosure} A single-size artwork keeps that size’s stated limit, plus one artist’s proof.`,
+      "Legend Series works exist for images that demand scale, restraint, and finality. These images no longer compete for attention — they command it.",
       "Choosing a Legend is not about what the image depicts, but what it communicates. These works reveal voice, confidence, and intention — reflecting as much about the collector as the story within the frame.",
-      "Issued sparingly and with purpose, Legends are allowed to settle into the long arc of a life — where meaning deepens with time, not explanation."
+      "Issued sparingly and with purpose, Legend Series works are allowed to settle into the long arc of a life — where meaning deepens with time, not explanation."
     ],
     list: [
       "Signed and numbered",
-      "Limited edition of 25 per image",
+      ...getEditionSummary('legend').entries.map(entry => `${entry.size}: edition of ${entry.limit} + 1 AP`),
       "Monumental sizes only",
       "Signature museum-grade paper"
     ]
@@ -100,7 +103,7 @@ export const seriesStory = [
       "Signed and numbered",
       "Limited edition of 5 per image (+1 Artist Proof)",
       "Material-defined formats",
-      "May exist alongside Chronicle or Legends paper editions"
+      "May exist alongside Chronicle or Legend Series paper editions"
     ]
   },
   {

@@ -8,6 +8,7 @@ import { SERIES_DEFINITIONS, SERIES_ICONS } from "../data/seriesDefinitions.js";
 import pricingConfig from "../data/pricingConfig.json";
 import { getSeriesPricingEntries } from '../data/pricing/printSeries.js';
 import DisplayPreviewButton from './DisplayPreviewButton.jsx';
+import { SIZE_EDITION_LABEL, getEditionSummary } from '../data/editionPolicy.js';
 
 // Series order for display (excludes engrained which has its own flow)
 const DISPLAY_SERIES = ["sketch", "foundation", "chronicle", "legend"];
@@ -133,11 +134,14 @@ export default function SeriesInfoPopup({ isOpen, onClose, scrollToSeries = null
                         <span key={entry.size}>
                           {index > 0 && '; '}
                           {entry.displaySize.replace(/\s*x\s*/i, ' × ')} · {entry.displayPrice}
-                          <DisplayPreviewButton size={entry.size} />
+                          <DisplayPreviewButton size={entry.size} source="pricing" />
                         </span>
                       ))}
                     </p>
-                    {def.editionLimit && <p className="text-sm text-stone-600 mb-3">Limited edition of {def.editionLimit} per image.</p>}
+                    {def.editionLimits && <details className="text-sm text-stone-600 mb-3">
+                      <summary title={getEditionSummary(seriesKey).tooltip}>{SIZE_EDITION_LABEL} · {getEditionSummary(seriesKey).shorthand}</summary>
+                      <p>When both sizes are offered: {getEditionSummary(seriesKey).disclosure} When only one size is offered, its limit stays the same and only that size’s AP is reserved.</p>
+                    </details>}
 
                     {/* Series Description */}
                     <div className="text-sm text-stone-600 leading-relaxed whitespace-pre-line">

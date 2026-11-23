@@ -2,12 +2,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX, Info } from "lucide-react";
-import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry, isOneImageMovieFromRegistry } from "../data/seriesDefinitions.js";
+import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, getSeriesPricingList, fetchPricingConfig, loadSeriesRegistry, getExcludeSizesFromRegistry, getSeriesRecordFromRegistry, isOneImageMovieFromRegistry } from "../data/seriesDefinitions.js";
 import { getSpecialtyPrintSeries } from "../data/pricing/printSeries.js";
 import { normalizeImageSrc } from "../utils/imageProxyCore.js";
 import MerchantSketchOrderModal from "./commerce/MerchantSketchOrderModal.jsx";
 import CollectionOrderModal from "./commerce/CollectionOrderModal.jsx";
 import DisplayPreviewButton from './DisplayPreviewButton.jsx';
+import { getEditionSummary, getSizeEditionLimit } from '../data/editionPolicy.js';
 import { OimBadge } from './ChapterOimBadge.jsx';
 import { shouldUseNativeCollectionCart, shouldUseNativeMerchantCart } from "../config/commerce.js";
 
@@ -68,6 +69,7 @@ function SeriesInfoOverlay({ seriesKey, infoCopy, onClose }) {
 
 // Fetch edition state for an image from seriesRegistry (consolidated database)
 async function fetchEditionState(imageId) {
+  let record;
   try {
     const cacheBuster = Date.now();
     const res = await fetch(`/.netlify/functions/seriesRegistry?imageId=${imageId}&_t=${cacheBuster}`, {
@@ -75,23 +77,15 @@ async function fetchEditionState(imageId) {
     });
     if (res.ok) {
       const data = await res.json();
-      // Convert editionData from registry format to component format
-      const editionData = data.series?.editionData || {};
-      const states = {};
-      for (const [tier, tierData] of Object.entries(editionData)) {
-        states[tier] = {
-          soldBySize: tierData.soldBySize || {},
-          printedBySize: tierData.printedBySize || {},
-          sold: Object.values(tierData.soldBySize || {}).reduce((a, b) => a + b, 0),
-          released: tierData.released || false
-        };
-      }
-      return states;
+      record = data.series;
     }
   } catch (err) {
     console.error("[SeriesOrderModal] Error fetching edition state:", err);
   }
-  return {};
+  record ||= getSeriesRecordFromRegistry(imageId, await loadSeriesRegistry());
+  return Object.fromEntries(Object.entries(record?.editionData || {}).map(([tier, data]) => [tier, {
+    artistProofsBySize: data.artistProofsBySize || {}, soldBySize: data.soldBySize || {}, printedBySize: data.printedBySize || {}, released: Boolean(data.released),
+  }]));
 }
 
 // Build mailto link with pre-filled info
@@ -111,8 +105,8 @@ function buildMailtoLink(image, seriesKey, seriesDef, editionNumber, selectedSiz
     body += `\n`;
   }
   
-  if (seriesDef.showEdition && editionNumber !== undefined) {
-    body += `Edition: ${editionNumber + 1} of ${seriesDef.editionLimit}\n`;
+  if (seriesDef.showEdition && selectedSize) {
+    body += `Size edition: ${editionNumber + 1} of ${getSizeEditionLimit(seriesKey, selectedSize)} + 1 AP\n`;
   }
   
   body += `\nPlease provide ordering information.\n\n`;
@@ -144,6 +138,7 @@ async function fetchEngrainedCrosslink(imageId) {
         price: linked.price,
         imageSize: linked.imageSize,
         editionSize: linked.editionSize,
+        artistProof: linked.artistProof,
         inStock: inStock,
         hasInventory: inStock > 0
       };
@@ -396,13 +391,17 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                       {/* Editions remaining — only for Chronicle and Legend */}
                       {def.showEdition && (
                         <span className="text-xs text-amber-700 font-semibold">
-                          {loading ? "..." : `${def.editionLimit - editionNumber} remaining in series`}
+                          {loading ? "..." : 'Editions defined by size'}
                         </span>
                       )}
                     </div>
                     <p className="text-xs text-gray-600 mb-2 whitespace-pre-line leading-relaxed">
                       {cardCopy?.[seriesKey] || pricingConfigFallback.cardCopy?.[seriesKey] || descriptions?.[seriesKey] || def.description}
                     </p>
+                    {def.editionLimits && <details className="text-xs text-stone-600 mb-2">
+                      <summary title={getEditionSummary(seriesKey, (pricingList || []).map(entry => entry.size)).tooltip}>{getEditionSummary(seriesKey, (pricingList || []).map(entry => entry.size)).shorthand}</summary>
+                      <p>{getEditionSummary(seriesKey, (pricingList || []).map(entry => entry.size)).disclosure}</p>
+                    </details>}
 
                     {/* For contact fulfillment: show clickable size buttons that open mailto */}
                     {def.fulfillment === "contact" && (
@@ -420,7 +419,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                             return (
                             <div key={size} className="flex items-center gap-2">
                             <a
-                              href={getTierOrderHref(seriesKey, def, editionNumber, size, price)}
+                              href={getTierOrderHref(seriesKey, def, sold, size, price)}
                               target={shouldUseBuyLink(seriesKey) ? "_blank" : undefined}
                               rel={shouldUseBuyLink(seriesKey) ? "nofollow noopener noreferrer" : undefined}
                               className="flex items-center justify-between w-full px-3 py-2 text-white rounded text-sm transition-all font-medium"
@@ -446,7 +445,7 @@ export default function SeriesOrderModal({ isOpen, onClose, image, trackEvent })
                                 <span className="text-xs font-semibold uppercase tracking-wide">Order</span>
                               </span>
                             </a>
-                            <DisplayPreviewButton size={size} imageId={image.id} />
+                            <DisplayPreviewButton size={size} imageId={image.id} source="order" />
                             </div>
                           );})
                         ) : (

@@ -4,6 +4,9 @@ import { SERIES_DEFINITIONS, SERIES_ICONS, getEffectiveSeries, loadSeriesRegistr
 import { getSemanticImageUrl } from "@/utils/imageProxy.js";
 import { warmImage } from "../utils/warmImage";
 import { trackEvent, emitActionPixel } from "../utils/analytics";
+import ChapterOimBadge from './ChapterOimBadge.jsx';
+import contentClassificationRegistry from '../data/contentClassificationRegistry.json';
+import { isOimImage } from '../utils/contentReview.mjs';
 
 const BATCH_SIZES = { 1: 6, 2: 8, 3: 9 };
 const GRID_WARM_COUNT = 3;
@@ -569,6 +572,7 @@ export default function RebuiltScrollGrid({
             const rowIndex = Math.floor(globalIndex / colCount);
             const rowAnchor = globalIndex % colCount === 0;
             const gridSrc = getPreferredSrc(entry, colCount);
+            const markedOim = isOimImage(entry?.id, galleryKey, contentClassificationRegistry);
             
             // Check if this is a new card that needs animation
             const isNewCard = entry?.id && !animatedIds.current.has(entry.id);
@@ -658,7 +662,7 @@ export default function RebuiltScrollGrid({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
-                className="h-[4.5rem] mt-4 flex flex-col items-center justify-center"
+                className="relative h-[4.5rem] mt-4 flex flex-col items-center justify-center"
               >
                 {/* Series Icons Row */}
                 {(() => {
@@ -710,9 +714,11 @@ export default function RebuiltScrollGrid({
                 <h3 
                   className="text-[15px] font-semibold text-center text-warm-fade truncate max-w-full px-2"
                   title={entry.title}
+                  style={{ width: '100%', boxSizing: 'border-box', paddingLeft: markedOim ? 36 : undefined }}
                 >
                   "{entry.title}"
                 </h3>
+                {markedOim && <ChapterOimBadge placement="index" imageId={entry.id} />}
               </motion.div>
             </motion.div>
           ) : (

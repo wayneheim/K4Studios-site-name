@@ -16,6 +16,7 @@ import { semantic as k4Semantic } from '@/data/semantic/K4-Sem.ts';
 
 import { landingSeries } from '@/data/Other/Series/landingstones.ts';
 import { seriesStory } from '@/data/Other/Series/story.ts';
+import { getEditionSummary } from '@/data/editionPolicy.js';
 
 import '@/styles/global.css';
 
@@ -89,11 +90,11 @@ const faqItems = [
   },
   {
     question: "What is the Chronicle Series?",
-    answer: "The Chronicle Series marks where an image crosses from open exploration into recorded history. These are signed, limited editions of 50 — formally issued, tracked, and preserved as part of the artist's long-term archive."
+    answer: `Chronicle Series editions are defined by size. When both sizes are offered: ${getEditionSummary('chronicle').disclosure} A single-size artwork keeps that size’s stated limit and one artist’s proof.`
   },
   {
     question: "What is the Legend Series?",
-    answer: "Legend works are ultra-limited signed editions of 25 — monumental statement pieces for collectors who understand that presentation speaks more powerfully than words alone. These works command attention and define a space."
+    answer: `Legend Series editions are defined by size. When both sizes are offered: ${getEditionSummary('legend').disclosure} A single-size artwork keeps that size’s stated limit and one artist’s proof.`
   },
   {
     question: "What is the Engrained Series?",

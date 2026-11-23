@@ -1,6 +1,7 @@
 // InventoryTrackerApp.jsx - Inventory tracking page for prints in stock
 import { useState, useEffect, useRef } from "react";
 import { SERIES_DEFINITIONS } from "../data/seriesDefinitions.js";
+import { PAPER_EDITION_LIMITS, ENGRAINED_EDITION_LIMIT, getEditionSummary, getOfferedEditionSizes, getSizeEditionLimit } from '../data/editionPolicy.js';
 
 // Context menu component
 function ContextMenu({ x, y, item, onClose, onEditInEditorPro, onPrintCertificate }) {
@@ -31,6 +32,8 @@ function ContextMenu({ x, y, item, onClose, onEditInEditorPro, onPrintCertificat
       </button>
       <button
         onClick={() => { onPrintCertificate(item); onClose(); }}
+        disabled={item.tier !== 'engrained' && !getSizeEditionLimit(item.tier, item.size)}
+        title="Print a certificate from a specific size inventory card."
         className="w-full text-left px-4 py-2 hover:bg-stone-100 text-sm flex items-center gap-2"
       >
         <span>📜</span>
@@ -49,8 +52,8 @@ function InventoryCard({ item, onContextMenu }) {
   // Chronicle = blue base, Legend = green base, Engrained = amber/wood base
   // Smaller sizes = lighter (lower opacity), larger sizes = darker (higher opacity)
   
-  const chronicleSizes = ['16" x 20"', '20" x 24"'];
-  const legendSizes = ['24" x 30"', '30" x 40"', '40" x 60"'];
+  const chronicleSizes = Object.keys(PAPER_EDITION_LIMITS.chronicle);
+  const legendSizes = Object.keys(PAPER_EDITION_LIMITS.legend);
   
   const getOpacityForIndex = (idx, total) => {
     // Scale from 20% to 100% based on position
@@ -149,6 +152,11 @@ function InventoryCard({ item, onContextMenu }) {
             {def?.icon} {def?.label || item.tier}
           </span>
           <span className="text-xs font-medium text-stone-700">{item.size}</span>
+          {item.editionType === 'ap' && <span className="text-xs font-semibold">Artist’s Proof · 1 of 1</span>}
+          {PAPER_EDITION_LIMITS[item.tier] && item.editionType !== 'ap' && <details className="text-xs text-stone-600">
+            <summary title={(item.editionSummary || getEditionSummary(item.tier, [item.size])).tooltip}>{getSizeEditionLimit(item.tier, item.size) ? `Edition of ${getSizeEditionLimit(item.tier, item.size)} + 1 AP` : 'Editions defined by size'}</summary>
+            <p>{(item.editionSummary || getEditionSummary(item.tier, [item.size])).disclosure}</p>
+          </details>}
         </div>
         
         {/* Printed/Sold counts */}
@@ -185,10 +193,10 @@ function InventoryTrackerApp() {
           fetch(`/.netlify/functions/editionState?_t=${cacheBuster}`, { cache: "no-store" })
         ]);
         
-        if (!registryRes.ok) throw new Error("Failed to fetch registry");
-        
-        const registry = await registryRes.json();
-        const engrainedData = engrainedRes.ok ? await engrainedRes.json() : { items: [] };
+        let registry = registryRes.ok ? await registryRes.json() : null;
+        if (!Object.keys(registry?.series || {}).length) registry = await (await fetch(`/data/seriesRegistry.json?_t=${cacheBuster}`, { cache: 'no-store' })).json();
+        let engrainedData = engrainedRes.ok ? await engrainedRes.json() : null;
+        if (!engrainedData?.items?.length) engrainedData = await (await fetch(`/data/engrainedData.json?_t=${cacheBuster}`, { cache: 'no-store' })).json();
         const editionState = editionStateRes.ok ? await editionStateRes.json() : { state: {} };
         
         // Build a map of engrained state by imageId
@@ -235,7 +243,8 @@ function InventoryTrackerApp() {
                 title: series.title || series.primaryImageId,
                 src: series.src,
                 tier,
-                size: Object.keys(printedBySize).join(", ") || "All sizes",
+                size: getOfferedEditionSizes(tier, series.excludeSizes).join(", "),
+                editionSummary: getEditionSummary(tier, getOfferedEditionSizes(tier, series.excludeSizes)),
                 printed: totalPrinted,
                 sold: totalSold,
                 inventory: Math.max(0, totalPrinted - totalSold),
@@ -251,6 +260,9 @@ function InventoryTrackerApp() {
           for (const [tier, tierData] of Object.entries(series.editionData)) {
             // Only track limited series (chronicle, legend)
             if (!["chronicle", "legend"].includes(tier)) continue;
+            for (const [size, proof] of Object.entries(tierData.artistProofsBySize || {})) {
+              if (proof.printed > proof.sold) inStockItems.push({ seriesId, imageId: series.primaryImageId, title: series.title, src: series.src, tier, size, editionType: 'ap', printed: proof.printed, sold: proof.sold, inventory: proof.printed - proof.sold, galleryPath: series.occurrences?.[0]?.galleryPath || '' });
+            }
             
             const printedBySize = tierData.printedBySize || {};
             const soldBySize = tierData.soldBySize || {};
@@ -280,10 +292,12 @@ function InventoryTrackerApp() {
         // Add Engrained items - both to released list and in-stock (if applicable)
         for (const item of (engrainedData.items || [])) {
           // Get inventory from editionState (stored in editionState.json, not in the mjs file)
-          const stateData = engrainedStateMap[item.id] || {};
+          const stateData = engrainedStateMap[item.id] || item.inventory || {};
           const printed = stateData.printed || 0;
           const sold = stateData.sold || 0;
           const inStock = Math.max(0, printed - sold);
+          const proof = stateData.artistProof || item.artistProof;
+          if (proof?.printed > proof?.sold) inStockItems.push({ seriesId: `engrained:${item.id}:ap`, imageId: item.id, title: item.title, src: item.src, tier: 'engrained', size: item.imageSize, editionType: 'ap', printed: proof.printed, sold: proof.sold, inventory: proof.printed - proof.sold, galleryPath: '/src/data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs' });
           
           // Add to released list (all Engrained items are considered released)
           released.push({
@@ -361,7 +375,11 @@ function InventoryTrackerApp() {
     // Size format: "16 x 20" -> "16x20"
     const sizeSlug = (item.size || "16x20").replace(/["\s]/g, '').replace('×', 'x');
     const imageIdShort = (item.imageId || '').replace('i-', '');
-    const editionNum = String(item.printed || 1).padStart(3, '0');
+    const limit = getSizeEditionLimit(item.tier, item.size) || ENGRAINED_EDITION_LIMIT;
+    const selected = window.prompt(`Certificate for ${item.tier}, ${item.size}: enter its edition number (1–${limit}) or AP.`, item.editionType === 'ap' ? 'AP' : '1');
+    if (selected === null) return;
+    const editionNum = selected.trim().toUpperCase();
+    if (editionNum !== 'AP' && (!/^\d+$/.test(editionNum) || Number(editionNum) < 1 || Number(editionNum) > limit)) { window.alert('Enter a valid number for this size edition, or AP.'); return; }
     
     const certificateId = `K4-${imageIdShort}-${item.tier}-${sizeSlug}-${editionNum}`;
     

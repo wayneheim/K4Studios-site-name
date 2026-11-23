@@ -16,6 +16,7 @@ import { normalizeImageSrc } from "../../utils/imageProxyCore.js";
 import ImageId from "./ImageId.jsx";
 import DisplayPreviewButton from '../DisplayPreviewButton.jsx';
 import { OimBadge } from '../ChapterOimBadge.jsx';
+import { getEditionSummary, getSizeCount, buildArtistProofProduct } from '../../data/editionPolicy.js';
 
 const SERIES_COLORS = {
   sketch: { surface: "#e7eee8", border: "#b9c9bc", accent: "#59695d" },
@@ -150,6 +151,7 @@ export default function CollectionOrderModal({
   const cartCount = getCartCount(cart);
   const subtotal = getCartSubtotal(cart);
   const engrainedProduct = useMemo(() => buildEngrainedCartProduct(engrainedLink), [engrainedLink]);
+  const engrainedApProduct = useMemo(() => buildArtistProofProduct(engrainedProduct, engrainedLink?.artistProof), [engrainedProduct, engrainedLink]);
 
   if (!isOpen || !image) return null;
 
@@ -261,10 +263,9 @@ export default function CollectionOrderModal({
                 {displaySeries.map((seriesKey) => {
                   const definition = SERIES_DEFINITIONS[seriesKey];
                   const colors = SERIES_COLORS[seriesKey] || SERIES_COLORS.foundation;
-                  const products = getCatalogProductsForSeries(seriesKey, excludeSizes?.[seriesKey]);
                   const editionState = editionStates?.[seriesKey] || {};
-                  const sold = Number(editionState.sold) || Object.values(editionState.soldBySize || {}).reduce((sum, value) => sum + (Number(value) || 0), 0);
-                  const remaining = definition?.editionLimit ? Math.max(0, definition.editionLimit - sold) : null;
+                  const products = getCatalogProductsForSeries(seriesKey, excludeSizes?.[seriesKey], editionState.artistProofsBySize);
+                  const editionSummary = getEditionSummary(seriesKey, products.map(product => product.size));
                   const isExpanded = expandedSeries === seriesKey;
 
                   if (!definition || products.length === 0) return null;
@@ -277,10 +278,13 @@ export default function CollectionOrderModal({
                             <span className="text-xl" style={{ color: colors.accent }}>{definition.icon || SERIES_ICONS[seriesKey]}</span>
                             <div>
                               <h4 className="font-semibold text-stone-900">{definition.label} Series</h4>
-                              <p className="text-[11px] uppercase tracking-[0.12em] text-stone-500">{products[0].edition}</p>
+                              <p className="text-[11px] uppercase tracking-[0.12em] text-stone-500">{definition.editionLabel || products[0].edition}</p>
                             </div>
                           </div>
-                          {remaining !== null && <span className="rounded-full border border-white/70 bg-white/55 px-2.5 py-1 text-[11px] font-semibold" style={{ color: colors.accent }}>{remaining} editions remaining</span>}
+                          {editionSummary.ap > 0 && <details className="text-xs" style={{ color: colors.accent }}>
+                            <summary title={editionSummary.tooltip}>{editionSummary.shorthand}</summary>
+                            <p className="max-w-md mt-2">{editionSummary.disclosure}</p>
+                          </details>}
                         </div>
 
                         <p className="mt-3 text-sm leading-relaxed text-stone-700">{cardCopy?.[seriesKey] || products[0].description}</p>
@@ -301,6 +305,7 @@ export default function CollectionOrderModal({
 
                         <div className="mt-4 space-y-2">
                           {products.map((product) => {
+                            const remaining = product.editionType === 'ap' ? 1 : product.editionLimit ? Math.max(0, product.editionLimit - getSizeCount(editionState.soldBySize, product.size)) : null;
                             const printed = Number(editionState?.printedBySize?.[product.size]) || 0;
                             const soldForSize = Number(editionState?.soldBySize?.[product.size]) || 0;
                             const quickShip = printed - soldForSize > 0;
@@ -321,8 +326,9 @@ export default function CollectionOrderModal({
                                 className={`flex items-center justify-between gap-1.5 rounded-md border border-stone-300 bg-white px-2 py-2.5 shadow-sm transition sm:gap-3 sm:px-3 sm:py-3 ${unavailable ? "opacity-50" : "hover:border-stone-400"}`}
                               >
                                 <div className="flex min-w-0 flex-wrap items-baseline gap-1 sm:gap-2">
-                                  <span data-k4-option-size className="text-xs font-semibold text-stone-800 sm:text-sm">{product.size}</span>
-                                  <DisplayPreviewButton size={product.size} imageId={image.id} />
+                                  <span data-k4-option-size className="text-xs font-semibold text-stone-800 sm:text-sm">{product.size}{product.editionType === 'ap' ? ' · AP' : ''}</span>
+                                  <DisplayPreviewButton size={product.size} imageId={image.id} source="order" />
+                                  {product.editionLimit && <span className="basis-full text-xs text-stone-600" title="The artist’s proof is tracked separately and offered only when released by the artist.">{product.editionType === 'ap' ? 'Artist’s Proof · 1 of 1 in this size' : `Edition of ${product.editionLimit} + 1 AP · ${remaining} remaining`}</span>}
                                   <span className="hidden truncate text-[11px] text-stone-500 sm:inline">{product.finish}</span>
                                   {quickShip && <span className="hidden text-[10px] font-semibold uppercase tracking-wide text-emerald-700 sm:inline">Quick ship</span>}
                                 </div>
@@ -475,6 +481,11 @@ export default function CollectionOrderModal({
                     </article>
                   );
                 })()}
+                {engrainedApProduct && <article className="rounded-lg border border-amber-400 bg-amber-50 p-4">
+                  <h4 className="font-semibold">Engrained Series · Artist’s Proof</h4>
+                  <p className="mt-1 text-sm">{engrainedApProduct.size} · 1 AP · {formatModalPrice(engrainedApProduct.unitPrice)}</p>
+                  <button type="button" onClick={() => saveProduct(engrainedApProduct)} className="mt-2 rounded bg-stone-700 px-3 py-2 text-sm text-white">{cart.items.some(item => item.productKey === engrainedApProduct.productKey && item.imageId === image.id) ? 'Update AP in Cart' : 'Add AP to Cart'}</button>
+                </article>}
                 {engrainedPrimary && (paperAlternativeLoading || paperAlternative) && (
                   <article className="rounded-lg border border-stone-300 bg-[#f7f5ef] p-4">
                     {paperAlternativeLoading && !paperAlternative && (

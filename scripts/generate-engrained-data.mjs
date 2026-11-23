@@ -9,6 +9,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { artistProofState } from '../src/data/editionPolicy.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ENGRAINED_PATH = path.join(__dirname, "..", "src", "data", "Other", "K4-Select-Series", "Engrained", "Engrained-Series.mjs");
@@ -36,9 +37,13 @@ async function main() {
   const fileUrl = "file:///" + ENGRAINED_PATH.replace(/\\/g, "/");
   const mod = await import(fileUrl);
   const sourceItems = mod.galleryData || mod.engrainedData || [];
+  const state = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'src/data/editionState.json'), 'utf8'));
   const items = sourceItems
     .filter((item) => item?.id !== "i-k4studios" && item?.visibility !== "ghost")
-    .map(withPublicProxyImages);
+    .map(item => {
+      const inventory = state[`${item.id}:engrained`];
+      return withPublicProxyImages({ ...item, artistProof: artistProofState(inventory?.artistProof), ...(inventory ? { inventory: { printed: inventory.printed || 0, sold: inventory.sold || 0, inStock: Math.max(0, (inventory.printed || 0) - (inventory.sold || 0)) } } : {}) });
+    });
 
   // Ensure output directory exists
   const outDir = path.dirname(OUTPUT_PATH);

@@ -150,7 +150,7 @@ export default function MerchantSketchOrderModal({ isOpen, onClose, image, track
               </p>
               <p className="mt-2 text-sm leading-relaxed text-stone-700">{product.description}</p>
               <dl className="mt-3 grid grid-cols-[88px_1fr] gap-x-3 gap-y-1 text-xs text-stone-600">
-                <dt className="font-semibold text-stone-700">Size</dt><dd>{product.size}<DisplayPreviewButton size={product.size} imageId={image.id} /></dd>
+                <dt className="font-semibold text-stone-700">Size</dt><dd>{product.size}<DisplayPreviewButton size={product.size} imageId={image.id} source="order" /></dd>
                 <dt className="font-semibold text-stone-700">Finish</dt><dd>{product.finish}</dd>
                 <dt className="font-semibold text-stone-700">Edition</dt><dd>{product.edition}</dd>
               </dl>

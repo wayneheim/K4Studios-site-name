@@ -3,6 +3,7 @@
 
 const fs = require("fs/promises");
 const path = require("path");
+const PAPER_LIMITS = require('../../src/data/editionPolicy.json');
 
 // Same pattern as updateGalleryItem.js which works
 const EDITION_STATE_PATH = path.join(process.cwd(), "src/data/editionState.json");
@@ -12,8 +13,8 @@ const SERIES_REGISTRY_PATH = path.join(process.cwd(), "src/data/seriesRegistry.j
 const SERIES_DEFINITIONS = {
   sketch: { limit: null, description: "Open edition, 5×7 only", sizes: ['5" x 7"'] },
   foundation: { limit: null, description: "Open edition, larger formats", sizes: ['8" x 10"', '11" x 14"'] },
-  chronicle: { limit: 50, description: "Limited edition of 50", sizes: ['16" x 20"', '20" x 24"'] },
-  legend: { limit: 25, description: "Limited edition of 25", sizes: ['30" x 40"', '40" x 60"'] },
+  chronicle: { limit: null, limitsBySize: PAPER_LIMITS.chronicle, description: "Editions defined by size", sizes: Object.keys(PAPER_LIMITS.chronicle) },
+  legend: { limit: null, limitsBySize: PAPER_LIMITS.legend, description: "Editions defined by size", sizes: Object.keys(PAPER_LIMITS.legend) },
   engrained: { limit: 5, description: "Limited edition of 5 (+1 Artist Proof)", sizes: [] },
 };
 
@@ -143,6 +144,7 @@ exports.handler = async (event) => {
 
     // POST: Update edition state
     if (event.httpMethod === "POST") {
+      const { validateEditionCounts, validateArtistProof, artistProofState } = await import('../../src/data/editionPolicy.js');
       const body = JSON.parse(event.body || "{}");
       const { action, imageId, series, data } = body;
 
@@ -154,8 +156,25 @@ exports.handler = async (event) => {
       const canonicalId = resolveCanonicalId(imageId, registry);
       const key = makeKey(canonicalId, series);
       const existing = state[key];
+      if (PAPER_LIMITS[series]) {
+        if (['recordSale', 'setSold', 'setPrinted'].includes(action)) return { statusCode: 400, headers, body: JSON.stringify({ error: 'Select a size and use its per-size edition counter.' }) };
+        if (['setSoldBySize', 'setPrintedBySize'].includes(action)) {
+          try { validateEditionCounts(series, { [data?.size]: Number(data?.count) }); }
+          catch (error) { return { statusCode: 400, headers, body: JSON.stringify({ error: error.message }) }; }
+        }
+      }
 
       switch (action) {
+        case 'setArtistProof': {
+          if (series !== 'engrained') return { statusCode: 400, headers, body: JSON.stringify({ error: 'Use the series registry for paper APs.' }) };
+          let proof;
+          try { proof = validateArtistProof(data?.proof); }
+          catch (error) { return { statusCode: 400, headers, body: JSON.stringify({ error: error.message }) }; }
+          state[key] ||= { imageId: canonicalId, series, editionLimit: 5, printed: 0, sold: 0 };
+          state[key].artistProof = proof;
+          await writeEditionState(state);
+          return { statusCode: 200, headers, body: JSON.stringify({ ok: true, proof }) };
+        }
         case "create": {
           // Create new edition state (only if doesn't exist)
           if (existing) {
@@ -181,6 +200,8 @@ exports.handler = async (event) => {
             originalImageId: imageId !== canonicalId ? imageId : undefined,  // Track original if different
             series,
             editionLimit: seriesDef.limit,
+            ...(series === 'engrained' ? { artistProof: artistProofState() } : {}),
+            ...(PAPER_LIMITS[series] ? { editionLimitsBySize: PAPER_LIMITS[series] } : {}),
             // Legacy fields for backwards compatibility (totals)
             sold: 0,
             printed: 0,

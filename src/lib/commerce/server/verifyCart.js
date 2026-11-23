@@ -6,6 +6,7 @@ import smugmugFulfillmentLinks from "../../../data/commerce/smugmugFulfillmentLi
 import collectorNotesByImage from "../../../data/commerce/collectorNotes.generated.json";
 import { expeditions } from "../../../data/Other/Expeditions/shoots.ts";
 import { dollarsToCents } from "./money.js";
+import { getSizeCount, buildArtistProofProduct } from '../../../data/editionPolicy.js';
 
 const SITE_ORIGIN = "https://www.k4studios.com";
 
@@ -41,24 +42,27 @@ function getSeriesRecord(imageId) {
 function getVerifiedProduct(rawItem, imageId) {
   const standardProduct = getCatalogProduct(rawItem?.productKey);
   if (standardProduct) return { product: standardProduct, engrainedRecord: null };
+  const apBase = String(rawItem?.productKey || '').endsWith('-ap') ? getCatalogProduct(String(rawItem.productKey).slice(0, -3)) : null;
+  if (apBase?.editionLimit && ['chronicle', 'legend'].includes(apBase.seriesKey)) {
+    const proof = getSeriesRecord(imageId)?.record?.editionData?.[apBase.seriesKey]?.artistProofsBySize?.[apBase.size];
+    return { product: buildArtistProofProduct(apBase, proof), engrainedRecord: null };
+  }
 
   const engrainedRecord = engrainedData?.items?.find((item) => (
     (item?.linkedImageId === imageId || item?.id === imageId)
-    && rawItem?.productKey === `engrained-${item.id}`
+    && [ `engrained-${item.id}`, `engrained-${item.id}-ap` ].includes(rawItem?.productKey)
     && !["hidden", "hide", "ghost", "non", "none", ""].includes(String(item?.visibility ?? "show").trim().toLowerCase())
   ));
   if (!engrainedRecord) return { product: null, engrainedRecord: null };
 
-  return {
-    engrainedRecord,
-    product: buildEngrainedCartProduct({
+  const product = buildEngrainedCartProduct({
       engrainedId: engrainedRecord.id,
       price: engrainedRecord.price,
       imageSize: engrainedRecord.imageSize,
       editionSize: engrainedRecord.editionSize,
       url: `/Other/K4-Select-Series/Engrained/Engrained-Series/${engrainedRecord.id}`,
-    }),
-  };
+    });
+  return { engrainedRecord, product: rawItem.productKey.endsWith('-ap') ? buildArtistProofProduct(product, engrainedRecord.artistProof) : product };
 }
 
 export function verifyCartItems(rawItems) {
@@ -84,7 +88,8 @@ export function verifyCartItems(rawItems) {
       if (!expedition) throw new Error("This Expedition print is no longer available.");
     } else if (product.seriesKey === "engrained") {
       if (!engrainedRecord) throw new Error("This Engrained edition is no longer available.");
-      remaining = Number(product.editionLimit) || null;
+      const sold = product.editionType === 'ap' ? Number(engrainedRecord.artistProof?.sold) || 0 : Number(engrainedRecord.inventory?.sold) || 0;
+      remaining = Math.max(0, (Number(product.editionLimit) || 0) - sold);
       if (remaining !== null && quantity > remaining) {
         throw new Error("The requested quantity exceeds the remaining Engrained edition availability.");
       }
@@ -98,8 +103,10 @@ export function verifyCartItems(rawItems) {
       if (excludedSizes.includes(product.size)) throw new Error("This print size is not available for the selected artwork.");
 
       const editionState = seriesRecord?.editionData?.[product.seriesKey] || {};
-      const sold = Number(editionState.sold) || Object.values(editionState.soldBySize || {})
-        .reduce((sum, value) => sum + (Number(value) || 0), 0);
+      const sold = product.editionType === 'ap' ? Number(editionState.artistProofsBySize?.[product.size]?.sold) || 0 : getSizeCount(editionState.soldBySize, product.size);
+      if (product.editionLimit && product.editionType !== 'ap' && Number(editionState.sold) > 0 && !Object.keys(editionState.soldBySize || {}).length) {
+        throw new Error('This edition requires its existing sales to be assigned to sizes before checkout.');
+      }
       remaining = product.editionLimit ? Math.max(0, product.editionLimit - sold) : null;
       if (remaining !== null && quantity > remaining) {
         throw new Error("The requested quantity exceeds the remaining edition availability.");
@@ -129,12 +136,13 @@ export function verifyCartItems(rawItems) {
       expeditionSlug: product.expeditionSlug || null,
       medium: product.medium,
       edition: product.edition,
+      editionType: product.editionType || (product.editionLimit ? 'numbered' : 'open'),
       editionLimit: Number(product.editionLimit) || null,
       editionBaselineSold: remaining === null ? 0 : Math.max(0, (Number(product.editionLimit) || 0) - remaining),
       inventoryKey: product.editionLimit
         ? (product.seriesKey === "engrained"
-          ? `engrained:${engrainedRecord.id}`
-          : `series:${seriesMatch.seriesId}:${product.seriesKey}`)
+          ? `engrained:${engrainedRecord.id}${product.editionType === 'ap' ? ':ap' : ''}`
+          : `series:${seriesMatch.seriesId}:${product.seriesKey}:${product.productKey}`)
         : null,
       fulfillment: product.seriesKey === "engrained" ? "engrained" : product.fulfillment,
       quantity,

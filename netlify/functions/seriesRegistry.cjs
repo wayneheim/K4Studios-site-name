@@ -51,6 +51,18 @@ async function readRegistry() {
 }
 
 async function writeRegistry(registry) {
+  const { getArtistProofs, assertNoAddedEditionSizes } = await import('../../src/data/editionPolicy.js');
+  const previous = await readRegistry();
+  for (const [id, series] of Object.entries(previous.series || {})) {
+    if (registry.series[id]) assertNoAddedEditionSizes(series, registry.series[id]);
+  }
+  for (const series of Object.values(registry.series || {})) {
+    for (const tier of (series.tiers || []).filter(tier => ['chronicle', 'legend'].includes(tier))) {
+      series.editionData ||= {};
+      series.editionData[tier] ||= { soldBySize: {}, printedBySize: {} };
+      series.editionData[tier].artistProofsBySize = getArtistProofs(tier, series.excludeSizes, series.editionData[tier].artistProofsBySize);
+    }
+  }
   registry._meta = registry._meta || {};
   registry._meta.lastUpdated = new Date().toISOString();
   await fs.writeFile(REGISTRY_PATH, JSON.stringify(registry, null, 2), "utf8");
@@ -71,6 +83,7 @@ exports.handler = async (event) => {
   }
 
   try {
+    const { validateEditionCounts, validateArtistProof, getOfferedEditionSizes } = await import('../../src/data/editionPolicy.js');
     const registry = await readRegistry();
 
     // GET: Read registry or resolve a specific image
@@ -366,6 +379,23 @@ exports.handler = async (event) => {
           };
         }
 
+        case 'setArtistProof': {
+          const { tier, size, proof } = body.data || {};
+          const seriesId = registry.images[imageId] || Object.entries(registry.images).find(([key]) => key.startsWith(`${imageId}:`))?.[1];
+          const series = registry.series[seriesId];
+          if (!series || !series.tiers?.includes(tier) || !getOfferedEditionSizes(tier, series.excludeSizes).includes(size)) return { statusCode: 400, headers, body: JSON.stringify({ error: 'Select an offered limited edition size.' }) };
+          let validated;
+          try { validated = validateArtistProof(proof); }
+          catch (error) { return { statusCode: 400, headers, body: JSON.stringify({ error: error.message }) }; }
+          series.editionData ||= {};
+          series.editionData[tier] ||= { soldBySize: {}, printedBySize: {} };
+          series.editionData[tier].artistProofsBySize ||= {};
+          series.editionData[tier].artistProofsBySize[size] = validated;
+          if (validated.sold) series.editionData[tier].declaredSizes ||= getOfferedEditionSizes(tier, series.excludeSizes);
+          await writeRegistry(registry);
+          return { statusCode: 200, headers, body: JSON.stringify({ ok: true, proof: validated }) };
+        }
+
         case "setEditionData": {
           // Set edition tracking data (soldBySize, printedBySize) for a series tier
           // data: { tier: "chronicle", soldBySize: {...}, printedBySize: {...} }
@@ -375,6 +405,13 @@ exports.handler = async (event) => {
           const { tier, soldBySize, printedBySize } = body.data || {};
           if (!tier) {
             return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing tier in data" }) };
+          }
+          if (!['chronicle', 'legend'].includes(tier)) return { statusCode: 400, headers, body: JSON.stringify({ error: 'Select a numbered paper size edition.' }) };
+          try {
+            validateEditionCounts(tier, soldBySize);
+            validateEditionCounts(tier, printedBySize);
+          } catch (error) {
+            return { statusCode: 400, headers, body: JSON.stringify({ error: error.message }) };
           }
           
           // Find the series for this image
@@ -409,6 +446,7 @@ exports.handler = async (event) => {
           if (soldBySize !== undefined) {
             series.editionData[tier].soldBySize = { ...series.editionData[tier].soldBySize, ...soldBySize };
           }
+          if (Object.values(series.editionData[tier].soldBySize || {}).some(value => Number(value) > 0)) series.editionData[tier].declaredSizes ||= getOfferedEditionSizes(tier, series.excludeSizes);
           if (printedBySize !== undefined) {
             series.editionData[tier].printedBySize = { ...series.editionData[tier].printedBySize, ...printedBySize };
           }

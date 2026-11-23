@@ -1,4 +1,5 @@
 import pricingConfig from "../pricingConfig.json";
+import { PAPER_EDITION_LIMITS, SIZE_EDITION_LABEL, ENGRAINED_EDITION_LIMIT, getSizeEditionLimit } from '../editionPolicy.js';
 
 export const STANDARD_PRINT_SERIES_KEYS = ["sketch", "foundation", "chronicle", "legend"];
 
@@ -42,9 +43,10 @@ const SERIES_META = {
     collectorSummary:
       "Signed limited editions where scarcity, provenance, and permanence enter the work’s story.",
     learnMoreHref: "/Other/Series",
-    editionNote: "Signed limited edition. Remaining counts are image-specific in the order modal.",
+    editionNote: SIZE_EDITION_LABEL,
     showEdition: true,
-    editionLimit: 50,
+    editionLabel: SIZE_EDITION_LABEL,
+    editionLimits: PAPER_EDITION_LIMITS.chronicle,
     fulfillment: "online",
     buttonLabel: "Order Print",
     sortOrder: 3,
@@ -58,9 +60,10 @@ const SERIES_META = {
     collectorSummary:
       "Ultra-limited statement works created for collectors who want scale, presence, and legacy on the wall.",
     learnMoreHref: "/Other/Series",
-    editionNote: "Ultra-limited signed edition. Remaining counts are image-specific in the order modal.",
+    editionNote: SIZE_EDITION_LABEL,
     showEdition: true,
-    editionLimit: 25,
+    editionLabel: SIZE_EDITION_LABEL,
+    editionLimits: PAPER_EDITION_LIMITS.legend,
     fulfillment: "online",
     buttonLabel: "Order Print",
     sortOrder: 4,
@@ -79,7 +82,7 @@ const SPECIALTY_SERIES = [
     href: "/Other/K4-Select-Series/Engrained",
     cta: "View Engrained Series →",
     showEdition: true,
-    editionLimit: 5,
+    editionLimit: ENGRAINED_EDITION_LIMIT,
     fulfillment: "online",
     buttonLabel: "Order Print",
     sortOrder: 99,
@@ -108,7 +111,8 @@ export function getSeriesPricingEntries(seriesKey, pricingData, excludeSizes = n
       displaySize: displaySize(size),
       price,
       displayPrice: formatPrice(price),
-      display: `${displaySize(size)} · ${formatPrice(price)}`,
+      display: `${displaySize(size)} · ${formatPrice(price)}${getSizeEditionLimit(seriesKey, size) ? ` · Edition of ${getSizeEditionLimit(seriesKey, size)} + 1 AP` : ''}`,
+      editionLimit: getSizeEditionLimit(seriesKey, size),
     }));
 }
 
@@ -122,6 +126,7 @@ export function getStandardPrintSeries(config = pricingConfig) {
     const meta = SERIES_META[key];
     return {
       ...meta,
+      collectorSummary: meta.editionLimits ? `${meta.collectorSummary} ${SIZE_EDITION_LABEL}. Each size is numbered independently, with one artist’s proof (AP) reserved outside its numbered edition. Only the sizes offered for an artwork count toward its total.` : meta.collectorSummary,
       description: infoCopy[key]?.body || cardCopy[key] || descriptions[key] || "",
       shortDescription: cardCopy[key] || descriptions[key] || "",
       summaryDescription: descriptions[key] || "",
@@ -214,6 +219,8 @@ export function getSeriesDefinitionMap() {
         description: series.summaryDescription || series.shortDescription,
         showEdition: series.showEdition,
         editionLimit: series.editionLimit,
+        editionLabel: series.editionLabel,
+        editionLimits: series.editionLimits,
         fulfillment: series.fulfillment,
         buttonLabel: series.buttonLabel,
         sortOrder: series.sortOrder,

@@ -64,7 +64,7 @@ function DisplayPreview({ preview, onClose }) {
   );
 }
 
-export default function DisplayPreviewButton({ size, imageId }) {
+export default function DisplayPreviewButton({ size, imageId, source }) {
   const [isOpen, setIsOpen] = useState(false);
   const preview = getDisplayPreview(size);
   if (!preview) return null;
@@ -80,10 +80,11 @@ export default function DisplayPreviewButton({ size, imageId }) {
           event.stopPropagation();
           setIsOpen(true);
           const sizeKey = preview.size.replace(/\s/g, '');
+          const origin = ['zoom', 'pricing', 'order'].includes(source) ? source : null;
           trackEvent('wall_preview_open', {
             imageId,
-            sourceLayer: `wall_preview_size_${sizeKey}_v1`,
-            trigger: `see_on_wall_${sizeKey}`,
+            sourceLayer: origin ? `wall_preview_size_${sizeKey}_${origin}_v2` : `wall_preview_size_${sizeKey}_v1`,
+            trigger: `see_on_wall_${sizeKey}${origin ? `_${origin}` : ''}`,
           });
         }}
       >

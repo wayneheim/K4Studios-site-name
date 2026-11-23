@@ -41,6 +41,14 @@ export async function reserveEditionInventory(db, orderId, items) {
   const groups = buildEditionReservationGroups(items);
   if (!groups.length) return [];
 
+  // Old shared pools must be reconciled explicitly before switching identities.
+  for (const key of new Set(groups.filter(group => group.inventoryKey.startsWith('series:') && group.inventoryKey.split(':').length >= 4).map(group => group.inventoryKey.split(':').slice(0, 3).join(':')))) {
+    const legacy = await db.prepare('SELECT baseline_sold, checkout_sold, reserved_quantity FROM edition_inventory WHERE inventory_key = ?').bind(key).first();
+    if (legacy && (Number(legacy.baseline_sold) + Number(legacy.checkout_sold) + Number(legacy.reserved_quantity) > 0)) {
+      throw new Error('This edition requires its previous inventory to be reconciled by size before checkout.');
+    }
+  }
+
   const existing = await db.prepare(`
     SELECT inventory_key, quantity, status
     FROM edition_allocations
@@ -66,6 +74,8 @@ export async function reserveEditionInventory(db, orderId, items) {
         checkout_sold, reserved_quantity, created_at, updated_at
       ) VALUES (?, ?, ?, ?, ?, 0, ?, ?, ?)
       ON CONFLICT(inventory_key) DO UPDATE SET
+        edition_limit = excluded.edition_limit,
+        baseline_sold = MAX(edition_inventory.baseline_sold, excluded.baseline_sold),
         reserved_quantity = edition_inventory.reserved_quantity + excluded.reserved_quantity,
         updated_at = excluded.updated_at
     `).bind(

@@ -80,6 +80,15 @@ async function fetchPaperAlternative(image) {
 export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent }) {
   const [paperAlternative, setPaperAlternative] = useState(null);
   const [paperAlternativeLoading, setPaperAlternativeLoading] = useState(false);
+  const [artistProof, setArtistProof] = useState(null);
+  useEffect(() => {
+    let cancelled = false;
+    setArtistProof(null);
+    if (isOpen && image?.id) fetch('/data/engrainedData.json', { cache: 'no-store' }).then(response => response.json()).then(data => {
+      if (!cancelled) setArtistProof(data.items?.find(item => item.id === image.id)?.artistProof || null);
+    }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [isOpen, image?.id]);
 
   useEffect(() => {
     let cancelled = false;
@@ -106,6 +115,7 @@ export default function EngrainedOrderModal({ isOpen, onClose, image, trackEvent
     price: image.price,
     imageSize: image.imageSize,
     editionSize: image.editionSize,
+    artistProof,
     hasInventory: getInStockCount(image.inventory) > 0,
   };
 

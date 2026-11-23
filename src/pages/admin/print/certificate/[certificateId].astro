@@ -7,6 +7,7 @@
 
 import registry from "../../../../data/seriesRegistry.json";
 import { galleryData as engrainedData } from "../../../../data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs";
+import { ENGRAINED_EDITION_LIMIT, getSizeEditionLimit } from '../../../../data/editionPolicy.js';
 
 const { certificateId } = Astro.params;
 
@@ -16,6 +17,7 @@ const imageId = parts.length >= 2 ? `i-${parts[1]}` : null;
 const tier = parts[2] || 'chronicle';
 const size = parts[3] || '16x24';
 const editionNum = parseInt(parts[4] || '1', 10);
+const isArtistProof = parts[4]?.toUpperCase() === 'AP';
 
 // Find series data
 let imageTitle = "Untitled";
@@ -48,14 +50,17 @@ if (imageId) {
 
 const SERIES_INFO = {
   foundation: { name: "Foundation Series", editionSize: null, medium: "Pigment Print on Paper" },
-  chronicle: { name: "Chronicle Series", editionSize: 50, medium: "Pigment Print on Paper" },
-  legend: { name: "Legend Series", editionSize: 25, medium: "Pigment Print on Paper" },
-  engrained: { name: "Engrained Series", editionSize: 5, medium: "UV Print on Wood" },
+  chronicle: { name: "Chronicle Series", editionSize: getSizeEditionLimit('chronicle', size), medium: "Pigment Print on Paper" },
+  legend: { name: "Legend Series", editionSize: getSizeEditionLimit('legend', size), medium: "Pigment Print on Paper" },
+  engrained: { name: "Engrained Series", editionSize: engrainedData.find(item => item.id === imageId)?.editionSize || ENGRAINED_EDITION_LIMIT, medium: "UV Print on Wood" },
 };
 
 const seriesInfo = SERIES_INFO[tier] || SERIES_INFO.chronicle;
 const medium = seriesInfo.medium;
 const editionTotal = seriesInfo.editionSize;
+if (!SERIES_INFO[tier] || (['chronicle', 'legend'].includes(tier) && !editionTotal) || (!isArtistProof && editionTotal && (!/^\d+$/.test(parts[4] || '') || editionNum < 1 || editionNum > editionTotal))) {
+  return new Response('Invalid size edition or edition number.', { status: 400 });
+}
 const editionNumFormatted = String(editionNum).padStart(editionTotal >= 100 ? 3 : 2, '0');
 const issueDate = new Date().toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
 const sizeFormatted = size.replace(/x/i, '" \u00D7 ') + '"';
@@ -153,13 +158,13 @@ if (!yearCreated) {
         <div class="field"><span class="label">Medium:</span><span class="value">{medium}</span></div>
         <div class="field"><span class="label">Print Size:</span><span class="value">{sizeFormatted}</span></div>
         <div class="field"><span class="label">Series:</span><span class="value">{seriesInfo.name}</span></div>
-        <div class="field"><span class="label">Edition:</span><span class="value">{editionNumFormatted} of {editionTotal}</span></div>
+        <div class="field"><span class="label">Edition:</span><span class="value">{isArtistProof ? 'AP — Artist’s Proof, 1 of 1 in this size' : `${editionNumFormatted} of ${editionTotal}`}</span></div>
         <div class="field"><span class="label">Image ID:</span><span class="value">{imageId?.replace('i-', 'I-') || 'N/A'}</span></div>
       </div>
 
       <p class="legal-text">
         This work is part of a strictly limited edition.
-        No additional prints will be produced beyond the stated edition size.
+        The numbered edition is limited to {editionTotal} in this size, plus one artist’s proof outside the numbered edition.
       </p>
       <p class="legal-text">
         All copyrights remain the exclusive property of the artist.

@@ -1,6 +1,7 @@
 import { getStandardPrintSeries } from '../data/pricing/printSeries.js';
 import DisplayPreviewButton from './DisplayPreviewButton.jsx';
 import './ImagePricingSummary.css';
+import { SIZE_EDITION_LABEL, getEditionSummary, getSizeEditionLimit } from '../data/editionPolicy.js';
 
 const SIGNED_SERIES = new Set(["chronicle", "legend"]);
 
@@ -27,6 +28,7 @@ export default function ImagePricingSummary({
   showLimited = true,
   collectionOverview = false,
   pricing = null,
+  previewSource = 'pricing',
 }) {
   if (!commerce || commerce.mode !== "standard") return null;
 
@@ -93,7 +95,7 @@ export default function ImagePricingSummary({
         </p>
       )}
 
-      {seriesGroups.map(({ key, name, offers, editionLimit }, index) => (
+      {seriesGroups.map(({ key, name, offers }, index) => (
         <div key={key} data-pricing-series={key} style={{
           paddingTop: index > 0 ? "0.75rem" : "0.38rem",
           marginTop: index > 0 ? "0.45rem" : 0,
@@ -102,19 +104,24 @@ export default function ImagePricingSummary({
         }}>
           <h4 style={{ margin: 0, color: "#716964", fontSize: "0.9rem", fontWeight: 400, lineHeight: 1.25 }}>{name}</h4>
           <div style={{ color: "#9a928d", fontSize: "0.72rem", lineHeight: 1.35 }}>
-            {SIGNED_SERIES.has(key) ? `Limited Edition${editionLimit ? ` of ${editionLimit}` : ''}${collectionOverview ? '' : ' · Signed · Numbered'}` : 'Open Edition'}
+            {SIGNED_SERIES.has(key) ? SIZE_EDITION_LABEL : 'Open Edition'}
           </div>
           {offers.map((offer) => (
             <div key={`${offer.seriesKey}:${offer.size}`} style={rowStyle} data-pricing-size={offer.size}>
               <div style={{ color: "#9a928d", fontSize: "0.8rem", lineHeight: 1.35 }}>
                 {formatSize(offer.size)}
-                <DisplayPreviewButton size={offer.size} imageId={commerce.imageId} />
+                <DisplayPreviewButton size={offer.size} imageId={commerce.imageId} source={previewSource} />
+                {SIGNED_SERIES.has(key) && <span style={{ display: 'block' }}>Edition of {getSizeEditionLimit(key, offer.size)} + 1 AP</span>}
               </div>
               <div style={{ color: "#716964", fontSize: "0.86rem", whiteSpace: "nowrap", textAlign: "right" }}>
                 {formatPrice(offer.price)}
               </div>
             </div>
           ))}
+          {SIGNED_SERIES.has(key) && <details style={{ fontSize: '0.8rem', marginTop: '0.3rem' }}>
+            <summary title={getEditionSummary(key, offers.map(offer => offer.size)).tooltip}>{getEditionSummary(key, offers.map(offer => offer.size)).shorthand}</summary>
+            <p>{collectionOverview ? 'For an artwork offered in these sizes: ' : ''}{getEditionSummary(key, offers.map(offer => offer.size)).disclosure}</p>
+          </details>}
         </div>
       ))}
 

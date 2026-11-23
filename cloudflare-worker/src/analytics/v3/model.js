@@ -17,7 +17,7 @@ export const V3_CORE_EVENT_TYPES = Object.freeze([
   'native_checkout_quote', 'native_payment_start', 'native_order_complete',
   'native_checkout_error', 'native_checkout_cancel',
   'order_native_cart_opened',
-  'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start',
+  'series_info', 'more_info_open', 'collector_notes_open', 'oim_info_open', 'slideshow_start',
   'slideshow_nav_next', 'slideshow_nav_prev'
 ]);
 
@@ -141,7 +141,7 @@ export function getV3ActionLabel(type, sourceLayer = null) {
     frontier_story_video_widget_click: 'Story video clicked', xl_zoom: 'XL zoom opened',
     wall_preview_open: 'See on Wall opened',
     series_info: 'Series information opened', more_info_open: 'More information opened',
-    collector_notes_open: 'Collector notes opened', slideshow_start: 'Slideshow started',
+    collector_notes_open: 'Collector notes opened', oim_info_open: 'OIM-1 logo opened', slideshow_start: 'Slideshow started',
     slideshow_nav_next: 'Slideshow image advance', slideshow_nav_prev: 'Slideshow previous image'
   })[type] || null;
 }
@@ -155,7 +155,7 @@ export function getV3ActionGroup(type) {
   if (['nav_next', 'nav_prev', 'slideshow_nav_next', 'slideshow_nav_prev', 'sister_image_click', 'cowboy_jump', 'picture_shows_jump', 'presentation_last_image_back_to_start'].includes(type)) return 'Image navigation';
   if (type.startsWith('story_') || type === 'frontier_story_video_widget_click') return 'Story';
   if (type.startsWith('guide_')) return 'Guide';
-  if (['xl_zoom', 'wall_preview_open', 'series_info', 'more_info_open', 'collector_notes_open', 'slideshow_start'].includes(type)) return 'Engagement';
+  if (['xl_zoom', 'wall_preview_open', 'series_info', 'more_info_open', 'collector_notes_open', 'oim_info_open', 'slideshow_start'].includes(type)) return 'Engagement';
   return null;
 }
 
@@ -424,8 +424,10 @@ export function buildV3RollupBatch(rows, previousSessions = []) {
     }
     const action = getV3ActionLabel(row.event_type, row.source_layer);
     if (row.event_type === 'wall_preview_open') {
-      const size = String(row.source_layer || '').match(/^wall_preview_size_(5x7|8x10|11x14|16x20|20x24|30x40|40x60)_v1$/)?.[1];
-      incrementDimension(day, 'wall_preview_size', size ? size.replace('x', ' × ') : 'Unknown size');
+      const preview = String(row.source_layer || '').match(/^wall_preview_size_(5x7|8x10|11x14|16x20|20x24|30x40|40x60)(?:_v1|_(zoom|pricing|order)_v2)$/);
+      const size = preview ? preview[1].replace('x', ' × ') : 'Unknown size';
+      const source = { zoom: 'Z', pricing: 'P', order: 'O' }[preview?.[2]];
+      incrementDimension(day, 'wall_preview_size', source ? `${size} · ${source}` : size);
     }
     if (action) incrementDimension(day, 'action', action);
     const expeditionAction = getV3ExpeditionActionLabel(row.page, row.event_type);
@@ -627,7 +629,7 @@ export function summarizeV3Rollup(batch, label = 'Archive sample') {
       return topDistinctVisitors('imageGeo', 20, (row) => Boolean(row.imageGeo), true)
         .map((row) => ({ ...row, imageViews: viewCounts.get(row.label) || 0 }));
     })(),
-    wallPreviews: top('wall_preview_size', 20),
+    wallPreviews: top('wall_preview_size', 32),
     expeditionActions: top('expedition_action', 30),
     actionGroups: top('action_group', 10),
     actions: top('action', 20).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),

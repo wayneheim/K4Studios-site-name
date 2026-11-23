@@ -292,7 +292,7 @@ export async function getV3CoreSummary(env, { windowKey = 'today', now = new Dat
     imageGeography: topSession('image_geo', 20).map((row) => ({
       ...row, imageViews: imageViewGeoCounts.get(row.label) || 0
     })),
-    wallPreviews: top('wall_preview_size', 20),
+    wallPreviews: top('wall_preview_size', 32),
     expeditionActions: top('expedition_action', 30),
     actionGroups: top('action_group', 10),
     actions: top('action', 25).filter((row) => !['Order clicked — SmugMug', 'Order clicked — email'].includes(row.label)),

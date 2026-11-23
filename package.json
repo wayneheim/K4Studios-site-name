@@ -53,6 +53,7 @@
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types",
     "test:commerce": "node --test cloudflare-commerce/test/quote.test.js cloudflare-commerce/test/order-email.test.mjs cloudflare-commerce/test/order-processing.test.mjs cloudflare-commerce/test/promotions.test.mjs",
+    "test:editions": "node --test scripts/size-editions.test.mjs",
     "test:order-tracker": "node --test cloudflare-worker/test/order-tracker.test.mjs",
     "test:promotions:browser": "node --test cloudflare-commerce/test/promotions-ui.test.mjs",
     "test:admin-session:browser": "node --test cloudflare-commerce/test/admin-session-ui.test.mjs",

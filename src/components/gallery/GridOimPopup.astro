@@ -11,6 +11,7 @@ import '../ChapterOimBadge.css';
   <footer class="chapter-oim-popup-footer"><a href="/Other/One-Image-Movie">Learn more about One-Image Movies</a></footer>
 </dialog>
 <script>
+  import { trackOimOpen } from '@/utils/analytics';
   const dialog = document.querySelector<HTMLDialogElement>('[data-grid-oim-popup]');
   if (dialog) {
     document.addEventListener('click', (event) => {
@@ -18,8 +19,10 @@ import '../ChapterOimBadge.css';
       if (!(trigger instanceof HTMLButtonElement)) return;
       event.preventDefault();
       event.stopPropagation();
+      if (dialog.open) return;
       trigger.focus();
       dialog.showModal();
+      trackOimOpen(trigger.dataset.oimImageId || null);
     });
     dialog.querySelector('[data-grid-oim-close]')?.addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', (event) => {

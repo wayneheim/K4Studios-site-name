@@ -1,5 +1,7 @@
 // API endpoint to serve Engrained gallery data for crosslink lookups
 import { galleryData } from "../../data/Other/K4-Select-Series/Engrained/Engrained-Series.mjs";
+import editionState from '../../data/editionState.json';
+import { artistProofState } from '../../data/editionPolicy.js';
 
 export async function GET() {
   // Transform to the format expected by SeriesOrderModal
@@ -13,6 +15,8 @@ export async function GET() {
       visibility: item.visibility,
       price: item.price,
       imageSize: item.imageSize,
+      editionSize: item.editionSize,
+      artistProof: artistProofState(editionState[`${item.id}:engrained`]?.artistProof),
       inventory: item.inventory || {}
     }));
 

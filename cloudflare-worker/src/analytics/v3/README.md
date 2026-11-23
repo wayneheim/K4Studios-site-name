@@ -30,10 +30,17 @@ other requested reports provide more value for substantially less storage.
 
 ## Core population
 
-The **See on Wall** panel counts `wall_preview_open` browser events by print size.
-Size is encoded in the existing `source_layer` field as `wall_preview_size_5x7_v1`
-(and the other supported sizes). The updater writes `wall_preview_size` daily
-dimensions, so no schema migration or historical backfill is needed. Totals count
+The **See on Wall** panel counts `wall_preview_open` browser events by print size
+and source. Z means Zoom window; P means Pricing window (including series
+pricing guides); O means Order window. Size and source use the existing
+`source_layer` field, for example `wall_preview_size_5x7_zoom_v2`,
+`wall_preview_size_5x7_pricing_v2`, or `wall_preview_size_5x7_order_v2`.
+The updater stores labels such as `5 × 7 · Z` in `wall_preview_size` daily
+dimensions. Legacy `wall_preview_size_5x7_v1` events and existing summaries
+retain their size and show — (source not recorded); their origin cannot be
+recovered reliably. No schema migration or historical backfill is needed.
+Deploy the site to Netlify to send the new source tags, and deploy the analytics
+Worker to read them and show the Source column. Totals count
 clicks, including repeat opens, rather than distinct visitors. The existing date
 window and core traffic exclusions apply.
 
