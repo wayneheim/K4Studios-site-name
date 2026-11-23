@@ -9,7 +9,7 @@ const marked = isOimImage(imageId, null, registry);
   <button class="grid-oim-seal" type="button" data-oim-seal aria-label="About OIM-1" aria-haspopup="dialog" title="About OIM-1">
     <img src="/images/OIM-1-web.webp" alt="OIM-1" width="34" height="34" loading="lazy" />
   </button>
-  <span class="grid-oim-caption">This image is part of the OIM-1 collection.</span>
+  <span class="grid-oim-caption">* This image is part of the OIM-1 collection.</span>
   </span>
 )}
 
@@ -101,7 +101,19 @@ const marked = isOimImage(imageId, null, registry);
     visibility: visible;
     opacity: 1;
   }
-  .ssr-grid .ssr-card:has(.grid-oim-seal):is(:hover, :focus-within) .ssr-card-content {
-    padding-bottom: 56px;
+  .ssr-card .card-cta:has(.grid-oim-seal) {
+    font-weight: 400 !important;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .ssr-grid .ssr-card:has(.grid-oim-seal):is(:hover, :focus-within) .ssr-card-content {
+      padding-top: 0 !important;
+      overflow: visible !important;
+    }
+    .ssr-grid .ssr-card:has(.ssr-card-media):has(.grid-oim-seal):is(:hover, :focus-within) .ssr-card-content {
+      transform: translateY(min(var(--card-overlap, 0px), calc(100% - 90px))) !important;
+    }
+    .ssr-grid .ssr-card:has(.grid-oim-seal):is(:hover, :focus-within) .ssr-card-content .story-excerpt {
+      margin-bottom: 0 !important;
+    }
   }
 </style>
