@@ -9,6 +9,7 @@ const marked = isOimImage(imageId, null, registry);
   <button class="grid-oim-seal" type="button" data-oim-seal aria-label="About OIM-1" aria-haspopup="dialog" title="About OIM-1">
     <img src="/images/OIM-1-web.webp" alt="OIM-1" width="34" height="34" loading="lazy" />
   </button>
+  <span class="grid-oim-caption">This image is part of the OIM-1 collection.</span>
   </span>
 )}
 
@@ -81,5 +82,26 @@ const marked = isOimImage(imageId, null, registry);
     display: block;
     margin-top: 26px;
     border-top: 1px solid #e3d7c9;
+  }
+  .ssr-card .grid-oim-caption {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: -8px;
+    right: -8px;
+    color: #7a6047;
+    font: 400 0.75rem/1.4 Arial, sans-serif;
+    letter-spacing: normal;
+    text-align: center;
+    white-space: normal;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .ssr-card:is(:hover, :focus-within) .grid-oim-caption {
+    visibility: visible;
+    opacity: 1;
+  }
+  .ssr-grid .ssr-card:has(.grid-oim-seal):is(:hover, :focus-within) .ssr-card-content {
+    padding-bottom: 56px;
   }
 </style>
