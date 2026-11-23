@@ -1,0 +1,64 @@
+---
+import registry from '@/data/contentClassificationRegistry.json';
+import { isOimImage } from '@/utils/contentReview.mjs';
+import { oimFootnote } from '@/data/oimCopy.js';
+
+const { images = [] } = Astro.props;
+const hasMarkedImages = images.some(image => isOimImage(image?.id, null, registry));
+---
+{hasMarkedImages && (
+  <aside class="grid-oim-footnote" aria-labelledby="grid-oim-footnote-heading">
+    <img src="/images/OIM-1-web.webp" alt="OIM-1 maker's mark" width="52" height="52" loading="lazy" />
+    <div>
+      <h2 id="grid-oim-footnote-heading">What is OIM-1?</h2>
+      <p>{oimFootnote} <a href="/Other/One-Image-Movie">Learn more about One-Image Movies</a></p>
+    </div>
+  </aside>
+)}
+<style>
+  .grid-oim-footnote {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 2rem auto 1.5rem;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid #e3d7c9;
+    border-bottom: 1px solid #e3d7c9;
+    color: #78695c;
+    font-family: 'Glegoo', serif;
+    text-align: left;
+  }
+  .grid-oim-footnote > img {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+  }
+  .grid-oim-footnote h2 {
+    margin: 0 0 0.35rem;
+    color: #655447;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .grid-oim-footnote p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+  .grid-oim-footnote a {
+    color: #85644b;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  @media (max-width: 520px) {
+    .grid-oim-footnote {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.25rem 0.75rem;
+      text-align: center;
+    }
+  }
+</style>

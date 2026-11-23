@@ -2,6 +2,7 @@
 import EditionGroupHeading from "@/components/gallery/EditionGroupHeading.astro";
 import GridOimSeal from "@/components/gallery/GridOimSeal.astro";
 import GridOimPopup from "@/components/gallery/GridOimPopup.astro";
+import GridOimFootnote from "@/components/gallery/GridOimFootnote.astro";
 import { buildEditionCatalog } from "@/utils/editionCatalog.js";
 import "@/styles/edition-catalog.css";
 import Footer from "@/components/Footer.astro";
@@ -723,6 +724,8 @@ const compactBreadcrumbHtml = breadcrumbHtml
         );
       })}
     </div>
+
+    <GridOimFootnote images={filteredGalleryData} />
 
     <ArchiveContext 
       categoryUrl={archiveContext.categoryUrl || basePath} 

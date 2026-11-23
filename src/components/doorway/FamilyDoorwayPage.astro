@@ -6,6 +6,7 @@ const { taxonomy, heroPortraitIds } = config;
 import { LIMITED_FIRST_DOORWAY_PATHS, alignDoorwayDescription, alignDoorwayGateway } from "@/data/doorway/limitedFirstCopy.js";
 import GridOimSeal from "@/components/gallery/GridOimSeal.astro";
 import GridOimPopup from "@/components/gallery/GridOimPopup.astro";
+import GridOimFootnote from "@/components/gallery/GridOimFootnote.astro";
 import EditionGroupHeading from "@/components/gallery/EditionGroupHeading.astro";
 import { buildEditionCatalog } from "@/utils/editionCatalog.js";
 import "@/styles/edition-catalog.css";
@@ -885,6 +886,8 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
       </div>
     </section>
     )}
+
+    <GridOimFootnote images={hasSectionedCatalog ? normalizedGridSections.flatMap(section => section.items.slice(0, section.limit)) : filteredGalleryData} />
 
     {isCinematicConceptLayout && archiveContextParagraphs.length > 0 && (
       <section class:list={["cinematic-closing-callout", isCinematicConceptSeriesTopLayout && "cinematic-closing-callout--wide"]} aria-labelledby={archiveContextTitle ? "collection-introduction-heading" : undefined}>

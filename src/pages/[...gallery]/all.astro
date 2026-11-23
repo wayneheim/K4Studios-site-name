@@ -9,6 +9,7 @@ export const prerender = true;
 import Footer from "@/components/Footer.astro";
 import GridOimSeal from "@/components/gallery/GridOimSeal.astro";
 import GridOimPopup from "@/components/gallery/GridOimPopup.astro";
+import GridOimFootnote from "@/components/gallery/GridOimFootnote.astro";
 import EditionGroupHeading from "@/components/gallery/EditionGroupHeading.astro";
 import { buildEditionCatalog } from "@/utils/editionCatalog.js";
 import { resolveImageCommerce } from "@/data/commerceResolver.js";
@@ -780,6 +781,8 @@ const pageMetaOverride = {
         <p><a href={basePath}>← Return to gallery</a></p>
       </div>
     )}
+
+    <GridOimFootnote images={galleryData} />
 
     <section class="archive-context">
       <p>
