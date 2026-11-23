@@ -7,6 +7,8 @@ export const prerender = true;
  * This replaces individual /all.astro files per gallery.
  */
 import Footer from "@/components/Footer.astro";
+import GridOimSeal from "@/components/gallery/GridOimSeal.astro";
+import GridOimPopup from "@/components/gallery/GridOimPopup.astro";
 import EditionGroupHeading from "@/components/gallery/EditionGroupHeading.astro";
 import { buildEditionCatalog } from "@/utils/editionCatalog.js";
 import { resolveImageCommerce } from "@/data/commerceResolver.js";
@@ -750,7 +752,8 @@ const pageMetaOverride = {
             {legacyEditionCatalog.hasSplit && displayIndex === 0 && <EditionGroupHeading kind="limited" price={legacyEditionCatalog.limitedPrice} />}
             {legacyEditionCatalog.hasSplit && displayIndex === legacyEditionCatalog.limitedCount && <EditionGroupHeading kind="open" price={legacyEditionCatalog.openPrice} />}
             <div class:list={["ssr-card", { "ssr-card--open-edition": legacyEditionCatalog.hasSplit && openEditionOnly, "ssr-card--limited-edition": legacyEditionCatalog.hasSplit && !openEditionOnly }]} id={item.id} data-edition-group={openEditionOnly ? 'open' : 'limited'}>
-              <a href={linkUrl} class="ssr-card-link">
+              <a href={linkUrl} class="card-artwork-link" aria-label={`Explore ${title}`}></a>
+              <div class="ssr-card-link">
                 <img 
                   src={imageUrl} 
                   srcset={srcsetParts}
@@ -763,8 +766,9 @@ const pageMetaOverride = {
                   <span class="card-number">#{idx + 1}</span>
                   <h3>{title}</h3>
                   {storyExcerpt && <p>{storyExcerpt}</p>}
+                  <GridOimSeal imageId={item.id} footer />
                 </div>
-              </a>
+</div>
             </div>
             </>
           );
@@ -1106,4 +1110,5 @@ const pageMetaOverride = {
       window.addEventListener('resize', clearActiveRow);
     })();
   </script>
+  <GridOimPopup />
 </BaseLayout>)}

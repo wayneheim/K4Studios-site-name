@@ -1,0 +1,40 @@
+---
+import { oimParagraphs } from '@/data/oimCopy.js';
+import '../ChapterOimBadge.css';
+---
+<dialog class="chapter-oim-popup" data-grid-oim-popup aria-labelledby="grid-oim-heading" aria-describedby="grid-oim-description">
+  <button type="button" class="chapter-oim-popup-close" aria-label="Close OIM-1 information" data-grid-oim-close>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 9 6 6m0-6-6 6"/></svg>
+  </button>
+  <h2 id="grid-oim-heading" class="chapter-oim-popup-heading"><img src="/images/OIM-1-web.webp" alt="OIM-1" width="95" height="94" /></h2>
+  <div id="grid-oim-description" class="chapter-oim-popup-copy">{oimParagraphs.map(paragraph => <p>{paragraph}</p>)}</div>
+  <footer class="chapter-oim-popup-footer"><a href="/Other/One-Image-Movie">Learn more about One-Image Movies</a></footer>
+</dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('[data-grid-oim-popup]');
+  if (dialog) {
+    document.addEventListener('click', (event) => {
+      const trigger = event.target instanceof Element ? event.target.closest('[data-oim-seal]') : null;
+      if (!(trigger instanceof HTMLButtonElement)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      trigger.focus();
+      dialog.showModal();
+    });
+    dialog.querySelector('[data-grid-oim-close]')?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      event.stopPropagation();
+      if (event.target !== dialog) return;
+      const r = dialog.getBoundingClientRect();
+      if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close();
+    });
+    dialog.addEventListener('keydown', (event) => {
+      event.stopPropagation();
+      if (event.key !== 'Tab') return;
+      const first = dialog.querySelector<HTMLButtonElement>('button');
+      const last = dialog.querySelector<HTMLAnchorElement>('a');
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    });
+  }
+</script>

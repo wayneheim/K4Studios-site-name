@@ -1,5 +1,7 @@
 ---
 import EditionGroupHeading from "@/components/gallery/EditionGroupHeading.astro";
+import GridOimSeal from "@/components/gallery/GridOimSeal.astro";
+import GridOimPopup from "@/components/gallery/GridOimPopup.astro";
 import { buildEditionCatalog } from "@/utils/editionCatalog.js";
 import "@/styles/edition-catalog.css";
 import Footer from "@/components/Footer.astro";
@@ -647,12 +649,13 @@ const compactBreadcrumbHtml = breadcrumbHtml
             >
               <a
                 href={linkUrl}
-                class="ssr-card-link"
+                class="card-artwork-link"
                 data-collection-image-link
                 data-image-id={item.id}
                 data-gallery-id={contentBasePath}
                 data-artwork-number={idx + 1}
-              >
+               aria-label={`Explore ${title}`}></a>
+              <div class="ssr-card-link">
                 <span class="ssr-card-media">
                   <img
                     class="ssr-card-image"
@@ -689,11 +692,12 @@ const compactBreadcrumbHtml = breadcrumbHtml
                   <p class="print-cue sr-only">Fine art print available</p>
                   {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
                   <span class="card-cta">
+                    <GridOimSeal imageId={item.id} />
                     <span class="card-cta-desktop">Explore Story | Order Fine Art Print &rarr;</span>
                     <span class="card-cta-mobile">Explore Story | Order</span>
                   </span>
                 </div>
-              </a>
+              </div>
               <button
                 type="button"
                 class="collector-notes-trigger"
@@ -2527,4 +2531,5 @@ const compactBreadcrumbHtml = breadcrumbHtml
   initEditionCatalogs();
 </script>
 
+  <GridOimPopup />
 </BaseLayout>

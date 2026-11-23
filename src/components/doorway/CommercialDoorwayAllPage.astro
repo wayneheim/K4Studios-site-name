@@ -1,5 +1,7 @@
 ---
 import { LIMITED_FIRST_DOORWAY_PATHS, alignDoorwayDescription, alignDoorwayGateway } from "@/data/doorway/limitedFirstCopy.js";
+import GridOimSeal from "@/components/gallery/GridOimSeal.astro";
+import GridOimPopup from "@/components/gallery/GridOimPopup.astro";
 import EditionGroupHeading from "@/components/gallery/EditionGroupHeading.astro";
 import { buildEditionCatalog } from "@/utils/editionCatalog.js";
 import "@/styles/edition-catalog.css";
@@ -1000,12 +1002,13 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
             >
               <a
                 href={linkUrl}
-                class="ssr-card-link"
+                class="card-artwork-link"
                 data-context-image-link
                 data-image-id={item.id}
                 data-gallery-id={contentBasePath}
                 data-artwork-number={idx + 1}
-              >
+               aria-label={`Explore ${title}`}></a>
+              <div class="ssr-card-link">
                 <img 
                   class="ssr-card-image"
                   src={imageUrl} 
@@ -1040,11 +1043,12 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                   <p class="print-cue sr-only">Fine art print available</p>
                   {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
                   <span class="card-cta">
+                    <GridOimSeal imageId={item.id} />
                     <span class="card-cta-desktop">Explore Story | Order Fine Art Print &rarr;</span>
                     <span class="card-cta-mobile">Explore Story | Order</span>
                   </span>
                 </div>
-              </a>
+              </div>
               <button
                 type="button"
                 class="collector-notes-trigger"
@@ -1158,12 +1162,13 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                     >
                       <a
                         href={linkUrl}
-                        class="ssr-card-link"
+                        class="card-artwork-link"
                         data-context-image-link
                         data-image-id={item.id}
                         data-gallery-id={section.galleryPath}
                         data-artwork-number={idx + 1}
-                      >
+                       aria-label={`Explore ${title}`}></a>
+              <div class="ssr-card-link">
                         <img
                           class="ssr-card-image"
                           src={imageUrl}
@@ -1198,11 +1203,12 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
                           <p class="print-cue sr-only">Fine art print available</p>
                           {storyExcerpt && <p class="story-excerpt">{storyExcerpt}</p>}
                           <span class="card-cta">
+                    <GridOimSeal imageId={item.id} />
                             <span class="card-cta-desktop">Explore Story | Order Fine Art Print &rarr;</span>
                             <span class="card-cta-mobile">Explore Story | Order</span>
                           </span>
                         </div>
-                      </a>
+                      </div>
                       <button
                         type="button"
                         class="collector-notes-trigger"
@@ -4185,4 +4191,5 @@ const faqRight = visibleFaqItems.slice(faqSplitIndex);
   initEditionCatalogs();
 </script>
 
+  <GridOimPopup />
 </BaseLayout>

@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { CircleX } from 'lucide-react';
 import contentClassificationRegistry from '../data/contentClassificationRegistry.json';
 import { isOimImage } from '../utils/contentReview.mjs';
+import { oimParagraphs } from '../data/oimCopy.js';
 import './ChapterOimBadge.css';
 
 function OimInfoPopup({ onClose }) {
@@ -59,8 +60,7 @@ function OimInfoPopup({ onClose }) {
         <img src="/images/OIM-1-web.webp" alt="OIM-1" width={95} height={94} />
       </h2>
       <div id={descriptionId} className="chapter-oim-popup-copy">
-        <p>OIM-1 is a maker's mark reserved for a personally curated collection of Wayne's most signature One-Image Movie creations.</p>
-        <p>Each of these images combines with Wayne's title and unresolved story to build an interrupted moment — asking you to finish the story that lives beyond the frame.</p>
+        {oimParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       </div>
       <footer className="chapter-oim-popup-footer">
         <a href="/Other/One-Image-Movie">Learn more about One-Image Movies</a>
